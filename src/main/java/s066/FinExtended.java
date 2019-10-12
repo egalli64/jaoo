@@ -1,4 +1,4 @@
-package s062;
+package s066;
 
 // Cannot override the final method from Sample
 public class FinExtended extends Final {

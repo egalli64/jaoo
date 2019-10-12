@@ -1,4 +1,4 @@
-package s062;
+package s066;
 
 public class Final {
     public static void main(String[] args) {
