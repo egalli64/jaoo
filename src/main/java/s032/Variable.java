@@ -1,4 +1,4 @@
-package s028;
+package s032;
 
 public class Variable {
     public static void main(String[] args) {

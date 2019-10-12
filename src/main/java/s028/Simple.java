@@ -1,7 +1,7 @@
 /*
  * A simple Java source file
  */
-package s024;
+package s028;
 
 import java.lang.Math; // not required
 

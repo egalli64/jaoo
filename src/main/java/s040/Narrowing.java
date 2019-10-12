@@ -1,4 +1,4 @@
-package s036;
+package s040;
 
 public class Narrowing {
     public static void main(String[] args) {
