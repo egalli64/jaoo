@@ -1,4 +1,4 @@
-package s039;
+package s043;
 
 public class SwitchString {
     public static void main(String[] args) {

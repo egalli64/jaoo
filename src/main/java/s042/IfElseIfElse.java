@@ -1,4 +1,4 @@
-package s038;
+package s042;
 
 public class IfElseIfElse {
     public static void main(String[] args) {

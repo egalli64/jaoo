@@ -1,4 +1,4 @@
-package s039;
+package s043;
 
 public class SwitchEnum {
 

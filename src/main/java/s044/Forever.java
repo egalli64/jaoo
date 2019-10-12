@@ -1,4 +1,4 @@
-package s040;
+package s044;
 
 public class Forever {
     public static void main(String[] args) {

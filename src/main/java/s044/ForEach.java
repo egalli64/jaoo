@@ -1,4 +1,4 @@
-package s040;
+package s044;
 
 public class ForEach {
     public static void main(String[] args) {
