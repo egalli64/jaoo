@@ -1,12 +1,11 @@
-package s119;
+package s121;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DriverManagerConnector {
-    private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
-//    private static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
+    private static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
     private static final String USER = "me";
     private static final String PASSWORD = "password";
 
@@ -14,9 +13,9 @@ public class DriverManagerConnector {
         try {
             Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
 
-            String user = conn.getSchema();
+            String user = conn.getCatalog();
             if (user == null) {
-                user = conn.getCatalog();
+                user = conn.getSchema();
             }
 
             System.out.println("Connected as " + user);

@@ -1,4 +1,4 @@
-package s123;
+package s125;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Selector {
-	private static final String URL = "jdbc:oracle:thin:@localhost:1521/xe";
+	private static final String URL = "jdbc:mysql://localhost:3306/me?serverTimezone=Europe/Rome";
 	private static final String USER = "me";
 	private static final String PASSWORD = "password";
 
