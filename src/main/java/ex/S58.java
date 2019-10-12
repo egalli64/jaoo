@@ -1,6 +1,6 @@
 package ex;
 
-public class S54 {
+public class S58 {
     /**
      * Check if the parameter is positive, negative, or zero
      *  

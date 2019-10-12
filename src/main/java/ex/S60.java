@@ -1,6 +1,6 @@
 package ex;
 
-public class S56 {
+public class S60 {
     /**
      * Reverse a string
      * 

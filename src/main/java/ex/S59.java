@@ -1,6 +1,6 @@
 package ex;
 
-public class S55 {
+public class S59 {
     /**
      * Add up all the numbers in the passed closed interval
      * 
@@ -37,7 +37,7 @@ public class S55 {
     }
     
     /**
-     * Fibonacci number (0, 1, 1, 2, 3, 5, 8, …)
+     * Fibonacci number (0, 1, 1, 2, 3, 5, 8, ï¿½)
      * 
      * @param value
      * @return the Fibonacci number of value, or zero

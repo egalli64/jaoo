@@ -1,6 +1,6 @@
 package ex;
 
-public class S53 {
+public class S57 {
     /**
      * Average speed
      * 
