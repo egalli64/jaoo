@@ -1,4 +1,4 @@
-package s092;
+package s096;
 
 import java.util.Locale;
 import java.util.logging.ConsoleHandler;

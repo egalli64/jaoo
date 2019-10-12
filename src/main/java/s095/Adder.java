@@ -1,4 +1,4 @@
-package s091;
+package s095;
 
 import java.util.Scanner;
 
