@@ -2,23 +2,12 @@ package s073;
 
 public class Main {
     public static void main(String[] args) {
-//		Cat cat = (Cat) new Dog();
+        Mammal[] mammals = new Mammal[2];
+        mammals[0] = new Dog(63, 40);
+        mammals[1] = new Cat(63, 20);
 
-        Pet pet = new Dog("Bob");
-
-        // risky
-        Dog dog = (Dog) pet;
-        dog.bark();
-
-        // next line leads to a ClassCastException
-        Cat cat = (Cat) pet;
-        System.out.println(System.identityHashCode(cat));
-
-        if (pet instanceof Cat) {
-            Cat tom = (Cat) pet;
-            tom.meow();
-        } else {
-            System.out.println("This pet is not a cat!");
+        for (Mammal mammal : mammals) {
+            System.out.println(mammal.toString());
         }
     }
 }

@@ -2,11 +2,14 @@ package s072;
 
 public class Main {
     public static void main(String[] args) {
-        Dog tom = new Dog("Tom");
+        // Cannot instantiate
+//        Abstract ma = new Abstract();
+//        Abstract2 ma2 = new Abstract2();
 
-        String name = tom.getName();
-        double speed = tom.getSpeed();
+        Abstract ma = new Concrete();
+        ma.anAbstractMethod();
 
-        System.out.println("Name and speed: " + name + ", " + speed);
+        Abstract2 ma2 = new Concrete2();
+        ma2.aConcreteMethod();
     }
 }
