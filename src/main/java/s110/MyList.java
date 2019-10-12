@@ -1,5 +1,11 @@
-package s106;
+package s110;
 
+/**
+ * Exercise: write a simple linked list.
+ * 
+ * @see tester for expected results
+ * @author manny
+ */
 public class MyList {
 
     public Object size() {

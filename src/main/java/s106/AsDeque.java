@@ -1,4 +1,4 @@
-package s102;
+package s106;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
