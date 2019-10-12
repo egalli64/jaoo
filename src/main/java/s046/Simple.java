@@ -1,4 +1,4 @@
-package s042;
+package s046;
 
 public class Simple {
     static String h() {

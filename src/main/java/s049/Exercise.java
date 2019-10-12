@@ -1,4 +1,4 @@
-package s045;
+package s049;
 
 public class Exercise {
     final static int GAP = 'a' - 'A';

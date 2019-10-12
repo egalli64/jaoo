@@ -1,4 +1,4 @@
-package s046;
+package s050;
 
 public class AboutStringBuilder {
     public static void main(String[] args) {

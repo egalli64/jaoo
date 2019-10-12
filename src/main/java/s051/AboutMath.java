@@ -1,4 +1,4 @@
-package s047;
+package s051;
 
 public class AboutMath {
     public static void main(String[] args) {

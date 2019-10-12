@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.Test;
 
+import s049.Exercise;
+
 class ExerciseTest {
 
     @Test
