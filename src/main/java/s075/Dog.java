@@ -30,6 +30,6 @@ public class Dog {
 
     @Override
     public String toString() {
-        return "S71Dog [name=" + name + ", weight=" + weight + "]";
+        return "S75Dog [name=" + name + ", weight=" + weight + "]";
     }
 }
