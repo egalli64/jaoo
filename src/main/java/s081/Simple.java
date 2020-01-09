@@ -23,7 +23,7 @@ public class Simple {
 			System.out.println("Negate " + value);
 			int x = simple.negate2(value);
 			System.out.println("My value negated is: " + x);
-		} catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
+		} catch (NumberFormatException e) {
 			System.out.println("Pass me an integer!");
 			return;
 		} catch (MyNegateException mne) {
