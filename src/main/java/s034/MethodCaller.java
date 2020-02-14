@@ -1,4 +1,4 @@
-package s046;
+package s034;
 
 public class MethodCaller {
     public static void main(String[] args) {

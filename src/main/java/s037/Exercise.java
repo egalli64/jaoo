@@ -1,4 +1,4 @@
-package s049;
+package s037;
 
 public class Exercise {
     final static int GAP = 'a' - 'A';
@@ -14,6 +14,10 @@ public class Exercise {
     }
 
     public static String toUpper(String s) {
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+
         StringBuilder sb = new StringBuilder(s.length());
 
         for (int i = 0; i < s.length(); i++) {
@@ -29,12 +33,16 @@ public class Exercise {
     }
 
     public static String toUpper2(String s) {
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+
         StringBuilder sb = new StringBuilder(s);
 
         for (int i = 0; i < s.length(); i++) {
             char cur = s.charAt(i);
             if (cur >= 'a' && cur <= 'z') {
-                sb.setCharAt(i, (char)(cur-GAP));
+                sb.setCharAt(i, (char) (cur - GAP));
             }
         }
 
@@ -42,14 +50,18 @@ public class Exercise {
     }
 
     public static String toUpper3(String s) {
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+
         StringBuilder sb = new StringBuilder(s.length());
 
         for (int i = 0; i < s.length(); i++) {
             char cur = s.charAt(i);
             if (cur >= 'a' && cur <= 'z') {
-                sb.insert(i, (char)(cur-GAP));
+                sb.insert(i, (char) (cur - GAP));
             } else {
-                sb.insert(i, cur);                
+                sb.insert(i, cur);
             }
         }
 
@@ -57,20 +69,28 @@ public class Exercise {
     }
 
     public static String toUpper4(String s) {
+        if (s == null || s.isEmpty()) {
+            return s;
+        }
+
         StringBuilder sb = new StringBuilder(s);
 
         for (int i = 0; i < s.length(); i++) {
             char cur = s.charAt(i);
             if (cur >= 'a' && cur <= 'z') {
-                String x = Character.toString((char)(cur - GAP));
-                sb.replace(i, i+1, x);
+                String x = Character.toString((char) (cur - GAP));
+                sb.replace(i, i + 1, x);
             }
         }
 
         return sb.toString();
     }
-    
+
     public static void exercise(String sample) {
+        if (sample == null || sample.isEmpty()) {
+            return;
+        }
+
         System.out.println(sample + " to uppercase and lowercase");
         for (int i = 0; i < sample.length(); i++) {
             char cur = sample.charAt(i);

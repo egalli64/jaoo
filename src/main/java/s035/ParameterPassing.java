@@ -1,4 +1,4 @@
-package s047;
+package s035;
 
 import java.util.Objects;
 
@@ -30,7 +30,7 @@ public class ParameterPassing {
         }
 
         // alternatively: if parameter is null throws a NullPointerException
-        Objects.requireNonNull(parameter, "Parameter should not be null");
+        // Objects.requireNonNull(parameter, "Parameter should not be null");
 
         parameter.append(" there");
         System.out.println("parameter value is " + parameter);
@@ -41,9 +41,6 @@ public class ParameterPassing {
             System.out.println("Nothing to do here");
             return;
         }
-
-        // alternatively: if parameter is null throws a NullPointerException
-        Objects.requireNonNull(data, "Parameter should not be null");
 
         data[0] += 1;
         System.out.println("data[0] is " + data[0]);
@@ -68,7 +65,7 @@ public class ParameterPassing {
         reference(referenceValue);
         System.out.println("referenceValue now is " + referenceValue);
 
-        int array[] = { 42 };
+        int[] array = { 42 };
 
         System.out.println("array[0] is " + array[0]);
         reference(array);

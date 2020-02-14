@@ -1,4 +1,4 @@
-package s049;
+package s037;
 
 public class AboutString {
     public static void main(String[] args) {
