@@ -1,4 +1,4 @@
-package s041;
+package s029;
 
 public class Array2D {
     public static void main(String[] args) {

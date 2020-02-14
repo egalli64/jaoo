@@ -1,16 +1,16 @@
-package s044;
+package s032;
 
-public class DoWhile {
+public class While {
     public static void main(String[] args) {
-        boolean condition = false;
+        boolean condition = true;
         boolean something = true;
 
-        do {
+        while (condition) {
             System.out.println("something is true");
 
             if (something) {
                 condition = false;
             }
-        } while (condition);
+        }
     }
 }

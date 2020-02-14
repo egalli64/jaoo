@@ -1,13 +1,11 @@
-package s042;
+package s030;
 
-public class IfElse {
+public class If {
     public static void main(String[] args) {
-        boolean condition = false;
+        boolean condition = true;
         
         if (condition) {
             System.out.println("only if condition is true");
-        } else {
-            System.out.println("only if condition is false");
         }
 
         System.out.println("always printed");

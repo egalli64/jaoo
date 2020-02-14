@@ -1,16 +1,16 @@
-package s043;
+package s031;
 
-public class SwitchInt {
+public class SwitchString {
     public static void main(String[] args) {
-        int value = 42;
+        String value = "1";
 
         // ...
 
         switch (value) {
-        case 1:
+        case "1":
             System.out.println("value is one");
             break;
-        case 2:
+        case "2":
             System.out.println("value is two");
             break;
         default:
