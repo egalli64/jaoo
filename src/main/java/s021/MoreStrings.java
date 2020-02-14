@@ -1,6 +1,6 @@
-package s033;
+package s021;
 
-public class Simple {
+public class MoreStrings {
     public static void main(String[] args) {
         String s = new String("hello");
         System.out.println(s);

@@ -1,6 +1,6 @@
-package s038;
+package s025;
 
-public class Simple {
+public class Logic {
     public static void main(String[] args) {
         boolean alpha = true;
         boolean beta = false;

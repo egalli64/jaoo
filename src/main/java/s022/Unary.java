@@ -1,4 +1,4 @@
-package s034;
+package s022;
 
 public class Unary {
     public static void main(String[] args) {
