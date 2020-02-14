@@ -1,9 +1,11 @@
-package s054;
+package s042;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
+
+import s042.Simple;
 
 class SimpleTest {
     @Test

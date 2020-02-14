@@ -1,7 +1,7 @@
-package s054;
+package s041;
 
 public class Simple {
     public int negate(int value) {
-        return -value;
+        return 0;
     }
 }

@@ -1,11 +1,10 @@
-package s045;
+package s037;
 
-//import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.Test;
 
-import s049.Exercise;
+import s037.Exercise;
 
 class ExerciseTest {
 
@@ -28,6 +27,5 @@ class ExerciseTest {
         String result = Exercise.toUpper("Bob");
         
         Assertions.assertEquals("BOB", result);
-    }
-    
+    }   
 }
