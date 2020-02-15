@@ -1,4 +1,4 @@
-package s076;
+package s060;
 
 public class Dog extends Pet {
     private double speed;

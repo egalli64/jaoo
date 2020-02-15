@@ -1,4 +1,4 @@
-package s073;
+package s057;
 
 public abstract class Mammal {
     protected int gestation;

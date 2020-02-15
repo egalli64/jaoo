@@ -1,4 +1,4 @@
-package s072;
+package s056;
 
 // The type Concrete must implement the inherited abstract method
 //public class Concrete extends Abstract {

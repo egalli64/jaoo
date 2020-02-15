@@ -1,4 +1,4 @@
-package s075;
+package s059;
 
 public class Poodle extends Dog {
 	private static final int DEFAULT_DENSITY = 3;

@@ -1,4 +1,4 @@
-package s072;
+package s056;
 
 public abstract class Abstract2 {
     public void aConcreteMethod() {
