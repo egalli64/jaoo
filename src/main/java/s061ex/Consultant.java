@@ -1,4 +1,4 @@
-package s077ex;
+package s061ex;
 
 public class Consultant extends Person {
     private int daily;

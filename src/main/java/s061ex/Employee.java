@@ -1,4 +1,4 @@
-package s077ex;
+package s061ex;
 
 public class Employee extends Person {
     private int salary;

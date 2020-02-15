@@ -1,4 +1,4 @@
-package s077ex;
+package s061ex;
 
 public class Person {
     private String firstName;
