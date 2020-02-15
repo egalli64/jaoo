@@ -1,4 +1,4 @@
-package s065;
+package s049;
 
 public class Initialize {
     private int i; // 0

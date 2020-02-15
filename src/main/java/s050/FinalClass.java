@@ -1,4 +1,4 @@
-package s066;
+package s050;
 
 public final class FinalClass {
 }

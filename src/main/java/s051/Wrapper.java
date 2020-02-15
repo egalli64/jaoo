@@ -1,4 +1,4 @@
-package s067;
+package s051;
 
 public class Wrapper {
     public static void main(String[] args) {

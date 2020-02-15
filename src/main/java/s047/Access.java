@@ -1,4 +1,4 @@
-package s063;
+package s047;
 
 public class Access {
     private int a;

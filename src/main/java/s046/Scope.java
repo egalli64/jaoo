@@ -1,4 +1,4 @@
-package s062;
+package s046;
 
 public class Scope {
     private static int staticMember = 5;
