@@ -1,4 +1,4 @@
-package s070ex;
+package s054ex;
 
 public interface Conditioning {
     public void setTemperature(int newTemp);

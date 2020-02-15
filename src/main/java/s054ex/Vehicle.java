@@ -1,4 +1,4 @@
-package s070ex;
+package s054ex;
 
 public class Vehicle {
     public void steer(boolean right) {

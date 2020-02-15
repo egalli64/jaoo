@@ -1,4 +1,4 @@
-package s070ex;
+package s054ex;
 
 public class Car extends Vehicle implements Conditioning {
     @Override

@@ -1,4 +1,4 @@
-package s070;
+package s054;
 
 interface Barker {
     String bark();
