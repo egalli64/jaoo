@@ -1,4 +1,4 @@
-package s082;
+package s066;
 
 //import org.junit.Rule;
 //import org.junit.Test;
@@ -14,7 +14,7 @@ public class SimpleTest {
 //		thrown.expect(IllegalArgumentException.class);
 //		thrown.expectMessage("Can't negate MIN_VALUE");
 //
-//		Simple sample = new Simple();
+//		Simple sample = new s065.Simple();
 //		sample.negate(Integer.MIN_VALUE);
 //	}
 }

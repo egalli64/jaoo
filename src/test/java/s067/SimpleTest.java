@@ -1,4 +1,4 @@
-package s083;
+package s067;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -9,10 +9,9 @@ import org.junit.jupiter.api.Test;
 public class SimpleTest {
     @Test
     public void negateMinInt() {
-        var sample = new s081.Simple();
+        var sample = new s065.Simple();
 
-        var exc = assertThrows(IllegalArgumentException.class, //
-                () -> sample.negate(Integer.MIN_VALUE));
+        var exc = assertThrows(IllegalArgumentException.class, () -> sample.negate(Integer.MIN_VALUE));
         assertThat(exc.getMessage(), is("Can't negate MIN_VALUE"));
     }
 }
