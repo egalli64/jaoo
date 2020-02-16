@@ -1,15 +1,36 @@
-package s088;
+package s072;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Arrays;
 
 public class TempFile {
     public static void main(String[] args) {
-        File dir = new File("/tmp");
-        File f1 = new File("c:/tmp/hello.txt");
-        File f2 = new File("/tmp", "hello.txt");
+        String dirName = "/tmp";
+
+        File dir = new File(dirName);
+
+        if (dir.mkdir()) {
+            System.out.println(String.format("Directory %s created successfully", dirName));
+        } else {
+            System.out.println("Can't create directory " + dirName);
+        }
+
+        String fileName = "c:/tmp/hello.txt";
+        File f1 = new File(fileName);
+        try {
+            if (f1.createNewFile()) {
+                System.out.println(String.format("File %s created successfully", fileName));
+            } else {
+                System.out.println("Can't create file " + fileName);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        File f2 = new File(dirName, "hello.txt");
         File f3 = new File(dir, "hello.txt");
 
         try {
@@ -27,7 +48,7 @@ public class TempFile {
         System.out.println("Can /tmp/hello.txt be executed? " + f2.canExecute());
         System.out.println("Is c:/tmp/hello.txt absolute? " + f1.isAbsolute());
         System.out.println("Is /tmp/hello.txt absolute? " + f2.isAbsolute());
-        
+
         System.out.println("Name: " + f1.getName());
         System.out.println("Path: " + f2.getPath());
         System.out.println("Absolute path: " + f2.getAbsolutePath());
