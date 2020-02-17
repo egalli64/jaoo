@@ -1,4 +1,4 @@
-package s106;
+package s090;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
@@ -31,7 +31,7 @@ public class AsDeque {
         System.out.println("Pop (first) (or null): " + deq.pop());
         deq.push(-33);
         System.out.println("After pushing (first) -33 (when no excepion): " + deq);
-        
+
         System.out.println("Remove first element (or exc): " + deq.removeFirst());
         System.out.println("Remove last element (or exc): " + deq.removeLast());
     }

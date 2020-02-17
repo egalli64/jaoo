@@ -1,4 +1,4 @@
-package s119;
+package s103;
 
 public class WaitNotify {
 	public static void main(String[] args) {

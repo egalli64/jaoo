@@ -1,4 +1,4 @@
-package s110;
+package s094;
 
 /**
  * Exercise: write a simple linked list.
@@ -27,5 +27,4 @@ public class MyList {
         // TODO Auto-generated method stub
         return null;
     }
-
 }

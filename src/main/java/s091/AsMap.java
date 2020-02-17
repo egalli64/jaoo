@@ -1,4 +1,4 @@
-package s107;
+package s091;
 
 import java.util.HashMap;
 import java.util.Iterator;
@@ -34,7 +34,7 @@ public class AsMap {
 
         System.out.println("Removed value for key 23: " + map.remove(23));
         System.out.println("Replaced value for key 12: " + map.replace(12, "twelve"));
-        
+
         System.out.println("Size is " + map.size());
         System.out.println("Values are: " + map.values());
 

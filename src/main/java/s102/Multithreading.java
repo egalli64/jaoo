@@ -1,4 +1,4 @@
-package s118;
+package s102;
 
 public class Multithreading {
     public static void main(String[] args) {

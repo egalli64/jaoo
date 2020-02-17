@@ -1,4 +1,4 @@
-package s104;
+package s088;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -18,13 +18,13 @@ public class AsNavigableSet {
 
         System.out.println("Poll the first element: " + ns.pollFirst());
         System.out.println("Poll the last element: " + ns.pollLast());
-    
+
         System.out.println("Print the set in descending order");
         Iterator<Integer> it = ns.descendingIterator();
-        while(it.hasNext()) {
+        while (it.hasNext()) {
             System.out.println(it.next());
         }
-        
+
         System.out.println("The set in descending order: " + ns.descendingSet());
     }
 

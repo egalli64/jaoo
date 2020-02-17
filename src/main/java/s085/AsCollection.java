@@ -1,4 +1,4 @@
-package s101;
+package s085;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,13 +35,13 @@ public class AsCollection {
         System.out.println('}');
 
         coll.remove(-5);
-        
+
         Integer[] values = coll.toArray(new Integer[coll.size()]);
         System.out.println(Arrays.toString(values));
-        
+
         coll.retainAll(aCollection());
         System.out.println(coll);
-        
+
         coll.clear();
         System.out.println("Collection is empty? " + coll.isEmpty());
     }
@@ -55,5 +55,4 @@ public class AsCollection {
     private static Collection<Integer> aCollection() {
         return Arrays.asList(12, 18, -5, -2233);
     }
-
 }
