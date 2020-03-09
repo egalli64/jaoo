@@ -8,6 +8,8 @@ where region_id = 1;
 -- select all
 select * from regions;
 
+show schemas;
+
 -- select distinct
 select distinct manager_id
 from employees;
@@ -27,3 +29,7 @@ select 1+2, 3-4, 2*6, 5/2, current_date;
 -- concatenation
 select concat(country_id, "...", region_id, '!' )
 from countries;
+
+-- limit to get result set with a specified size
+select first_name, last_name
+from employees limit 1;
