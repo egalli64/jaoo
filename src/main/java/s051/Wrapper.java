@@ -12,7 +12,7 @@ public class Wrapper {
 
         // from Java 9 on
         @SuppressWarnings("deprecation")
-		Integer i = new Integer(1);
+        Integer i = new Integer(1);
         Integer j = Integer.valueOf(2);
         System.out.println(i + j);
 
