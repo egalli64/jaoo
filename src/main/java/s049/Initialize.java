@@ -7,9 +7,14 @@ public class Initialize {
 
     public void f() {
         int i = 42;
+        int j;
         String s = new String("Hello");
 
         System.out.println(s + i);
+        
+        // System.out.println(j); // error: variable j might not have been initialized
+        j = i / 2;
+        System.out.println(j);
     }
 
     public void g() {
