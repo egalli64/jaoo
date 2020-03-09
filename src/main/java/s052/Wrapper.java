@@ -17,5 +17,11 @@ public class Wrapper {
 
         System.out.println(Integer.parseInt("42"));
         System.out.println(Integer.toHexString(65535));
+        
+        double x = Math.sqrt(-2);
+        System.out.println("Is NaN? " + Double.isNaN(x));
+        System.out.println(Double.NaN + ", " + x + ", " + (x == Double.NaN));
+        System.out.println(Double.POSITIVE_INFINITY);
+        System.out.println(Double.NEGATIVE_INFINITY);
     }
 }

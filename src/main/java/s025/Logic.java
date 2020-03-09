@@ -17,5 +17,7 @@ public class Logic {
         System.out.println(gamma & delta); // 4 == 0100
         System.out.println(gamma | delta); // 7 == 0111
         System.out.println(gamma ^ delta); // 3 == 0011
+
+        System.out.println(~gamma); // -6
     }
 }

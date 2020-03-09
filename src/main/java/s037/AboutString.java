@@ -48,7 +48,7 @@ public class AboutString {
         System.out.println("lower: " + "SHUT UP!".toLowerCase());
 
         System.out.println("trim [" + " la la la ".trim() + "]");
-        
+
         String x = null;
         System.out.println("Sort of safe toString(): " + String.valueOf(x));
     }
