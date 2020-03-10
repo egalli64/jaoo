@@ -7,6 +7,7 @@ public class Scope {
     public void f() {
         int local = 7;
         if (staticMember == 2) {
+//            float local = 0.0F;
             short inner = 12;
             staticMember = 1 + inner;
             member = 3 + local;
@@ -16,7 +17,7 @@ public class Scope {
     public void g() {
         System.out.println(member);
     }
-    
+
     public static void main(String[] args) {
         double local = 5;
         System.out.println(local);
