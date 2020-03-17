@@ -68,7 +68,7 @@ class S02Test {
     void scoreTen() {
         int actual = S02.score(0.1, -0.1);
 
-        assertThat(actual, is(6));
+        assertThat(actual, is(10));
     }
 
     @Test
