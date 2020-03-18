@@ -31,6 +31,8 @@ public class S05 {
 	 */
 	public static String removeVowels(String s) {
 		// TODO
+
+	           
 		return "";
 	}
 
@@ -41,7 +43,9 @@ public class S05 {
 	 * @return the converted integer
 	 */
 	public static int bin2dec(String s) {
-		// TODO
+		// [1][0][0][0][1]
+	    // 43_210
+	    // 2
 		return 0;
 	}
 
@@ -78,6 +82,6 @@ public class S05 {
 	 */
 	public static int max(int[] data) {
 		// TODO
-		return 0;
+		return Integer.MIN_VALUE;
 	}
 }
