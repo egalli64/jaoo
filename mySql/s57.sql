@@ -1,3 +1,5 @@
+drop table if exists details;
+
 -- create table with constraints
 create table details (
     detail_id integer primary key
@@ -19,9 +21,13 @@ create table details (
     constraint detail_name_status_uq unique(name, status)
 );
 
--- when in doubt, do not run the next line
-drop table details;
-
-insert into details values();
+insert into details(detail_id, coder_id) values(11, 107);
 
 select * from details;
+
+select * from coders;
+
+-- auto-commit assumed off!
+delete from coders where coder_id = 107;
+
+rollback;
