@@ -10,9 +10,11 @@ create table details (
 --   name varchar(20) not null,
 --	 name varchar(20) unique,
 
-    coder_id integer references coders(coder_id),
---    coder_id integer references coders(coder_id) on delete cascade,
---    coder_id integer references coders(coder_id) on delete set null,
+    coder_id integer,
+
+--    foreign key(coder_id) references coders(coder_id),
+--    foreign key(coder_id) references coders(coder_id) on delete cascade,
+    foreign key(coder_id) references coders(coder_id) on delete set null,
         
     constraint detail_name_status_uq unique(name, status)
 );
