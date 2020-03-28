@@ -2,8 +2,15 @@
 
 use me;
 
--- regions
+-- cleanup
+drop table if exists job_history;
+alter table departments drop foreign key departments_manager_fk;
+drop table if exists employees;
+drop table if exists departments;
+drop table if exists locations;
+drop table if exists countries;
 drop table if exists regions;
+drop table if exists jobs;
 
 create table regions(
 	region_id integer primary key auto_increment,
@@ -15,13 +22,12 @@ insert into regions (region_id, region_name) values ('2','Americas');
 insert into regions (region_id, region_name) values ('3','Asia');
 insert into regions (region_id, region_name) values ('4','Middle East and Africa');
 
--- countries
-drop table if exists countries;
-
 create table countries(
 	country_id char(2) primary key,
 	country_name varchar(40),
-	region_id integer references regions(region_id)
+	region_id integer,
+    
+    constraint countries_region_fk foreign key(region_id) references regions(region_id)
 );
 
 insert into countries (country_id,country_name,region_id) values ('AR','Argentina','2');
@@ -50,9 +56,6 @@ insert into countries (country_id,country_name,region_id) values ('US','United S
 insert into countries (country_id,country_name,region_id) values ('ZM','Zambia','4');
 insert into countries (country_id,country_name,region_id) values ('ZW','Zimbabwe','4');
 
--- jobs
-drop table if exists jobs;
-
 create table jobs(
 	job_id varchar(10) primary key, 
 	job_title varchar(35) not null, 
@@ -80,19 +83,18 @@ insert into jobs (job_id,job_title,min_salary,max_salary) values ('MK_REP','Mark
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('HR_REP','Human Resources Representative','4000','9000');
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('PR_REP','Public Relations Representative','4500','10500');
 
--- locations
-drop table if exists locations;
-
 create table locations(
-	location_id decimal(4,0) primary key, 
+	location_id integer primary key, 
 	street_address varchar(40), 
 	postal_code varchar(12), 
 	city varchar(30) not null,
 	state_province varchar(25), 
-	country_id char(2) references countries(country_id)
+	country_id char(2),
+
+    constraint locations_country_fk foreign key(country_id) references countries(country_id)
 );
 
-insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('1000','1297 Via Cola di Rie','00989','Roma',null,'IT');
+insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('1000','1297 Via Cola di Rienzo','00989','Roma',null,'IT');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('1100','93091 Calle della Testa','10934','Venice',null,'IT');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('1200','2017 Shinjuku-ku','1689','Tokyo','Tokyo Prefecture','JP');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('1300','9450 Kamiya-cho','6823','Hiroshima',null,'JP');
@@ -116,20 +118,42 @@ insert into locations (location_id,street_address,postal_code,city,state_provinc
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3100','Pieter Breughelstraat 837','3029SK','Utrecht','Utrecht','NL');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3200','Mariano Escobedo 9991','11932','Mexico City','Distrito Federal,','MX');
 
--- departments
-
-drop table if exists departments;
-
 create table departments(
-	department_id decimal(4,0) primary key, 
+	department_id integer primary key, 
 	department_name varchar(30) not null, 
 	manager_id integer, 
-	location_id decimal(4,0) references locations(location_id)
+	location_id integer,
+
+    constraint departments_location_fk foreign key(location_id) references locations(location_id)
 );
 
--- employees
-
-drop table if exists employees;
+insert into departments (department_id,department_name,manager_id,location_id) values ('10','Administration','200','1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('20','Marketing','201','1800');
+insert into departments (department_id,department_name,manager_id,location_id) values ('30','Purchasing','114','1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('40','Human Resources','203','2400');
+insert into departments (department_id,department_name,manager_id,location_id) values ('50','Shipping','121','1500');
+insert into departments (department_id,department_name,manager_id,location_id) values ('60','IT','103','1400');
+insert into departments (department_id,department_name,manager_id,location_id) values ('70','Public Relations','204','2700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('80','Sales','145','2500');
+insert into departments (department_id,department_name,manager_id,location_id) values ('90','Executive','100','1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('100','Finance','108','1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('110','Accounting','205','1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('120','Treasury',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('130','Corporate Tax',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('140','Control And Credit',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('150','Shareholder Services',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('160','Benefits',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('170','Manufacturing',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('180','Construction',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('190','Contracting',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('200','Operations',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('210','IT Support',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('220','NOC',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('230','IT Helpdesk',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('240','Government Sales',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('250','Retail Sales',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('260','Recruiting',null,'1700');
+insert into departments (department_id,department_name,manager_id,location_id) values ('270','Payroll',null,'1700');
 
 create table employees(
 	employee_id integer primary key auto_increment, 
@@ -138,14 +162,15 @@ create table employees(
 	email varchar(25) unique not null,
 	phone_number varchar(20), 
 	hire_date date not null,
-	job_id varchar(10) not null references jobs(job_id),
+	job_id varchar(10) not null,
 	salary decimal(8,2) constraint emp_salary_min check (salary > 0), 
 	commission_pct decimal(2,2), 
-	manager_id integer references employees(employee_id), 
-	department_id decimal(4,0) references departments(department_id)
-);
+	manager_id integer, 
+	department_id integer,
 
-alter table departments add constraint dept_mgr_fk foreign key(manager_id) references employees(employee_id);
+    constraint employees_job_fk foreign key(job_id) references jobs(job_id),
+    constraint employees_department_fk foreign key(department_id) references departments(department_id)
+);
 
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('198','Donald','OConnell','DOCONNEL','650.507.9833', str_to_date('21-JUN-07','%d-%b-%y'),'SH_CLERK','2600',null,'124','50');
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('199','Douglas','Grant','DGRANT','650.507.9844', str_to_date('13-JAN-08','%d-%b-%y'),'SH_CLERK','2600',null,'124','50');
@@ -255,46 +280,21 @@ insert into employees (employee_id,first_name,last_name,email,phone_number,hire_
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('196','Alana','Walsh','AWALSH','650.507.9811', str_to_date('24-APR-06','%d-%b-%y'),'SH_CLERK','3100',null,'124','50');
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('197','Kevin','Feeney','KFEENEY','650.507.9822', str_to_date('23-MAY-06','%d-%b-%y'),'SH_CLERK','3000',null,'124','50');
 
-insert into departments (department_id,department_name,manager_id,location_id) values ('10','Administration','200','1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('20','Marketing','201','1800');
-insert into departments (department_id,department_name,manager_id,location_id) values ('30','Purchasing','114','1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('40','Human Resources','203','2400');
-insert into departments (department_id,department_name,manager_id,location_id) values ('50','Shipping','121','1500');
-insert into departments (department_id,department_name,manager_id,location_id) values ('60','IT','103','1400');
-insert into departments (department_id,department_name,manager_id,location_id) values ('70','Public Relations','204','2700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('80','Sales','145','2500');
-insert into departments (department_id,department_name,manager_id,location_id) values ('90','Executive','100','1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('100','Finance','108','1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('110','Accounting','205','1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('120','Treasury',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('130','Corporate Tax',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('140','Control And Credit',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('150','Shareholder Services',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('160','Benefits',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('170','Manufacturing',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('180','Construction',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('190','Contracting',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('200','Operations',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('210','IT Support',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('220','NOC',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('230','IT Helpdesk',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('240','Government Sales',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('250','Retail Sales',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('260','Recruiting',null,'1700');
-insert into departments (department_id,department_name,manager_id,location_id) values ('270','Payroll',null,'1700');
-
--- job_history
-drop table if exists job_history;
+alter table departments add constraint departments_manager_fk foreign key(manager_id) references employees(employee_id);
+alter table employees add constraint employees_manager_fk foreign key(manager_id) references employees(employee_id);
 
 create table job_history(
-	employee_id integer not null references employees(employee_id), 
+	employee_id integer not null, 
 	start_date date not null, 
 	end_date date not null, 
-	job_id varchar(10) not null references jobs(job_id),
-	department_id decimal(4,0) references departments(department_id),
-	
-	constraint jhist_date_interval check (end_date > start_date),
-	constraint jhist_pk primary key(employee_id, start_date)
+	job_id varchar(10) not null,
+	department_id integer,
+
+	constraint jhistory_pk primary key(employee_id, start_date),
+	constraint jhistory_date_interval check (end_date > start_date),
+    constraint jhistory_employee_fk foreign key(employee_id) references employees(employee_id),
+    constraint jhistory_job_fk foreign key(job_id) references jobs(job_id),
+    constraint jhistory_department_fk foreign key(department_id) references departments(department_id)
 );
 
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('102',str_to_date('13-JAN-01','%d-%b-%y'),str_to_date('24-JUL-06','%d-%b-%y'),'IT_PROG','60');
@@ -307,5 +307,53 @@ insert into job_history (employee_id,start_date,end_date,job_id,department_id) v
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('176',str_to_date('24-MAR-06','%d-%b-%y'),str_to_date('31-DEC-06','%d-%b-%y'),'SA_REP','80');
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('176',str_to_date('01-JAN-07','%d-%b-%y'),str_to_date('31-DEC-07','%d-%b-%y'),'SA_MAN','80');
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('200',str_to_date('01-JUL-02','%d-%b-%y'),str_to_date('31-DEC-06','%d-%b-%y'),'AC_ACCOUNT','90');
+
+-- extra playground
+drop table if exists team_coder;
+drop table if exists teams;
+drop table if exists coders;
+
+create table coders
+as
+    select employee_id as coder_id, first_name, last_name, hire_date, salary
+    from employees
+    where department_id = 60;
+
+alter table coders modify coder_id int primary key auto_increment;
+alter table coders add constraint coders_name_uq unique(first_name, last_name);
+
+insert into coders(first_name, last_name, hire_date, salary)
+values('Tim', 'Ice', curdate(), 5760);
+
+create table teams(
+	team_id integer primary key auto_increment,
+	name varchar(25),
+    leader_id integer unique,
+
+    constraint teams_leader_fk foreign key(leader_id) references coders(coder_id)
+);
+
+insert into teams(name, leader_id) values('red', 103);
+insert into teams(name, leader_id) values('blue', 107);
+insert into teams(name, leader_id) values('green', 105);
+
+create table team_coder(
+	team_id integer,
+    coder_id integer,
+    
+	constraint team_coder_pk primary key(team_id, coder_id),
+    constraint team_coder_fk foreign key(team_id) references teams(team_id),
+    constraint coder_team_fk foreign key(coder_id) references coders(coder_id)
+);
+
+insert into team_coder values(1, 104);
+insert into team_coder values(1, 106);
+insert into team_coder values(1, 108);
+insert into team_coder values(2, 105);
+insert into team_coder values(2, 106);
+insert into team_coder values(2, 107);
+insert into team_coder values(3, 105);
+insert into team_coder values(3, 106);
+insert into team_coder values(3, 103);
 
 commit;
