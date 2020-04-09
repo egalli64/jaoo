@@ -1,4 +1,4 @@
-package s094;
+package m2.s51;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;

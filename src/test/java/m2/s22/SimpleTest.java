@@ -1,4 +1,4 @@
-package s065;
+package m2.s22;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -11,12 +11,12 @@ class SimpleTest {
         Simple simple = new Simple();
 
         try {
-            simple.negate(Integer.MIN_VALUE);
+            simple.negate(0);
+            fail("An IllegalArgumentException was expected");
         } catch (IllegalArgumentException iae) {
             String message = iae.getMessage();
-            assertThat(message, is("Can't negate MIN_VALUE"));
+            assertThat(message, is("Can't negate 0"));
             return;
         }
-        fail("An IllegalArgumentException was expected");
     }
 }
