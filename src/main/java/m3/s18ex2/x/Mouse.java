@@ -1,0 +1,17 @@
+package m3.s18ex2.x;
+
+import m3.s18ex2.Pet;
+
+public class Mouse extends Pet {
+
+    public Mouse(int days) {
+        super(days);
+    }
+
+    @Override
+    public int housing() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+}
