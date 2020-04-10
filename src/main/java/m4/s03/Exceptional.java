@@ -1,4 +1,4 @@
-package m3.s20;
+package m4.s03;
 
 public class Exceptional {
     public void f() {

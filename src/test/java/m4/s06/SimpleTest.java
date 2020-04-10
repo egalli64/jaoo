@@ -1,4 +1,4 @@
-package m3.s23;
+package m4.s06;
 
 //import org.junit.Rule;
 //import org.junit.Test;
