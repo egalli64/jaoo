@@ -1,10 +1,10 @@
-package ex;
-
-import org.junit.jupiter.api.Test;
+package m2ex;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
+
+import org.junit.jupiter.api.Test;
 
 class S02Test {
 

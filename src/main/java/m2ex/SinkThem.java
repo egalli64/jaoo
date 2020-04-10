@@ -1,8 +1,8 @@
-package ex;
+package m2ex;
 
 import java.util.Arrays;
 
-public class SinkThemSolution {
+public class SinkThem {
     static public final char SHIP = 'S';
     static public final char WRECK = 'W';
     static public final char MISS = 'M';
@@ -24,14 +24,9 @@ public class SinkThemSolution {
      * 
      * @param dimension board size
      */
-    public SinkThemSolution(int dimension) {
-        board = new char[dimension][dimension];
-        for (int i = 0; i < dimension; i++) {
-            for (int j = 0; j < dimension; j++) {
-                board[i][j] = EMPTY;
-            }
-        }
-        this.counter = 0;
+    public SinkThem(int dimension) {
+        // TODO
+        board = new char[0][0];
     }
 
     /**
@@ -67,26 +62,8 @@ public class SinkThemSolution {
      * @return a string
      */
     public String getBoard() {
-        StringBuilder result = new StringBuilder(board.length * board.length + board.length);
-
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                switch (board[i][j]) {
-                case MISS:
-                    result.append(MISS);
-                    break;
-                case WRECK:
-                    result.append(WRECK);
-                    break;
-                default:
-                    result.append(UNKNOWN);
-                    break;
-                }
-            }
-            result.append('\n');
-        }
-
-        return result.toString();
+        // TODO
+        return "* * *\n* * *\n* * *\n";
     }
 
     /**
@@ -97,17 +74,8 @@ public class SinkThemSolution {
      * @return false if it can't be placed
      */
     public boolean place(int row, int col) {
-        if (row < 0 || row >= board.length || col < 0 || col >= board[row].length) {
-            return false;
-        }
-
-        if (board[row][col] == SHIP) {
-            return false;
-        }
-
-        board[row][col] = SHIP;
-        counter += 1;
-        return true;
+        // TODO
+        return false;
     }
 
     /**
@@ -120,21 +88,7 @@ public class SinkThemSolution {
      * @return true for a sink
      */
     public boolean shoot(int row, int col) {
-        if (row < 0 || row >= board.length || col < 0 || col >= board[row].length) {
-            return false;
-        }
-
-        if (board[row][col] == SHIP) {
-            counter -= 1;
-            points += POINTS_FOR_SINK;
-
-            board[row][col] = WRECK;
-            return true;
-        } else if (board[row][col] != WRECK) {
-            board[row][col] = MISS;
-        }
-
-        points -= POINTS_FOR_MISS;
+        // TODO
         return false;
     }
 
@@ -148,7 +102,7 @@ public class SinkThemSolution {
      * 
      * @param st the game
      */
-    public static void shootAll(SinkThemSolution st) {
+    public static void shootAll(SinkThem st) {
         for (int i = 0; i < st.getBoardSize(); i++) {
             for (int j = 0; j < st.getBoardSize(); j++) {
                 System.out.println(st.getBoard());
@@ -166,12 +120,19 @@ public class SinkThemSolution {
     }
 
     public static void main(String[] args) {
-        SinkThemSolution st = new SinkThemSolution(3);
+        // TODO: use Scanner for user interaction
+
+        // TODO: let the player choose for a (sensible) board size
+        SinkThem st = new SinkThem(10);
+
+        // TODO: place the ships randomly instead
         st.place(0, 2);
         st.place(1, 1);
         st.place(2, 0);
 
+        // TODO: use Scanner instead
         shootAll(st);
+
         System.out.println(st);
         System.out.println("You scored " + st.getPoints());
     }

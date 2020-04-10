@@ -1,4 +1,4 @@
-package ex;
+package m2ex;
 
 public class S08 {
 	/**

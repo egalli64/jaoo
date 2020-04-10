@@ -1,4 +1,4 @@
-package ex;
+package m2ex;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
