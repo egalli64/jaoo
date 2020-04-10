@@ -1,3 +1,4 @@
+use me;
 
 drop procedure if exists hello;
 

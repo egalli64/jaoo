@@ -5,3 +5,8 @@ where mod(coder_id, 2) = 1;
 
 -- get rid of a view
 drop view odd_coders_view;
+
+
+select * from coders;
+
+select * from odd_coders_view;

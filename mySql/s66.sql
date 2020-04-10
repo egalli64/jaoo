@@ -1,4 +1,5 @@
 -- loops
+use me;
 
 drop procedure if exists loop_example;
 

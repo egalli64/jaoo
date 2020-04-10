@@ -2,7 +2,7 @@
 select ascii('A') as A, convert(char(90) using utf8) as '90';
 
 -- string concatenation
-select concat(first_name, ' ', last_name) from employees;
+select concat(first_name, ' ', last_name) name from employees;
 
 -- upper and lower case
 select upper('upper') up, lower('LOWER') low;

@@ -1,3 +1,4 @@
+use me;
 
 drop procedure if exists condition_example;
 
@@ -33,4 +34,4 @@ end;
 
 // delimiter ;
 
-call condition_example();
+-- call condition_example();

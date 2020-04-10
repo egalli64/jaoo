@@ -22,12 +22,11 @@ begin
 	while not v_done do
 		fetch cur_coders into v_first_name, v_last_name;
 		set v_mailing_list = concat(v_mailing_list,
-			lower(v_first_name), "." , lower(v_last_name), "@x.dd;");
+			lower(v_first_name), "." , lower(v_last_name), "@accenture.com;");
 	end while;
+    close cur_coders;
 
 	select v_mailing_list as "mailing list";
-
-    close cur_coders;
 end;
 
 // delimiter ;

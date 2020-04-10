@@ -8,26 +8,26 @@ create table details (
     status char default 'A'
         constraint detail_status_ck check (status in ('A', 'B', 'X')),
 --	status enum('A', 'B', 'X') default 'A',
-    name varchar(20),
---   name varchar(20) not null,
---	 name varchar(20) unique,
+	name varchar(20),
+--	name varchar(20) not null,
+--	name varchar(20) unique,
 
     coder_id integer,
 
---    foreign key(coder_id) references coders(coder_id),
---    foreign key(coder_id) references coders(coder_id) on delete cascade,
-    foreign key(coder_id) references coders(coder_id) on delete set null,
+--    constraint details_coder_fk foreign key(coder_id) references coders(coder_id),
+--    constraint details_coder_fk foreign key(coder_id) references coders(coder_id) on delete cascade,
+    constraint details_coder_fk foreign key(coder_id) references coders(coder_id) on delete set null,
         
-    constraint detail_name_status_uq unique(name, status)
+    constraint details_name_status_uq unique(name, status)
 );
 
-insert into details(detail_id, coder_id) values(11, 107);
+insert into details(detail_id, coder_id) values(11, 106);
 
 select * from details;
 
 select * from coders;
 
 -- auto-commit assumed off!
-delete from coders where coder_id = 107;
+delete from coders where coder_id = 106;
 
 rollback;
