@@ -2,14 +2,26 @@ package m3.s13;
 
 public class Main {
     public static void main(String[] args) {
-        // Cannot instantiate
-//        Abstract ma = new Abstract();
-//        Abstract2 ma2 = new Abstract2();
+        Barker[] group = new Barker[3];
+        
+        group[0] = new Fox();
+        group[1] = new Dog();
+        group[2] = new Robot();
 
-        Abstract ma = new Concrete();
-        ma.anAbstractMethod();
+        for(Barker aBarker: group) {
+            System.out.println(aBarker.bark());
+        }
+        
+        BarkAndWag baw = new Dog();
+        System.out.println(baw.tailWaggingSpeed());
 
-        Abstract2 ma2 = new Concrete2();
-        ma2.aConcreteMethod();
+        Dog dog = new Dog();
+        System.out.println(dog.bark(3));
+        
+        interact(dog);
+    }
+    
+    static void interact(Dog barker) {
+        barker.bark();
     }
 }

@@ -1,12 +1,11 @@
 package m3.s17;
 
 public class Main {
-    public static void main(String[] args) {
-        Dog tom = new Dog("Tom");
+	public static void main(String[] args) {
+		Poodle poodle = new Poodle("Jim");
+		Poodle p2 = new Poodle();
 
-        String name = tom.getName();
-        double speed = tom.getSpeed();
-
-        System.out.println("Name and speed: " + name + ", " + speed);
-    }
+		System.out.println(poodle);
+		System.out.println(p2);
+	}
 }

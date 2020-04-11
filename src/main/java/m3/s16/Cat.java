@@ -1,15 +1,15 @@
 package m3.s16;
 
-public class Dog extends Mammal {
+public class Cat extends Mammal {
     private Tail tail;
 
-    public Dog(int gestationDays, int tailLen) {
+    public Cat(int gestationDays, int tailLen) {
         super(gestationDays);
         this.tail = new Tail(tailLen);
     }
 
     @Override
     public String toString() {
-        return "Dog [tail=" + tail + ", gestation=" + gestation + "]";
+        return "Cat [tail=" + tail + ", gestation=" + gestation + "]";
     }
 }
