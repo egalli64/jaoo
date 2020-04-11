@@ -1,47 +1,16 @@
 package m2.s18;
 
+import java.util.Arrays;
+
 public class Exercise {
     public static void main(String[] args) {
-        // counting
-        for (int i = 0; i < 10; i++) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        // 1. print all values in [0 .. 9], expected output:
+        // 0 1 2 3 4 5 6 7 8 9
+        // do it using a for and a while loop
 
-        int counter = 0;
-        while (counter < 10) {
-            System.out.print(counter + " ");
-        }
-        System.out.println();
-
-        // for each
+        // 2. given a boolean array, change its false values to true
         boolean[] flags = { true, false, false };
 
-        System.out.println("*** Initial Values ***");
-        for (boolean flag : flags) {
-            System.out.println(flag);
-        }
-
-        for (int i = 0; i < flags.length; i++) {
-            if (!flags[i]) {
-                flags[i] = true;
-            }
-        }
-
-        System.out.println("*** Changed Values ***");
-        for (boolean flag : flags) {
-            System.out.println(flag);
-        }
-
-        for (boolean flag : flags) {
-            if (!flag) {
-                flag = true;
-            }
-        }
-
-        System.out.println("*** (Not!) Changed Values ***");
-        for (boolean flag : flags) {
-            System.out.println(flag);
-        }
+        System.out.println(Arrays.toString(flags));
     }
 }
