@@ -6,8 +6,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
-import m4.s05.Simple;
-
 class SimpleTest {
     @Test
     void negateException() {
