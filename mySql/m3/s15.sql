@@ -1,3 +1,5 @@
+use me;
+
 -- multirow subquery to get manager names
 select first_name, last_name
 from employees

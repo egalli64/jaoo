@@ -1,3 +1,6 @@
+-- group by
+use me;
+
 -- average salary for each department
 select department_id, truncate(avg(salary), 0) as 'avg salary'
 from employees

@@ -1,3 +1,6 @@
+-- numeric functions
+use me;
+
 -- absolute value
 select abs(10), abs(-10);
 

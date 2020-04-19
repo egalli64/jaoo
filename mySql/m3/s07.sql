@@ -1,3 +1,6 @@
+-- regex
+use me;
+
 -- LIKE with regular expression
 select last_name
 from employees

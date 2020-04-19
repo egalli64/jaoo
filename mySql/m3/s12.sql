@@ -1,3 +1,6 @@
+-- group by - having
+use me;
+
 -- get employees with a salary less than 8000
 -- group them by manager id
 -- keep the groups with an average salary above 6000

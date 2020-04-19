@@ -1,3 +1,6 @@
+-- date functions
+use me;
+
 -- current date (and time)
 select curdate(), now();
 

@@ -1,3 +1,6 @@
+-- aggregate functions
+use me;
+
 -- average
 select avg(salary)
 from employees

@@ -1,3 +1,5 @@
+use me;
+
 -- join with a subquery
 -- how many countries for each region
 select region_name, c.country_count

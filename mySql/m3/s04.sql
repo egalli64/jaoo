@@ -1,3 +1,6 @@
+-- string function /2
+use me;
+
 -- left and right padding
 select lpad('tom', 30, '.') tom, rpad('tim', 30, '_- -_') tim;
 

@@ -1,3 +1,7 @@
+-- conversion functions
+
+use me;
+
 -- char cast
 select cast(12345.67 as char);
 

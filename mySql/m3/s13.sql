@@ -1,5 +1,9 @@
+-- subquery
+use me;
+
 -- a) subquery in where:
 -- employees having Chen as manager
+-- !!! risky !!!
 select first_name, last_name
 from employees
 where employee_id = (

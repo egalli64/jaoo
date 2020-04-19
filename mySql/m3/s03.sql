@@ -1,3 +1,7 @@
+-- string function
+
+use me;
+
 -- char and its representation
 select ascii('A') as A, convert(char(90) using utf8) as '90';
 
