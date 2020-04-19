@@ -26,6 +26,30 @@ public class S04 {
 	}
 
 	/**
+	 * Square root using Newton method
+	 * Epsilon should be set to 0.001
+	 *  
+	 * @param value
+	 * @return calculated square root
+	 */
+	public static double sqrt(double value) {
+	    // TODO
+	    return 0.0;
+	}
+
+	/**
+     * Square root using Newton method
+     * 
+	 * @param value
+	 * @param epsilon stop iterating when gain is less than this value
+	 * @return calculated square root
+	 */
+    public static double sqrt(double value, double epsilon) {
+        // TODO
+        return 0.0;
+    }
+	
+	/**
 	 * Factorial
 	 * 
 	 * @param value
