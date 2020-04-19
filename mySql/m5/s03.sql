@@ -1,3 +1,6 @@
+-- variables
+
+use me;
 
 drop procedure if exists variable_example;
 
@@ -15,4 +18,4 @@ end;
 
 // delimiter ;
 
-call variable_example();
+-- call variable_example();

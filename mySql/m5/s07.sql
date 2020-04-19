@@ -31,4 +31,4 @@ end;
 
 // delimiter ;
 
-call email_coders();
+-- call email_coders();

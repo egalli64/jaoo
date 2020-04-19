@@ -1,4 +1,5 @@
 -- loops
+
 use me;
 
 drop procedure if exists loop_example;
@@ -42,4 +43,4 @@ end;
 
 // delimiter ;
 
-call loop_example();
+-- call loop_example();

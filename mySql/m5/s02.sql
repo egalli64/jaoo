@@ -1,3 +1,5 @@
+-- life of a Stored Procedure
+
 use me;
 
 drop procedure if exists hello;

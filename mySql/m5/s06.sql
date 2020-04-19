@@ -1,4 +1,4 @@
--- procedure with local variable, select into, if-else
+-- a procedure with local variable, select into, if-else
 
 use me;
 
@@ -23,4 +23,4 @@ end;
 
 // delimiter ;
 
-call total_salaries_coders();
+-- call total_salaries_coders();
