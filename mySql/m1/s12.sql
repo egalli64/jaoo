@@ -1,3 +1,6 @@
+-- null
+use me;
+
 -- check null
 select first_name, last_name
 from employees

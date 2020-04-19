@@ -1,3 +1,6 @@
+-- comparison operators /1
+use me;
+
 -- that one
 select *
 from regions

@@ -1,3 +1,6 @@
+-- logical operators
+use me;
+
 -- both conditions should hold
 select *
 from employees

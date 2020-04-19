@@ -1,3 +1,6 @@
+-- order by
+use me;
+
 -- sorting in natural order
 select *
 from employees

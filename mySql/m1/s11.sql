@@ -1,3 +1,6 @@
+-- information on tables
+use me;
+
 -- tables in the current database
 show tables;
 

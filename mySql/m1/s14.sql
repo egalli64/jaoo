@@ -1,3 +1,6 @@
+-- comparison operators /2
+use me;
+
 -- simple pattern matching
 select last_name
 from employees
