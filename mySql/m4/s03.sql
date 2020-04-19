@@ -1,3 +1,6 @@
+-- update
+use me;
+
 -- updating regions
 update regions
 set region_name = concat('Region ', region_id)

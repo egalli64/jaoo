@@ -1,3 +1,6 @@
+-- create table
+use me;
+
 create table items (
     item_id integer primary key,
     status char,

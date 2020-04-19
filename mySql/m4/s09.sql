@@ -1,3 +1,6 @@
+-- create table as select
+use me;
+
 drop table if exists details;
 drop table if exists coders;
 

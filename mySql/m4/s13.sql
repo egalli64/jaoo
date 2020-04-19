@@ -1,3 +1,6 @@
+-- index
+use me;
+
 -- index on a column
 create index coders_last_name_ix on coders(last_name);
 

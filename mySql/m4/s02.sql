@@ -1,3 +1,6 @@
+-- insert
+use me;
+
 -- plain insert
 insert into regions(region_id, region_name)
 values (11, 'Antarctica');

@@ -1,3 +1,6 @@
+-- view
+use me;
+
 -- create view
 create or replace view odd_coders_view as
 select * from coders

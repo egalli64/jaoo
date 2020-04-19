@@ -1,3 +1,6 @@
+-- truncate / drop table
+use me;
+
 -- get rid of all rows (DML)
 delete from details;
 

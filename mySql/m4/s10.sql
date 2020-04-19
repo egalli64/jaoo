@@ -1,4 +1,7 @@
 -- alter table
+use me;
+
+-- alter table
 describe items;
 -- add/drop column from table
 alter table items add counter decimal(38, 0);
