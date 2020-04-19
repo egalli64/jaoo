@@ -1,3 +1,5 @@
+use me;
+
 -- right outer join
 select first_name, last_name, department_name
 from employees right outer join departments

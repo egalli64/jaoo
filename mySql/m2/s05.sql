@@ -1,3 +1,6 @@
+-- join: using / natural
+use me;
+
 -- join is inner by default
 select region_name, country_name
 from regions join countries

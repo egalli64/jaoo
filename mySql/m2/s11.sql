@@ -1,3 +1,5 @@
+use me;
+
 -- non-equi join
 select e.last_name, e.salary, j.min_salary
 from employees e join jobs j

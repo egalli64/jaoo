@@ -1,3 +1,6 @@
+-- join on
+use me;
+
 -- join-on, more flexible
 select region_name, country_name
 from regions join countries

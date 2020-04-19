@@ -1,3 +1,5 @@
+use me;
+
 -- join on 3 tables
 select employee_id, first_name, last_name, city, department_name
 from employees join departments using(department_id)

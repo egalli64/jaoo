@@ -1,3 +1,6 @@
+-- join (on, using, natural, classic) where
+use me;
+
 -- join on
 select region_name, country_name
 from regions r join countries c

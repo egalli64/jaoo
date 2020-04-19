@@ -1,3 +1,6 @@
+-- inner join
+use me;
+
 -- name of a region and name of countries for that region
 select region_name
 from regions
