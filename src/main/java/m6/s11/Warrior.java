@@ -1,4 +1,4 @@
-package m6.s10;
+package m6.s11;
 
 public class Warrior implements Fighter {
     private int power = 10;

@@ -1,4 +1,4 @@
-package m6.s08;
+package m6.s09;
 
 public class Lazy {
     private static Lazy instance;

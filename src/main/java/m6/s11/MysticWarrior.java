@@ -1,10 +1,10 @@
-package m6.s10;
+package m6.s11;
 
-public class MagicWarrior implements Fighter, Wizard {
+public class MysticWarrior implements Fighter, Healer {
     private Warrior warrior;
     private int healing = 8;
 
-    public MagicWarrior(Warrior warrior) {
+    public MysticWarrior(Warrior warrior) {
         this.warrior = warrior;
     }
 
