@@ -17,7 +17,7 @@ public class Primitive {
         int i = 1_000_000_000;
         System.out.println(i);
 
-        long z = 1_000_000_000_000_000L;
+        long z = 100_000_000_000_000_000L;
         System.out.println(z);
 
         float f = 3.12e20F;
