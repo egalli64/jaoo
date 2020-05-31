@@ -8,8 +8,8 @@ public class Main {
 
         Dog[] dogs = new Dog[2];
 
-        dogs[0] = Dog.withName("Bob");
-        dogs[1] = Dog.withNoName();
+        dogs[0] = Dog.createWithName("Bob");
+        dogs[1] = Dog.createWithNoName();
 
         for (Dog dog : dogs) {
             dog.bark();

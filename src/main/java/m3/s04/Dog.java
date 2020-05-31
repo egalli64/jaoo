@@ -8,11 +8,11 @@ public class Dog {
         name = nm;
     }
 
-    public static Dog withNoName() {
+    public static Dog createWithNoName() {
         return new Dog("No name");
     }
 
-    public static Dog withName(String name) {
+    public static Dog createWithName(String name) {
         return new Dog(name);
     }
 
