@@ -11,8 +11,8 @@ public class Initialize {
         String s = new String("Hello");
 
         System.out.println(s + i);
-        
-        // System.out.println(j); // error: variable j might not have been initialized
+
+//        System.out.println(j); // error: variable j might not have been initialized
         j = i / 2;
         System.out.println(j);
     }
