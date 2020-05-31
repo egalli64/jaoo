@@ -10,6 +10,8 @@ public class Array {
         int value = array[5];
         System.out.println(value);
 
-        // value = array[12]; // exception
+//        value = array[12]; // exception
+
+        System.out.println("Done");
     }
 }
