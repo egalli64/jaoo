@@ -9,15 +9,20 @@ public class ReadHello {
     public static void main(String[] args) {
         File f = new File("/tmp/hello.txt");
 
-        BufferedReader br;
+        BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(f));
             String line = br.readLine();
             System.out.println(">" + line + "<");
 
-            br.close();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException | NullPointerException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

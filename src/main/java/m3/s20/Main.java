@@ -21,20 +21,20 @@ public class Main {
         } else {
             System.out.println("This pet is not a cat!");
         }
-        
+
         Pet[] pets = { new Dog("Tom"), new Cat("Bob") };
-        
+
         f(pets);
     }
 
     static void f(Pet[] pets) {
         for (Pet pet : pets) {
-            if(pet instanceof Dog) {
-                Dog dog = (Dog)pet;
+            if (pet instanceof Dog) {
+                Dog dog = (Dog) pet;
                 dog.bark();
             }
-            if(pet instanceof Cat) {
-                Cat cat = (Cat)pet;
+            if (pet instanceof Cat) {
+                Cat cat = (Cat) pet;
                 cat.meow();
             }
         }

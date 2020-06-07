@@ -12,11 +12,11 @@ public class Main {
         }
 
         for (Person person : persons) {
-            if(person instanceof Consultant) {
-                Consultant c = (Consultant)person;
+            if (person instanceof Consultant) {
+                Consultant c = (Consultant) person;
                 System.out.println(c.getDaily());
-            } else if(person instanceof Employee) {
-                Employee e = (Employee)person;
+            } else if (person instanceof Employee) {
+                Employee e = (Employee) person;
                 System.out.println(e.getSalary());
             }
 
