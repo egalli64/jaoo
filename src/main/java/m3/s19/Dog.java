@@ -4,7 +4,7 @@ public class Dog extends Pet {
     private double speed;
 
     public Dog(String name) {
-        this(name, 0);
+        this(name, 0.0);
     }
 
     public Dog(String name, double speed) {
@@ -14,5 +14,10 @@ public class Dog extends Pet {
 
     public double getSpeed() {
         return speed;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog [speed=" + speed + "] " + super.toString();
     }
 }
