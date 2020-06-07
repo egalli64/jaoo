@@ -12,4 +12,8 @@ public class Dog extends Mammal {
     public String toString() {
         return "Dog [tail=" + tail + ", gestation=" + gestation + "]";
     }
+
+    public void wag() {
+        tail.wag();
+    }
 }

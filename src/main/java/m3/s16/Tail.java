@@ -15,4 +15,8 @@ public class Tail {
     public String toString() {
         return "Tail [size=" + size + "]";
     }
+    
+    public void wag() {
+        
+    }
 }
