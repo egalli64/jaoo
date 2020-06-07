@@ -18,3 +18,12 @@ public class AsSortedSet {
     }
 
 }
+
+/*
+[ 1 3 45 18]
+
+      18
+   3     45
+1 
+    
+ */
