@@ -1,7 +1,7 @@
 package m6.s09;
 
 public class Lazy {
-    private static Lazy instance;
+    private static Lazy instance = null;
 
     private Lazy() {
     }
