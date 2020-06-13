@@ -27,13 +27,13 @@ public class Main {
 
 class OddFirst implements Comparator<Integer> {
     @Override
-    public int compare(Integer lhs, Integer rhs) {
-        if (lhs % 2 == 1 && rhs % 2 == 0) {
+    public int compare(Integer left, Integer right) {
+        if (left % 2 == 1 && right % 2 == 0) {
             return -1;
         }
-        if (lhs % 2 == 0 && rhs % 2 == 1) {
+        if (left % 2 == 0 && right % 2 == 1) {
             return 1;
         }
-        return lhs.compareTo(rhs);
+        return left.compareTo(right);
     }
 }

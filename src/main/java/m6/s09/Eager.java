@@ -14,3 +14,10 @@ public class Eager {
         return 42;
     }
 }
+
+class X {
+    public static void main(String[] args) {
+        Eager eager = Eager.getInstance();
+        System.out.println(eager.solution());
+    }
+}
