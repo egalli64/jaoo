@@ -2,7 +2,7 @@
 use me;
 
 -- a) subquery in where:
--- employees having Chen as manager
+-- Chen manager name
 -- !!! risky !!!
 select first_name, last_name
 from employees
@@ -11,13 +11,26 @@ where employee_id = (
 	from employees
 	where last_name = 'Chen');
 
+-- safe version, using "in" and checking for null
+select first_name, last_name
+from employees
+where employee_id in (
+	select manager_id
+	from employees
+	where last_name = 'King' and manager_id is not null);
+
 -- b) subquery in from:
 -- get the top salary from the ones specified in the subquery
 select max(e.salary)
 from (
 	select employee_id, salary
 	from employees
-	where employee_id between 112 and 115) e;
+	where employee_id between 112 and 115) as e;
+
+
+select employee_id, salary
+from employees
+where employee_id between 112 and 115;
 
 -- c) subquery in having
 -- c.1) average salaries for each department

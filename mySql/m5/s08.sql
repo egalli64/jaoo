@@ -18,5 +18,5 @@ end;
 
 // delimiter ;
 
--- call get_coder_salary(104, @result);
--- select @result;
+call get_coder_salary(104, @my_salary);
+select @my_salary;

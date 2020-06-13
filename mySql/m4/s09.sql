@@ -1,6 +1,8 @@
 -- create table as select
 use me;
 
+drop table if exists team_coder;
+drop table if exists teams;
 drop table if exists details;
 drop table if exists coders;
 

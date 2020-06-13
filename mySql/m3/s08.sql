@@ -6,3 +6,5 @@ select version();
 select user();
 
 select database();
+
+select schema();

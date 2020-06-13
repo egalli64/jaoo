@@ -20,6 +20,6 @@ where region_id = 1;
 
 -- "classic" join
 select region_name, country_name
-  from regions r, countries c
- where r.region_id = c.region_id
-   and r.region_id = 1;
+from regions r, countries c
+where r.region_id = c.region_id
+and r.region_id = 1;

@@ -43,4 +43,4 @@ end;
 
 // delimiter ;
 
--- call loop_example();
+call loop_example();

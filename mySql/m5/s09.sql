@@ -11,7 +11,7 @@ delimiter //
 create function get_salary(
 	p_coder_id integer
 ) returns decimal(8, 2)
-deterministic
+/*deterministic*/
 begin
 	declare v_result decimal(8, 2);
 
@@ -25,4 +25,4 @@ end;
 
 // delimiter ;
 
--- select get_salary(104) as salary;
+select get_salary(104) as salary;

@@ -3,5 +3,5 @@ use me;
 
 -- join-on, more flexible
 select region_name, country_name
-from regions join countries
-on(regions.region_id = countries.region_id);
+from regions r join countries c
+on(r.region_id = c.region_id);
