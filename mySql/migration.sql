@@ -2,9 +2,30 @@
 
 use me;
 
--- cleanup
+-- utility procedure for dropping a foreign key - if it exists
+drop procedure if exists drop_fk_if_exists;
+
+DELIMITER //
+
+create procedure drop_fk_if_exists(my_table varchar(64), my_fk varchar(64))
+begin
+	if exists(
+		select enforced
+        from information_schema.table_constraints
+		where table_schema = schema() and table_name = my_table and constraint_name = my_fk and constraint_type = 'FOREIGN KEY')
+	then
+		set @query = concat('ALTER TABLE ', my_table, ' DROP FOREIGN KEY ', my_fk, ';');
+ 		prepare stmt from @query;
+		execute stmt;
+		deallocate prepare stmt;
+ 	end if;
+end;
+    
+// DELIMITER ;
+
+-- main tables cleanup
 drop table if exists job_history;
-alter table departments drop foreign key departments_manager_fk;
+call drop_fk_if_exists('departments', 'departments_manager_fk');
 drop table if exists employees;
 drop table if exists departments;
 drop table if exists locations;
@@ -26,7 +47,7 @@ create table countries(
 	country_id char(2) primary key,
 	country_name varchar(40),
 	region_id integer,
-    
+
     constraint countries_region_fk foreign key(region_id) references regions(region_id)
 );
 
@@ -57,9 +78,9 @@ insert into countries (country_id,country_name,region_id) values ('ZM','Zambia',
 insert into countries (country_id,country_name,region_id) values ('ZW','Zimbabwe','4');
 
 create table jobs(
-	job_id varchar(10) primary key, 
-	job_title varchar(35) not null, 
-	min_salary decimal(6,0), 
+	job_id varchar(10) primary key,
+	job_title varchar(35) not null,
+	min_salary decimal(6,0),
 	max_salary decimal(6,0)
 );
 
@@ -84,11 +105,11 @@ insert into jobs (job_id,job_title,min_salary,max_salary) values ('HR_REP','Huma
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('PR_REP','Public Relations Representative','4500','10500');
 
 create table locations(
-	location_id integer primary key, 
-	street_address varchar(40), 
-	postal_code varchar(12), 
+	location_id integer primary key,
+	street_address varchar(40),
+	postal_code varchar(12),
 	city varchar(30) not null,
-	state_province varchar(25), 
+	state_province varchar(25),
 	country_id char(2),
 
     constraint locations_country_fk foreign key(country_id) references countries(country_id)
@@ -119,9 +140,9 @@ insert into locations (location_id,street_address,postal_code,city,state_provinc
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3200','Mariano Escobedo 9991','11932','Mexico City','Distrito Federal,','MX');
 
 create table departments(
-	department_id integer primary key, 
-	department_name varchar(30) not null, 
-	manager_id integer, 
+	department_id integer primary key,
+	department_name varchar(30) not null,
+	manager_id integer,
 	location_id integer,
 
     constraint departments_location_fk foreign key(location_id) references locations(location_id)
@@ -156,18 +177,19 @@ insert into departments (department_id,department_name,manager_id,location_id) v
 insert into departments (department_id,department_name,manager_id,location_id) values ('270','Payroll',null,'1700');
 
 create table employees(
-	employee_id integer primary key auto_increment, 
-	first_name varchar(20), 
-	last_name varchar(25) not null, 
+	employee_id integer primary key auto_increment,
+	first_name varchar(20),
+	last_name varchar(25) not null,
 	email varchar(25) unique not null,
-	phone_number varchar(20), 
+	phone_number varchar(20),
 	hire_date date not null,
 	job_id varchar(10) not null,
-	salary decimal(8,2) constraint emp_salary_min check (salary > 0), 
-	commission_pct decimal(2,2), 
-	manager_id integer, 
+	salary decimal(8,2),
+	commission_pct decimal(2,2),
+	manager_id integer,
 	department_id integer,
 
+	constraint emp_salary_min check (salary > 0),
     constraint employees_job_fk foreign key(job_id) references jobs(job_id),
     constraint employees_department_fk foreign key(department_id) references departments(department_id)
 );
@@ -284,9 +306,9 @@ alter table departments add constraint departments_manager_fk foreign key(manage
 alter table employees add constraint employees_manager_fk foreign key(manager_id) references employees(employee_id);
 
 create table job_history(
-	employee_id integer not null, 
-	start_date date not null, 
-	end_date date not null, 
+	employee_id integer not null,
+	start_date date not null,
+	end_date date not null,
 	job_id varchar(10) not null,
 	department_id integer,
 
@@ -325,6 +347,25 @@ alter table coders add constraint coders_name_uq unique(first_name, last_name);
 insert into coders(first_name, last_name, hire_date, salary)
 values('Tim', 'Ice', curdate(), 5760);
 
+-- a procedure on coders
+
+drop procedure if exists get_coder_salary;
+
+DELIMITER //
+
+CREATE PROCEDURE get_coder_salary(
+	in p_coder_id integer,
+    out p_salary decimal(8, 2)
+)
+begin
+	select salary
+	into p_salary
+	from coders
+	where coder_id = p_coder_id;
+end;
+
+// DELIMITER ;
+
 create table teams(
 	team_id integer primary key auto_increment,
 	name varchar(25),
@@ -340,7 +381,7 @@ insert into teams(name, leader_id) values('green', 105);
 create table team_coder(
 	team_id integer,
     coder_id integer,
-    
+
 	constraint team_coder_pk primary key(team_id, coder_id),
     constraint team_coder_fk foreign key(team_id) references teams(team_id),
     constraint coder_team_fk foreign key(coder_id) references coders(coder_id)
