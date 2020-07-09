@@ -7,6 +7,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
+import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.CoreMatchers.startsWith;
 import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.jupiter.api.Test;
@@ -86,6 +87,13 @@ class SimpleTest {
         int expected = 42;
         int actual = 42;
         assertThat(actual, is(expected));
+    }
+
+    @Test
+    public void hamEqualsDouble() {
+        double expected = .87;
+        double actual = .29 * 3;
+        assertThat(actual, closeTo(expected, .0001));
     }
 
     @Test
