@@ -5,8 +5,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import m1.s21.Exercise;
-
 class ExerciseCaesarTest {
 
     /*

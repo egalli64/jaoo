@@ -5,8 +5,6 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 
-import m1ex.S03;
-
 class S03Test {
 
     @Test

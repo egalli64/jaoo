@@ -6,8 +6,6 @@ import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
-import m1ex.S04;
-
 class S04Test {
     @Test
     void sumPositive() {

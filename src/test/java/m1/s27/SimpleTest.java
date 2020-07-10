@@ -2,10 +2,9 @@ package m1.s27;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.IsEqual.equalTo;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import m1.s27.Simple;
 
 class SimpleTest {
     private Simple simple;

@@ -3,8 +3,6 @@ package m1.s21;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import m1.s21.Exercise;
-
 class ExerciseTest {
 
     @Test

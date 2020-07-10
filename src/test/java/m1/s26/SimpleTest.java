@@ -2,9 +2,8 @@ package m1.s26;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import org.junit.jupiter.api.Test;
 
-import m1.s26.Simple;
+import org.junit.jupiter.api.Test;
 
 class SimpleTest {
     @Test
