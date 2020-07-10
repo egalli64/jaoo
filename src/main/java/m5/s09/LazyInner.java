@@ -1,4 +1,4 @@
-package m6.s09;
+package m5.s09;
 
 public class LazyInner {
     private LazyInner() {

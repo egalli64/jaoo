@@ -1,4 +1,4 @@
-package m6.s12;
+package m5.s12;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

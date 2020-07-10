@@ -1,21 +1,21 @@
-package m6.s09;
+package m5.s09;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-class LazyDoubleCheckTest {
+class LazyInnerTest {
     @Test
     void getInstance() {
-        LazyDoubleCheck unique = LazyDoubleCheck.getInstance();
-        LazyDoubleCheck single = LazyDoubleCheck.getInstance();
+        LazyInner unique = LazyInner.getInstance();
+        LazyInner single = LazyInner.getInstance();
 
         assertThat(unique, is(single));
     }
 
     @Test
     void solution() {
-        assertThat(LazyDoubleCheck.getInstance().solution(), is(42));
+        assertThat(LazyInner.getInstance().solution(), is(42));
     }
 }

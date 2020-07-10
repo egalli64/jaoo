@@ -1,4 +1,4 @@
-package m6.s11;
+package m5.s11;
 
 public class Main {
     public static void main(String[] args) {

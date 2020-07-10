@@ -1,21 +1,20 @@
-package m6.s09;
+package m5.s09;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-class LazyTest {
+class EnumEagerTest {
     @Test
     void getInstance() {
-        Lazy unique = Lazy.getInstance();
-        Lazy single = Lazy.getInstance();
+        EnumEager unique = EnumEager.INSTANCE;
 
-        assertThat(unique, is(single));
+        assertThat(unique, is(EnumEager.INSTANCE));
     }
 
     @Test
     void solution() {
-        assertThat(Lazy.getInstance().solution(), is(42));
+        assertThat(EnumEager.INSTANCE.solution(), is(42));
     }
 }
