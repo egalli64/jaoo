@@ -1,4 +1,4 @@
-package m4.s05;
+package m3.s05;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;

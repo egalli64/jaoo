@@ -1,4 +1,4 @@
-package m4.s05;
+package m3.s05;
 
 public class Simple {
 	public int negate(int value) {

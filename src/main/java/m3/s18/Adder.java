@@ -1,4 +1,4 @@
-package m4.s18;
+package m3.s18;
 
 import java.util.Scanner;
 

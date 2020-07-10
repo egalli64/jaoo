@@ -1,4 +1,4 @@
-package m4.s03;
+package m3.s03;
 
 public class NoExc {
     public static void main(String[] args) {
