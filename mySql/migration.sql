@@ -20,7 +20,7 @@ begin
 		deallocate prepare stmt;
  	end if;
 end;
-    
+
 // DELIMITER ;
 
 -- main tables cleanup
@@ -42,6 +42,8 @@ insert into regions (region_id, region_name) values ('1','Europe');
 insert into regions (region_id, region_name) values ('2','Americas');
 insert into regions (region_id, region_name) values ('3','Asia');
 insert into regions (region_id, region_name) values ('4','Middle East and Africa');
+
+commit;
 
 create table countries(
 	country_id char(2) primary key,
@@ -77,6 +79,8 @@ insert into countries (country_id,country_name,region_id) values ('US','United S
 insert into countries (country_id,country_name,region_id) values ('ZM','Zambia','4');
 insert into countries (country_id,country_name,region_id) values ('ZW','Zimbabwe','4');
 
+commit;
+
 create table jobs(
 	job_id varchar(10) primary key,
 	job_title varchar(35) not null,
@@ -103,6 +107,8 @@ insert into jobs (job_id,job_title,min_salary,max_salary) values ('MK_MAN','Mark
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('MK_REP','Marketing Representative','4000','9000');
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('HR_REP','Human Resources Representative','4000','9000');
 insert into jobs (job_id,job_title,min_salary,max_salary) values ('PR_REP','Public Relations Representative','4500','10500');
+
+commit;
 
 create table locations(
 	location_id integer primary key,
@@ -138,6 +144,8 @@ insert into locations (location_id,street_address,postal_code,city,state_provinc
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3000','Murtenstrasse 921','3095','Bern','BE','CH');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3100','Pieter Breughelstraat 837','3029SK','Utrecht','Utrecht','NL');
 insert into locations (location_id,street_address,postal_code,city,state_province,country_id) values ('3200','Mariano Escobedo 9991','11932','Mexico City','Distrito Federal,','MX');
+
+commit;
 
 create table departments(
 	department_id integer primary key,
@@ -175,6 +183,8 @@ insert into departments (department_id,department_name,manager_id,location_id) v
 insert into departments (department_id,department_name,manager_id,location_id) values ('250','Retail Sales',null,'1700');
 insert into departments (department_id,department_name,manager_id,location_id) values ('260','Recruiting',null,'1700');
 insert into departments (department_id,department_name,manager_id,location_id) values ('270','Payroll',null,'1700');
+
+commit;
 
 create table employees(
 	employee_id integer primary key auto_increment,
@@ -302,6 +312,8 @@ insert into employees (employee_id,first_name,last_name,email,phone_number,hire_
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('196','Alana','Walsh','AWALSH','650.507.9811', str_to_date('24-APR-06','%d-%b-%y'),'SH_CLERK','3100',null,'124','50');
 insert into employees (employee_id,first_name,last_name,email,phone_number,hire_date,job_id,salary,commission_pct,manager_id,department_id) values ('197','Kevin','Feeney','KFEENEY','650.507.9822', str_to_date('23-MAY-06','%d-%b-%y'),'SH_CLERK','3000',null,'124','50');
 
+commit;
+
 alter table departments add constraint departments_manager_fk foreign key(manager_id) references employees(employee_id);
 alter table employees add constraint employees_manager_fk foreign key(manager_id) references employees(employee_id);
 
@@ -330,6 +342,8 @@ insert into job_history (employee_id,start_date,end_date,job_id,department_id) v
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('176',str_to_date('01-JAN-07','%d-%b-%y'),str_to_date('31-DEC-07','%d-%b-%y'),'SA_MAN','80');
 insert into job_history (employee_id,start_date,end_date,job_id,department_id) values ('200',str_to_date('01-JUL-02','%d-%b-%y'),str_to_date('31-DEC-06','%d-%b-%y'),'AC_ACCOUNT','90');
 
+commit;
+
 -- extra playground
 drop table if exists team_coder;
 drop table if exists teams;
@@ -346,6 +360,8 @@ alter table coders add constraint coders_name_uq unique(first_name, last_name);
 
 insert into coders(first_name, last_name, hire_date, salary)
 values('Tim', 'Ice', curdate(), 5760);
+
+commit;
 
 -- a procedure on coders
 
@@ -377,6 +393,8 @@ create table teams(
 insert into teams(name, leader_id) values('red', 103);
 insert into teams(name, leader_id) values('blue', 107);
 insert into teams(name, leader_id) values('green', 105);
+
+commit;
 
 create table team_coder(
 	team_id integer,
