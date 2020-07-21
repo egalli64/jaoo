@@ -1,6 +1,6 @@
 -- source this script from mySQL
 
-use me;
+use me
 
 -- utility procedure for dropping a foreign key - if it exists
 drop procedure if exists drop_fk_if_exists;
@@ -21,7 +21,8 @@ begin
  	end if;
 end;
 
-// DELIMITER ;
+//
+DELIMITER ;
 
 -- main tables cleanup
 drop table if exists job_history;
@@ -380,7 +381,8 @@ begin
 	where coder_id = p_coder_id;
 end;
 
-// DELIMITER ;
+//
+DELIMITER ;
 
 create table teams(
 	team_id integer primary key auto_increment,
