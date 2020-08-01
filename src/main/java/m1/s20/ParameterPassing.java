@@ -70,5 +70,13 @@ public class ParameterPassing {
         System.out.println("array[0] is " + array[0]);
         reference(array);
         System.out.println("array[0] now is " + array[0]);
+        
+        int other = 12;
+        other = increase(other);
+        System.out.println(other);
+    }
+    
+    static int increase(int value) {
+    	return value + 1;
     }
 }
