@@ -10,9 +10,10 @@ class SimpleTest {
     public void negatePositive() {
         Simple simple = new Simple();
         int value = 42;
+        int expected = -42;
 
         int result = simple.negate(value);
 
-        assertThat(result, equalTo(-42));
+        assertThat(result, equalTo(expected));
     }
 }
