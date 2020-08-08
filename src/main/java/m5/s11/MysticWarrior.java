@@ -1,20 +1,28 @@
 package m5.s11;
 
 public class MysticWarrior implements Fighter, Healer {
+    private static final int HEALING_POWER = 2;
     private Warrior warrior;
-    private int healing = 8;
 
     public MysticWarrior(Warrior warrior) {
         this.warrior = warrior;
     }
 
     @Override
-    public int heal() {
-        return healing;
+    public void heal(Actor target) {
+        target.addLife(HEALING_POWER);
+    }
+
+    /**
+     * Auto healing
+     */
+    public void heal() {
+        heal(this.warrior);
     }
 
     @Override
-    public int fight() {
-        return warrior.fight();
+    public boolean fight(Actor other) {
+        return warrior.fight(other);
     }
+
 }

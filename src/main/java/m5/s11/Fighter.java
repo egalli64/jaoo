@@ -1,5 +1,11 @@
 package m5.s11;
 
 public interface Fighter {
-    int fight();
+    /**
+     * Fight again another actor
+     * 
+     * @param other the enemy
+     * @return true if win 
+     */
+    boolean fight(Actor other);
 }
