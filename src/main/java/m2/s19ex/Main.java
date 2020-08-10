@@ -19,7 +19,6 @@ public class Main {
                 Employee e = (Employee) person;
                 System.out.println(e.getSalary());
             }
-
         }
     }
 }
