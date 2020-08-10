@@ -1,6 +1,7 @@
 package m2.s07;
 
-import static java.lang.Math.*;
+import static java.lang.Math.abs;
+import static java.lang.Math.cos;
 
 public class Scope {
     private static int staticMember = 5;
