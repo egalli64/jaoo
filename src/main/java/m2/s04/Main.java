@@ -11,6 +11,8 @@ public class Main {
         dogs[0] = Dog.createWithName("Bob");
         dogs[1] = Dog.createWithNoName();
 
+//        dogs[0].name = "   ";
+
         for (Dog dog : dogs) {
             dog.bark();
         }
