@@ -5,4 +5,9 @@ public class Bus extends Vehicle implements Conditioning {
     public void setTemperature(int newTemp) {
         System.out.println("Bus temperature now is " + newTemp);
     }
+
+    @Override
+    public void brake() {
+        System.out.println("Very strong braking");
+    }
 }

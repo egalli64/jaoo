@@ -6,19 +6,20 @@ public class Main {
         vehicles[0] = new Car();
         vehicles[1] = new Bus();
         vehicles[2] = new MotorBike();
-        
+
         boolean rightDirection = true;
-        for(Vehicle vehicle : vehicles) {
+        for (Vehicle vehicle : vehicles) {
             vehicle.steer(rightDirection);
             rightDirection = !rightDirection;
         }
-        
-        Conditioning[] conditionings = new Conditioning[2];
+
+        Conditioning[] conditionings = new Conditioning[3];
         conditionings[0] = new Bus();
         conditionings[1] = new Car();
-        
+        conditionings[2] = new Flat();
+
         int temperature = 20;
-        for(Conditioning conditioning : conditionings) {
+        for (Conditioning conditioning : conditionings) {
             conditioning.setTemperature(temperature);
             temperature += 1;
         }
