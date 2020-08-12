@@ -8,15 +8,37 @@ import org.junit.jupiter.api.Test;
 
 class SimpleTest {
     @Test
+    void negateZero() {
+        Simple simple = new Simple();
+
+        int value = 0;
+        int expected = 0;
+
+        int result = simple.negate(value);
+        assertThat(result, is(expected));
+    }
+
+    @Test
+    void negatePositive() {
+        Simple simple = new Simple();
+
+        int value = 42;
+        int expected = -42;
+
+        int result = simple.negate(value);
+        assertThat(result, is(expected));
+    }
+
+    @Test
     void negateException() {
         Simple simple = new Simple();
 
         try {
-            simple.negate(0);
+            simple.negate(Integer.MIN_VALUE);
             fail("An IllegalArgumentException was expected");
         } catch (IllegalArgumentException iae) {
             String message = iae.getMessage();
-            assertThat(message, is("Can't negate 0"));
+            assertThat(message, is("Can't negate MIN_VALUE"));
             return;
         }
     }
