@@ -1,4 +1,4 @@
-package m2.s19ex2;
+package m2.s19ex;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,6 +26,6 @@ public class Main {
             total += guest.housing();
         }
         
-        System.out.println(total);
+        System.out.println("Total bill for guests: " + total);
     }
 }
