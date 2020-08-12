@@ -1,29 +1,32 @@
 package m3.s03;
 
-public class NoExc {
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class Mistake {
+    private static final Logger LOG = Logger.getGlobal();
+
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE);
-        try {
-            System.out.println(increment(Integer.MAX_VALUE));
-        } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+        int value = Integer.MAX_VALUE;
+        LOG.info("value is " + value);
 
-        int y = 3;
-        
-        // ...
-        
         try {
-            y = increment(Integer.MAX_VALUE);
+            System.out.println(increment(value));
         } catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            LOG.log(Level.SEVERE, "Can't increase " + value, e);
         }
 
         // ...
-        
-        System.out.println(y);
+
+        try {
+            value = increment(value);
+        } catch (Exception e) {
+            LOG.log(Level.SEVERE, "Can't increase " + value, e);
+        }
+
+        // ...
+
+        System.out.println("value is " + value);
     }
 
     /**
@@ -32,7 +35,7 @@ public class NoExc {
      * @return
      */
     static int increment(int x) throws Exception {
-        if(x == Integer.MAX_VALUE) {
+        if (x == Integer.MAX_VALUE) {
             throw new Exception();
         }
         return x + 1;
