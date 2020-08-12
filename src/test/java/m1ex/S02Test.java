@@ -3,6 +3,7 @@ package m1ex;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -20,6 +21,17 @@ class S02Test {
         double actual = S02.speed(100, 0);
 
         assertThat(actual, is(Double.POSITIVE_INFINITY));
+    }
+
+    @Test
+    void speedNegativeTime() {
+        try {
+            S02.speed(100, -1);
+            fail("An IllegalArgumentException was expected");
+        } catch (IllegalArgumentException iae) {
+            String message = iae.getMessage();
+            assertThat(message, is("No negative values expected"));
+        }
     }
 
     @Test
@@ -46,21 +58,18 @@ class S02Test {
     @Test
     void digitSumPositive() {
         int actual = S02.digitSum(123);
-
         assertThat(actual, is(6));
     }
 
     @Test
     void digitSumZero() {
         int actual = S02.digitSum(0);
-
         assertThat(actual, is(0));
     }
 
     @Test
     void digitSumNegative() {
         int actual = S02.digitSum(-123);
-
         assertThat(actual, is(6));
     }
 

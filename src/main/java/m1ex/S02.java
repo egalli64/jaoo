@@ -13,7 +13,7 @@ public class S02 {
      * @return speed in meters per second
      */
     public static double speed(double distance, double time) {
-        LOG.info("distance is " + distance + " and time is " + time);
+        LOG.info(String.format("distance is %.3f and time is %.2f", distance, time));
 
         // TODO
         return 0;
@@ -51,9 +51,8 @@ public class S02 {
      * 
      * @param value
      * @return sum of digits
-     * @throws ExerciseException when value is negative
      */
-    public static int digitSum(int value) throws ExerciseException {
+    public static int digitSum(int value) {
         // TODO
         return 0;
     }
