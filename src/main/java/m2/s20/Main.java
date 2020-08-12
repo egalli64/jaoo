@@ -28,6 +28,10 @@ public class Main {
     }
 
     static void f(Pet[] pets) {
+        if (pets == null) {
+            return;
+        }
+
         for (Pet pet : pets) {
             if (pet instanceof Dog) {
                 Dog dog = (Dog) pet;
@@ -36,6 +40,7 @@ public class Main {
             if (pet instanceof Cat) {
                 Cat cat = (Cat) pet;
                 cat.meow();
+//				((Cat)pet).meow();
             }
         }
     }
