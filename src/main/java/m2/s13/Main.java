@@ -15,15 +15,22 @@ public class Main {
         }
 
         BarkAndWag baw = new Dog();
-        System.out.println(baw.tailWaggingSpeed());
+        System.out.println(baw.wag());
 
         Dog dog = new Dog();
         System.out.println(dog.bark(3));
 
         interact(dog);
+
+        Object obj = new Dog();
+        System.out.println(obj.toString());
     }
 
-    static void interact(Dog barker) {
-        barker.bark();
+    static void interact(Barker barker) {
+        System.out.println(barker.bark());
+    }
+
+    static void interact(Object obj) {
+        System.out.println(obj.toString());
     }
 }

@@ -2,10 +2,7 @@ package m2.s13ex;
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle[] vehicles = new Vehicle[3];
-        vehicles[0] = new Car();
-        vehicles[1] = new Bus();
-        vehicles[2] = new MotorBike();
+        Vehicle[] vehicles = { new Car(), new Bus(), new MotorBike() };
 
         boolean rightDirection = true;
         for (Vehicle vehicle : vehicles) {
@@ -13,10 +10,7 @@ public class Main {
             rightDirection = !rightDirection;
         }
 
-        Conditioning[] conditionings = new Conditioning[3];
-        conditionings[0] = new Bus();
-        conditionings[1] = new Car();
-        conditionings[2] = new Flat();
+        Conditioning[] conditionings = { new Bus(), new Car(), new Flat() };
 
         int temperature = 20;
         for (Conditioning conditioning : conditionings) {

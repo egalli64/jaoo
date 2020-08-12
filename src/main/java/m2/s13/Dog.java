@@ -1,9 +1,19 @@
 package m2.s13;
 
 public class Dog implements BarkAndWag {
+    private final int WAG_COUNT;
+
+    public Dog(int wagCount) {
+        WAG_COUNT = wagCount;
+    }
+
+    public Dog() {
+        WAG_COUNT = DEFAULT_WAG_COUNT;
+    }
+
     @Override
     public String bark() {
-        return "woof!";
+        return "Woof";
     }
 
     public String bark(int count) {
@@ -17,7 +27,13 @@ public class Dog implements BarkAndWag {
     }
 
     @Override
-    public int tailWaggingSpeed() {
-        return BarkAndWag.AVG_WAGGING_SPEED;
+    public String wag() {
+        StringBuilder sb = new StringBuilder();
+
+        for (int i = 0; i < WAG_COUNT; i++) {
+            sb.append("Wag");
+        }
+
+        return sb.toString();
     }
 }

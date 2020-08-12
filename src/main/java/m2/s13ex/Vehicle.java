@@ -1,11 +1,15 @@
 package m2.s13ex;
 
+import java.util.logging.Logger;
+
 public class Vehicle {
+    private static final Logger LOG = Logger.getGlobal();
+
     public void steer(boolean right) {
-        System.out.println("Steering " + (right ? "right" : "left"));
+        LOG.info("Steering " + (right ? "right" : "left"));
     }
 
     public void brake() {
-        System.out.println("Braking");
+        LOG.info("Braking");
     }
 }
