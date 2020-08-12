@@ -1,4 +1,4 @@
-package m2.s19ex;
+package m2.s20ex2;
 
 public class Consultant extends Person {
     public static final int DEFAULT_DAILY = 1_000;

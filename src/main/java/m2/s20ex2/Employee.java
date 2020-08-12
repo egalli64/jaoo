@@ -1,4 +1,4 @@
-package m2.s19ex;
+package m2.s20ex2;
 
 public class Employee extends Person {
     private int salary;
