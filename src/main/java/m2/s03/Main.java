@@ -8,7 +8,6 @@ public class Main {
         for (int i = 1; i < dogs.length; i++) {
             dogs[i] = new Dog();
         }
-        System.out.println("There are " + Dog.counter + " dogs");
 
         dogs[0].bark();
         dogs[dogs.length - 1].bark();

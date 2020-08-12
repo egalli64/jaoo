@@ -1,20 +1,21 @@
 package m2.s03;
 
+import java.util.logging.Logger;
+
 public class Dog {
-    String name;
-    static int counter = 0;
+    private static final Logger LOG = Logger.getGlobal();
+
+    private String name;
 
     public Dog() {
         name = "No name";
-        counter += 1;
-        //System.out.println("A new anonymous dog has been created");
+        LOG.info("A new anonymous dog has been created");
     }
 
     // not a good parameter name, see "this"
     public Dog(String nm) {
-        counter += 1;
         name = nm;
-        //System.out.println("A new dog named " + name + " has been created");
+        LOG.info("A new dog named " + name + " has been created");
     }
 
     public void bark() {

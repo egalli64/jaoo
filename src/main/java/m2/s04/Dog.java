@@ -1,20 +1,16 @@
 package m2.s04;
 
-public class Dog {
-    String name;
+import java.util.logging.Logger;
 
-    // not a good parameter name, see "this"
-    public void setName(String nm) {
-        if (nm == null || nm.isBlank()) {
-            // ...
-        } else {
-            name = nm;
-        }
-    }
+public class Dog {
+    private static final Logger LOG = Logger.getGlobal();
+
+    private String name;
 
     // not a good parameter name, see "this"
     private Dog(String nm) {
         name = nm;
+        LOG.info(String.format("A new dog has been created with name [%s]", name));
     }
 
     public static Dog createWithNoName() {

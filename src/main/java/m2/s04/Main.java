@@ -2,16 +2,16 @@ package m2.s04;
 
 public class Main {
     public static void main(String[] args) {
-        String name1 = String.valueOf(true);
-        String name2 = "" + true;
-        System.out.println(name1 + ", " + name2);
+        String boolAsStringClassic = "" + true;
+        System.out.println("A boolean converted to string: " + boolAsStringClassic);
+
+        String boolAsStringModern = String.valueOf(true);
+        System.out.println("Another boolean converted to string: " + boolAsStringModern);
 
         Dog[] dogs = new Dog[2];
 
         dogs[0] = Dog.createWithName("Bob");
         dogs[1] = Dog.createWithNoName();
-
-//        dogs[0].name = "   ";
 
         for (Dog dog : dogs) {
             dog.bark();
