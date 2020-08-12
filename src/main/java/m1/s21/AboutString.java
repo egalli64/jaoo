@@ -1,7 +1,7 @@
 package m1.s21;
 
 public class AboutString {
-    
+
     public static void main(String[] args) {
         String s = "hello";
         String t = "world";
@@ -45,7 +45,7 @@ public class AboutString {
             System.out.println(token);
         }
         String joined = String.join(" ", splits);
-//        String joined = String.join(" ", "a", "b", "c");
+//        String joined = String.join(",", "a", "b", "c");
         System.out.println("Joining back [" + joined + "]");
 
         String myS = s.toUpperCase();
@@ -54,6 +54,11 @@ public class AboutString {
 
         System.out.println("trim [" + " la la la ".trim() + "]");
 
+        int a = 42;
+        String b = "hello";
+        double c = 10 / 3.0;
+        System.out.println(String.format("An integer %d, a string %s, and a floating point %.3f", a, b, c));
+        
         String x = null;
         System.out.println("Sort of safe toString(): " + String.valueOf(x));
     }
