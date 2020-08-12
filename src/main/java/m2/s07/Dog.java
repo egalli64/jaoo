@@ -1,36 +1,21 @@
 package m2.s07;
 
 public class Dog {
-	static final int MAX_DOGS = 1000;
-	static int counter;
-	
-	// very strange example - don't do this in production code
-	static Dog[] dogs = new Dog[MAX_DOGS];
-	
-	Dog() {
-		counter += 1;
-	}
-	
-	static void killAll() {
-		for(Dog dog : dogs) {
-			if(dog != null) {
-				dog.kill();
-			}
-		}
-	}
-	
-	void kill() {
-		
-	}
-}
+    private static int counter;
 
-class DogUser {
-	void f() {
-		System.out.println(Dog.counter);
-		
-		Dog.killAll();
-		
-		Dog bob = new Dog();
-		bob.kill();
-	}
+    public Dog() {
+        counter += 1;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Current number of dogs: " + Dog.counter);
+
+        Dog[] dogs = new Dog[10];
+        System.out.println("Current number of dogs is still: " + Dog.counter);
+
+        for (int i = 0; i < dogs.length; i++) {
+            dogs[i] = new Dog();
+        }
+        System.out.println("Current number of dogs: " + Dog.counter);
+    }
 }
