@@ -1,26 +1,34 @@
 package m2.s09;
 
+import java.util.logging.Logger;
+
 public class Dog {
-    String name;
-    
+    private static final Logger LOG = Logger.getGlobal();
+
+    private String name;
+
     public Dog() {
+        LOG.info("Creating a new dog");
         name = "Unknown";
     }
-    
+
+    // poor choice for parameter name, see this
     public void setName(String aName) {
-        if(aName == null || aName.isEmpty()) {
-            System.out.println("!!!");
+        if (aName == null || aName.isEmpty()) {
+            LOG.warning(String.format("User tried to set name to [%s]", aName));
             return;
         }
-        for(int i = 0; i < aName.length(); i++) {
-            if(!Character.isLetter(aName.charAt(i))) {
-                System.out.println("!!!");
+        for (int i = 0; i < aName.length(); i++) {
+            if (!Character.isLetter(aName.charAt(i))) {
+                LOG.warning(String.format("User tried to set name to [%s]", aName));
                 return;
             }
         }
+
+        LOG.info(String.format("Dog nome set to [%s]", aName));
         name = aName;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -29,13 +37,13 @@ public class Dog {
         // violating black box principle
         Dog dog = new Dog();
         dog.name = "*!_";
-        System.out.println(dog.getName());
-        
-        
-        // using black box principle (not enforced by the class, here)
+        System.out.println("Dog name set to " + dog.getName());
+
         Dog dog2 = new Dog();
-        
+
         dog2.setName("|||");
+        System.out.println(dog2.getName());
+        dog2.setName(null);
         System.out.println(dog2.getName());
         dog2.setName("Tom");
         System.out.println(dog2.getName());

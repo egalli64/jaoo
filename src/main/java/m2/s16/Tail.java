@@ -1,6 +1,9 @@
 package m2.s16;
 
-public class Tail {
+import java.util.logging.Logger;
+
+public class Tail extends Object {
+    private static final Logger LOG = Logger.getGlobal();
     private int size;
 
     public Tail(int size) {
@@ -15,8 +18,8 @@ public class Tail {
     public String toString() {
         return "Tail [size=" + size + "]";
     }
-    
+
     public void wag() {
-        
+        LOG.info(toString());
     }
 }
