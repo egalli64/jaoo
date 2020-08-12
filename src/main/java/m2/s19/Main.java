@@ -7,6 +7,10 @@ public class Main {
         String name = tom.getName();
         double speed = tom.getSpeed();
 
-        System.out.println("Name and speed: " + name + ", " + speed);
+        // dog speed copy, the change here has no effect on original value
+        speed += 3;
+
+        System.out.println("Local name and speed: " + name + ", " + speed);
+        System.out.println(tom);
     }
 }
