@@ -2,10 +2,13 @@ package m2.s06;
 
 public class Wrapper {
     public static void main(String[] args) {
+        // from boolean to Boolean
         Boolean f1 = Boolean.valueOf(true);
-        Boolean f2 = Boolean.valueOf("True");
+        // not a boolean -> false
+        Boolean f2 = Boolean.valueOf("Mistake");
+        // case insensitive
         boolean f3 = Boolean.parseBoolean("True");
-        System.out.println(f1 + ", " + f2 + ", " + f3);
+        System.out.println(String.format("A few booleans: %b, %b, %b", f1, f2, f3));
 
         System.out.println("Is '9' a digit? " + Character.isDigit('9'));
         System.out.println("Is 'k' a letter? " + Character.isLetter('k'));
@@ -15,13 +18,17 @@ public class Wrapper {
         System.out.println("'c' to uppercase " + Character.toUpperCase('c'));
         System.out.println("'W' to lowercase " + Character.toLowerCase('W'));
 
-        System.out.println(Integer.parseInt("42"));
+        int primitive = Integer.parseInt("42");
+        System.out.println(primitive);
         System.out.println(Integer.toHexString(65535));
 
         double x = Math.sqrt(-2);
-        System.out.println("Is NaN? " + Double.isNaN(x));
-        System.out.println(Double.NaN + ", " + x + ", " + (x == Double.NaN));
-        System.out.println(Double.POSITIVE_INFINITY);
-        System.out.println(Double.NEGATIVE_INFINITY);
+        System.out.println("Square root of -2 is NaN? " + Double.isNaN(x));
+        System.out.println("NaN == NaN is ... " + (x == Double.NaN));
+
+        // Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY
+        double infinityPos = 1 / 0.0;
+        double infinityNeg = -1 / 0.0;
+        System.out.println(String.format("Divide by zero for floating points: %f, %f", infinityPos, infinityNeg));
     }
 }
