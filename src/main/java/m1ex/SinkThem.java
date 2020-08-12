@@ -26,7 +26,7 @@ public class SinkThem {
      */
     public SinkThem(int dimension) {
         // TODO
-        board = new char[0][0];
+        this.board = new char[0][0];
     }
 
     /**
@@ -125,7 +125,7 @@ public class SinkThem {
         // TODO: let the player choose for a (sensible) board size
         SinkThem st = new SinkThem(10);
 
-        // TODO: place the ships randomly instead
+        // TODO: place the ships randomly instead: Math.random()
         st.place(0, 2);
         st.place(1, 1);
         st.place(2, 0);
