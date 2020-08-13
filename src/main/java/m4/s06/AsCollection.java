@@ -7,52 +7,40 @@ import java.util.Iterator;
 
 public class AsCollection {
     public static void main(String[] args) {
-        Collection<Integer> coll = emptyCollection();
+        Collection<Integer> collOne = new ArrayList<Integer>();
+        Collection<Integer> collTwo = Arrays.asList(12, 18, -5, -2233);
 
-        coll.addAll(aCollection());
-        System.out.println(coll);
+        collOne.addAll(collTwo);
+        // implicit call to the overridden toString() for the actual collOne type
+        System.out.println(collOne);
 
-        if (coll.contains(-2233)) {
+        if (collOne.contains(-2233)) {
             System.out.println("-2233 is there");
         }
 
-        if (coll.equals(aCollection())) {
-            System.out.println("Same collection");
+        if (collOne.equals(collTwo)) {
+            System.out.println("These collections contain the same (equals) elements");
         }
 
-        coll.add(42);
-        if (!coll.equals(aCollection())) {
-            System.out.println("Different collection");
+        collOne.add(42);
+        if (!collOne.equals(collTwo)) {
+            System.out.println("Collections with different elements within");
         }
 
-        System.out.println("The collection has " + coll.size() + " elements");
-
-        Iterator<Integer> it = coll.iterator();
-        System.out.print("{ ");
+        System.out.print("This collection has " + collOne.size() + " elements: ");
+        Iterator<Integer> it = collOne.iterator();
         while (it.hasNext()) {
             System.out.print(it.next() + " ");
         }
-        System.out.println('}');
+        System.out.println();
 
-        coll.remove(-5);
+        collOne.remove(-5);
 
-        Integer[] values = coll.toArray(new Integer[coll.size()]);
+        System.out.print("Converting a collection to an array: ");
+        Integer[] values = collOne.toArray(new Integer[collOne.size()]);
         System.out.println(Arrays.toString(values));
 
-        coll.retainAll(aCollection());
-        System.out.println(coll);
-
-        coll.clear();
-        System.out.println("Collection is empty? " + coll.isEmpty());
-    }
-
-    private static Collection<Integer> emptyCollection() {
-        Collection<Integer> result = new ArrayList<Integer>();
-
-        return result;
-    }
-
-    private static Collection<Integer> aCollection() {
-        return Arrays.asList(12, 18, -5, -2233);
+        collOne.clear();
+        System.out.println("Collection is empty? " + collOne.isEmpty());
     }
 }
