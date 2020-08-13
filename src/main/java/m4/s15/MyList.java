@@ -8,23 +8,22 @@ package m4.s15;
  */
 public class MyList {
 
-    public Object size() {
+    public int size() {
         // TODO Auto-generated method stub
-        return null;
+        return 0;
     }
 
     public void add(int i) {
         // TODO Auto-generated method stub
-        
     }
 
-    public Object get() {
+    public int get() {
         // TODO Auto-generated method stub
-        return null;
+        return 0;
     }
 
-    public Object pop() {
+    public int pop() {
         // TODO Auto-generated method stub
-        return null;
+        return 0;
     }
 }
