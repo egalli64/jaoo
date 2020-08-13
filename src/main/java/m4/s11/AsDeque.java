@@ -6,7 +6,7 @@ import java.util.Deque;
 
 public class AsDeque {
     public static void main(String[] args) {
-        Deque<Integer> deq = aDeque();
+        Deque<Integer> deq = new ArrayDeque<Integer>(Arrays.asList(-3, -1, 12, 27, 5));
         System.out.println(deq);
 
         deq.addFirst(7);
@@ -34,9 +34,5 @@ public class AsDeque {
 
         System.out.println("Remove first element (or exc): " + deq.removeFirst());
         System.out.println("Remove last element (or exc): " + deq.removeLast());
-    }
-
-    private static Deque<Integer> aDeque() {
-        return new ArrayDeque<Integer>(Arrays.asList(-3, -1, 12, 27, 5));
     }
 }
