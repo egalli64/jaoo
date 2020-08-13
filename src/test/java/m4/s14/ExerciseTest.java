@@ -10,51 +10,49 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 class ExerciseTest {
+    @Test
+    void singlesOne() {
+        Exercise ex = new Exercise();
 
-	@Test
-	void singlesLinearClassicOne() {
-		Exercise ex = new Exercise();
+        List<Integer> expected = Arrays.asList(3);
+        List<Integer> actual = ex.singles(new int[] { 23, 3, 23 });
+        assertThat(actual, is(expected));
+    }
 
-		List<Integer> expected = Arrays.asList(3);
-		List<Integer> actual = ex.singlesLinearClassic(new int[] { 23, 3, 23 });
-		assertThat(actual, is(expected));
-	}
+    @Test
+    void singlesCouple() {
+        Exercise ex = new Exercise();
 
-	@Test
-	void singlesLinearClassicCouple() {
-		Exercise ex = new Exercise();
+        int[] data = { 23, 43, 23, 25 };
 
-		int[] data = { 23, 43, 23, 25 };
+        List<Integer> expected = Arrays.asList(25, 43);
+        List<Integer> actual = ex.singles(data);
+        assertThat(actual, is(expected));
+    }
 
-		List<Integer> expected = Arrays.asList(25, 43);
-		List<Integer> actual = ex.singlesLinearClassic(data);
-		assertThat(actual, is(expected));
-	}
+    @Test
+    void singlesCouple2() {
+        Exercise ex = new Exercise();
 
-	@Test
-	void singlesLinearClassicCouple2() {
-		Exercise ex = new Exercise();
+        int[] data = { 23, 43, 23, 25 };
 
-		int[] data = { 23, 43, 23, 25 };
+        List<Integer> expected = Arrays.asList(25, 43);
 
-		List<Integer> expected = Arrays.asList(25, 43);
+        List<Integer> actual = ex.singles(data);
+        actual.sort(null);
+        assertThat(actual, is(expected));
+    }
 
-		List<Integer> actual = ex.singlesLinearClassic(data);
-		actual.sort(null);
-		assertThat(actual, is(expected));
-	}
+    @Test
+    void singlesCouple3() {
+        Exercise ex = new Exercise();
 
-	@Test
-	void singlesLinearClassicCouple3() {
-		Exercise ex = new Exercise();
+        int[] data = { 23, 43, 23, 25 };
 
-		int[] data = { 23, 43, 23, 25 };
+        List<Integer> expected = Arrays.asList(25, 43);
 
-		List<Integer> expected = Arrays.asList(25, 43);
-
-		List<Integer> actual = ex.singlesLinearClassic(data);
-		assertThat(actual.size(), is(expected.size()));
-		assertThat(actual, containsInAnyOrder(expected.toArray()));
-	}
-
+        List<Integer> actual = ex.singles(data);
+        assertThat(actual.size(), is(expected.size()));
+        assertThat(actual, containsInAnyOrder(expected.toArray()));
+    }
 }
