@@ -1,6 +1,6 @@
 package m5.s05.pizzeria;
 
-public class Pizza {
+public abstract class Pizza {
     public static Pizza create(Menu menu) {
         switch (menu) {
         case MARGHERITA:
@@ -10,8 +10,5 @@ public class Pizza {
         default:
             throw new IllegalArgumentException(menu + " currently not available");
         }
-    }
-
-    protected Pizza() {
     }
 }
