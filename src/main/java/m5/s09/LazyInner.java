@@ -16,11 +16,3 @@ public class LazyInner {
         return 42;
     }
 }
-
-class Z {
-    public static void main(String[] args) {
-        if(args.length > 0) {
-            LazyInner.getInstance().solution();
-        }
-    }
-}

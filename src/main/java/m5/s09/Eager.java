@@ -3,21 +3,25 @@ package m5.s09;
 public class Eager {
     private static final Eager INSTANCE = new Eager();
 
+    // when it is not so easy: static initializer
+//    static {
+//    	// ...
+//    	
+//    	INSTANCE = new Eager();
+//    }
+
+    private int life;
+
     private Eager() {
+        this.life = 42;
     }
 
     public static Eager getInstance() {
         return INSTANCE;
     }
 
-    public int solution() {
-        return 42;
-    }
-}
-
-class X {
-    public static void main(String[] args) {
-        Eager eager = Eager.getInstance();
-        System.out.println(eager.solution());
+    public int fight(int points) {
+        life -= points;
+        return life;
     }
 }

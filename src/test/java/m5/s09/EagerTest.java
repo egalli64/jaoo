@@ -14,8 +14,8 @@ class EagerTest {
         assertThat(unique, is(single));
     }
 
-    @Test
-    void solution() {
-        assertThat(Eager.getInstance().solution(), is(42));
-    }
+//    @Test
+//    void solution() {
+//        assertThat(Eager.getInstance().solution(), is(42));
+//    }
 }
