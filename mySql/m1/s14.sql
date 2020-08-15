@@ -6,6 +6,10 @@ select last_name
 from employees
 where last_name like '_ul%';
 
+select last_name
+from employees
+where last_name like binary 'Sul%';
+
 -- interval check
 select *
 from regions
