@@ -1,6 +1,6 @@
 -- source this script from mySQL
 
-use me
+use me;
 
 -- utility procedure for dropping a foreign key - if it exists
 drop procedure if exists drop_fk_if_exists;
