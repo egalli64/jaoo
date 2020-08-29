@@ -12,6 +12,4 @@ from employees;
 
 -- what if null
 select employee_id, last_name, 12 * salary * ifnull(commission_pct, 0)
-from employees
--- where employee_id > 140 and employee_id < 150;
-where employee_id between 141 and 149;
+from employees;
