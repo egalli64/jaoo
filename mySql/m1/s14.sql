@@ -8,7 +8,11 @@ where last_name like '_ul%';
 
 select last_name
 from employees
-where last_name like binary 'Sul%';
+where last_name like '____';
+
+select last_name
+from employees
+where last_name like 'sul%';
 
 -- interval check
 select *
@@ -23,7 +27,7 @@ where country_name between 'a' and 'c';
 -- check if (not) in a set
 select *
 from regions
-where region_id not in (2, 3);
+where region_id not in (2, 4);
 
 -- beware of null
 select *
@@ -40,7 +44,7 @@ select *
 from employees
 where commission_pct in (0.10);
 
--- this does select anything!
+-- this does not select anything!
 select *
 from employees
 where commission_pct in (null);
