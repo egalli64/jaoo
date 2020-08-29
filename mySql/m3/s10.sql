@@ -1,11 +1,6 @@
 -- aggregate functions
 use me;
 
--- average
-select avg(salary)
-from employees
-where department_id = 50;
-
 -- count, count distinct
 select count(*), count(manager_id), count(distinct manager_id)
 from employees;
@@ -19,6 +14,11 @@ select sum(salary)
 from employees
 where department_id = 50;
 
--- standar deviation, variance
+-- average
+select avg(salary)
+from employees
+where department_id = 50;
+
+-- standard deviation, variance
 select stddev(salary), variance(salary)
 from employees;
