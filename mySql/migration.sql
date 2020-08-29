@@ -7,8 +7,10 @@ drop procedure if exists drop_fk_if_exists;
 
 DELIMITER //
 
-create procedure drop_fk_if_exists(my_table varchar(64), my_fk varchar(64))
-begin
+create procedure drop_fk_if_exists(
+	in my_table varchar(64),
+    in my_fk varchar(64)
+) begin
 	if exists(
 		select enforced
         from information_schema.table_constraints
@@ -39,10 +41,10 @@ create table regions(
 	region_name varchar(25)
 );
 
-insert into regions (region_id, region_name) values ('1','Europe');
-insert into regions (region_id, region_name) values ('2','Americas');
-insert into regions (region_id, region_name) values ('3','Asia');
-insert into regions (region_id, region_name) values ('4','Middle East and Africa');
+insert into regions (region_id, region_name) values (1, 'Europe');
+insert into regions (region_id, region_name) values (2, 'Americas');
+insert into regions (region_id, region_name) values (3, 'Asia');
+insert into regions (region_id, region_name) values (4, 'Middle East and Africa');
 
 commit;
 
