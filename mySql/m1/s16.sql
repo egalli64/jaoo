@@ -6,12 +6,12 @@ select *
 from employees
 order by last_name;
 
--- ascending, descending
-select *
+-- descending
+select first_name, last_name, salary
 from employees
-order by last_name desc, first_name asc;
+order by salary desc;
 
 -- positional notation
 select first_name, last_name
 from employees
-order by 2;
+order by last_name;
