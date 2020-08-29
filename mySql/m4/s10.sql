@@ -11,6 +11,11 @@ alter table items drop column counter;
 alter table items add constraint items_status_ck check(status in ('A', 'B', 'X'));
 insert into items values(13, 'Y', 'ciao', 13);
 
+select * from items;
+insert into items (item_id, status) values(43, 'X');
+update items set status = '?';
+delete from items;
+
 describe coders;
 
 select * from coders;

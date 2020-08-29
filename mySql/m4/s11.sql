@@ -4,15 +4,15 @@ use me;
 drop table if exists details;
 
 create table details (
-    detail_id integer primary key
-        constraint detail_id_ck check (mod(detail_id, 2) = 1),
---    detail_id integer primary key auto_increment,
+--    detail_id integer primary key
+--        constraint detail_id_ck check (mod(detail_id, 2) = 1),
+    detail_id integer primary key auto_increment,
     status char default 'A'
         constraint detail_status_ck check (status in ('A', 'B', 'X')),
 --	status enum('A', 'B', 'X') default 'A',
-	name varchar(20),
+--	name varchar(20),
 --	name varchar(20) not null,
---	name varchar(20) unique,
+	name varchar(20) unique,
 
     coder_id integer,
 
@@ -23,13 +23,15 @@ create table details (
     constraint details_name_status_uq unique(name, status)
 );
 
-insert into details(detail_id, coder_id) values(11, 106);
+select * from coders where coder_id = 412;
 
+insert into coders values(412, 'Bill', 'Mates', curdate(), 1950);
+
+insert into details(coder_id) values(412);
 select * from details;
 
-select * from coders;
+commit;
 
--- auto-commit assumed off!
-delete from coders where coder_id = 106;
+delete from coders where coder_id = 412;
 
 rollback;
