@@ -25,12 +25,12 @@ public class Primitive {
 
         double d = 3.12e200;
         System.out.println(d);
-        
+
         double nan = Double.NaN;
         double posInf = Double.POSITIVE_INFINITY;
         double negInf = Double.NEGATIVE_INFINITY;
-        
-        if(!Double.isNaN(nan) || !Double.isInfinite(posInf) || Double.isFinite(negInf)) {
+
+        if (!Double.isNaN(nan) || !Double.isInfinite(posInf) || Double.isFinite(negInf)) {
             System.out.println("Unexpected");
         }
     }
