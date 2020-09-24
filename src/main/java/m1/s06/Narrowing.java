@@ -19,6 +19,16 @@ public class Narrowing {
         int neg2 = neg;
         
         System.out.println(neg + ", " + neg2);
+        
+        // beware of narrowing
+        int million = 1_000_000;
+        byte sliced = (byte)million;
+        System.out.println(sliced);
+        
+        // floating point -> integer
+        double largeValue = 800_000_000_000L;
+        int approx = (int)largeValue;
+        System.out.println(approx);
     }
 }
 
