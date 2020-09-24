@@ -1,6 +1,6 @@
 package m2.s13;
 
-public class Dog implements BarkAndWag {
+public class Dog implements WaggingBarker {
     private final int WAG_COUNT;
 
     public Dog(int wagCount) {
@@ -35,5 +35,10 @@ public class Dog implements BarkAndWag {
         }
 
         return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return "Dog [WAG_COUNT=" + WAG_COUNT + "]";
     }
 }

@@ -1,5 +1,9 @@
 package m2.s13;
 
+import java.util.Arrays;
+
+
+
 public class Main {
     public static void main(String[] args) {
 //        Barker[] group = new Barker[3];
@@ -7,14 +11,16 @@ public class Main {
 //        group[0] = new Fox();
 //        group[1] = new Dog();
 //        group[2] = new Robot();
-
+        
         Barker[] barkers = { new Fox(), new Dog(), new Robot() };
+        System.out.println(barkers);
+        System.out.println(Arrays.toString(barkers));
 
         for (Barker aBarker : barkers) {
             System.out.println(aBarker.bark());
         }
 
-        BarkAndWag baw = new Dog();
+        WaggingBarker baw = new Dog();
         System.out.println(baw.wag());
 
         Dog dog = new Dog();
