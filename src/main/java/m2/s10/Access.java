@@ -11,8 +11,8 @@ public class Access {
     }
 
     public Access() {
-        this.a = 42;
-        this.b = 23;
+        a = 42;
+        b = 23;
     }
 
     public int h() {
