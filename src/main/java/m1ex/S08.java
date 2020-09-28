@@ -74,4 +74,17 @@ public class S08 {
 	public static boolean isAnagram(String s, String t) {
 		throw new UnsupportedOperationException("Not yet implemented");
 	}
+
+	/**
+	 * not sorted -> O(n)
+	 * 
+	 * sorted -> O(lg n)
+	 * 
+	 * @param data
+	 * @param target
+	 * @return
+	 */
+	boolean find(int[] data, int target) {
+	    return false;
+	}
 }
