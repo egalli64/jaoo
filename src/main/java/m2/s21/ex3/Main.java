@@ -1,4 +1,4 @@
-package m2.s19ex;
+package m2.s21.ex3;
 
 public class Main {
     public static void main(String[] args) {

@@ -2,46 +2,15 @@ package m2.s20;
 
 public class Main {
     public static void main(String[] args) {
-//		Cat cat = (Cat) new Dog();
+        Dog tom = new Dog("Tom");
 
-        Pet pet = new Dog("Bob");
+        String name = tom.getName();
+        double speed = tom.getSpeed();
 
-        // risky
-        Dog dog = (Dog) pet;
-        dog.bark();
+        // dog speed copy, the change here has no effect on original value
+        speed += 3;
 
-        // next line leads to a ClassCastException
-//        Cat cat = (Cat) pet;
-        // next line is just not to have a warning for unused cat on the previous line
-//        System.out.println(System.identityHashCode(cat));
-
-        if (pet instanceof Cat) {
-            Cat tom = (Cat) pet;
-            tom.meow();
-        } else {
-            System.out.println("This pet is not a cat!");
-        }
-
-        Pet[] pets = { new Dog("Tom"), new Cat("Bob") };
-
-        f(pets);
-    }
-
-    static void f(Pet[] pets) {
-        if (pets == null) {
-            return;
-        }
-
-        for (Pet pet : pets) {
-            if (pet instanceof Dog) {
-                Dog dog = (Dog) pet;
-                dog.bark();
-            }
-            if (pet instanceof Cat) {
-                Cat cat = (Cat) pet;
-                cat.meow();
-//				((Cat)pet).meow();
-            }
-        }
+        System.out.println("Local name and speed: " + name + ", " + speed);
+        System.out.println(tom);
     }
 }

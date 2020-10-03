@@ -1,4 +1,4 @@
-package m2.s19;
+package m2.s21;
 
 public class Pet {
     private String name;
@@ -9,10 +9,5 @@ public class Pet {
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String toString() {
-        return "Pet [name=" + name + "]";
     }
 }

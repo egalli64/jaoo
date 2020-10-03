@@ -1,4 +1,4 @@
-package m2.s21;
+package m2.s22;
 
 public final class FinalClass {
 }

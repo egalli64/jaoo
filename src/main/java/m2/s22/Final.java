@@ -1,4 +1,4 @@
-package m2.s21;
+package m2.s22;
 
 public class Final {
     public static void main(String[] args) {

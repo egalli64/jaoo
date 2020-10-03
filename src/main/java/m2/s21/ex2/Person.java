@@ -1,4 +1,4 @@
-package m2.s20ex2;
+package m2.s21.ex2;
 
 public abstract class Person {
     private String firstName;

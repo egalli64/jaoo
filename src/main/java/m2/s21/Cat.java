@@ -1,4 +1,4 @@
-package m2.s20;
+package m2.s21;
 
 public class Cat extends Pet {
     public Cat(String name) {
