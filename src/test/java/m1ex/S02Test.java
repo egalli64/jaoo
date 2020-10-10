@@ -5,6 +5,7 @@ import static org.hamcrest.Matchers.closeTo;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class S02Test {
@@ -24,6 +25,7 @@ class S02Test {
     }
 
     @Test
+    @Disabled
     void speedNegativeTime() {
         try {
             S02.speed(100, -1);
