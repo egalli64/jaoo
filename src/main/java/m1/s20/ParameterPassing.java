@@ -1,13 +1,21 @@
 package m1.s20;
 
-import java.util.Objects;
-
 public class ParameterPassing {
+    /**
+     * No side effect
+     * 
+     * @param parameter being a primitive, it is just a local copy
+     */
     static void primitive(int parameter) {
         parameter += 1;
         System.out.println("parameter is " + parameter);
     }
 
+    /**
+     * No side effect
+     * 
+     * @param parameter being an immutable, its associated value can't change
+     */
     static void immutableReference(String parameter) {
         if (parameter == null) {
             System.out.println("Nothing to do here");
@@ -15,7 +23,7 @@ public class ParameterPassing {
         }
 
         // alternatively: if parameter is null throws a NullPointerException
-        Objects.requireNonNull(parameter, "Parameter should not be null");
+//        Objects.requireNonNull(parameter, "Parameter should not be null");
 
         System.out.println("parameter id was " + System.identityHashCode(parameter));
         parameter += " there";
@@ -23,6 +31,11 @@ public class ParameterPassing {
         System.out.println("parameter value is " + parameter);
     }
 
+    /**
+     * Side effect
+     * 
+     * @param parameter being a reference, its associated value could change
+     */
     static void reference(StringBuilder parameter) {
         if (parameter == null) {
             System.out.println("Nothing to do here");
@@ -36,6 +49,11 @@ public class ParameterPassing {
         System.out.println("parameter value is " + parameter);
     }
 
+    /**
+     * Array is a reference
+     * 
+     * @param data being a reference, its associated values could change
+     */
     static void reference(int[] data) {
         if (data == null || data.length == 0) {
             System.out.println("Nothing to do here");
@@ -70,13 +88,13 @@ public class ParameterPassing {
         System.out.println("array[0] is " + array[0]);
         reference(array);
         System.out.println("array[0] now is " + array[0]);
-        
+
         int other = 12;
         other = increase(other);
         System.out.println(other);
     }
-    
+
     static int increase(int value) {
-    	return value + 1;
+        return value + 1;
     }
 }
