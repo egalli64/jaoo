@@ -1,6 +1,5 @@
 package m4.s14;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise {
@@ -13,11 +12,11 @@ public class Exercise {
      *         example: in {2, 3, 4, 5} -> out {2, 4}
      */
     public List<Integer> evens(int[] data) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 
-        // TODO
-
-        return result;
+    public int[] evensRaw(int[] data) {
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
@@ -26,14 +25,11 @@ public class Exercise {
      * @param data a bunch of integers
      * @return only the non-duplicated values from input
      * 
-     *         example: in {2, 3, 4, 4} -> out {2, 3}
+     *         example: in {2, 3, 4, 4, 5, 6} -> out {2, 3}
+     * 
      */
     public List<Integer> singles(int[] data) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
-
-        // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
@@ -42,11 +38,12 @@ public class Exercise {
      * @param data
      * @return
      */
-    public ArrayList<Integer> singlesLinear(int[] data) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+    public List<Integer> singlesLinear(int[] data) {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
 
-        // TODO
-
-        return result;
+    public static void main(String[] args) {
+        Exercise ex = new Exercise();
+        System.out.println(ex.singlesLinear(new int[] { 2, 3, 4, 4, 5, 6 }));
     }
 }
