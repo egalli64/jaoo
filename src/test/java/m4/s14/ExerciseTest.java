@@ -55,4 +55,17 @@ class ExerciseTest {
         assertThat(actual.size(), is(expected.size()));
         assertThat(actual, containsInAnyOrder(expected.toArray()));
     }
+
+    @Test
+    void singlesMany() {
+        Exercise ex = new Exercise();
+
+        int[] data = { 23, 23, 23, 25 };
+
+        List<Integer> expected = Arrays.asList(25);
+
+        List<Integer> actual = ex.singles(data);
+        assertThat(actual.size(), is(expected.size()));
+        assertThat(actual, containsInAnyOrder(expected.toArray()));
+    }
 }
