@@ -1,10 +1,12 @@
-package m1ex;
+package mx;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
+
+import mx.S04;
 
 class S04Test {
     @Test

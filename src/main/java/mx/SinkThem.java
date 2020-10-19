@@ -1,4 +1,4 @@
-package m1ex;
+package mx;
 
 import java.util.Arrays;
 

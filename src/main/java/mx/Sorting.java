@@ -1,4 +1,4 @@
-package m1ex;
+package mx;
 
 public class Sorting {
     public static void swap(int[] data, int i, int j) {
