@@ -5,123 +5,87 @@ import static org.hamcrest.Matchers.is;
 
 import org.junit.jupiter.api.Test;
 
-import mx.Sorting;
-
 class SortingTest {
-	@Test
-	void bubbleSortReverted() {
-		int[] data = { 5, 4, 3, 2, 1 };
+    static private final int[] expected = { 1, 2, 3, 4, 5 };
 
-		Sorting.bubbleSort(data);
+    @Test
+    void bubbleSortReverted() {
+        int[] data = { 5, 4, 3, 2, 1 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.bubbleSort(data);
 
-	@Test
-	void bubbleSortOrdered() {
-		int[] data = { 1, 2, 3, 4, 5 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.bubbleSort(data);
+    @Test
+    void bubbleSortOrdered() {
+        int[] data = { 1, 2, 3, 4, 5 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.bubbleSort(data);
 
-	@Test
-	void bubbleSortMixed() {
-		int[] data = { 3, 2, 5, 1, 4 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.bubbleSort(data);
+    @Test
+    void bubbleSortMixed() {
+        int[] data = { 3, 2, 5, 1, 4 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.bubbleSort(data);
 
-	@Test
-	void selectionSortReverted() {
-		int[] data = { 5, 4, 3, 2, 1 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.selectionSort(data);
+    @Test
+    void selectionSortReverted() {
+        int[] data = { 5, 4, 3, 2, 1 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.selectionSort(data);
 
-	@Test
-	void selectionSortOrdered() {
-		int[] data = { 1, 2, 3, 4, 5 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.selectionSort(data);
+    @Test
+    void selectionSortOrdered() {
+        int[] data = { 1, 2, 3, 4, 5 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.selectionSort(data);
 
-	@Test
-	void selectionSortMixed() {
-		int[] data = { 3, 2, 5, 1, 4 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.selectionSort(data);
+    @Test
+    void selectionSortMixed() {
+        int[] data = { 3, 2, 5, 1, 4 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.selectionSort(data);
 
-	@Test
-	void insertionSortReverted() {
-		int[] data = { 5, 4, 3, 2, 1 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.insertionSort(data);
+    @Test
+    void insertionSortReverted() {
+        int[] data = { 5, 4, 3, 2, 1 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.insertionSort(data);
 
-	@Test
-	void insertionSortOrdered() {
-		int[] data = { 1, 2, 3, 4, 5 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.insertionSort(data);
+    @Test
+    void insertionSortOrdered() {
+        int[] data = { 1, 2, 3, 4, 5 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.insertionSort(data);
 
-	@Test
-	void insertionSortMixed() {
-		int[] data = { 3, 2, 5, 1, 4 };
+        assertThat(data, is(expected));
+    }
 
-		Sorting.bubbleSort(data);
+    @Test
+    void insertionSortMixed() {
+        int[] data = { 3, 2, 5, 1, 4 };
 
-		assertThat(data[0], is(1));
-		assertThat(data[1], is(2));
-		assertThat(data[2], is(3));
-		assertThat(data[3], is(4));
-		assertThat(data[4], is(5));
-	}
+        Sorting.insertionSort(data);
+
+        assertThat(data, is(expected));
+    }
 }
