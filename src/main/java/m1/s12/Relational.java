@@ -20,5 +20,20 @@ public class Relational {
 
         System.out.println("alpha != beta? " + (alpha != beta)); // true
         System.out.println("alpha != gamma? " + (alpha != gamma)); // false
+
+        String a = "solution";
+        String b = "sol";
+        String c = "ution";
+        String d = b + c;
+
+        if (a == d) {
+            System.out.println("You won't see this message");
+        } else {
+            System.out.println("'" + a + "' == '" + d + "' is not true");
+        }
+
+        if (a != d) {
+            System.out.println("'" + a + "' != '" + d + "' is true");
+        }
     }
 }
