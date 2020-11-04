@@ -17,6 +17,8 @@ public class CatMain {
             cats[i] = new Cat(names[i], colors[i]);
         }
 
+        System.out.println(String.format("Currently there are %d cats in the program", Cat.getCount()));
+
         for (Cat cat : cats) {
             cat.meow();
         }
@@ -44,7 +46,7 @@ public class CatMain {
             }
         }
 
-        // "for-each" all Kit 
+        // "for-each" all Kit
         for (Cat cat : cats) {
             if (cat.getName().equals("Kit")) {
                 cat.meow();
@@ -55,6 +57,22 @@ public class CatMain {
         for (int i = 0; i < cats.length; i++) {
             if (i % 2 == 0) {
                 cats[i].meow();
+            }
+        }
+
+        // let meow Zip once, and Kit twice
+        System.out.println("Zip and Kit");
+        for (Cat cat : cats) {
+            switch (cat.getName()) {
+            case "Zip":
+                cat.meow();
+                break;
+            case "Kit":
+                cat.meow(2);
+                break;
+            default:
+                System.out.println("Nothing to do here");
+                break;
             }
         }
     }
