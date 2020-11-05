@@ -1,8 +1,8 @@
-package m2.s13ex;
+package m2.s13.ex;
 
 import java.util.logging.Logger;
 
-public class Flat implements Conditioning {
+public class Car extends Vehicle implements Conditioning {
     private static final Logger LOG = Logger.getGlobal();
 
     @Override

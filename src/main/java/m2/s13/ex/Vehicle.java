@@ -1,4 +1,4 @@
-package m2.s13ex;
+package m2.s13.ex;
 
 import java.util.logging.Logger;
 
