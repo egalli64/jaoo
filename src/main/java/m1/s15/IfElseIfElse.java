@@ -1,4 +1,4 @@
-package m1.s16;
+package m1.s15;
 
 public class IfElseIfElse {
     public static void main(String[] args) {

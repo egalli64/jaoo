@@ -1,4 +1,4 @@
-package m1.s15;
+package m1.s12;
 
 public class Concatenation {
     public static void main(String[] args) {
@@ -11,13 +11,9 @@ public class Concatenation {
 
         System.out.println("Vogons".repeat(3)); // Java 11
 
-        String s = "ciao";
+        String s = "Hello";
         s += 3;
         // s = s + 3;
         System.out.println(s);
-    }
-
-    static void f(String a, int b, String c) {
-        System.out.println(a + b + c);
     }
 }

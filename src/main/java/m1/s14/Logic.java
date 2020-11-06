@@ -1,4 +1,4 @@
-package m1.s13;
+package m1.s14;
 
 public class Logic {
     public static void main(String[] args) {

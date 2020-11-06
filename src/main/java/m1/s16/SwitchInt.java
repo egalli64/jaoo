@@ -1,4 +1,4 @@
-package m1.s17;
+package m1.s16;
 
 public class SwitchInt {
     public static void main(String[] args) {

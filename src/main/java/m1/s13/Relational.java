@@ -1,4 +1,4 @@
-package m1.s12;
+package m1.s13;
 
 public class Relational {
     public static void main(String[] args) {
@@ -21,6 +21,7 @@ public class Relational {
         System.out.println("alpha != beta? " + (alpha != beta)); // true
         System.out.println("alpha != gamma? " + (alpha != gamma)); // false
 
+        // For references, == is _not_ about the content
         String a = "solution";
         String b = "sol";
         String c = "ution";
