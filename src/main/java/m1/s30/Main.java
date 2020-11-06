@@ -13,7 +13,7 @@ public class Main {
     static {
         try {
             LogManager.getLogManager()
-                    .readConfiguration(Main.class.getClassLoader().getResourceAsStream("s30/logging.properties"));
+                    .readConfiguration(Main.class.getClassLoader().getResourceAsStream("m1/s30/logging.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
