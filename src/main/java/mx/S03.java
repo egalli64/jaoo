@@ -59,12 +59,29 @@ public class S03 {
     }
 
     /**
+     * return the input value as String
+     * 
+     * <p>
+     * special cases:
+     * 
+     * <li>3, 6, ... : "Fizz"
+     * <li>5, 10, ... : "Buzz"
+     * <li>15, 30, ... : "FizzBuzz"
+     * 
+     * @param value an integer
+     * @return Fizz, Buzz, or the integer as String
+     */
+    public static String fizzBuzz(int value) {
+        return "FizzBuzz";
+    }
+
+    /**
      * Sort the input parameters
      * 
      * @param a
      * @param b
      * @param c
-     * @return a sorted array
+     * @return the input values, sorted, in an array
      */
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
