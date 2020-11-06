@@ -21,5 +21,22 @@ public class Arithmetic {
 
         System.out.println(c - 2.1); // 0.8999999999999999
         System.out.println(c / 0); // Infinity
+
+        int alpha = 2;
+
+        alpha += 8; // 10
+        System.out.println(alpha);
+
+        alpha -= 3; // 7
+        System.out.println(alpha);
+
+        alpha *= 2; // 14
+        System.out.println(alpha);
+
+        alpha /= 2; // 7
+        System.out.println(alpha);
+
+        alpha %= 5; // 2
+        System.out.println(alpha);
     }
 }
