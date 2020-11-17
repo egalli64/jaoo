@@ -29,12 +29,20 @@ public class Relational {
 
         if (a == d) {
             System.out.println("You won't see this message");
+        } else if (a != d) {
+            System.out.println("'" + a + "' != '" + d + "'");
         } else {
-            System.out.println("'" + a + "' == '" + d + "' is not true");
+            System.out.println("Useless, we can't get here");
         }
 
-        if (a != d) {
-            System.out.println("'" + a + "' != '" + d + "' is true");
+        // Java should be smart enough to see there is already a "solution" string
+        // Two references to the same object
+        String e = "solution";
+        if (a == e) {
+            System.out.println("'" + a + "' == '" + e + "'");
+        } else /* if (a != e) */ {
+            System.out.println("You won't see this message");
         }
+
     }
 }

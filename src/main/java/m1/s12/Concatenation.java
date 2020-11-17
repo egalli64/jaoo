@@ -12,8 +12,13 @@ public class Concatenation {
         System.out.println("Vogons".repeat(3)); // Java 11
 
         String s = "Hello";
+        // both t and s refer to the same object
+        String t = s;
+
+        // now s refers to a different object: s = s + 3;
         s += 3;
-        // s = s + 3;
+
         System.out.println(s);
+        System.out.println(t);
     }
 }
