@@ -7,8 +7,8 @@ public class ArrayIntro {
 
         System.out.println(anArray[0] + ", " + anArray[11]);
 
-        int aValue = anArray[5];
-        System.out.println(aValue);
+        int value = anArray[5];
+        System.out.println(value);
 
 //        value = array[12]; // exception
 
