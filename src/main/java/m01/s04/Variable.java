@@ -18,5 +18,9 @@ public class Variable {
 
         System.out.println(anotherReference);
         System.out.println(anotherPrimitive);
+
+        final int A_CONSTANT = 12;
+        final var ANOTHER_CONSTANT = 21;
+        System.out.println(A_CONSTANT + ANOTHER_CONSTANT);
     }
 }
