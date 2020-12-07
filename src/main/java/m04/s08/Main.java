@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 import m1.s29.Simple;
 
 public class Main {
-    private static final Logger LOG;
+    private static final Logger log;
 
     static {
         try {
@@ -17,19 +17,19 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            LOG = Logger.getLogger(Main.class.getName());
+            log = Logger.getLogger(Main.class.getName());
         }
     }
 
     public static void main(String[] args) {
         System.out.println("main");
-        LOG.finest("finest message");
-        LOG.finer("finer message");
-        LOG.fine("fine message");
-        LOG.config("config message");
-        LOG.info("info message");
-        LOG.warning("warning message");
-        LOG.severe("severe message");
+        log.finest("finest message");
+        log.finer("finer message");
+        log.fine("fine message");
+        log.config("config message");
+        log.info("info message");
+        log.warning("warning message");
+        log.severe("severe message");
 
         Other other = new Other();
         other.f();
@@ -42,7 +42,7 @@ public class Main {
             int x = 7 / 0;
             System.out.println("x = " + x);
         } catch (Exception ex) {
-            LOG.log(Level.SEVERE, "Can't divide an integer by zero", ex);
+            log.log(Level.SEVERE, "Can't divide an integer by zero", ex);
         }
 
     }

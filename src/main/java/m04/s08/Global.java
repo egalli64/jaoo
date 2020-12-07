@@ -3,9 +3,9 @@ package m04.s08;
 import java.util.logging.Logger;
 
 public class Global {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
-        LOG.info("Hello");
+        log.info("Hello");
     }
 }

@@ -3,14 +3,14 @@ package m05.s04;
 import java.util.logging.Logger;
 
 public class Dog {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     private String name;
 
     // bad parameter name, see "this"
     private Dog(String n) {
         name = n;
-        LOG.info(String.format("A new dog has been created with name [%s]", name));
+        log.info(String.format("A new dog has been created with name [%s]", name));
     }
 
     public static Dog createWithNoName() {
