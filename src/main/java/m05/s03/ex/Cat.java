@@ -14,7 +14,7 @@ public class Cat {
      * @param n
      * @param c
      */
-    public Cat(String n, String c) {
+    public Cat(String name, String color) {
         // TODO: initialize the object
         // TODO: increase the counter
     }

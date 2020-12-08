@@ -12,9 +12,10 @@ public class Dog {
         log.info("A new anonymous dog has been created");
     }
 
-    // bad parameter name, see "this"
-    public Dog(String n) {
-        name = n;
+    public Dog(String name) {
+        // "this" name - the name of the current object -
+        // is initialized with the parameter name
+        this.name = name;
         log.info("A new dog named " + name + " has been created");
     }
 

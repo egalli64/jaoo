@@ -7,9 +7,8 @@ public class Dog {
 
     private String name;
 
-    // bad parameter name, see "this"
-    private Dog(String n) {
-        name = n;
+    private Dog(String name) {
+        this.name = name;
         log.info(String.format("A new dog has been created with name [%s]", name));
     }
 
