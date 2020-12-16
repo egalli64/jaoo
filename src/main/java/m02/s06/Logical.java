@@ -22,6 +22,12 @@ public class Logical {
         result = alpha | beta; // true
         System.out.println("alpha | beta? " + result);
 
+        result = alpha ^ beta;
+        System.out.println("alpha ^ beta? " + result);
+
+        result = alpha ^ alpha;
+        System.out.println("alpha ^ alpha? " + result);
+
         System.out.println("Shortcut logical operator at work");
         result = f() || g();
         System.out.println("f() || g()? " + result);
