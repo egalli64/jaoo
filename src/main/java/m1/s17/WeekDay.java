@@ -1,5 +1,0 @@
-package m1.s17;
-
-public enum WeekDay {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
-}

@@ -5,7 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
-import m1.s29.Simple;
+import m04.s07.Simple;
 
 public class Main {
     private static final Logger log;
@@ -44,6 +44,5 @@ public class Main {
         } catch (Exception ex) {
             log.log(Level.SEVERE, "Can't divide an integer by zero", ex);
         }
-
     }
 }

@@ -2,8 +2,8 @@ package m10.s05;
 
 import java.util.logging.Logger;
 
-import m5.s05.pizzeria.Menu;
-import m5.s05.pizzeria.Pizza;
+import m10.s05.pizzeria.Menu;
+import m10.s05.pizzeria.Pizza;
 
 public class FactoryMethod {
     private static final Logger LOG = Logger.getGlobal();
