@@ -2,16 +2,13 @@ package mex.s06;
 
 public class Exercise5 {
     /**
-     * Merge two arrays in a new one, keeping the values ordered
+     * Find the duplicated values
      * 
-     * @param left  a naturally ordered array
-     * @param right another naturally ordered array
-     * @return the merged arrays
+     * @param data
+     * @return the duplicated value
      */
-    public static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-
+    public static int[] duplicates(int[] data) {
         // TODO
-        return result;
+        return new int[0];
     }
 }
