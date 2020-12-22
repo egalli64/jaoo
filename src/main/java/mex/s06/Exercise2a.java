@@ -1,6 +1,6 @@
 package mex.s06;
 
-public class Exercise2 {
+public class Exercise2a {
     /**
      * Calculate the average
      * 
