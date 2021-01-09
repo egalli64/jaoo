@@ -11,7 +11,7 @@ public class ArrayTwoD {
         System.out.println(matrix[2][3] + ", " + value);
         System.out.println(matrix[3][4]);
 
-        System.out.println(matrix);
+        System.out.println(matrix.toString());
         System.out.println(Arrays.toString(matrix));
         System.out.println(Arrays.deepToString(matrix));
     }

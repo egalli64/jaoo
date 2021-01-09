@@ -5,7 +5,7 @@ public class Narrowing {
         double aDouble = 42;
         float aFloat = (float) aDouble;
         long aLong = (long) aFloat;
-        // [00000000][00000000][00000000][00101010]
+        // [0000 0000][0000 0000][0000 0000][0010 1010]
         int anInt = (int) aLong;
         short aShort = (short) anInt;
         // [00101010]
@@ -17,24 +17,16 @@ public class Narrowing {
         short anotherShort = (short) aChar;
         System.out.println(aChar + " " + anotherShort);
 
-        // [11111111] -> -1
-        byte minusOne8Bit = -1;
-        // [11111111][11111111][11111111][11111111] -> -1
-        int minusOne32Bit = minusOne8Bit;
-
-        // [00000000][00000000][00000000][11111111] -> 255
-        System.out.println(minusOne8Bit + ", " + minusOne32Bit);
-
         // beware of narrowing
-        // [00000000][00001111][01000010][01000000]
+        // [0000 0000][0000 1111][0100 0010][0100 0000] -> 1_000_000
+        // [0100 0000] -> 64
         int aMillion = 1_000_000;
-        // [1000000] -> 64
         byte maxInByte = (byte) aMillion;
-        System.out.println("A million (int) casted to a byte gives byte max value " + maxInByte);
+        System.out.println("A million (int) casted to a byte keeps just the least significant byte " + maxInByte);
 
         // floating point -> integer
         double aLargeValue = 3_000_000_000.0;
-        // [01111111][11111111][11111111][11111111]
+        // [0111 1111][1111 1111][1111 1111][1111 1111]
         int maxInInt = (int) aLargeValue;
         System.out.println("Three billions (double) casted to int gives int max value  " + maxInInt);
     }

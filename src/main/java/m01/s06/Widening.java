@@ -19,6 +19,14 @@ public class Widening {
         int asterAsInt = asterisk;
         System.out.println(asterisk + ", " + asterAsInt);
 
+        // widening a negative value works as expected
+        // [11111111] -> -1
+        // [11111111][11111111][11111111][11111111] -> -1
+        // this would be a mistake: [00000000][00000000][00000000][11111111] -> 255
+        byte minusOne8Bit = -1;
+        int minusOne32Bit = minusOne8Bit;
+        System.out.println(minusOne8Bit + ", " + minusOne32Bit);
+
         long aBigLongValue = 1_000_000_000_000_000_000L;
         float aFloatApproximation = aBigLongValue;
         double aDoubleConversion = aBigLongValue;

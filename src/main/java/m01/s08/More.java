@@ -7,7 +7,7 @@ public class More {
         int[] one = { 1, 2, 3, 4, 5 };
         int[] two = { 6, 2, 4, 5, 3 };
 
-        System.out.println(one);
+        System.out.println(one.toString());
         System.out.println(Arrays.toString(one));
 
         System.out.println(Arrays.toString(Arrays.copyOf(one, 7)));
