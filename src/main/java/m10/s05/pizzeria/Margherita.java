@@ -1,22 +1,18 @@
 package m10.s05.pizzeria;
 
-import java.util.logging.Logger;
-
 public class Margherita extends Pizza {
-    private static final Logger LOG = Logger.getGlobal();
-    private String extra = "";
+    private boolean rucola;
 
     public Margherita() {
-        this(false);
+        this.rucola = false;
     }
 
     public Margherita(boolean rucola) {
-        extra = rucola ? "rucola" : "";
-        LOG.info("Margherita " + extra);
+        this.rucola = rucola;
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + " " + extra;
+        return rucola ? "Rucola" : this.getClass().getSimpleName();
     }
 }
