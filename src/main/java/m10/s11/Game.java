@@ -3,7 +3,7 @@ package m10.s11;
 import java.util.logging.Logger;
 
 public class Game {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     private static void message(Actor actor, String message) {
         System.out.println(String.format("%s %s %s", actor.getClass().getSimpleName(), actor.getName(), message));
@@ -27,7 +27,7 @@ public class Game {
 
         // only a warrior could become a mystic warrior
         if (actor instanceof Warrior) {
-            LOG.info("Decorating Warrior");
+            log.info("Decorating Warrior");
             MysticWarrior mw = new MysticWarrior((Warrior) actor);
             mw.heal();
             message(actor, "feels better");

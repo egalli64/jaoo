@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class AsList {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<Integer>(Arrays.asList(12, 18, -5, -2233));
@@ -25,7 +25,7 @@ public class AsList {
             int badPos = 100;
             list.add(badPos, value);
         } catch (Exception ex) {
-            LOG.log(Level.SEVERE, "Careful with indices!", ex);
+            log.log(Level.SEVERE, "Careful with indices!", ex);
         }
 
         pos = 3;

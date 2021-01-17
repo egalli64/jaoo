@@ -3,7 +3,7 @@ package m10.s05.pizzeria;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
         for (PizzaType type : PizzaType.values()) {
@@ -11,7 +11,7 @@ public class Main {
                 Pizza pizza = Pizza.create(type);
                 System.out.println("Here is your pizza: " + pizza);
             } catch (IllegalArgumentException iae) {
-                LOG.severe("Can't create pizza: " + iae.getMessage());
+                log.severe("Can't create pizza: " + iae.getMessage());
             }
         }
     }

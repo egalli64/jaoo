@@ -3,7 +3,7 @@ package m09.s02;
 import java.util.logging.Logger;
 
 public class Main {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
         Encloser encloser = new Encloser();
@@ -18,7 +18,7 @@ public class Main {
         // this is safer
         encloser.g();
 
-        LOG.info("creating and using an inner object");
+        log.info("creating and using an inner object");
         Encloser.InnerPublic eip = encloser.new InnerPublic();
         System.out.println("Accessing a private member of encloser: " + eip.getDoubledValue());
     }

@@ -3,7 +3,7 @@ package m10.s11;
 import java.util.logging.Logger;
 
 public class Actor {
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger log = Logger.getGlobal();
 
     private static final int BASE_VALUE = 10;
     private static final int MAX_EXTRA = 90;
@@ -29,7 +29,7 @@ public class Actor {
         this.life = life;
         this.strength = strength;
 
-        LOG.info(String.format("%s %s [%d, %d]", getClass().getSimpleName(), name, life, strength));
+        log.info(String.format("%s %s [%d, %d]", getClass().getSimpleName(), name, life, strength));
     }
 
     public String getName() {
@@ -49,16 +49,16 @@ public class Actor {
 
     public void addLife(int points) {
         if(points < 0) {
-            LOG.warning("Unexpected negative input");
+            log.warning("Unexpected negative input");
             return;
         }
         
         this.life += points;
         if(this.life > BASE_VALUE + MAX_EXTRA) {
-            LOG.warning("Life reached its max value");
+            log.warning("Life reached its max value");
             this.life = BASE_VALUE + MAX_EXTRA;
         } else {
-            LOG.info("Healing worked just fine");
+            log.info("Healing worked just fine");
         }
     }
 }
