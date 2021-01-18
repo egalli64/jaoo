@@ -8,19 +8,26 @@ public class Bitwise {
         System.out.println("delta is " + delta);
 
         // 0101 & 0110 -> 0100 (4)
-        int result = gamma & delta;
-        System.out.println("gamma & delta is " + result);
+        int epsilon = gamma & delta;
+        System.out.println("gamma & delta is " + epsilon);
 
         // 0101 | 0110 -> 0111 (7)
-        result = gamma | delta;
-        System.out.println("gamma | delta is " + result);
+        epsilon = gamma | delta;
+        System.out.println("gamma | delta is " + epsilon);
 
         // 0101 ^ 0110 -> 0011 (3)
-        result = gamma ^ delta;
-        System.out.println("gamma ^ delta is " + result);
+        epsilon = gamma ^ delta;
+        System.out.println("gamma ^ delta is " + epsilon);
 
         // ~0101 -> [11111111] [11111111] [11111111] [11111010] (-6)
-        result = ~gamma;
-        System.out.println("~gamma is " + result);
+        int zeta = ~gamma;
+        System.out.println("~gamma is " + zeta);
+
+        int rho = zeta >> 1;
+        System.out.println("right shift: " + rho);
+        rho = zeta >>> 1;
+        System.out.println("right shift (sign is shifting, too!): " + rho);
+        rho = zeta << 1;
+        System.out.println("left shift: " + rho);
     }
 }
