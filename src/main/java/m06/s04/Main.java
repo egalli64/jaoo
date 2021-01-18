@@ -2,15 +2,15 @@ package m06.s04;
 
 public class Main {
     public static void main(String[] args) {
-        Access access = new Access();
+        Pet pet = new Pet();
 
-        // super's private members are _not_ accessible
-//      System.out.println(access.a);
+        // pet's private members are _not_ accessible
+//      System.out.println(pet.name);
 
-        // super's protected members are accessible
-        System.out.println("b: " + access.b);
+        // pet's package members are accessible
+        System.out.println("count: " + Pet.count);
 
-        // super's package members are accessible
-        System.out.println("c: " + Access.c);
+        // pet's protected members are accessible too!
+        System.out.println("weight: " + pet.weight);
     }
 }
