@@ -11,13 +11,17 @@ public class Main {
     private static final Logger log;
 
     static {
+        var stream = Main.class.getClassLoader().getResourceAsStream("m04/s08/logging.properties");
+        if (stream == null) {
+            throw new IllegalStateException("Can't get logging properties");
+        }
+
         try {
-            LogManager.getLogManager()
-                    .readConfiguration(Main.class.getClassLoader().getResourceAsStream("m1/s30/logging.properties"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
+            LogManager.getLogManager().readConfiguration(stream);
             log = Logger.getLogger(Main.class.getName());
+        } catch (SecurityException | IOException e) {
+            e.printStackTrace();
+            throw new IllegalStateException("Can't configure logger", e);
         }
     }
 
