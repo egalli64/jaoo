@@ -11,20 +11,20 @@ public class AsCollection {
         Collection<Integer> collTwo = Arrays.asList(12, 18, -5, -2233);
 
         collOne.addAll(collTwo);
-        // implicit call to the overridden toString() for the actual collOne type
-        System.out.println(collOne);
+        // implicit call to the overridden toString() for the variable actual type
+        System.out.println("Working with this collection: " + collOne);
 
         if (collOne.contains(-2233)) {
             System.out.println("-2233 is there");
         }
 
         if (collOne.equals(collTwo)) {
-            System.out.println("These collections contain the same (equals) elements");
+            System.out.println("The two collections contain the same (equals) elements");
         }
 
         collOne.add(42);
         if (!collOne.equals(collTwo)) {
-            System.out.println("Collections with different elements within");
+            System.out.println("Now the two collections are different");
         }
 
         System.out.print("This collection has " + collOne.size() + " elements: ");
@@ -34,7 +34,9 @@ public class AsCollection {
         }
         System.out.println();
 
-        collOne.remove(-5);
+        if (collOne.remove(-5)) {
+            System.out.println("Element -5 removed");
+        }
 
         System.out.print("Converting a collection to an array: ");
         Integer[] values = collOne.toArray(new Integer[collOne.size()]);
