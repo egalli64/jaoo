@@ -53,5 +53,10 @@ public class Main {
         MyArray<?>[] mao = new MyArray<?>[10];
         mao[0] = new MyArray<Dog>();
         mao[1] = new MyArray<Integer>();
+
+        // Still, using an unbound generic is a pain
+        @SuppressWarnings("unchecked")
+        MyArray<Dog> mad = (MyArray<Dog>) mao[0];
+        mad.add(new Dog());
     }
 }
