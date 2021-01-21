@@ -18,11 +18,15 @@ public class StreamIntermediateExample {
         System.out.println("Convert to x-strings: " + xs);
 
         // sorted and limit
-        List<Integer> top = values.stream().sorted(Comparator.reverseOrder()).limit(3).collect(toList());
-        System.out.println("Top three values" + top);
+        List<Integer> topValues = values.stream().sorted(Comparator.reverseOrder()).limit(3).collect(toList());
+        System.out.println("Top three values" + topValues);
 
         // distinct, sorted, limit
-        List<Integer> bottom = values.stream().distinct().sorted().limit(3).collect(toList());
-        System.out.println("Bottom three values (no duplicates)" + bottom);
+        List<Integer> bottomValues = values.stream().distinct().sorted().limit(3).collect(toList());
+        System.out.println("Bottom three values (no duplicates) " + bottomValues);
+
+        // distinct, sorted, skip
+        List<Integer> others = values.stream().distinct().sorted().skip(3).collect(toList());
+        System.out.println("Values after first three ones (no duplicates) " + others);
     }
 }
