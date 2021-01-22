@@ -1,13 +1,12 @@
 package m09.s05;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 public class Looping {
     public static void main(String[] args) {
-        List<Integer> aList = Arrays.asList(1, 3, 4, 2);
+        List<Integer> aList = List.of(1, 3, 4, 2);
         Iterable<Integer> iterable = new ArrayList<Integer>(aList);
 
         // "while has next" loop

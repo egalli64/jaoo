@@ -1,14 +1,14 @@
 package m09.s10;
 
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 
 public class AsNavigableSet {
     public static void main(String[] args) {
-        Collection<Integer> coll = Arrays.asList(5, -3, -1, 12, 27, 5);
+        Collection<Integer> coll = List.of(5, -3, -1, 12, 27, 5);
         NavigableSet<Integer> ns = new TreeSet<Integer>(coll);
         System.out.println(coll + " -> " + ns);
 

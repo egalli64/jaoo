@@ -15,7 +15,7 @@ public class MethodReferenceExample {
         Arrays.sort(names, String::compareToIgnoreCase);
         System.out.println("Natural order (ignore case): " + Arrays.toString(names));
 
-        List<String> list = Arrays.asList(names);
+        List<String> list = List.of(names);
         // meaning: s -> System.out.println(s)
         list.forEach(System.out::println);
     }

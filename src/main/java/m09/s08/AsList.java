@@ -1,7 +1,6 @@
 package m09.s08;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -10,7 +9,7 @@ public class AsList {
     private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<Integer>(Arrays.asList(12, 18, -5, -2233));
+        List<Integer> list = new ArrayList<Integer>(List.of(12, 18, -5, -2233));
         System.out.println(list);
 
         System.out.println("At index 2: " + list.get(2));

@@ -1,13 +1,13 @@
 package m09.s09;
 
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class AsSortedSet {
     public static void main(String[] args) {
-        Collection<Integer> coll = Arrays.asList(12, 18, -5, -2233);
+        Collection<Integer> coll = List.of(12, 18, -5, -2233);
         SortedSet<Integer> sortedSet = new TreeSet<Integer>(coll);
         System.out.println(coll + " -> " + sortedSet);
         System.out.println("First: " + sortedSet.first());

@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.List;
 
 public class AsCollection {
     public static void main(String[] args) {
         Collection<Integer> collOne = new ArrayList<Integer>();
-        Collection<Integer> collTwo = Arrays.asList(12, 18, -5, -2233);
+        Collection<Integer> collTwo = List.of(12, 18, -5, -2233);
 
         collOne.addAll(collTwo);
         // implicit call to the overridden toString() for the variable actual type

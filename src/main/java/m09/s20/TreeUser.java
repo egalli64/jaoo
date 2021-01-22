@@ -1,6 +1,5 @@
 package m09.s20;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
@@ -8,7 +7,7 @@ import java.util.TreeSet;
 
 public class TreeUser {
     public static void main(String[] args) {
-        List<String> data = Arrays.asList("alpha", "beta", "gamma", "delta", "gamma");
+        List<String> data = List.of("alpha", "beta", "gamma", "delta", "gamma");
 
         Set<String> ts = new TreeSet<>(data);
         System.out.println("Simple tree: " + ts);
