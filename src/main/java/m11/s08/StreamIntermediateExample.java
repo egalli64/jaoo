@@ -13,10 +13,6 @@ public class StreamIntermediateExample {
         // fiter
         System.out.println("Count odds: " + values.stream().filter(x -> x % 2 == 1).count());
 
-        // map
-        List<String> xs = values.stream().map(n -> "x".repeat(n)).collect(toList());
-        System.out.println("Convert to x-strings: " + xs);
-
         // sorted and limit
         List<Integer> topValues = values.stream().sorted(Comparator.reverseOrder()).limit(3).collect(toList());
         System.out.println("Top three values" + topValues);
