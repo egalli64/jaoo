@@ -1,6 +1,7 @@
 package m11.s11;
 
 import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class PrimitiveStreamExample {
@@ -16,5 +17,11 @@ public class PrimitiveStreamExample {
         Stream<Integer> si = Arrays.stream(data).boxed();
         si.reduce(Integer::sum) //
                 .ifPresent(x -> System.out.println("No boxing/unboxing to calculate sum: " + x));
+
+        System.out.println("Even numbers in [0, 10) ...");
+        IntStream.range(0, 10).filter(x -> x % 2 == 0).forEach(System.out::println);
+
+        System.out.println("Even numbers in [0, 10] ...");
+        IntStream.rangeClosed(0, 10).filter(x -> x % 2 == 0).forEach(System.out::println);
     }
 }
