@@ -14,7 +14,7 @@ public class CheckToUpper {
         String input = "Bob";
         String actual = ex.toUpper(input);
         String expected = "BOB";
-        if (!input.equals(expected)) {
+        if (!actual.equals(expected)) {
             System.out.println(String.format("Failure: %s not equals to %s", actual, expected));
         }
     }
