@@ -9,10 +9,8 @@ public class Cat {
     /**
      * Cat with a given name and color
      * 
-     * bad parameter names, see "this"
-     * 
-     * @param n
-     * @param c
+     * @param name  the cat name
+     * @param color the cat color
      */
     public Cat(String name, String color) {
         // TODO: initialize the object
