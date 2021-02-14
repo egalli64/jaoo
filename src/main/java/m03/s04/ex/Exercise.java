@@ -7,6 +7,10 @@ public class Exercise {
     /**
      * A simpler version of String.toUpperCase()
      * 
+     * Build the result in a StringBuilder, then convert it to String and return it
+     * 
+     * Do not use any method in String!
+     * 
      * @param s
      * @return uppercase version of input
      */

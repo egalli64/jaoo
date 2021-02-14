@@ -8,10 +8,11 @@ public class Main {
         String boolAsStringModern = String.valueOf(true);
         System.out.println("Another boolean converted to string: " + boolAsStringModern);
 
-        Dog[] dogs = new Dog[2];
+        Dog[] dogs = new Dog[3];
 
         dogs[0] = Dog.createWithName("Bob");
         dogs[1] = Dog.createWithNoName();
+        dogs[2] = Dog.createWithBreedButNoName("BobTail");
 
         for (Dog dog : dogs) {
             dog.bark();
