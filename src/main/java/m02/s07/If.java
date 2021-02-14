@@ -3,7 +3,7 @@ package m02.s07;
 public class If {
     public static void main(String[] args) {
         boolean condition = true;
-        
+
         if (condition) {
             System.out.println("only if condition is true");
         }

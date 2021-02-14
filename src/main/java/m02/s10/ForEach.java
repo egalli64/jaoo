@@ -4,17 +4,17 @@ import java.util.Arrays;
 
 public class ForEach {
     public static void main(String[] args) {
-        String[] array = { "one", "two", "three", "four", "five" };
+        String[] numbers = { "one", "two", "three", "four", "five" };
         // ...
 
         // for-each helps readability
-        for (String item : array) {
-            System.out.println(item);
+        for (String number : numbers) {
+            System.out.println(number);
         }
 
         // we really don't care about "i" here
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
         }
 
         // beware of how for-each works on primitives
@@ -26,17 +26,17 @@ public class ForEach {
         System.out.println(Arrays.toString(ai));
 
         // beware of how for-each works on immutable references
-        for (String item : array) {
-            item += 3;
-            System.out.println(item);
+        for (String number : numbers) {
+            number += 3;
+            System.out.println(number);
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(numbers));
 
         // classic for is what we need in this case
-        for (int i = 0; i < array.length; i++) {
-            array[i] += i;
-            System.out.println(array[i]);
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] += i;
+            System.out.println(numbers[i]);
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(numbers));
     }
 }
