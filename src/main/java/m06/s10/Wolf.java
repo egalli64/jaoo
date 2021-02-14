@@ -10,4 +10,9 @@ public class Wolf implements WolfBehavior {
     public String toString() {
         return "A Wolf";
     }
+
+    @Override
+    public String attack(Man man) {
+        return "Attacking a man";
+    }
 }

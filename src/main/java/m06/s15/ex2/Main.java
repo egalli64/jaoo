@@ -14,7 +14,6 @@ package m06.s15.ex2;
  * <p>
  * Print name and daily / salary accordingly to their actual type
  */
-
 public class Main {
     public static void main(String[] args) {
         Person[] persons = { /* ... */ };

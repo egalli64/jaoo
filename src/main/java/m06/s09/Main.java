@@ -5,7 +5,7 @@ public class Main {
         Mammal[] mammals = { new Dog(63, 40), new Cat(63, 20) };
 
         for (Mammal mammal : mammals) {
-            System.out.println(mammal);
+            System.out.println(mammal.toString());
         }
 
         Barker barker = new Dog(62, 42);

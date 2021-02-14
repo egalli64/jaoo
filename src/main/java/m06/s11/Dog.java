@@ -1,6 +1,6 @@
 package m06.s11;
 
-public class Dog implements WaggingBarker {
+public class Dog implements WaggingBarker, Jumper {
     private final int WAG_COUNT;
 
     public Dog(int wagCount) {
@@ -44,5 +44,10 @@ public class Dog implements WaggingBarker {
     @Override
     public String toString() {
         return "Dog [WAG_COUNT=" + WAG_COUNT + "]";
+    }
+
+    @Override
+    public void jump() {
+        System.out.println("I'm jumping");
     }
 }

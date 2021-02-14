@@ -9,6 +9,7 @@ public class Main {
         }
 
         Werewolf ww = new Werewolf("Uli");
+        ww.howl();
         ww.sayHello();
         ww.sayHowllo();
     }

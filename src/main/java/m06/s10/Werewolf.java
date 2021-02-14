@@ -6,6 +6,8 @@ public class Werewolf extends Man implements WolfBehavior {
     private String name;
 
     public Werewolf(String name) {
+        // more info on super soon
+        // super(name);
         this.name = name;
     }
 
@@ -21,5 +23,10 @@ public class Werewolf extends Man implements WolfBehavior {
 
     public void sayHowllo() {
         System.out.println("Howllo, I'm " + name);
+    }
+
+    @Override
+    public String attack(Man man) {
+        return "Attacking a man";
     }
 }

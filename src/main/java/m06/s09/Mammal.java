@@ -1,6 +1,6 @@
 package m06.s09;
 
-public class Mammal {
+public abstract class Mammal {
     protected int gestation;
 
     public Mammal(int gestation) {

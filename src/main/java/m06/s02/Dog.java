@@ -5,12 +5,17 @@ import java.util.logging.Logger;
 public class Dog {
     private static final Logger log = Logger.getGlobal();
 
-    // weak data hiding
+    // !!! weak data hiding - don't do that, if you don't really have to
     String name;
 
     public Dog() {
         log.info("Creating a new dog");
-        name = "Unknown";
+        this.name = "Unknown";
+    }
+
+    public Dog(String name) {
+        log.info("Creating a new dog " + name);
+        this.name = name;
     }
 
     public void setName(String name) {

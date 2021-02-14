@@ -25,9 +25,11 @@ public class Main {
         Pet[] pets = { new Dog("Tom"), new Cat("Bob") };
 
         f(pets);
+        g(pets);
     }
 
     static void f(Pet[] pets) {
+        System.out.println("Let the pets bark and meow ...");
         if (pets == null) {
             return;
         }
@@ -42,6 +44,17 @@ public class Main {
                 cat.meow();
 //				((Cat)pet).meow();
             }
+        }
+    }
+
+    static void g(Pet[] pets) {
+        System.out.println("Let the pets say something ...");
+        if (pets == null) {
+            return;
+        }
+
+        for (Pet pet : pets) {
+            pet.saySomething();
         }
     }
 }
