@@ -9,7 +9,16 @@ public class Exercise4 {
      * @return false during weekend or holiday
      */
     public static boolean isAlarmSet(WeekDay day, boolean vacation) {
-        // TODO
-        return false;
+        if (vacation) {
+            return false;
+        }
+
+        switch (day) {
+        case SATURDAY:
+        case SUNDAY:
+            return false;
+        default:
+            return true;
+        }
     }
 }

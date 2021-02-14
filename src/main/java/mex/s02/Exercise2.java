@@ -12,6 +12,7 @@ public class Exercise2 {
      */
     public static double distance(int x0, int y0, int x1, int y1) {
         // TODO
+
         return 0.0;
     }
 }

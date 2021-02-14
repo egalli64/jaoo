@@ -5,11 +5,14 @@ import java.util.List;
 
 public class ArrayListUser {
     public static void main(String[] args) {
-        ArrayList<Integer> al = new ArrayList<>(List.of(23, 12, 18, 5));
+        var temp = List.of(23, 12, 18, 5);
+//        var temp = Arrays.asList(23, 12, 18, 5);
+        ArrayList<Integer> al = new ArrayList<>(temp);
         System.out.println("Values in al: " + al);
 
         ArrayList<Integer> al2 = new ArrayList<Integer>();
         al2.add(56);
+        al2.add(1, 18);
 
         // ...
 

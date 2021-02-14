@@ -11,6 +11,13 @@ class Exercise6bTest {
         String actual = Exercise6b.binAdd("1001", "1101");
         String expected = "10110";
 
+        /*  001
+         *  1001
+         *  1101
+         *  ----
+         * 10110
+         */
+        
         assertThat(actual, is(expected));
     }
 

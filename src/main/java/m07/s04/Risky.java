@@ -14,9 +14,16 @@ public class Risky {
         // ...
         try {
             exceptional.aCheckedThrower();
+
+            // called only if no exception before
+            // cleanup();
         } catch (Exception ex) {
             log.log(Level.SEVERE, "Exception caught in f()", ex);
+
+            // called only when an exception occurs
+            // cleanup();
         } finally {
+            // always called
             cleanup();
         }
     }

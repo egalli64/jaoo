@@ -1,5 +1,6 @@
 package m09.s15;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Exercise {
@@ -26,7 +27,15 @@ public class Exercise {
      *         example: in {2, 3, 4, 5} -> out {2, 4}
      */
     public List<Integer> evens(int[] data) {
-        throw new UnsupportedOperationException("Not yet implemented");
+        List<Integer> result = new ArrayList<Integer>();
+
+        for (int value : data) {
+            if (value % 2 == 0) {
+                result.add(value);
+            }
+        }
+
+        return result;
     }
 
     /**
