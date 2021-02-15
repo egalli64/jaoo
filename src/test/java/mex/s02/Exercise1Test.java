@@ -28,7 +28,7 @@ class Exercise1Test {
     }
 
     @Test
-//    @Disabled("enable it for an exception throwing version")
+    @Disabled("enable it for an exception throwing version")
     void speedNegativeTime() {
         try {
             Exercise1.speed(100, -1);
