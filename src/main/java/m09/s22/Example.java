@@ -1,4 +1,4 @@
-package m09.s21;
+package m09.s22;
 
 import java.util.Map;
 import java.util.TreeMap;

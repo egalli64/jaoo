@@ -1,4 +1,4 @@
-package m09.s23;
+package m09.s24;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
