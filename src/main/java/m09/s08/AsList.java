@@ -3,6 +3,7 @@ package m09.s08;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,6 +37,15 @@ public class AsList {
         value = 42;
         int old = list.set(pos, value);
         System.out.println(String.format("Set at position %d element %d, was %d: %s", pos, value, old, list));
+
+        ListIterator<Integer> it = list.listIterator();
+        while (it.hasNext()) {
+            Integer current = it.next();
+            if (current < 0) {
+                it.set(-current);
+            }
+        }
+        System.out.println(list);
     }
 
     public static List<Integer> create(List<Integer> input, boolean asArray) {
