@@ -8,5 +8,8 @@ public class Main {
         };
 
         m.c("hello");
+
+        ModernFunctional mf = () -> System.out.println("Hello Functional Programming in Java");
+        mf.example();
     }
 }
