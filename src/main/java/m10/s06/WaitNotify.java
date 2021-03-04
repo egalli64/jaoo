@@ -1,7 +1,7 @@
 package m10.s06;
 
 public class WaitNotify {
-    private static class Worker extends Thread {
+    private static class Worker implements Runnable {
         private boolean done;
 
         public Worker() {
@@ -11,7 +11,7 @@ public class WaitNotify {
         @Override
         public synchronized void run() {
             done = true;
-            notify();
+            notifyAll();
         }
 
         public boolean isDone() {
@@ -21,7 +21,8 @@ public class WaitNotify {
 
     public static void main(String[] args) {
         Worker worker = new Worker();
-        worker.start();
+        Thread t = new Thread(worker);
+        t.start();
 
         synchronized (worker) {
             try {
@@ -31,6 +32,7 @@ public class WaitNotify {
                     System.out.println("Back to work");
                 }
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 System.out.println("Wait interrupted");
             }
         }

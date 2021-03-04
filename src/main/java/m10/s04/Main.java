@@ -18,6 +18,7 @@ public class Main {
             System.out.println(t0.getName() + " joins to main");
         } catch (InterruptedException e) {
             System.out.println(t0.getName() + " interrupted");
+            Thread.currentThread().interrupt();
         }
     }
 }

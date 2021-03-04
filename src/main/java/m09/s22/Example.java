@@ -11,7 +11,7 @@ public class Example {
 
         // ? Tom -> "0044 3242344234234"
         // ? Bob -> "no number!"
-        Map<String, String> map = new TreeMap<String, String>();
+        Map<String, String> map = new TreeMap<>();
         map.put("Tom", "43534534534534");
         map.put("Bob", "78768679789");
 

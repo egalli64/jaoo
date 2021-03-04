@@ -1,9 +1,13 @@
 package m03.s04.ex;
 
+/**
+ * Sort of simple tester, see JUnit for the real stuff
+ */
 public class CheckToUpper {
-    /**
-     * Sort of simple tester, see JUnit for the real stuff
-     */
+    private static void check(String actual, String expected) {
+        System.out.println(String.format("Failure: %s not equals to %s", actual, expected));
+    }
+
     public static void main(String[] args) {
         testBob();
     }
@@ -14,8 +18,7 @@ public class CheckToUpper {
         String input = "Bob";
         String actual = ex.toUpper(input);
         String expected = "BOB";
-        if (!actual.equals(expected)) {
-            System.out.println(String.format("Failure: %s not equals to %s", actual, expected));
-        }
+
+        check(actual, expected);
     }
 }

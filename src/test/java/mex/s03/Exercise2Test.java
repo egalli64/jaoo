@@ -6,6 +6,8 @@ import static org.hamcrest.Matchers.is;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.jupiter.api.Disabled;
+
 class Exercise2Test {
     @Test
     void isOddTrue() {
@@ -24,6 +26,7 @@ class Exercise2Test {
     }
 
     @Test
+    @Disabled("enable it for an exception throwing version")
     void isOddZero() {
         // check on exception!
         try {

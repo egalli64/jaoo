@@ -42,7 +42,7 @@ public class Scope {
         Scope scope = new Scope();
         scope.f();
         scope.g();
-        abs(4);
+        abs(staticMember);
         cos(12);
     }
 }

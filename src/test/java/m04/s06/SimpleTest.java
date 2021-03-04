@@ -14,97 +14,97 @@ import org.junit.jupiter.api.Test;
 
 class SimpleTest {
     @Test
-    public void checkTrue() {
+    void checkTrue() {
         boolean condition = true;
         assertTrue(condition);
     }
 
     @Test
-    public void checkNull() {
+    void checkNull() {
         String reference = null;
         assertNull(reference);
     }
 
     @Test
-    public void checkEquals() {
+    void checkEquals() {
         int expected = 42;
         int actual = 42;
         assertEquals(expected, actual);
     }
 
     @Test
-    public void checkEqualsDouble() {
+    void checkEqualsDouble() {
         double expected = .87;
         double actual = .29 * 3;
         assertEquals(expected, actual, .0001);
     }
 
     @Test
-    public void hamTrue() {
+    void hamTrue() {
         boolean condition = true;
         assertThat(condition, is(true));
     }
 
     @Test
-    public void hamTrue2() {
+    void hamTrue2() {
         boolean condition = true;
         assertThat(condition, is(equalTo(true)));
     }
 
     @Test
-    public void hamTrue3() {
+    void hamTrue3() {
         boolean condition = true;
         assertThat(condition, equalTo(true));
     }
 
     @Test
-    public void hamNull() {
+    void hamNull() {
         String reference = null;
         assertThat(reference, is((String) null));
     }
 
     @Test
-    public void hamNull2() {
+    void hamNull2() {
         String reference = null;
         assertThat(reference, is(nullValue()));
     }
 
     @Test
-    public void hamNull3() {
+    void hamNull3() {
         String reference = null;
         assertThat(reference, nullValue());
     }
 
     @Test
-    public void hamEquals() {
+    void hamEquals() {
         int expected = 42;
         int actual = 42;
         assertThat(actual, equalTo(expected));
     }
 
     @Test
-    public void hamEquals2() {
+    void hamEquals2() {
         int expected = 42;
         int actual = 42;
         assertThat(actual, is(expected));
     }
 
     @Test
-    public void hamEqualsDouble() {
+    void hamEqualsDouble() {
         double expected = .87;
         double actual = .29 * 3;
         assertThat(actual, closeTo(expected, .0001));
     }
 
     @Test
-    public void hamStart() {
+    void hamStart() {
         String prefix = "Tom";
         String actual = "Tom Jones";
         assertThat(actual, startsWith(prefix));
     }
 
     @Test
-    public void hamNot() {
+    void hamNot() {
         String prefix = "Bob";
         String actual = "Tom Jones";
         assertThat(actual, not(startsWith(prefix)));

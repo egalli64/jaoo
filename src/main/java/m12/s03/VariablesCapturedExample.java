@@ -23,7 +23,7 @@ public class VariablesCapturedExample {
         System.out.println("Modifying the instance variable: " + ++instanceValue);
 
         // Local variable local defined in an enclosing scope must be final or effectively final
-        // System.out.println("Modifying the local variable: " + ++local);
+        // System.out.println("Modifying the local variable: " + ++local); // won't work
     }
 
     public static void main(String[] args) {

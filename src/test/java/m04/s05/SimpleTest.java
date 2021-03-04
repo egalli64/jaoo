@@ -12,12 +12,12 @@ class SimpleTest {
     private Simple simple;
 
     @BeforeEach
-    public void init() {
+    void init() {
         simple = new Simple();
     }
 
     @Test
-    public void negatePositive() {
+    void negatePositive() {
         int value = 42;
         int expected = -42;
 
@@ -27,7 +27,7 @@ class SimpleTest {
     }
 
     @Test
-    public void negateNegative() {
+    void negateNegative() {
         int value = -42;
         int expected = 42;
 
@@ -37,7 +37,7 @@ class SimpleTest {
     }
 
     @Test
-    public void negateZero() {
+    void negateZero() {
         int value = 0;
         int expected = 0;
 

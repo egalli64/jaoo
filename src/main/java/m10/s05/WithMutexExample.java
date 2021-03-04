@@ -25,6 +25,7 @@ public class WithMutexExample {
                 t.join();
             } catch (InterruptedException e) {
                 System.out.println("Join interrupted on " + t.getName());
+                Thread.currentThread().interrupt();
             }
         }
         System.out.println("Main thread done");
@@ -34,9 +35,11 @@ public class WithMutexExample {
         System.out.println("Enter syncOnThis() for " + Thread.currentThread().getName());
 
         try {
+            // !!! job simulation - don't do this in production code !!!
             Thread.sleep(200);
         } catch (InterruptedException e) {
             System.out.println("Sleep interrupted on syncOnThis()");
+            Thread.currentThread().interrupt();
         }
 
         System.out.println("Exit syncOnThis() for " + Thread.currentThread().getName());
@@ -48,9 +51,11 @@ public class WithMutexExample {
             System.out.println("Enter monitor in syncOnMutexF() for " + Thread.currentThread().getName());
 
             try {
+                // !!! job simulation - don't do this in production code !!!
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 System.out.println("Sleep interrupted on syncOnMutexF()");
+                Thread.currentThread().interrupt();
             }
 
             System.out.println("Exit monitor in syncOnMutexF() for " + Thread.currentThread().getName());
@@ -63,9 +68,11 @@ public class WithMutexExample {
             System.out.println("Enter monitor in syncOnMutexG() for " + Thread.currentThread().getName());
 
             try {
+                // !!! job simulation - don't do this in production code !!!
                 Thread.sleep(200);
             } catch (InterruptedException e) {
                 System.out.println("Sleep interrupted on syncOnMutexG()");
+                Thread.currentThread().interrupt();
             }
 
             System.out.println("Exit monitor in syncOnMutexG() for " + Thread.currentThread().getName());

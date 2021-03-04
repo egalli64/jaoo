@@ -8,8 +8,10 @@ public class Exercise2a {
      * @return the average
      */
     public static double average(int[] data) {
+        double result = 0.0;
 
         // TODO
-        return 0.0;
+
+        return result;
     }
 }

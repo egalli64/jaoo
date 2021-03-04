@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AsDeque {
     public static void main(String[] args) {
-        Deque<Integer> deq = new ArrayDeque<Integer>(List.of(-3, -1, 12, 27, 5));
+        Deque<Integer> deq = new ArrayDeque<>(List.of(-3, -1, 12, 27, 5));
         System.out.println(deq);
 
         deq.addFirst(7);

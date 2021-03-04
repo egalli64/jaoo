@@ -15,7 +15,7 @@ public class Concatenation {
         // both t and s refer to the same object
         String t = s;
 
-        // now s refers to a different object: s = s + 3;
+        // reference to a different object created by concatenation
         s += 3;
 
         System.out.println(s);

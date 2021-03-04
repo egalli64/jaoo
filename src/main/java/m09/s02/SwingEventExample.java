@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 public class SwingEventExample extends JFrame {
     private static final long serialVersionUID = 1L;
@@ -15,7 +16,7 @@ public class SwingEventExample extends JFrame {
     public SwingEventExample() {
         setSize(300, 100);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hello");
 
         button = new JButton("Click Me!");

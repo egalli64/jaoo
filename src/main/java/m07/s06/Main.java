@@ -12,10 +12,10 @@ public class Main {
             System.out.println("My value negated is: " + x);
         } catch (NumberFormatException e) {
             System.out.println("Pass me an integer!");
-            return;
         } catch (MyNegateException mne) {
             System.out.println("My value negated is close to: " + mne.getAlternativeValue());
-            return;
         }
+
+        System.out.println("Bye");
     }
 }

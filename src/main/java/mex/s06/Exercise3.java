@@ -8,10 +8,10 @@ public class Exercise3 {
      * @return the largest value
      */
     public static int max(int[] data) {
-        if (data == null || data.length == 0) {
-            return Integer.MIN_VALUE;
-        }
+        int result = Integer.MIN_VALUE;
         
-        return Integer.MIN_VALUE;
+        // TODO
+
+        return result;
     }
 }

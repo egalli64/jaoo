@@ -19,7 +19,7 @@ public class StreamExample {
     }
 
     private static List<Integer> extractEvenValuesNoStream(List<Integer> values) {
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
 
         values.forEach(value -> {
             if (value % 2 == 0) {

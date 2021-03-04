@@ -1,7 +1,7 @@
 package m06.s15.ex3;
 
 public abstract class Pet {
-    public Pet(int days) {
+    protected Pet(int days) {
         // TODO
     }
 

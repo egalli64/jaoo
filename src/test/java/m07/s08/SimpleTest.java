@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import m07.s06.Simple;
 
-public class SimpleTest {
+class SimpleTest {
     @Test
-    public void negateMinInt() {
+    void negateMinInt() {
         var simple = new Simple();
 
         var exc = assertThrows(IllegalArgumentException.class, () -> simple.negate(Integer.MIN_VALUE));

@@ -12,8 +12,11 @@ public class MyIterableString implements Iterable<Character> {
 
     @Override
     public Iterator<Character> iterator() {
-//        return new MyIterator(s);
-
+        /*
+         * A new instance of an anonymous inner class implementing Iterator is returned
+         * 
+         * Otherwise it is possible returning a new instance of MyIterator, see it below 
+         */
         return new Iterator<Character>() {
             private int pos = 0;
 
@@ -28,8 +31,8 @@ public class MyIterableString implements Iterable<Character> {
                     char c = s.charAt(pos);
                     pos += 1;
                     return c;
-//                    return s.charAt(pos++);
-                } catch (Exception e) {
+                    // in a more compact way: return s.charAt(pos++)
+                } catch (IndexOutOfBoundsException e) {
                     throw new NoSuchElementException(e.getMessage());
                 }
             }

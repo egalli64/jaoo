@@ -38,11 +38,7 @@ public class Dog implements Comparable<Dog> {
         }
 
         Dog that = (Dog) obj;
-        if (Objects.equals(this.name, that.name) && Objects.equals(this.owner, that.owner)) {
-            return true;
-        }
-
-        return false;
+        return Objects.equals(this.name, that.name) && Objects.equals(this.owner, that.owner);
     }
 
     @Override

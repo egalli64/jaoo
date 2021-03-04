@@ -5,11 +5,11 @@ import java.util.logging.Logger;
 public class Track implements Composite {
     private static final Logger log = Logger.getGlobal();
 
-    private static double DEFAULT_SPEED = 1;
+    private static final double DEFAULT_SPEED = 1;
 
-    public String name;
-    public String author;
-    public double speed = DEFAULT_SPEED;
+    private String name;
+    private String author;
+    private double speed;
 
     public Track(String name, String author) {
         this(name, author, DEFAULT_SPEED);
@@ -18,6 +18,7 @@ public class Track implements Composite {
     public Track(String name, String author, double speed) {
         this.name = name;
         this.author = author;
+        this.speed = speed;
     }
 
     @Override

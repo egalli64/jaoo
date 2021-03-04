@@ -8,9 +8,7 @@ public class Exercise2 {
      * @return true if odd
      */
     public static boolean isOdd(int value) {
-        if (value == 0) {
-            throw new IllegalArgumentException("Zero is not even nor odd!");
-        }
-        return value % 2 == 1;
+        // TODO
+        return false;
     }
 }

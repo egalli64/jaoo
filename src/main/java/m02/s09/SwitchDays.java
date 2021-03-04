@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SwitchDays {
     public static void main(String[] args) {
-        WeekDay today = WeekDay.FRIDAY;
+        WeekDay today = args.length == 0 ? WeekDay.FRIDAY : WeekDay.MONDAY;
 
         switch (today) {
         case MONDAY:

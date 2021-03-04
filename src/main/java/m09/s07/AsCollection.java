@@ -8,7 +8,7 @@ import java.util.List;
 
 public class AsCollection {
     public static void main(String[] args) {
-        Collection<Integer> collOne = new ArrayList<Integer>();
+        Collection<Integer> collOne = new ArrayList<>();
         Collection<Integer> collTwo = List.of(12, 18, -5, -2233);
 
         collOne.addAll(collTwo);

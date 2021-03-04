@@ -15,8 +15,8 @@ public class FunctionalExample {
         execute.run();
 
         // T -> boolean
-        Predicate<Integer> isPositive = x -> x > 0;
-        if (isPositive.test(42)) {
+        Predicate<String> isEvenSized = s -> s.length() % 2 == 0;
+        if (isEvenSized.test("hello!")) {
             System.out.println("Hello Predicate");
         }
 
@@ -25,8 +25,8 @@ public class FunctionalExample {
         consume.accept("Hello Consumer");
 
         // void -> T
-        Supplier<Double> pi = () -> Math.PI;
-        System.out.println("Supplier of PI: " + pi.get());
+        Supplier<String> greeter = () -> "Hi";
+        System.out.println("Greeting supplier: " + greeter.get());
 
         // T, R -> T
         Function<String, Integer> size = String::length;

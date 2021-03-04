@@ -1,5 +1,6 @@
 package m11.s11;
 
+import java.util.Random;
 import java.util.logging.Logger;
 
 public class Actor {
@@ -8,8 +9,10 @@ public class Actor {
     private static final int BASE_VALUE = 10;
     private static final int MAX_EXTRA = 90;
 
-    static private int randomValue() {
-        return BASE_VALUE + (int) (Math.random() * MAX_EXTRA);
+    private static final Random random = new Random();
+
+    private static int randomValue() {
+        return BASE_VALUE + random.nextInt(MAX_EXTRA);
     }
 
     private String name;
@@ -48,13 +51,13 @@ public class Actor {
     }
 
     public void addLife(int points) {
-        if(points < 0) {
+        if (points < 0) {
             log.warning("Unexpected negative input");
             return;
         }
-        
+
         this.life += points;
-        if(this.life > BASE_VALUE + MAX_EXTRA) {
+        if (this.life > BASE_VALUE + MAX_EXTRA) {
             log.warning("Life reached its max value");
             this.life = BASE_VALUE + MAX_EXTRA;
         } else {

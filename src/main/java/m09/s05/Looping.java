@@ -7,7 +7,7 @@ import java.util.List;
 public class Looping {
     public static void main(String[] args) {
         List<Integer> aList = List.of(1, 3, 4, 2);
-        Iterable<Integer> iterable = new ArrayList<Integer>(aList);
+        Iterable<Integer> iterable = new ArrayList<>(aList);
 
         // "while has next" loop
         Iterator<Integer> it = iterable.iterator();

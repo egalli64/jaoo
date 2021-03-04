@@ -10,7 +10,7 @@ public class ArrayListUser {
         ArrayList<Integer> al = new ArrayList<>(temp);
         System.out.println("Values in al: " + al);
 
-        ArrayList<Integer> al2 = new ArrayList<Integer>();
+        ArrayList<Integer> al2 = new ArrayList<>();
         al2.add(56);
         al2.add(1, 18);
 

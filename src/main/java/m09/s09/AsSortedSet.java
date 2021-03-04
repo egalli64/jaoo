@@ -14,7 +14,7 @@ public class AsSortedSet {
         System.out.println("List: " + list);
         System.out.println("From list to set: " + Set.copyOf(list));
 
-        SortedSet<Integer> sortedSet = new TreeSet<Integer>(set);
+        SortedSet<Integer> sortedSet = new TreeSet<>(set);
         System.out.println(set + " sorted -> " + sortedSet);
         System.out.println("First: " + sortedSet.first());
         System.out.println("Last: " + sortedSet.last());

@@ -27,7 +27,7 @@ public class Exercise {
      *         example: in {2, 3, 4, 5} -> out {2, 4}
      */
     public List<Integer> evens(int[] data) {
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
 
         for (int value : data) {
             if (value % 2 == 0) {

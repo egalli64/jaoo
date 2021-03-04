@@ -18,7 +18,7 @@ public class TempFile {
             System.out.println("Can't create directory " + dirName);
         }
 
-        String fileName = "c:/tmp/hello.txt";
+        String fileName = "/tmp/hello.txt";
         File f1 = new File(fileName);
         try {
             if (f1.createNewFile()) {
@@ -34,7 +34,7 @@ public class TempFile {
         File f3 = new File(dir, "hello.txt");
 
         try {
-            File f4 = new File(new URI("file:///C://tmp/hello.txt"));
+            File f4 = new File(new URI("file:///tmp/hello.txt"));
             System.out.println("Does the file exist? " + f4.exists());
         } catch (URISyntaxException e) {
             e.printStackTrace();

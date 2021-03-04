@@ -18,6 +18,7 @@ public class Main {
                 thread.join();
             } catch (InterruptedException e) {
                 System.out.println("Interrupted join on " + thread.getName());
+                Thread.currentThread().interrupt();
             }
         }
     }
@@ -39,6 +40,7 @@ public class Main {
                 thread.join();
             } catch (InterruptedException e) {
                 System.out.println("Interrupted join on " + thread.getName());
+                Thread.currentThread().interrupt();
             }
         }
     }
@@ -73,6 +75,7 @@ public class Main {
                 thread.join();
             } catch (InterruptedException e) {
                 System.out.println("Interrupted join on " + thread.getName());
+                Thread.currentThread().interrupt();
             }
         }
     }

@@ -49,6 +49,6 @@ public class AsList {
     }
 
     public static List<Integer> create(List<Integer> input, boolean asArray) {
-        return asArray ? new ArrayList<Integer>(input) : new LinkedList<Integer>(input);
+        return asArray ? new ArrayList<>(input) : new LinkedList<>(input);
     }
 }

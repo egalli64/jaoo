@@ -5,7 +5,7 @@ public class StringIntro {
         char c = 'x';
         System.out.println(c);
 
-        String s = new String("hello");
+        String s = new String("hello"); // explicit, but _not_ a good idea
         System.out.println(s);
 
         String t = "hello";

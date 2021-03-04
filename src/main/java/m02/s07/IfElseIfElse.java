@@ -2,8 +2,8 @@ package m02.s07;
 
 public class IfElseIfElse {
     public static void main(String[] args) {
-        boolean condition = false;
-        boolean otherCondition = true;
+        boolean condition = args.length != 0;
+        boolean otherCondition = args.length == 1;
 
         if (condition) {
             System.out.println("only if condition is true");

@@ -13,7 +13,7 @@ public class Mistake {
         try {
             System.out.println(increment(value));
         } catch (Exception e) {
-            log.log(Level.SEVERE, "Can't increase " + value, e);
+            log.log(Level.SEVERE, "Cannot increase " + value, e);
         }
 
         // ...
@@ -21,7 +21,7 @@ public class Mistake {
         try {
             value = increment(value);
         } catch (Exception e) {
-            log.log(Level.SEVERE, "Can't increase " + value, e);
+            log.log(Level.SEVERE, "Cannot increase " + value, e);
         }
 
         // ...
@@ -62,6 +62,6 @@ public class Mistake {
             return Long.MIN_VALUE;
         }
 
-        return x + 1;
+        return x + 1L;
     }
 }

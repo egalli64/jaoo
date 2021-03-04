@@ -16,7 +16,6 @@ class Exercise4Test {
     }
 
     @Test
-    @Disabled
     void sqrtEpsilon() {
         double epsilon = 0.001;
         double actual = Exercise4.sqrt(2, epsilon);
