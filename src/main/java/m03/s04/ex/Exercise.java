@@ -1,8 +1,8 @@
 package m03.s04.ex;
 
 public class Exercise {
-    private static final int GAP = 'a' - 'A';
-    private static final int ALPHABET_SIZE = 26;
+//    private static final int GAP = 'a' - 'A';     // charset independent 
+//    private static final int ALPHABET_SIZE = 26;  // standard alphabet
 
     /**
      * A simpler version of String.toUpperCase()
