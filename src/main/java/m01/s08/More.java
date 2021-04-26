@@ -10,7 +10,9 @@ public class More {
         System.out.println(one.toString());
         System.out.println(Arrays.toString(one));
 
-        System.out.println(Arrays.toString(Arrays.copyOf(one, 7)));
+        // create a copy of one w/ length increased by 2
+        int[] oneExtra = Arrays.copyOf(one, one.length + 2);
+        System.out.println(Arrays.toString(oneExtra));
 
         Arrays.sort(two);
         System.out.println(Arrays.toString(two));

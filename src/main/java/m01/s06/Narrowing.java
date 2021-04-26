@@ -16,18 +16,5 @@ public class Narrowing {
         char aChar = (char) anInt;
         short anotherShort = (short) aChar;
         System.out.println(aChar + " " + anotherShort);
-
-        // beware of narrowing
-        // [0000 0000][0000 1111][0100 0010][0100 0000] -> 1_000_000
-        // [0100 0000] -> 64
-        int aMillion = 1_000_000;
-        byte maxInByte = (byte) aMillion;
-        System.out.println("A million (int) casted to a byte keeps just the least significant byte " + maxInByte);
-
-        // floating point -> integer
-        double aLargeValue = 3_000_000_000.0;
-        // [0111 1111][1111 1111][1111 1111][1111 1111]
-        int maxInInt = (int) aLargeValue;
-        System.out.println("Three billions (double) casted to int gives int max value  " + maxInInt);
     }
 }

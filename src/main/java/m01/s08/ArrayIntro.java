@@ -5,12 +5,13 @@ public class ArrayIntro {
         int[] anArray = new int[12];
         anArray[0] = 7;
 
-        System.out.println(anArray[0] + ", " + anArray[11]);
+        System.out.println(anArray[0]);
+        System.out.println(anArray[11]);
 
         int value = anArray[5];
         System.out.println(value);
 
-//        value = array[12]; // exception
+//        value = anArray[12]; // exception
 
         System.out.println("Done");
     }
