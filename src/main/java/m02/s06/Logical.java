@@ -7,8 +7,8 @@ public class Logical {
         System.out.println("alpha is " + alpha);
         System.out.println("beta is " + beta);
 
-        boolean result = alpha && beta; // false
-        System.out.println("alpha && beta? " + result);
+        boolean result = beta && alpha; // false
+        System.out.println("beta && alpha? " + result);
 
         result = alpha || beta; // true
         System.out.println("alpha || beta? " + result);
@@ -16,8 +16,8 @@ public class Logical {
         result = !alpha; // false
         System.out.println("!alpha? " + result);
 
-        result = alpha & beta; // false
-        System.out.println("alpha & beta? " + result);
+        result = beta & alpha; // false
+        System.out.println("beta & alpha? " + result);
 
         result = alpha | beta; // true
         System.out.println("alpha | beta? " + result);
