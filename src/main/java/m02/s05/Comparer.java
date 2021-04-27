@@ -1,6 +1,6 @@
 package m02.s05;
 
-public class Relational {
+public class Comparer {
     public static void main(String[] args) {
         int alpha = 12;
         int beta = 21;
