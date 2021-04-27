@@ -7,7 +7,9 @@ public class Simple {
         String other = null;
 
         System.out.println(value);
-        System.out.println(Integer.toHexString(System.identityHashCode(name)) + " -> " + name);
+        System.out.print(Integer.toHexString(System.identityHashCode(name)));
+        System.out.print(" [\"reference\" -> object] ");
+        System.out.println(name);
         System.out.println(other);
     }
 }
