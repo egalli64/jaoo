@@ -15,6 +15,10 @@ public class Narrowing {
 
         char aChar = (char) anInt;
         short anotherShort = (short) aChar;
-        System.out.println(aChar + " " + anotherShort);
+
+        // notice the difference between print() and println()
+        System.out.print(aChar);
+        System.out.print(" <-> ");
+        System.out.println(anotherShort);
     }
 }
