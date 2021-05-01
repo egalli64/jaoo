@@ -1,4 +1,4 @@
-package m01.s06;
+package m01.s07;
 
 public class Widening {
     public static void main(String[] args) {

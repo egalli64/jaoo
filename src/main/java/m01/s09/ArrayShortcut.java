@@ -1,4 +1,4 @@
-package m01.s08;
+package m01.s09;
 
 public class ArrayShortcut {
     public static void main(String[] args) {

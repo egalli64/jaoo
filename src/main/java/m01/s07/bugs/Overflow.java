@@ -1,4 +1,4 @@
-package m01.s06.bugs;
+package m01.s07.bugs;
 
 public class Overflow {
     public static void main(String[] args) {

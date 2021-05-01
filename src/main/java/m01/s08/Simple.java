@@ -1,4 +1,4 @@
-package m01.s07;
+package m01.s08;
 
 public class Simple {
     public static void main(String[] args) {

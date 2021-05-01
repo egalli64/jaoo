@@ -1,9 +1,7 @@
 /*
  * A simple Java source file
  */
-package m01.s02;
-
-import java.lang.Math; // not required
+package m01.s04;
 
 /**
  * A "hello" class
@@ -19,12 +17,8 @@ public class Simple {
         if (args.length == 1) {
             System.out.println(args[0]);
         } else {
-            // otherwise output PI
-            System.out.println(Math.PI);
+            // otherwise output something generic
+            System.out.println("stranger");
         }
     }
-}
-
-class PackageClass {
-    // TODO: Not implemented (yet)
 }
