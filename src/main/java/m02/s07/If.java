@@ -3,12 +3,11 @@ package m02.s07;
 public class If {
     public static void main(String[] args) {
         // condition is true when no argument is passed
-        boolean condition = args.length == 0;
-
-        if (condition) {
-            System.out.println("only if condition is true");
+        if (args.length == 0) {
+            System.out.println("You didn't pass me any parameter!");
         }
 
-        System.out.println("always printed");
+        // always executed
+        System.out.println("Bye");
     }
 }
