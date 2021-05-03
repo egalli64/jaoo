@@ -1,10 +1,8 @@
 package m02.s09;
 
-import java.util.Arrays;
-
 public class SwitchDays {
     public static void main(String[] args) {
-        WeekDay today = args.length == 0 ? WeekDay.FRIDAY : WeekDay.MONDAY;
+        WeekDay today = WeekDay.values()[(int) (Math.random() * 7)];
 
         switch (today) {
         case MONDAY:
@@ -31,7 +29,5 @@ public class SwitchDays {
         if (today == WeekDay.FRIDAY) {
             System.out.println(":-)");
         }
-
-        System.out.println(Arrays.toString(WeekDay.values()));
     }
 }
