@@ -1,27 +1,22 @@
 package m02.s08;
 
-public class PlainSwitch {
+public class SwitchArgs {
     public static void main(String[] args) {
-        int value = 14554556;
-
-        // ...
-
-        switch (value) {
+        switch (args.length) {
+        case 0:
+            System.out.println("No arg passed in");
+            break;
         case 1:
-        case 3:
-        case 5:
-            System.out.println("value is odd and small");
+            System.out.println("A single arg passed: " + args[0]);
             break;
         case 2:
-        case 4:
-        case 6:
-            System.out.println("value is even and small");
+            System.out.println("The second arg passed: " + args[1]);
             break;
         default:
-            System.out.println("value is something else");
+            System.out.println("The last arg passed: " + args[args.length - 1]);
             break;
         }
 
-        System.out.println("done");
+        System.out.println("-- done --");
     }
 }
