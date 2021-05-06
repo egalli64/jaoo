@@ -1,20 +1,26 @@
 package m03.s02;
 
 public class Simple {
-    static String h() {
+    static String aStaticMethod() {
         return "Hi";
     }
 
-    int f(int a, int b) {
+    int anInstanceMethod(int a) {
+        return -a;
+    }
+
+    int anInstanceMethod(int a, int b) {
         return a * b;
     }
 
-    void g(boolean flag) {
+    void anotherInstanceMethod(boolean flag) {
         if (flag) {
             System.out.println("Hello");
+        } else {
+            System.out.println("Goodbye");
             return;
         }
 
-        System.out.println("Goodbye");
+        System.out.println("!");
     }
 }
