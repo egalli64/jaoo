@@ -1,17 +1,31 @@
 package m01.s09;
 
+import java.util.Arrays;
+
 public class ArrayIntro {
     public static void main(String[] args) {
-        int[] anArray = new int[12];
-        anArray[0] = 7;
+        // create an array of 12 integers (int)
+        int[] values = new int[12];
 
-        System.out.println(anArray[0]);
-        System.out.println(anArray[11]);
+        // set a value in the first element
+        values[0] = 7;
 
-        int value = anArray[5];
+        System.out.print("First element is ");
+        System.out.println(values[0]);
+
+        // copy a value from an array in another variable
+        int value = values[5];
         System.out.println(value);
 
-//        value = anArray[12]; // exception
+        // be careful with indices!
+//        value = values[12]; // exception
+
+        // unfortunately this does not work as one would expect
+        System.out.println(values);
+
+        // convert an array to a string
+        String s = Arrays.toString(values);
+        System.out.println(s);
 
         System.out.println("Done");
     }
