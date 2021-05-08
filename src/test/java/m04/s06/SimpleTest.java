@@ -41,38 +41,38 @@ class SimpleTest {
 
     @Test
     void hamTrue() {
-        boolean condition = true;
-        assertThat(condition, is(true));
+        boolean actual = true;
+        assertThat(actual, is(true));
     }
 
     @Test
     void hamTrue2() {
-        boolean condition = true;
-        assertThat(condition, is(equalTo(true)));
+        boolean actual = true;
+        assertThat(actual, is(equalTo(true)));
     }
 
     @Test
     void hamTrue3() {
-        boolean condition = true;
-        assertThat(condition, equalTo(true));
+        boolean actual = true;
+        assertThat(actual, equalTo(true));
     }
 
     @Test
     void hamNull() {
-        String reference = null;
-        assertThat(reference, is((String) null));
+        String actual = null;
+        assertThat(actual, is((String) null));
     }
 
     @Test
     void hamNull2() {
-        String reference = null;
-        assertThat(reference, is(nullValue()));
+        String actual = null;
+        assertThat(actual, is(nullValue()));
     }
 
     @Test
     void hamNull3() {
-        String reference = null;
-        assertThat(reference, nullValue());
+        String actual = null;
+        assertThat(actual, nullValue());
     }
 
     @Test

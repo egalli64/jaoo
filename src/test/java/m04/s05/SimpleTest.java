@@ -21,9 +21,9 @@ class SimpleTest {
         int value = 42;
         int expected = -42;
 
-        int result = simple.negate(value);
+        int actual = simple.negate(value);
 
-        assertThat(result, equalTo(expected));
+        assertThat(actual, equalTo(expected));
     }
 
     @Test
@@ -31,9 +31,9 @@ class SimpleTest {
         int value = -42;
         int expected = 42;
 
-        int result = simple.negate(value);
+        int actual = simple.negate(value);
 
-        assertThat(result, equalTo(expected));
+        assertThat(actual, equalTo(expected));
     }
 
     @Test
@@ -41,8 +41,8 @@ class SimpleTest {
         int value = 0;
         int expected = 0;
 
-        int result = simple.negate(value);
+        int actual = simple.negate(value);
 
-        assertThat(result, equalTo(expected));
+        assertThat(actual, equalTo(expected));
     }
 }
