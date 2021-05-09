@@ -39,7 +39,9 @@ public class AboutString {
         String s2 = s.replace('l', 'q');
         System.out.println("Replacing 'l' with 'q': " + s + " -> " + s2);
 
-        String[] splits = "one for me, one for you".split(" ");
+//        String[] splits = "one for me, one for you".split(" ");
+        String csv = "alpha,beta,gamma,delta";
+        String[] splits = csv.split(",");
         System.out.println("Splitting: ");
         for (String token : splits) {
             System.out.println(token);
@@ -50,7 +52,7 @@ public class AboutString {
 
         String myS = s.toUpperCase();
         System.out.println("upper: " + myS);
-        System.out.println("lower: " + "SHUT UP!".toLowerCase());
+        System.out.println("lower: " + "Shut UP!".toLowerCase());
 
         System.out.println("trim [" + " la la la ".trim() + "]");
 
