@@ -19,11 +19,9 @@ public class Exercise4 {
      * @return calculated square root
      */
     public static double sqrt(double value) {
-        double result = 0.0;
-
         // TODO
 
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**

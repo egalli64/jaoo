@@ -9,6 +9,6 @@ public class Exercise5 {
      */
     public static int digitSum(int value) {
         // TODO
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

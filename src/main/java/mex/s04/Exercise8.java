@@ -8,10 +8,8 @@ public class Exercise8 {
      * @return the Fibonacci number of value, or zero
      */
     public static long fibonacci(int value) {
-        long result = 0;
-
         // TODO
 
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

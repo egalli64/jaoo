@@ -8,7 +8,6 @@ public class Exercise4 {
      * @return temperature converted to Fahrenheit
      */
     public static double toFahrenhein(double celsius) {
-        // TODO
-        return 0.0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

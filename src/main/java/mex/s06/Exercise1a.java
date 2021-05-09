@@ -8,10 +8,9 @@ public class Exercise1a {
      * @return a new array holding the same elements of input, in reversed order
      */
     public static int[] reverse(int[] data) {
-        int[] result = new int[0];
+//        int[] result = ???;
 
         // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

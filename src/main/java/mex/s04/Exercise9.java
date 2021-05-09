@@ -16,10 +16,9 @@ public class Exercise9 {
      * @return The multiplication table for value, when possible
      */
     public static int[][] multiplicationTable(int value) {
-        int[][] result = new int[0][0];
+//        int[][] result = ???;
 
         // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

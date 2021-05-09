@@ -11,6 +11,6 @@ public class Exercise6 {
      */
     public static long squareDigit(int value) {
         // TODO
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

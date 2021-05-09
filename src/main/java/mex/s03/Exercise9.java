@@ -9,6 +9,6 @@ public class Exercise9 {
      */
     public static boolean isPrime(int value) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

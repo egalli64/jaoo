@@ -14,6 +14,6 @@ public class Exercise5 {
      */
     public static char vote(double percentile) {
         // TODO
-        return 'F';
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

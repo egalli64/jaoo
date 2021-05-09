@@ -15,6 +15,6 @@ public class Exercise6a {
      * @return the converted integer
      */
     public static int bin2dec(String bri) {
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

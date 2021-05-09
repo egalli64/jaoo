@@ -16,6 +16,6 @@ public class Exercise1 {
         log.info(String.format("distance is %.3f and time is %.2f", distance, time));
 
         // TODO
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

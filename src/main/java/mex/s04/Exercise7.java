@@ -9,6 +9,6 @@ public class Exercise7 {
      */
     public static long factorial(int value) {
         // TODO
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

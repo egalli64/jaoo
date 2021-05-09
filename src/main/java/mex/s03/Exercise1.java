@@ -9,6 +9,6 @@ public class Exercise1 {
      */
     public static String checkSign(int value) {
         // TODO
-        return "";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

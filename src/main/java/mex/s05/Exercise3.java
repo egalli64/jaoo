@@ -10,6 +10,6 @@ public class Exercise3 {
     public static String removeVowels(String s) {
         // TODO
 
-        return "";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

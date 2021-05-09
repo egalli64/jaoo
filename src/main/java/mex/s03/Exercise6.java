@@ -9,6 +9,6 @@ public class Exercise6 {
      */
     public static boolean isLeapYear(int year) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

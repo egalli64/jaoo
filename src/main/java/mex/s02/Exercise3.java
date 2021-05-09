@@ -10,7 +10,6 @@ public class Exercise3 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-        // TODO
-        return 0.0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

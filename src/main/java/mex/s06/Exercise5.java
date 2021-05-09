@@ -9,6 +9,6 @@ public class Exercise5 {
      */
     public static int[] duplicates(int[] data) {
         // TODO
-        return new int[0];
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

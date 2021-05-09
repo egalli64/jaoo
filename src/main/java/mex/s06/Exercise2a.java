@@ -8,10 +8,7 @@ public class Exercise2a {
      * @return the average
      */
     public static double average(int[] data) {
-        double result = 0.0;
-
         // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

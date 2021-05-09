@@ -9,6 +9,6 @@ public class Exercise3 {
      */
     public static String asWord(int value) {
         // TODO
-        return "";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

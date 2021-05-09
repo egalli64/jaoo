@@ -10,6 +10,6 @@ public class Exercise5 {
      */
     public static boolean isAnagram(String s, String t) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

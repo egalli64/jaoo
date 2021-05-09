@@ -8,10 +8,7 @@ public class Exercise4 {
      * @return a non duplicated value
      */
     public static int single(int[] data) {
-        int result = Integer.MIN_VALUE;
-
         // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

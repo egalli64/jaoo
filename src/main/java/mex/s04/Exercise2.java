@@ -9,10 +9,8 @@ public class Exercise2 {
      * @return the sum of all the even numbers, or zero
      */
     public static long evenSum(int first, int last) {
-        long result = 0;
-
         // TODO
 
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

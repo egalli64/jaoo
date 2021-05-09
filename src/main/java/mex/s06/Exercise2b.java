@@ -8,9 +8,7 @@ public class Exercise2b {
      * @return the median
      */
     public static double median(int[] data) {
-        double result = 0.0;
-
         // TODO
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

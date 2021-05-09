@@ -9,6 +9,6 @@ public class Exercise2 {
      */
     public static boolean isPalindrome(String s) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

@@ -10,6 +10,6 @@ public class Exercise4 {
      */
     public static boolean isAlarmSet(WeekDay day, boolean vacation) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

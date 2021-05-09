@@ -9,9 +9,7 @@ public class Exercise6 {
      * @return the merged arrays
      */
     public static int[] merge(int[] left, int[] right) {
-        int[] result = new int[left.length + right.length];
-
         // TODO
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

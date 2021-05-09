@@ -9,6 +9,6 @@ public class Exercise2 {
      */
     public static boolean isOdd(int value) {
         // TODO
-        return false;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

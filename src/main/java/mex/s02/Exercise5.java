@@ -18,9 +18,9 @@ public class Exercise5 {
      * @return resulting points: 0, 1, 5, or 10
      */
     public static int score(double x, double y) {
+        log.info(String.format("(%.5f, %.5f)", x, y));
+
         // TODO
-        double distance = 0.0;
-        log.info(String.format("(%.5f, %.5f) -> %.5f", x, y, distance));
-        return 0;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

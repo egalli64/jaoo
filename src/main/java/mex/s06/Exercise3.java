@@ -8,10 +8,7 @@ public class Exercise3 {
      * @return the largest value
      */
     public static int max(int[] data) {
-        int result = Integer.MIN_VALUE;
-        
         // TODO
-
-        return result;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

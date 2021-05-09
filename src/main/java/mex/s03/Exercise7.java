@@ -15,6 +15,6 @@ public class Exercise7 {
      * @return Fizz, Buzz, or the integer as String
      */
     public static String fizzBuzz(int value) {
-        return "FizzBuzz";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

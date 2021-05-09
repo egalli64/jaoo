@@ -18,6 +18,6 @@ public class Exercise6b {
      * @return the converted integer
      */
     public static String binAdd(String left, String right) {
-        return "";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

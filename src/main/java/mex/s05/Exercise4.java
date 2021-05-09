@@ -10,6 +10,6 @@ public class Exercise4 {
      */
     public static String removeChar(String s, int pos) {
         // TODO
-        return "";
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }

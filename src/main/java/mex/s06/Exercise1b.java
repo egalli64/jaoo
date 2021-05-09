@@ -9,6 +9,6 @@ public class Exercise1b {
      * @param data an array that is going to be reversed
      */
     public static void reverse(int[] data) {
-
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }
