@@ -16,7 +16,7 @@ public class Exercise {
      */
     public String toUpper(String s) {
         // TODO: create an uppercase version of the input and return it
-        return s;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
@@ -28,6 +28,6 @@ public class Exercise {
      */
     public String caesarEncrypt(String s, int shift) {
         // TODO: create an encrypted version of the input and return it
-        return s;
+        throw new UnsupportedOperationException("Not yet implemented");
     }
 }
