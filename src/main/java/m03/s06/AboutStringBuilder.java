@@ -1,4 +1,4 @@
-package m03.s05;
+package m03.s06;
 
 public class AboutStringBuilder {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package m03.s04.ex;
+package m03.s05.ex;
 
 /**
  * Sort of simple tester, see JUnit for the real stuff

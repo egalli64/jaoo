@@ -1,4 +1,4 @@
-package m03.s04;
+package m03.s05;
 
 public class AboutString {
 

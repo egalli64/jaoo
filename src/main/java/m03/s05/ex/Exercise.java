@@ -1,4 +1,4 @@
-package m03.s04.ex;
+package m03.s05.ex;
 
 public class Exercise {
 //    private static final int GAP = 'a' - 'A';     // charset independent 

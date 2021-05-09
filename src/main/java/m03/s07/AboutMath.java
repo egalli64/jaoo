@@ -1,4 +1,4 @@
-package m03.s06;
+package m03.s07;
 
 public class AboutMath {
     public static void main(String[] args) {
