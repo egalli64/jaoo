@@ -6,26 +6,23 @@ public class ReferenceExceptional {
     public static void main(String[] args) {
         try {
             // Passing null as argument
-            Double argument = null;
-            double radix = mySqrt(argument);
-            System.out.println(String.format("Square root of %f is %f", argument, radix));
+            double radix = mySqrt(null);
+            System.out.println("Square root is " + radix);
         } catch (NullPointerException npe) {
             System.out.println("Can't calculate the square root: " + npe.getMessage());
         }
 
         try {
-            // Passing bad as argument
-            Double argument = -1.0;
-            double radix = mySqrt(argument);
-            System.out.println(String.format("Square root of %f is %f", argument, radix));
+            // Passing a bad argument
+            double radix = mySqrt(-1.0);
+            System.out.println("Square root is " + radix);
         } catch (NullPointerException | IllegalArgumentException ex) {
             System.out.println("Can't calculate the square root: " + ex.getMessage());
         }
 
         // If the coder does not catch the exception, the program ends!
-        Double argument = -1.0;
-        double radix = mySqrt(argument);
-        System.out.println(String.format("Square root of %f is %f", argument, radix));
+        double radix = mySqrt(-1.0);
+        System.out.println("Square root is " + radix);
     }
 
     public static double mySqrt(Double value) {

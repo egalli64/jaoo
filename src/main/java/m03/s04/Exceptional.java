@@ -7,14 +7,14 @@ public class Exceptional {
 
         try {
             double radix = mySqrt(argument);
-            System.out.println(String.format("Square root of %f is %f", argument, radix));
+            System.out.println("Square root is " + radix);
         } catch (IllegalArgumentException iae) {
             System.out.println("Can't calculate the square root of " + argument);
         }
 
         // If the coder does not catch the exception, the program ends!
         double radix = mySqrt(argument);
-        System.out.println(String.format("Square root of %f is %f", argument, radix));
+        System.out.println("Square root is " + radix);
     }
 
     public static double mySqrt(double value) {

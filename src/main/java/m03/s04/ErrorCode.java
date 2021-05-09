@@ -7,13 +7,13 @@ public class ErrorCode {
         double radix = Math.sqrt(argument);
 
         // Here the coder does not check the return value before using it!
-        System.out.println(String.format("Square root of %f is %f", argument, radix));
+        System.out.println("Square root is " + radix);
 
         // Check the return value before using it!
         if (Double.isNaN(radix)) {
             System.out.println("Can't calculate the square root of " + argument);
         } else {
-            System.out.println(String.format("Square root of %f is %f", argument, radix));
+            System.out.println("Square root is " + radix);
         }
     }
 }
