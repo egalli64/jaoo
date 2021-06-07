@@ -8,10 +8,9 @@ public class Dog {
     private String name;
     private String breed;
 
-    private Dog(String name) {
-        this.name = name;
-        this.breed = "Mixed";
-        log.info(String.format("A new mixed dog has been created with name [%s]", name));
+    private Dog(String name, String breed) {
+        this.name = name == null ? "No Name" : name;
+        this.breed = breed == null ? "Mixed" : breed;
     }
 
     public static Dog createWithNoName() {
@@ -23,21 +22,21 @@ public class Dog {
          * 3. ...
          */
 
-        return new Dog("No name");
+        log.info("Creating a dog with no name");
+        return new Dog(null, null);
     }
 
     public static Dog createWithName(String name) {
-        return new Dog(name);
+        log.info(String.format("Creating a dog with name [%s]", name));
+        return new Dog(name, null);
     }
 
     public static Dog createWithBreedButNoName(String breed) {
-        Dog my = new Dog("No Name");
-        my.breed = breed;
-
-        return my;
+        log.info(String.format("Creating a dog with no name and breed [%s]", breed));
+        return new Dog(null, breed);
     }
 
     public void bark() {
-        System.out.println(breed + " " + name + ": woof");
+        System.out.println(String.format("%s %s: woof", breed, name));
     }
 }
