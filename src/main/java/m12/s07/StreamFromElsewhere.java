@@ -15,5 +15,9 @@ public class StreamFromElsewhere {
 
         results = Stream.of(12, 34, 2, 11, 5, 7).filter(x -> x % 2 == 1).collect(Collectors.toList());
         System.out.println("Odd numbers are: " + results);
+
+        Stream.Builder<Integer> builder = Stream.builder();
+        results = builder.add(42).add(2).build().filter(x -> x < 10).collect(Collectors.toList());
+        System.out.println("Small numbers are: " + results);
     }
 }
