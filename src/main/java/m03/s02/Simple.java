@@ -5,10 +5,6 @@ public class Simple {
         return "Hi";
     }
 
-    int anInstanceMethod(int a) {
-        return -a;
-    }
-
     int anInstanceMethod(int a, int b) {
         return a * b;
     }
@@ -18,9 +14,6 @@ public class Simple {
             System.out.println("Hello");
         } else {
             System.out.println("Goodbye");
-            return;
         }
-
-        System.out.println("!");
     }
 }
