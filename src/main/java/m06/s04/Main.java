@@ -10,7 +10,12 @@ public class Main {
         // pet's package members are accessible
         System.out.println("count: " + Pet.count);
 
-        // pet's protected members are accessible too!
+        makeBill(pet);
+    }
+
+    public static void makeBill(Pet pet) {
+        // pet's protected members are accessible!
+        pet.weight = 1000;
         System.out.println("weight: " + pet.weight);
     }
 }
