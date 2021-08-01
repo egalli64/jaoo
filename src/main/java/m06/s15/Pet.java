@@ -1,6 +1,6 @@
 package m06.s15;
 
-public abstract class Pet {
+public abstract class Pet implements Brushable {
     private String name;
 
     protected Pet(String name) {
@@ -9,6 +9,11 @@ public abstract class Pet {
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void brush() {
+        System.out.println("Brushing " + name);
     }
 
     public abstract void saySomething();

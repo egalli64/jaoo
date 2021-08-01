@@ -2,6 +2,14 @@ package m06.s15;
 
 public class Main {
     public static void main(String[] args) {
+        Brushable kim = new Cat("Kim");
+        kim.brush();
+
+        if (kim instanceof Dog) {
+            Dog dog = (Dog) kim;
+            dog.bark();
+        }
+
 //		Cat cat = (Cat) new Dog();
 
         Pet pet = new Dog("Bob");
@@ -24,6 +32,10 @@ public class Main {
 
         Pet[] pets = { new Dog("Tom"), new Cat("Bob") };
 
+        for (int i = 0; i < pets.length; i++) {
+            pets[i].brush();
+        }
+
         f(pets);
         g(pets);
     }
@@ -42,7 +54,7 @@ public class Main {
             if (pet instanceof Cat) {
                 Cat cat = (Cat) pet;
                 cat.meow();
-//				((Cat)pet).meow();
+//                ((Cat) pet).meow();
             }
         }
     }
