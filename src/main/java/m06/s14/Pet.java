@@ -1,10 +1,17 @@
 package m06.s14;
 
 public class Pet {
-    private String name;
+    protected String name;
+
+    public Pet() {
+        // implicit call to super ctor
+//      super();
+        this.name = "Unknown";
+    }
 
     public Pet(String name) {
-        // super();
+        // useless explicit call to super ctor
+        super();
         this.name = name;
     }
 
