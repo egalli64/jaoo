@@ -1,7 +1,6 @@
 package mex.s06;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -13,6 +12,6 @@ class Exercise6Test {
         int[] actual = Exercise6.merge(left, right);
         int[] expected = { 1, 2, 3, 4, 5, 6, 7 };
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

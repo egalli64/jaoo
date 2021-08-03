@@ -1,9 +1,8 @@
 package mex.s03;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Disabled;
@@ -14,7 +13,7 @@ class Exercise2Test {
         boolean actual = Exercise2.isOdd(19);
         boolean expected = true;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -22,7 +21,7 @@ class Exercise2Test {
         boolean actual = Exercise2.isOdd(-12);
         boolean expected = false;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -33,7 +32,7 @@ class Exercise2Test {
             Exercise2.isOdd(0);
             fail("Exception expected!");
         } catch (IllegalArgumentException iae) {
-            assertThat(iae.getMessage(), is("Zero is not even nor odd!"));
+            assertThat(iae.getMessage()).isEqualTo("Zero is not even nor odd!");
         }
     }
 }

@@ -1,15 +1,10 @@
 package m04.s06;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.withPrecision;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.CoreMatchers.not;
-import static org.hamcrest.CoreMatchers.nullValue;
-import static org.hamcrest.Matchers.closeTo;
-import static org.hamcrest.CoreMatchers.startsWith;
-import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.jupiter.api.Test;
 
 class SimpleTest {
@@ -40,73 +35,54 @@ class SimpleTest {
     }
 
     @Test
-    void hamTrue() {
+    void ajTrue() {
         boolean actual = true;
-        assertThat(actual, is(true));
+        assertThat(actual).isTrue();
     }
 
     @Test
-    void hamTrue2() {
+    void ajEqTrue() {
         boolean actual = true;
-        assertThat(actual, is(equalTo(true)));
+        assertThat(actual).isEqualTo(true);
     }
 
     @Test
-    void hamTrue3() {
-        boolean actual = true;
-        assertThat(actual, equalTo(true));
-    }
-
-    @Test
-    void hamNull() {
+    void ajNull() {
         String actual = null;
-        assertThat(actual, is((String) null));
+        assertThat(actual).isNull();
     }
 
     @Test
-    void hamNull2() {
+    void ajEqNull() {
         String actual = null;
-        assertThat(actual, is(nullValue()));
+        assertThat(actual).isEqualTo(null);
     }
 
     @Test
-    void hamNull3() {
-        String actual = null;
-        assertThat(actual, nullValue());
-    }
-
-    @Test
-    void hamEquals() {
+    void ajEquals() {
         int expected = 42;
         int actual = 42;
-        assertThat(actual, equalTo(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
-    void hamEquals2() {
-        int expected = 42;
-        int actual = 42;
-        assertThat(actual, is(expected));
-    }
-
-    @Test
-    void hamEqualsDouble() {
+    void ajEqualsDouble() {
         double expected = .87;
         double actual = .29 * 3;
-        assertThat(actual, closeTo(expected, .0001));
+        assertThat(actual).isEqualTo(expected, withPrecision(4d));
     }
 
     @Test
-    void hamStart() {
+    void ajStart() {
         String prefix = "Tom";
         String actual = "Tom Jones";
-        assertThat(actual, startsWith(prefix));
+        assertThat(actual).startsWith(prefix);
     }
 
     @Test
-    void hamNot() {
+    void ajNotStart() {
         String prefix = "Bob";
         String actual = "Tom Jones";
-        assertThat(actual, not(startsWith(prefix)));
+        assertThat(actual).doesNotStartWith(prefix);
     }
 }

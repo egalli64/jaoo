@@ -1,7 +1,6 @@
 package m07.s06;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
@@ -15,7 +14,7 @@ class SimpleTest {
         int expected = 0;
 
         int result = simple.negate(value);
-        assertThat(result, is(expected));
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -26,7 +25,7 @@ class SimpleTest {
         int expected = -42;
 
         int result = simple.negate(value);
-        assertThat(result, is(expected));
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
@@ -34,11 +33,11 @@ class SimpleTest {
         Simple simple = new Simple();
 
         try {
-            simple.negate(Integer.MIN_VALUE);
-            fail("An IllegalArgumentException was expected");
+            int actual = simple.negate(Integer.MIN_VALUE);
+            fail("An IllegalArgumentException was expected, instead I've got " + actual);
         } catch (IllegalArgumentException iae) {
             String message = iae.getMessage();
-            assertThat(message, is("Can't negate MIN_VALUE"));
+            assertThat(message).isEqualTo("Can't negate MIN_VALUE");
         }
     }
 
@@ -50,7 +49,7 @@ class SimpleTest {
             simple.negate(Integer.MIN_VALUE);
         } catch (IllegalArgumentException iae) {
             String message = iae.getMessage();
-            assertThat(message, is("Can't negate MIN_VALUE"));
+            assertThat(message).isEqualTo("Can't negate MIN_VALUE");
             return;
         }
         fail("An IllegalArgumentException was expected");

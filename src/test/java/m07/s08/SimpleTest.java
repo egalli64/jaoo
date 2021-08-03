@@ -1,7 +1,6 @@
 package m07.s08;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.Test;
@@ -14,6 +13,6 @@ class SimpleTest {
         var simple = new Simple();
 
         var exc = assertThrows(IllegalArgumentException.class, () -> simple.negate(Integer.MIN_VALUE));
-        assertThat(exc.getMessage(), is("Can't negate MIN_VALUE"));
+        assertThat(exc.getMessage()).isEqualTo("Can't negate MIN_VALUE");
     }
 }

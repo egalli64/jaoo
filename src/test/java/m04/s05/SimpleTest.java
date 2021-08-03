@@ -1,10 +1,8 @@
 package m04.s05;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.IsEqual.equalTo;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import m04.s04.Simple;
 
@@ -23,7 +21,7 @@ class SimpleTest {
 
         int actual = simple.negate(value);
 
-        assertThat(actual, equalTo(expected));
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -33,7 +31,7 @@ class SimpleTest {
 
         int actual = simple.negate(value);
 
-        assertThat(actual, equalTo(expected));
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -43,6 +41,6 @@ class SimpleTest {
 
         int actual = simple.negate(value);
 
-        assertThat(actual, equalTo(expected));
+        assertEquals(expected, actual);
     }
 }

@@ -1,8 +1,8 @@
 package m09.s03;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class MyArrayTest {
@@ -14,7 +14,7 @@ class MyArrayTest {
         int expected = 10;
         int actual = ma.getCapacity();
 
-        assertThat(expected, is(actual));
+        assertThat(expected).isEqualTo(actual);
     }
 
     @Test
@@ -24,7 +24,7 @@ class MyArrayTest {
 
         int actual = ma.getCapacity();
 
-        assertThat(expected, is(actual));
+        assertThat(expected).isEqualTo(actual);
     }
 
     @Test
@@ -33,16 +33,16 @@ class MyArrayTest {
 
         int expected = 42;
         ma.add(expected);
-        assertThat(ma.getCapacity(), is(1));
-        assertThat(ma.getSize(), is(1));
-        assertThat(ma.get(0), is(expected));
+        assertThat(ma.getCapacity()).isEqualTo(1);
+        assertThat(ma.getSize()).isEqualTo(1);
+        assertThat(ma.get(0)).isEqualTo(expected);
     }
 
     @Test
     void addZeroCapacity() {
         MyArray<Integer> ma = new MyArray<>(0);
         var thrown = assertThrows(IllegalStateException.class, () -> ma.add(42));
-        assertThat(thrown.getMessage(), is("Array is full"));
+        assertThat(thrown.getMessage()).isEqualTo("Array is full");
     }
 
 }

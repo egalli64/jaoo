@@ -1,8 +1,6 @@
 package m04.s04;
 
-import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.MatcherAssert.assertThat;
-
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
 class SimpleTest {
@@ -14,6 +12,6 @@ class SimpleTest {
 
         int actual = simple.negate(value);
 
-        assertThat(actual, equalTo(expected));
+        assertEquals(expected, actual);
     }
 }

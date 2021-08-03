@@ -1,7 +1,7 @@
 package mex.s04;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.Test;
 
 class Exercise6Test {
@@ -11,6 +11,6 @@ class Exercise6Test {
         long actual = Exercise6.squareDigit(345);
         long expected = 91625;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

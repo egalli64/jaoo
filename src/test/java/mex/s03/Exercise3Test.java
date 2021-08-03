@@ -1,7 +1,6 @@
 package mex.s03;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,7 @@ class Exercise3Test {
         String actual = Exercise3.asWord(0);
         String expected = "zero";
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -19,6 +18,6 @@ class Exercise3Test {
         String actual = Exercise3.asWord(42);
         String expected = "other";
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

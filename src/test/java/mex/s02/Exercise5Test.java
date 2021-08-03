@@ -1,7 +1,6 @@
 package mex.s02;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +10,7 @@ class Exercise5Test {
         int actual = Exercise5.score(0.1, -0.1);
         int expected = 10;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -19,7 +18,7 @@ class Exercise5Test {
         int actual = Exercise5.score(0.0, 1.0);
         int expected = 10;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -27,7 +26,7 @@ class Exercise5Test {
         int actual = Exercise5.score(Math.sqrt(0.6), Math.sqrt(0.4));
         int expected = 10;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -36,7 +35,7 @@ class Exercise5Test {
         int actual = Exercise5.score(pos, pos);
         int expected = 5;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -44,6 +43,6 @@ class Exercise5Test {
         int actual = Exercise5.score(3.55, 3.55);
         int expected = 1;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

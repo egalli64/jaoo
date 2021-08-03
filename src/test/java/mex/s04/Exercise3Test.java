@@ -1,8 +1,6 @@
 package mex.s04;
 
-import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.text.MatchesPattern.matchesPattern;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,9 +10,9 @@ class Exercise3Test {
         int input = 3;
         String[] actual = Exercise3.pyramid(input);
 
-        assertThat(actual.length, is(input));
+        assertThat(actual.length).isEqualTo(input);
         for (int i = 0; i < input; i++) {
-            assertThat(actual[i], matchesPattern(String.format("x{%d}", i + 1)));
+            assertThat(actual[i]).matches(String.format("x{%d}", i + 1));
         }
     }
 }

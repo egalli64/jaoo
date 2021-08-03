@@ -1,7 +1,6 @@
 package mex.s06;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +11,7 @@ class Exercise3Test {
         int actual = Exercise3.max(input);
         int expected = 3;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 
     @Test
@@ -22,6 +21,6 @@ class Exercise3Test {
         // when you know about exceptions, refactor the code accordingly
         int expected = Integer.MIN_VALUE;
 
-        assertThat(actual, is(expected));
+        assertThat(actual).isEqualTo(expected);
     }
 }

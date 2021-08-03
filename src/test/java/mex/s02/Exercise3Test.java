@@ -1,7 +1,7 @@
 package mex.s02;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.closeTo;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.withPrecision;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +11,6 @@ class Exercise3Test {
         double actual = Exercise3.engineCapacity(74, 75, 4);
         double expected = 1290.252;
 
-        assertThat(actual, closeTo(expected, 0.001));
+        assertThat(actual).isEqualTo(expected, withPrecision(3d));
     }
 }
