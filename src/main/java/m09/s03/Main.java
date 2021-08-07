@@ -1,62 +1,64 @@
 package m09.s03;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        // see test for more stuff
-        MyArray<String> mas = new MyArray<>();
+        List<Integer> li = new ArrayList<Integer>();
+        li.add(4);
 
-        mas.add("hello generic array");
-        System.out.println(mas.get(0));
-
-        noGenericTypeCheck(mas);
+        noGenericTypeCheck(li);
         noGenericDowncast();
         noGenericUpcast();
         noGenericArray();
     }
 
-    private static void noGenericTypeCheck(MyArray<String> mas) {
+    private static void noGenericTypeCheck(List<Integer> li) {
         // Cannot perform instanceof check against parameterized type
-//      if (mas instanceof MyArray<String>) {
-//          System.out.println("As expected");
-//      }
+//        if (li instanceof List<Integer>) {
+//            System.out.println("As expected");
+//        }
 
-        if (mas instanceof MyArray<?>) {
-            System.out.println("It is a MyArray (of what?)");
+        if (li instanceof List<?>) {
+            System.out.println("It is a List (of what?)");
         }
     }
 
     private static void noGenericDowncast() {
-        MyArray<Animal> maa = new MyArray<>();
-        maa.add(new Dog());
+        List<Animal> la = new ArrayList<>();
+        la.add(new Dog());
         // Cannot cast
-//        MyArray<Dog> mad = (MyArray<Dog>) maa;
+//        ArrayList<Dog> ald = (ArrayList<Dog>) la;
 
-        MyArray<?> mao = (MyArray<?>) maa;
-        System.out.println("MyArray contains " + mao.getSize() + " object(s)");
+        ArrayList<?> alo = (ArrayList<?>) la;
+        System.out.println("MyArray contains " + alo.size() + " object(s)");
     }
 
     private static void noGenericUpcast() {
-        MyArray<Dog> mad = new MyArray<>();
-        mad.add(new Dog());
+        List<Dog> ld = new ArrayList<>();
+        ld.add(new Dog());
         // Cannot cast
-//        MyArray<Animal> maa = (MyArray<Animal>) mad;
+//        ArrayList<Animal> ala = (ArrayList<Animal>) ld;
 
-        MyArray<?> mao = (MyArray<?>) mad;
-        System.out.println("MyArray contains " + mao.getSize() + " object(s)");
+        ArrayList<?> alo = (ArrayList<?>) ld;
+        System.out.println("MyArray contains " + alo.size() + " object(s)");
     }
 
     private static void noGenericArray() {
-        // Cannot create a generic array
-        // MyArray<Dog>[] mads = new MyArray<Dog>[10];
+        // Cannot create an array of generics
+//        List<Dog>[] ld = new ArrayList<Dog>[10];
 
         // If you really need it
-        MyArray<?>[] mao = new MyArray<?>[10];
-        mao[0] = new MyArray<Dog>();
-        mao[1] = new MyArray<Integer>();
+        List<?>[] alo = new ArrayList<?>[10];
+        System.out.println("Length of alo is " + alo.length);
+        alo[0] = new ArrayList<Dog>();
+        alo[1] = new ArrayList<Integer>();
 
         // Still, using an unbound generic is a pain
         @SuppressWarnings("unchecked")
-        MyArray<Dog> mad = (MyArray<Dog>) mao[0];
-        mad.add(new Dog());
+        ArrayList<Dog> ald = (ArrayList<Dog>) alo[0];
+        ald.add(new Dog());
+        System.out.println("Size of ald is " + ald.size());
     }
 }
