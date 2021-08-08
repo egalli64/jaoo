@@ -11,7 +11,7 @@ public class Exercise {
      * </pre>
      * 
      * @param data an array with duplicates
-     * @return a stripped copy of the original array
+     * @return the original array (but wrapped values) stripped of duplicates
      */
     public Integer[] singles(int[] data) {
         // TODO
