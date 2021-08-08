@@ -31,7 +31,11 @@ public class AsCollection {
         System.out.print("This collection has " + collOne.size() + " elements: ");
         Iterator<Integer> it = collOne.iterator();
         while (it.hasNext()) {
-            System.out.print(it.next() + " ");
+            Integer current = it.next();
+            System.out.print(current + " ");
+
+            // same, one-liner
+//            System.out.print(it.next() + " ");
         }
         System.out.println();
 
@@ -40,7 +44,11 @@ public class AsCollection {
         }
 
         System.out.print("Converting a collection to an array: ");
-        Integer[] values = collOne.toArray(new Integer[collOne.size()]);
+        Integer[] values = new Integer[collOne.size()];
+        values = collOne.toArray(values);
+
+        // same, one-liner
+//        Integer[] values = collOne.toArray(new Integer[collOne.size()]);
         System.out.println(Arrays.toString(values));
 
         collOne.clear();
