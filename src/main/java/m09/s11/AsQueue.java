@@ -1,22 +1,35 @@
 package m09.s11;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Queue;
 
 public class AsQueue {
     public static void main(String[] args) {
-        Queue<Integer> q = new LinkedList<>(List.of(5, -3, -1, 12, 27, 5));
-        System.out.println(q);
+        // The concrete class should implement the Queue interface
+        Queue<Integer> q = create(false);
+        System.out.println("An empty queue: " + q);
 
-        if (q.offer(18)) {
-            System.out.println("18 has been added: " + q);
+        try {
+            System.out.println("This won't work: " + q.remove());
+        } catch (NoSuchElementException e) {
+            System.out.println(e.getClass().getName() + " trying to remove an item from an empty queue");
         }
 
-        System.out.println("The first element in queue (or throws): " + q.element());
-        System.out.println("Again, the first element (or null): " + q.peek());
+        System.out.println("Poll on an empty queue: " + q.poll());
 
-        System.out.println("Remove (or throws): " + q.remove());
-        System.out.println("Poll (or null): " + q.poll());
+        if (q.offer(18)) {
+            System.out.println("Offer a value: " + q);
+        }
+
+        System.out.println("First element in queue (or throws): " + q.element());
+        System.out.println("First element (or null): " + q.peek());
+
+        System.out.println("Remove first element in queue (or throws): " + q.remove());
+    }
+
+    public static Queue<Integer> create(boolean flag) {
+        return flag ? new LinkedList<>() : new ArrayDeque<>();
     }
 }
