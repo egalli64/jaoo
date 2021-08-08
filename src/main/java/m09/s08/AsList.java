@@ -11,16 +11,18 @@ public class AsList {
     private static final Logger log = Logger.getGlobal();
 
     public static void main(String[] args) {
-        // concrete type could be ArrayList or LinkedList (...)
-        List<Integer> list = create(List.of(12, 18, -5, -2233), true);
-        System.out.println(list);
+        // no assumption here on the actual concrete type
+        List<Integer> list = create(true, 12, 18, -5, -2233);
+        System.out.println("Values in list: " + list);
 
-        System.out.println("At index 2: " + list.get(2));
+        System.out.println("At index 2: " + list.get(2)); // if it was an array: list[2];
+
+        list.add(997);
 
         int value = -997;
         int pos = 2;
         list.add(pos, value);
-        System.out.println(String.format("Inserting at position %d element %d: %s", pos, value, list));
+        System.out.println(String.format("After adding at position %d element %d: %s", pos, value, list));
         System.out.println(String.format("Index of %d: %d", value, list.indexOf(-997)));
 
         try {
@@ -30,12 +32,16 @@ public class AsList {
             log.log(Level.SEVERE, "Careful with indices!", ex);
         }
 
+        list.add(list.size(), 10_008);
+        list.add(10_009);
+        System.out.println("No \"holes\" in a collection: " + list);
+
         pos = 3;
         value = list.remove(pos);
         System.out.println(String.format("Removing at position %d element %d: %s", pos, value, list));
 
         value = 42;
-        int old = list.set(pos, value);
+        int old = list.set(pos, value); // if it was an array: list[pos] = value;
         System.out.println(String.format("Set at position %d element %d, was %d: %s", pos, value, old, list));
 
         ListIterator<Integer> it = list.listIterator();
@@ -45,10 +51,11 @@ public class AsList {
                 it.set(-current);
             }
         }
-        System.out.println(list);
+        System.out.println("Traverse and modify a list by list iterator: " + list);
     }
 
-    public static List<Integer> create(List<Integer> input, boolean asArray) {
+    public static List<Integer> create(boolean asArray, Integer... values) {
+        List<Integer> input = List.of(values);
         return asArray ? new ArrayList<>(input) : new LinkedList<>(input);
     }
 }

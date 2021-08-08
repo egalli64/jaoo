@@ -3,13 +3,15 @@ package m09.s07;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
 public class AsCollection {
     public static void main(String[] args) {
-        Collection<Integer> collOne = new ArrayList<>();
-        Collection<Integer> collTwo = List.of(12, 18, -5, -2233);
+        // concrete types could be _any_ Collection
+        Collection<Integer> collOne = create(true);
+        Collection<Integer> collTwo = create(true, 12, 18, -5, -2233);
 
         collOne.addAll(collTwo);
         // implicit call to the overridden toString() for the variable actual type
@@ -20,12 +22,12 @@ public class AsCollection {
         }
 
         if (collOne.equals(collTwo)) {
-            System.out.println("The two collections contain the same (equals) elements");
+            System.out.println("Collections of the same concrete type and with the same (equals) elements");
         }
 
         collOne.add(42);
         if (!collOne.equals(collTwo)) {
-            System.out.println("Now the two collections are different");
+            System.out.println("The collections are not equals");
         }
 
         System.out.print("This collection has " + collOne.size() + " elements: ");
@@ -53,5 +55,10 @@ public class AsCollection {
 
         collOne.clear();
         System.out.println("Collection is empty? " + collOne.isEmpty());
+    }
+
+    public static Collection<Integer> create(boolean flag, Integer... values) {
+        List<Integer> input = List.of(values);
+        return flag ? new HashSet<>(input) : new ArrayList<>(input);
     }
 }
