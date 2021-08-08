@@ -3,17 +3,18 @@ package m09.s13;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class AsMap {
     public static void main(String[] args) {
-        Map<Integer, String> map = aMap();
+        // any concrete map will do
+        Map<Integer, String> map = aMap(false);
         System.out.println("original map: " + map);
 
-        // Set<Map.Entry<Integer, String>>
-        var items = map.entrySet();
-        // Map.Entry<Integer, String>
-        for (var item : items) {
-            item.setValue(item.getValue() + "!");
+        // using var instead of Map.Entry<Integer, String>
+        for (var current : map.entrySet()) {
+            System.out.println("I'm modifying element with key: " + current.getKey());
+            current.setValue(current.getValue() + "!");
         }
         System.out.println("modified map: " + map);
 
@@ -24,8 +25,8 @@ public class AsMap {
         }
         System.out.println();
 
-        // Iterator<Map.Entry<Integer, String>>
-        var it = items.iterator();
+        // using var instead of Iterator<Map.Entry<Integer, String>>
+        var it = map.entrySet().iterator();
         System.out.print("looping via map iterator: ");
         while (it.hasNext()) {
             // Map.Entry<Integer, String>
@@ -44,7 +45,9 @@ public class AsMap {
         System.out.println("Value for key -1 (or null): " + map.get(-1));
         System.out.println("Value for key -1 (or default): " + map.getOrDefault(-1, "missing"));
 
+        // put() returns null if there was no previous value (or no entry)
         System.out.println("Previous value for 99 was: " + map.put(99, "nintynine"));
+        System.out.println("Previous value for 99 was: " + map.put(99, "hello"));
         System.out.println("Current value for 99 is: " + map.putIfAbsent(99, "star"));
 
         System.out.println("Removed value for key 23: " + map.remove(23));
@@ -53,10 +56,11 @@ public class AsMap {
         System.out.println("Size is " + map.size());
 
         map.clear();
+        System.out.println("Map after clear: " + map);
     }
 
-    private static Map<Integer, String> aMap() {
-        Map<Integer, String> result = new HashMap<>();
+    private static Map<Integer, String> aMap(boolean flag) {
+        Map<Integer, String> result = flag ? new HashMap<>() : new TreeMap<>();
         result.put(7, "seven");
         result.put(12, "twelve");
         result.put(23, "twentythree");
