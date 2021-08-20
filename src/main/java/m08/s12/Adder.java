@@ -8,18 +8,20 @@ public class Adder {
 
     public static void main(String[] args) {
         System.out.println("Please, enter a few numbers");
-        double result = 0.0;
+        double result = 0;
 
-        Scanner scanner = new Scanner(System.in);
-        while (scanner.hasNext()) {
-            if (scanner.hasNextDouble()) {
-                result += scanner.nextDouble();
-                log.info("Current result is " + result);
-            } else {
-                System.out.println("Bad input, discarded: " + scanner.next());
+        // try-with-resources
+        try (Scanner scanner = new Scanner(System.in)) {
+            while (scanner.hasNext()) {
+                if (scanner.hasNextDouble()) {
+                    result += scanner.nextDouble();
+                    log.info("Current result is " + result);
+                } else {
+                    System.out.println("Bad input, discarded: " + scanner.next());
+                }
             }
         }
-        scanner.close();
+
         System.out.println("Total is " + result);
     }
 }
