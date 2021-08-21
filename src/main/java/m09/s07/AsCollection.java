@@ -41,6 +41,13 @@ public class AsCollection {
         }
         System.out.println();
 
+        // for-each hides the iterator
+        System.out.print("Again: ");
+        for(Integer current: collOne) {
+            System.out.print(current + " ");
+        }
+        System.out.println();
+
         if (collOne.remove(-5)) {
             System.out.println("Element -5 removed");
         }
