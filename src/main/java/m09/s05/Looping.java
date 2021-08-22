@@ -6,27 +6,32 @@ import java.util.List;
 
 public class Looping {
     public static void main(String[] args) {
-        List<Integer> aList = List.of(1, 3, 4, 2);
-        Iterable<Integer> iterable = new ArrayList<>(aList);
+        Iterable<Integer> iterable = new ArrayList<>(List.of(1, 3, 4, 2, 42));
+        System.out.println("Iterable: " + iterable);
 
-        // "while has next" loop
+        System.out.print("\"while has next\" loop: ");
         Iterator<Integer> it = iterable.iterator();
         while (it.hasNext()) {
-            System.out.print(it.next() + " ");
+            Integer value = it.next();
+            System.out.print(value + " ");
+            if(value > 10) {
+                it.remove();
+            }
         }
         System.out.println();
+        System.out.println("Iterable after looping and removing: " + iterable);
 
-        // for each
+        System.out.print("for-each loop: ");
         for (Integer value : iterable) {
             System.out.print(value + " ");
         }
         System.out.println();
 
-        // Java8 forEach w/ blanks
+        System.out.print("Java8 forEach(): ");
         iterable.forEach(value -> System.out.print(value + " "));
         System.out.println();
 
-        // Java8 forEach
+        System.out.print("Java8 (too) compact forEach(): ");
         iterable.forEach(System.out::print);
         System.out.println();
     }
