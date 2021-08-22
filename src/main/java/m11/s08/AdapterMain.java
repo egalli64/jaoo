@@ -2,14 +2,13 @@ package m11.s08;
 
 public class AdapterMain {
     public static void main(String[] args) {
-        CoffeeMachineLegacy ocm = new CoffeeMachineLegacy();
-
-        CoffeeMachineAdapter cta = new CoffeeMachineAdapter(ocm);
+        CoffeeMachineLegacy cml = new CoffeeMachineLegacy();
+        CoffeeMachineAdapter cma = new CoffeeMachineAdapter(cml);
 
         System.out.println("Selecting the first one");
-        cta.select1();
+        cma.select1();
 
         System.out.println("Selecting the second one");
-        cta.select2();
+        cma.select2();
     }
 }
