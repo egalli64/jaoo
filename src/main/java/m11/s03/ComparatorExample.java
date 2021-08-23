@@ -1,11 +1,12 @@
 package m11.s03;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class ComparatorExample {
     public static void main(String[] args) {
-        String[] names = { "Tom", "Bo", "Bill", "Tony" };
+        String[] names = { "Tom", "Bob", "Bill", "Tony", "Cy" };
         System.out.println("As created: " + Arrays.toString(names));
 
         Arrays.sort(names);
@@ -22,14 +23,10 @@ public class ComparatorExample {
         Arrays.sort(names, Comparator.reverseOrder());
         System.out.println("Reversed alphabetic order: " + Arrays.toString(names));
 
-        // a few lines
+        // a longer lambda
         Arrays.sort(names, (left, right) -> {
             int comparison = right.length() - left.length();
-            if (comparison == 0) {
-                return left.compareTo(right);
-            }
-
-            return comparison;
+            return comparison == 0 ? left.compareTo(right) : comparison;
         });
         System.out.println("From longer to shorter (then alpha): " + Arrays.toString(names));
     }
