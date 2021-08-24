@@ -1,4 +1,4 @@
-package m09.s24;
+package m10.s07;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Reflection {
     private static void printIntegerMethods() {
-        Class<?> c = Integer.class;
+        Class<Integer> c = Integer.class;
         Method[] methods = c.getMethods();
         for (Method method : methods) {
             System.out.println(method);
