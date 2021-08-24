@@ -1,4 +1,4 @@
-package m11.s07;
+package m11.s05;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,17 +10,18 @@ public class StreamExample {
         System.out.println("Starting from this collection:" + values);
 
         // without stream
-        List<Integer> evenValues = extractEvenValuesNoStream(values);
-        System.out.println("Even numbers are: " + evenValues);
+        List<Integer> evenClassic = extractEvenValuesNoStream(values);
+        System.out.println("Even numbers are: " + evenClassic);
 
         // with stream
-        evenValues = values.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
-        System.out.println("Even numbers are: " + evenValues);
+        List<Integer> evenStream = values.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
+        System.out.println("Even numbers are: " + evenStream);
     }
 
     private static List<Integer> extractEvenValuesNoStream(List<Integer> values) {
         List<Integer> result = new ArrayList<>();
 
+        // consumes the input list, adding its even elements to the result
         values.forEach(value -> {
             if (value % 2 == 0) {
                 result.add(value);
