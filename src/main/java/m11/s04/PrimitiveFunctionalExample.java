@@ -1,4 +1,4 @@
-package m11.s05;
+package m11.s04;
 
 import java.util.function.DoublePredicate;
 import java.util.function.DoubleToIntFunction;
