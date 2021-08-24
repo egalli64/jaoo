@@ -4,7 +4,7 @@ import java.util.function.DoublePredicate;
 import java.util.function.DoubleToIntFunction;
 import java.util.function.IntConsumer;
 
-public class PrimitiveFunctionalExample {
+public class FunctionalPrimitiveExample {
     public static void main(String[] args) {
         // double -> boolean
         DoublePredicate isPositive = x -> x > 0;
