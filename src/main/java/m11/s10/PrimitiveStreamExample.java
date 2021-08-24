@@ -1,4 +1,4 @@
-package m11.s12;
+package m11.s10;
 
 import java.util.Arrays;
 import java.util.OptionalInt;

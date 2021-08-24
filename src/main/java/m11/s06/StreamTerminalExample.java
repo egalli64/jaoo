@@ -1,4 +1,4 @@
-package m11.s08;
+package m11.s06;
 
 import static java.util.stream.Collectors.toSet;
 

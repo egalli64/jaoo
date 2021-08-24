@@ -1,6 +1,7 @@
-package m11.s09;
+package m11.s07;
 
 import java.util.List;
+
 import static java.util.stream.Collectors.toList;
 
 import java.util.Arrays;
@@ -17,7 +18,9 @@ public class StreamMapExample {
         List<Integer> lengths = owners.stream().map(String::length).sorted().collect(toList());
         System.out.println("Sorted owner name lengths: " + lengths);
 
+        System.out.print("Split the owners characters, map them to a stream, lower case, no duplicates >");
         owners.stream().map(s -> s.split("")).flatMap(Arrays::stream).map(String::toLowerCase)
                 .distinct().forEach(System.out::print);
+        System.out.println(" <");
     }
 }
