@@ -22,7 +22,8 @@ public class PredicateComposition {
         System.out.println("Old dogs owned by Redford: " + dogs.stream().filter(old.and(redfordOwned)).collect(Collectors.toList()));
 
         Predicate<Dog> namedRob = dog -> dog.getName().equals("Rob");
+        System.out.println("Named Rob: " + dogs.stream().filter(namedRob).collect(Collectors.toList()));
+        System.out.println("Named Rob or owned by Redford: " + dogs.stream().filter(namedRob.or(redfordOwned)).collect(Collectors.toList()));
         System.out.println("Not (named Rob or owned by Redford): " + dogs.stream().filter(namedRob.or(redfordOwned).negate()).collect(Collectors.toList()));
-
     }
 }
