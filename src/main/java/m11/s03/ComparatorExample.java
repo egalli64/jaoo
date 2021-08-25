@@ -19,6 +19,7 @@ public class ComparatorExample {
         Arrays.sort(names, (s, t) -> t.length() - s.length());
         System.out.println("From longer to shorter: " + Arrays.toString(names));
 
+        // a few pre-built utility comparators are available
         Arrays.sort(names, Comparator.reverseOrder());
         System.out.println("Reversed alphabetic order: " + Arrays.toString(names));
 
