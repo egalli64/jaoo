@@ -7,7 +7,7 @@ import javax.swing.WindowConstants;
 
 public class SwingEventExample extends JFrame {
     private static final long serialVersionUID = 1L;
-    private JButton button;
+    private final JButton button;
     private int counter;
 
     public SwingEventExample() {
@@ -17,7 +17,7 @@ public class SwingEventExample extends JFrame {
         setTitle("Hello");
 
         button = new JButton("Click Me!");
-        button.addActionListener(ev -> button.setText(String.valueOf(++counter)));
+        button.addActionListener(ev -> button.setText(Integer.toString(++counter)));
 
         JPanel panel = new JPanel();
         panel.add(button);

@@ -8,11 +8,8 @@ public class ComparatorExample {
         String[] names = { "Tom", "Bo", "Billy", "Tony" };
         System.out.println("As created: " + Arrays.toString(names));
 
-        Arrays.sort(names, (String left, String right) -> left.length() - right.length());
-        System.out.println("From shorter to longer: " + Arrays.toString(names));
-
-        // a few methods are available to make the job even simpler
-        Arrays.sort(names, Comparator.comparingInt(String::length).reversed());
-        System.out.println("From longer to shorter: " + Arrays.toString(names));
+        Comparator<String> naturalOrder = (String left, String right) -> left.length() - right.length();
+        Arrays.sort(names, naturalOrder);
+        System.out.println("Sorted from shorter to longer: " + Arrays.toString(names));
     }
 }
