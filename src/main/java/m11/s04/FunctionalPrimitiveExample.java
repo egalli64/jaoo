@@ -8,12 +8,13 @@ public class FunctionalPrimitiveExample {
     public static void main(String[] args) {
         // double -> boolean
         DoublePredicate isPositive = x -> x > 0;
-        if (isPositive.test(Math.PI)) {
-            System.out.println("The double passed is positive");
+        double aValue = Math.PI;
+        if (isPositive.test(aValue)) {
+            System.out.println("Test passed on the DoublePredicate isPositive for " + aValue);
         }
 
         // int -> void
-        IntConsumer consume = i -> System.out.println("Consuming this value: " + i);
+        IntConsumer consume = i -> System.out.printf("Consuming %d on a IntConsumer%n", i);
         consume.accept(42);
 
         // double -> int
