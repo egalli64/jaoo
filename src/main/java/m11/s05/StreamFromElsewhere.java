@@ -10,15 +10,14 @@ public class StreamFromElsewhere {
         Integer[] values = { 12, 34, 2, 11, 5, 7 };
         System.out.println("Starting from this array:" + Arrays.toString(values));
 
-        List<Integer> results = Arrays.stream(values).filter(x -> x % 2 == 0).collect(Collectors.toList());
-        System.out.println("Even numbers are: " + results);
+        System.out.println("Even numbers from Arrays.stream()");
+        Arrays.stream(values).filter(x -> x % 2 == 0).forEach(System.out::println);
 
-        results = Stream.of(12, 34, 2, 11, 5, 7).filter(x -> x % 2 == 1).collect(Collectors.toList());
-        System.out.println("Odd numbers are: " + results);
+        System.out.println("Odd numbers from Stream.of()");
+        Stream.of(12, 34, 2, 11, 5, 7).filter(x -> x % 2 == 1).forEach(System.out::println);
 
-        Stream.Builder<Integer> builder = Stream.builder();
-        results = builder.add(42).add(2).build().filter(x -> x < 10).collect(Collectors.toList());
-        System.out.println("Small numbers are: " + results);
+        System.out.println("Small numbers from Stream.builder()");
+        Stream.<Integer>builder().add(42).add(2).build().filter(x -> x < 10).forEach(System.out::println);
 
         int[] data = { 12, 34, 2, 11, 5, 7 };
         System.out.println("Starting from this array:" + Arrays.toString(data));
