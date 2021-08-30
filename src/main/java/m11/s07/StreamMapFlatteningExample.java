@@ -2,6 +2,8 @@ package m11.s07;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
+
 import static java.util.stream.Collectors.toList;
 
 public class StreamMapFlatteningExample {
@@ -32,5 +34,16 @@ public class StreamMapFlatteningExample {
                 .flatMap(i -> li2.stream().sorted().map(j -> new Pair(i, j))) //
                 .collect(toList());
         System.out.println("Cartesian product: " + cartesian);
+
+        // strings and nulls
+        String[] data = {"Some ", "good ", "strings ", null, "but ", "also ", "some ", null};
+
+        System.out.print("This is not good: ");
+        Stream.of(data).forEach(System.out::print);
+        System.out.println();
+
+        System.out.print("This is better: ");
+        Stream.of(data).flatMap(Stream::ofNullable).forEach(System.out::print);
+        System.out.println();
     }
 }
