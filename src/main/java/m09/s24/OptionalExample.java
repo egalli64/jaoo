@@ -1,5 +1,6 @@
 package m09.s24;
 
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public class OptionalExample {
@@ -24,6 +25,13 @@ public class OptionalExample {
 
         Optional<String> o1 = Optional.ofNullable(s1);
         System.out.println("An optional of a nullable string: " + o1);
+
+        try {
+            o1.get();
+        } catch(NoSuchElementException e) {
+            System.out.println("Getting the value for an empty optional leads to " + e);
+        }
+
         Optional<String> o2 = Optional.ofNullable(s2);
         System.out.println("An optional of another nullable string: " + o2);
 
