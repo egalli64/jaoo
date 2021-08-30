@@ -10,12 +10,13 @@ public class StreamExample {
         System.out.println("Starting from this collection:" + values);
 
         // without stream
-        List<Integer> evenClassic = extractEvenValuesNoStream(values);
-        System.out.println("Even numbers are: " + evenClassic);
+        List<Integer> evenValues = extractEvenValuesNoStream(values);
+        System.out.println("Even numbers (no stream)");
+        evenValues.forEach(System.out::println);
 
         // with stream
-        List<Integer> evenStream = values.stream().filter(x -> x % 2 == 0).collect(Collectors.toList());
-        System.out.println("Even numbers are: " + evenStream);
+        System.out.println("Even numbers (stream)");
+        values.stream().filter(x -> x % 2 == 0).forEach(System.out::println);
     }
 
     private static List<Integer> extractEvenValuesNoStream(List<Integer> values) {
