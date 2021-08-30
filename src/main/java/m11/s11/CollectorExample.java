@@ -1,4 +1,4 @@
-package m11.s12;
+package m11.s11;
 
 import static java.util.stream.Collectors.counting;
 import static java.util.stream.Collectors.toList;
