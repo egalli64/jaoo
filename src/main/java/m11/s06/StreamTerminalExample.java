@@ -14,7 +14,5 @@ public class StreamTerminalExample {
         System.out.println("forEach() begin");
         values.stream().forEach(System.out::println);
         System.out.println("forEach() end");
-
-        System.out.println("collect(toSet): " + values.stream().collect(toSet()));
     }
 }
