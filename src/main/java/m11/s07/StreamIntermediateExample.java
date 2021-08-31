@@ -14,22 +14,23 @@ public class StreamIntermediateExample {
         System.out.println("Count odd ones: " + values.stream().filter(x -> x % 2 == 1).count());
 
         // sorted and limit
-        List<Integer> topValues = values.stream().sorted(Comparator.reverseOrder()).limit(3).collect(toList());
-        System.out.println("Top three values" + topValues);
+        System.out.println("Top three values");
+        values.stream().sorted(Comparator.reverseOrder()).limit(3).forEach(System.out::println);
 
         // distinct, sorted, limit
-        List<Integer> bottomValues = values.stream().distinct().sorted().limit(3).collect(toList());
-        System.out.println("Bottom three values (no duplicates) " + bottomValues);
+        System.out.println("Bottom three sorted values (no duplicates)");
+        values.stream().distinct().sorted().limit(3).forEach(System.out::println);
 
         // distinct, sorted, skip
-        List<Integer> others = values.stream().distinct().sorted().skip(3).collect(toList());
-        System.out.println("Values after first three ones (no duplicates) " + others);
+        System.out.println("Values after first three ones (no duplicates)");
+        values.stream().distinct().sorted().skip(3).forEach(System.out::println);
 
         // take while
-        System.out.println("The first odd values are: " + values.stream().takeWhile(x -> x % 2 == 1).collect(toList()));
+        System.out.println("Printing values while odd");
+        values.stream().takeWhile(x -> x % 2 == 1).forEach(System.out::println);
 
         // drop while
-        System.out.println("The values from the first even value on are: "
-                + values.stream().dropWhile(x -> x % 2 == 1).collect(toList()));
+        System.out.println("Discard the initial odd values, then print");
+        values.stream().dropWhile(x -> x % 2 == 1).forEach(System.out::println);
     }
 }
