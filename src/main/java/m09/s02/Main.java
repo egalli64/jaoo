@@ -18,6 +18,9 @@ public class Main {
         // this is safer
         encloser.g();
 
+        // using a local class, it is an implementation detail
+        System.out.println("A value from encloser: " + encloser.k());
+
         log.info("creating and using an inner object");
         Encloser.InnerPublic eip = encloser.new InnerPublic();
         System.out.println("Accessing a private member of encloser: " + eip.getDoubledValue());

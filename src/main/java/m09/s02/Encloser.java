@@ -4,23 +4,34 @@ import java.util.logging.Logger;
 
 public class Encloser {
     private static final Logger log = Logger.getGlobal();
-    private int value = 12;
+    private final int value = 12;
 
     /**
      * Dubious: let us access internal class details
      * 
-     * @return an instance of a inner private class!
+     * @return an instance of an inner private class!
      */
     public InnerPrivate f() {
         return new InnerPrivate();
     }
 
     /**
-     * Safer: internal details are managed here, the result is returned
+     * Safer: internal details are managed here, the result is just a copy
      */
     public int g() {
         InnerPrivate inner = new InnerPrivate();
         return inner.getDoubledValue();
+    }
+
+    public int k() {
+        class LocalClass {
+            final int a = 7;
+            final int b = 3;
+            final int c = 2;
+        }
+
+        LocalClass answer = new LocalClass();
+        return answer.a * answer.b * answer.c;
     }
 
     public class InnerPublic {
