@@ -1,7 +1,6 @@
-package m11.s12;
+package m11.s05;
 
 import java.util.function.Function;
-import java.util.function.IntFunction;
 
 public class FunctionComposition {
     public static void main(String[] args) {

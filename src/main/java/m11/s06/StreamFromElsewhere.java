@@ -1,8 +1,6 @@
-package m11.s05;
+package m11.s06;
 
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamFromElsewhere {

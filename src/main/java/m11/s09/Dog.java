@@ -1,4 +1,4 @@
-package m11.s08;
+package m11.s09;
 
 public class Dog {
     private String name;

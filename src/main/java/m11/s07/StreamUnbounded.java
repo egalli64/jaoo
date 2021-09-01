@@ -1,4 +1,4 @@
-package m11.s06;
+package m11.s07;
 
 import java.util.stream.Stream;
 

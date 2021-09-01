@@ -1,4 +1,4 @@
-package m11.s11;
+package m11.s12;
 
 import java.util.List;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package m11.s05;
+package m11.s06;
 
 import java.util.ArrayList;
 import java.util.List;

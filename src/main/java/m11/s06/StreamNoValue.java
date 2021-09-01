@@ -1,6 +1,5 @@
-package m11.s05;
+package m11.s06;
 
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamNoValue {
