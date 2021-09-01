@@ -4,11 +4,13 @@ public class Dog {
     private String name;
     private String owner;
     private int age;
+    private double weight;
 
-    public Dog(String name, String owner, int age) {
+    public Dog(String name, String owner, int age, double weight) {
         this.name = name;
         this.owner = owner;
         this.age = age;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -23,8 +25,17 @@ public class Dog {
         return age;
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
     @Override
     public String toString() {
-        return "Dog{name='" + name + ", owner='" + owner + ", age=" + age + '}';
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", owner='" + owner + '\'' +
+                ", age=" + age +
+                ", weight=" + weight +
+                '}';
     }
 }
