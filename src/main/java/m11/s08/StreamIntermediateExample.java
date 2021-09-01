@@ -1,7 +1,6 @@
-package m11.s07;
+package m11.s08;
 
 import java.util.List;
-import static java.util.stream.Collectors.toList;
 
 import java.util.Comparator;
 
