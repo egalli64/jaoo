@@ -1,6 +1,5 @@
-package m11.s05;
+package m11.s06;
 
-import static java.util.stream.Collectors.toList;
 import java.util.stream.Stream;
 
 public class StreamUnbounded {
