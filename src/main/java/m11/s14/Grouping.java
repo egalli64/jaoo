@@ -19,7 +19,7 @@ public class Grouping {
         }
     };
 
-    private static final Predicate<Dog> isDogYoung = dog -> dog.getAge() < 5;
+    private static final Predicate<Dog> isYoung = dog -> dog.getAge() < 5;
 
     public static void main(String[] args) {
         Dog[] dogs = {
@@ -39,13 +39,13 @@ public class Grouping {
                 Arrays.stream(dogs).collect(Collectors.groupingBy(dogWeight)));
 
         // filter then grouping
-        Map<String, List<Dog>> youngDogsByOwner = Arrays.stream(dogs).filter(isDogYoung)
+        Map<String, List<Dog>> youngDogsByOwner = Arrays.stream(dogs).filter(isYoung)
                 .collect(Collectors.groupingBy(Dog::getOwner));
         System.out.println("Young dogs by owner: " + youngDogsByOwner);
 
         // grouping then filtering
         Map<String, List<Dog>> youngDogsByAllOwner = Arrays.stream(dogs).collect(Collectors.groupingBy(
-                Dog::getOwner, Collectors.filtering(isDogYoung, Collectors.toList())));
+                Dog::getOwner, Collectors.filtering(isYoung, Collectors.toList())));
         System.out.println("Young dogs by all owners: " + youngDogsByAllOwner);
 
         // grouping and counting
@@ -57,5 +57,19 @@ public class Grouping {
         Map<String, Map<Weight, List<Dog>>> dogsByOwnerAndWeight = Arrays.stream(dogs).collect(
                 Collectors.groupingBy(Dog::getOwner, Collectors.groupingBy(dogWeight)));
         System.out.println("Dogs by owner and weight: " + dogsByOwnerAndWeight);
+
+        // partitioning
+        Map<Boolean, List<Dog>> dogsByAge = Arrays.stream(dogs)
+                .collect(Collectors.partitioningBy(isYoung));
+        System.out.println("Dogs partitioned by age: " + dogsByAge);
+
+        // just filtering
+        System.out.println("Only young dogs: " +
+                Arrays.stream(dogs).filter(isYoung).collect(Collectors.toList()));
+
+        // partitioning then grouping
+        Map<Boolean, Map<Weight, List<Dog>>> dogsByKimNameAndOwner = Arrays.stream(dogs)
+                .collect(Collectors.partitioningBy(isYoung, Collectors.groupingBy(dogWeight)));
+        System.out.println("Dogs partitioned by age and weight: " + dogsByKimNameAndOwner);
     }
 }
