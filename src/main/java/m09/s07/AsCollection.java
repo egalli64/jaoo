@@ -60,8 +60,11 @@ public class AsCollection {
 //        Integer[] values = collOne.toArray(new Integer[collOne.size()]);
         System.out.println(Arrays.toString(values));
 
+        collOne.removeIf(x -> x > 20);
+        System.out.println("After removing values over 20: " + collOne);
+
         collOne.clear();
-        System.out.println("Collection is empty? " + collOne.isEmpty());
+        System.out.println("After clear(), a collection is empty? " + collOne.isEmpty());
     }
 
     public static Collection<Integer> create(boolean flag, Integer... values) {
