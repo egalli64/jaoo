@@ -12,7 +12,7 @@ public class AsList {
 
     public static void main(String[] args) {
         // no assumption here on the actual concrete type
-        List<Integer> list = create(true, 12, 18, -5, -2233);
+        List<Integer> list = create(false, 12, 18, -5, -2233);
         System.out.println("Values in list: " + list);
 
         System.out.println("At index 2: " + list.get(2)); // if it was an array: list[2];
@@ -43,6 +43,9 @@ public class AsList {
         value = 42;
         int old = list.set(pos, value); // if it was an array: list[pos] = value;
         System.out.println(String.format("Set at position %d element %d, was %d: %s", pos, value, old, list));
+
+        list.replaceAll(x -> x + 1);
+        System.out.println("Increasing all elements by 1: " + list);
 
         ListIterator<Integer> it = list.listIterator();
         while (it.hasNext()) {
