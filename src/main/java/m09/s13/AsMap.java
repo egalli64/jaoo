@@ -11,28 +11,12 @@ public class AsMap {
         Map<Integer, String> map = aMap(false);
         System.out.println("original map: " + map);
 
-        // using var instead of Map.Entry<Integer, String>
-        for (var current : map.entrySet()) {
-            System.out.println("I'm modifying element with key: " + current.getKey());
-            current.setValue(current.getValue() + "!");
-        }
-        System.out.println("modified map: " + map);
+        loopOnEntries(map);
+        enhancedForLoopOnKeys(map);
+        iteratingOnEntries(map);
 
-        Set<Integer> keys = map.keySet();
-        System.out.print("accessing map from keys " + keys + ": ");
-        for (Integer key : keys) {
-            System.out.print(String.format("[%d: %s] ", key, map.get(key)));
-        }
-        System.out.println();
-
-        // using var instead of Iterator<Map.Entry<Integer, String>>
-        var it = map.entrySet().iterator();
-        System.out.print("looping via map iterator: ");
-        while (it.hasNext()) {
-            // Map.Entry<Integer, String>
-            var item = it.next();
-            System.out.print(String.format("[%d, %s] ", item.getKey(), item.getValue()));
-        }
+        System.out.print("looping by forEach(): ");
+        map.forEach((key, value) -> System.out.printf("[%d, %s] ", key, value));
         System.out.println();
 
         System.out.println("values are: " + map.values());
@@ -42,30 +26,76 @@ public class AsMap {
 
         System.out.println("is the map empty? " + map.isEmpty());
 
-        System.out.println("Value for key -1 (or null): " + map.get(-1));
-        System.out.println("Value for key -1 (or default): " + map.getOrDefault(-1, "missing"));
+        System.out.println("get() a missing key: " + map.get(-1));
+        System.out.println("getOrDefault() a missing key: " + map.getOrDefault(-1, "missing"));
 
-        // put() returns null if there was no previous value (or no entry)
-        System.out.println("Previous value for 99 was: " + map.put(99, "nintynine"));
-        System.out.println("Previous value for 99 was: " + map.put(99, "hello"));
-        System.out.println("Current value for 99 is: " + map.putIfAbsent(99, "star"));
+        System.out.println("put() a new key, previous: " + map.put(99, "ninety nine"));
+        System.out.println("put() an existing key, previous: " + map.put(99, "hello"));
+        System.out.println("putIfAbsent() an existing key, current value is still: " + map.putIfAbsent(99, "star"));
+        System.out.println("putIfAbsent() a new key, no current value: " + map.putIfAbsent(95, "star"));
+        System.out.println("after putting: " + map);
 
-        System.out.println("Removed value for key 23: " + map.remove(23));
-        System.out.println("Replaced value for key 12: " + map.replace(12, "twelve"));
+        System.out.println("removing element w/ key 23, value was: " + map.remove(23));
+        System.out.println("removed element w/ key 7? " + map.remove(7, "wrong"));
 
-        System.out.println("Size is " + map.size());
+        System.out.println("replacing value w/ key 12, value was: " + map.replace(12, "twelve"));
+        System.out.println("(not) replacing value w/ key 51, returns " + map.replace(51, "not used"));
+        System.out.println("(not) replacing [12, wrong], returns " + map.replace(12, "wrong", "not used"));
+        System.out.println("after removing and replacing: " + map);
+
+        System.out.println("compute() returns the new value: " +
+                map.compute(42, (k, v) -> v + '!'));
+        System.out.println("computeIfAbsent() returns the current value: " +
+                map.computeIfAbsent(42, k -> "not used"));
+        System.out.println("computeIfPresent() returns the new value, or null: " +
+                map.computeIfPresent(2, (k, v) -> "not used"));
+        System.out.println("after computing: " + map);
+
+        System.out.println("size is " + map.size());
 
         map.clear();
         System.out.println("Map after clear: " + map);
+    }
+
+    private static void loopOnEntries(Map<Integer, String> map) {
+        // using var instead of Map.Entry<Integer, String>
+        System.out.print("Changing elements: ");
+        for (var current : map.entrySet()) {
+            String modified = current.getValue() + "!";
+            current.setValue(modified);
+            System.out.printf("[%d, %s]", current.getKey(), modified);
+        }
+        System.out.println();
+    }
+
+    private static void enhancedForLoopOnKeys(Map<Integer, String> map) {
+        Set<Integer> keys = map.keySet();
+        System.out.print("accessing map from keys " + keys + ": ");
+        for (Integer key : keys) {
+            System.out.printf("[%d, %s] ", key, map.get(key));
+        }
+        System.out.println();
+    }
+
+    private static void iteratingOnEntries(Map<Integer, String> map) {
+        // using var instead of Iterator<Map.Entry<Integer, String>>
+        var it = map.entrySet().iterator();
+        System.out.print("looping via map iterator: ");
+        while (it.hasNext()) {
+            // Map.Entry<Integer, String>
+            var item = it.next();
+            System.out.printf("[%d, %s] ", item.getKey(), item.getValue());
+        }
+        System.out.println();
     }
 
     private static Map<Integer, String> aMap(boolean flag) {
         Map<Integer, String> result = flag ? new HashMap<>() : new TreeMap<>();
         result.put(7, "seven");
         result.put(12, "twelve");
-        result.put(23, "twentythree");
-        result.put(31, "thirtyone");
-        result.put(42, "fortytwo");
+        result.put(23, "twenty three");
+        result.put(31, "thirty one");
+        result.put(42, "forty two");
 
         return result;
     }
