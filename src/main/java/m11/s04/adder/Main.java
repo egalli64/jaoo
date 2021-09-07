@@ -22,6 +22,11 @@ public class Main {
             System.out.println("MT " + result + " after " + time);
 
             start = System.currentTimeMillis();
+            result = mt2Adder(data);
+            time = System.currentTimeMillis() - start;
+            System.out.println("MT2 " + result + " after " + time);
+
+            start = System.currentTimeMillis();
             result = Arrays.stream(data).parallel().sum();
             time = System.currentTimeMillis() - start;
             System.out.println("Stream " + result + " after " + time);
@@ -61,5 +66,37 @@ public class Main {
             result += worker.getResult();
         }
         return result;
+    }
+
+    private static long partialAdder(long[] data, int begin, int end) {
+        long result = 0;
+        for (int i = begin; i < end; i++) {
+            result += data[i];
+        }
+        return result;
+    }
+
+    private static long mt2Adder(long[] data) {
+        long[] result = {0};
+
+        Thread[] threads = {
+                new Thread(() -> result[0] += partialAdder(data, 0, data.length / 4)),
+                new Thread(() -> result[0] += partialAdder(data, data.length / 4, data.length / 2)),
+                new Thread(() -> result[0] += partialAdder(data, data.length / 2, data.length / 4 * 3)),
+                new Thread(() -> result[0] += partialAdder(data, data.length / 4 * 3, data.length))
+        };
+
+        for (Thread thread : threads) {
+            thread.start();
+        }
+
+        for (Thread thread : threads) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                throw new IllegalStateException(e);
+            }
+        }
+        return result[0];
     }
 }
