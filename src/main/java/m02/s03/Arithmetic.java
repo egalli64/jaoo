@@ -48,30 +48,37 @@ public class Arithmetic {
         System.out.println("--- alpha = 2 ---");
         int alpha = 2;
 
+        // same as: alpha = alpha + 8;
         alpha += 8; // 10
         System.out.print("alpha += 8 --> alpha = ");
         System.out.println(alpha);
 
+        // same as: alpha = alpha - 3;
         alpha -= 3; // 7
         System.out.print("alpha -= 3 --> alpha = ");
         System.out.println(alpha);
 
+        // same as: alpha = alpha * 2;
         alpha *= 2; // 14
         System.out.print("alpha *= 2 --> alpha = ");
         System.out.println(alpha);
 
+        // same as: alpha = alpha / 2;
         alpha /= 2; // 7
         System.out.print("alpha /= 2 --> alpha = ");
         System.out.println(alpha);
 
+        // same as: alpha = alpha % 5;
         alpha %= 5; // 2
         System.out.print("alpha %= 5 --> alpha = ");
         System.out.println(alpha);
 
+        // risky! implicit narrowing!
         alpha += 3_000_000_000L;
         System.out.print("alpha += 3_000_000_000L --> alpha = ");
         System.out.println(alpha);
 
+        // implicit widening!
         System.out.println("--- adding two bytes you get an int! ---");
         byte aByte = 6;
         byte anotherByte = 42;
