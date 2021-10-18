@@ -3,9 +3,12 @@ package mex.s02;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.withPrecision;
 import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
+import mex.ExerciseUncheckedException;
 
 class Exercise1Test {
     @Test
@@ -13,7 +16,15 @@ class Exercise1Test {
         double actual = Exercise1.speed(100.0, 9.58);
         double expected = 10.438;
 
-        assertThat(actual).isEqualTo(expected, withPrecision(3d));
+        assertEquals(expected, actual, .0001);
+    }
+
+    @Test
+    void speedPlainAJ() {
+        double actual = Exercise1.speed(100.0, 9.58);
+        double expected = 10.438;
+
+        assertThat(actual).isEqualTo(expected, withPrecision(.0001));
     }
 
     @Test
@@ -29,8 +40,8 @@ class Exercise1Test {
     void speedNegativeTime() {
         try {
             Exercise1.speed(100, -1);
-            fail("An ExUncheckedException was expected");
-        } catch (Exception eue) {
+            fail("An ExerciseUncheckedException was expected");
+        } catch (ExerciseUncheckedException eue) {
             String message = eue.getMessage();
             assertThat(message).isEqualTo("No negative values expected");
         }
