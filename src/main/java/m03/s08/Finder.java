@@ -25,6 +25,8 @@ public class Finder {
      * @return its position, or -1 if not found
      */
     public int getPosition(int[] data, int target) {
+        // Do not forget to check parameters in real code!
+
         for (int i = 0; i < data.length; i++) {
             if (data[i] == target) {
                 return i;
@@ -44,6 +46,8 @@ public class Finder {
      * @return the position of the (first) smallest element
      */
     public int getSmallestPosition(int[] data) {
+        // Do not forget to check parameters in real code!
+
         int position = 0;
 
         for (int i = 1; i < data.length; i++) {
