@@ -3,7 +3,7 @@
  */
 package m01.s02;
 
-import java.lang.Math; // not required
+// import java.lang.Math; // java.lang implicitly imported
 
 /**
  * A "hello" class
@@ -15,13 +15,11 @@ public class Simple {
         // output a string to console
         System.out.print("Hello, ");
 
-        // if the caller passes exactly one parameter, output it
+        // a different input argument leads to a different output
         if (args.length == 1) {
             System.out.println(args[0]);
-        } else {
-            // otherwise output PI
-            System.out.println(Math.PI);
         }
+        System.out.println(Math.PI);
     }
 }
 
