@@ -16,15 +16,15 @@ public class Risky {
             exceptional.aCheckedThrower();
 
             // called only if no exception before
-            // cleanup();
+            // close();
         } catch (Exception ex) {
             log.log(Level.SEVERE, "Exception caught in f()", ex);
 
             // called only when an exception occurs
-            // cleanup();
+            // close();
         } finally {
             // always called
-            cleanup();
+            close();
         }
     }
 
@@ -36,7 +36,7 @@ public class Risky {
         log.info("This statement won't be reached");
     }
 
-    private void cleanup() {
+    private void close() {
         log.info("performing cleanup");
     }
 
