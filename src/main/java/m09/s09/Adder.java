@@ -8,7 +8,7 @@ public class Adder {
 
     public static void main(String[] args) {
         System.out.println("Please, enter a few numbers");
-        double result = 0;
+        double result = 0.0;
 
         // try-with-resources
         try (Scanner scanner = new Scanner(System.in)) {
