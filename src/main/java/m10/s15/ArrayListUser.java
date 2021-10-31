@@ -1,6 +1,5 @@
 package m10.s15;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,8 +8,8 @@ public class ArrayListUser {
         List<Integer> empty = new ArrayList<>();
         recap("An empty list", empty);
 
-        List<Integer> sizedEmpty = new ArrayList<>(5);
-        recap("An empty list w/ capacity", sizedEmpty);
+        List<Integer> sizedEmpty = new ArrayList<Integer>(5);
+        recap("An empty list w/ given capacity", sizedEmpty);
 
         // an unmodifiable list
         var temp = List.of(23, 12, 18, 5, 42, 88);
@@ -33,26 +32,6 @@ public class ArrayListUser {
     }
 
     private static void recap(String message, List<?> lst) {
-        System.out.println(String.format("%s: %s, current size %d, capacity %d", //
-                message, lst, lst.size(), getCapacity(lst)));
-    }
-
-    /**
-     * A bit of reflection to get the capacity from an ArrayList
-     * <p>
-     * Disregard the warnings, until you can
-     * 
-     * @param al the actual ArrayList
-     * @return its capacity
-     */
-    private static int getCapacity(List<?> al) {
-        Field field;
-        try {
-            field = ArrayList.class.getDeclaredField("elementData");
-            field.setAccessible(true);
-            return ((Object[]) field.get(al)).length;
-        } catch (NoSuchFieldException | SecurityException | IllegalAccessException e) {
-            throw new IllegalStateException("Can't determine capacity!", e);
-        }
+        System.out.printf("%s: %s, current size %d%n", message, lst, lst.size());
     }
 }
