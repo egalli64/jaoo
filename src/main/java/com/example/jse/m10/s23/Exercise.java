@@ -1,4 +1,4 @@
-package com.example.jse.m10.s22;
+package com.example.jse.m10.s23;
 
 import java.util.List;
 
