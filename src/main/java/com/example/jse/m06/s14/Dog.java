@@ -3,7 +3,7 @@ package com.example.jse.m06.s14;
 public class Dog extends Pet {
     public static final double STANDARD_SPEED = 0.0;
 
-    private double speed;
+    private final double speed;
 
     public Dog() {
         // notice the implicit call to super
@@ -20,7 +20,7 @@ public class Dog extends Pet {
     }
 
     public double getSpeed() {
-        return speed;
+        return this.speed;
     }
 
     @Override
