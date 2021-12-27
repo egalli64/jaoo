@@ -16,10 +16,19 @@ public class StringIntro {
 
         // Create a mutable string, and then change it
         StringBuilder sb = new StringBuilder("Hello");
-        sb.append(", Tom");
+        sb.deleteCharAt(4);
+        sb.append(", Tom!");
 
         // Create a String from a StringBuilder
         String u = sb.toString();
         System.out.println(u);
+
+        // Text block
+        String text = """
+                Non impedir lo suo fatale andare:
+                vuolsi così colà dove si puote
+                ciò che si vuole, e più non dimandare
+                """;
+        System.out.println(text);
     }
 }
