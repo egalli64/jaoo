@@ -1,4 +1,4 @@
-package com.example.jse.m04.s06;
+package com.example.jse.m04.s07;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.withPrecision;

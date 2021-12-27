@@ -1,4 +1,4 @@
-package com.example.jse.m04.s08;
+package com.example.jse.m04.s09;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -11,7 +11,7 @@ public class Main {
     private static final Logger log;
 
     static {
-        var stream = Main.class.getClassLoader().getResourceAsStream("m04/s08/logging.properties");
+        var stream = Main.class.getClassLoader().getResourceAsStream("m04/s09/logging.properties");
         if (stream == null) {
             throw new IllegalStateException("Can't get logging properties");
         }
