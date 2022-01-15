@@ -7,8 +7,8 @@ import java.util.concurrent.FutureTask;
 public class ChatService {
     private static Map<String, ChatCallback> users = new HashMap<>();
 
-    public ChatService(String user, ChatCallback client) {
-        users.put(user, client);
+    public ChatService(String user, ChatCallback callback) {
+        users.put(user, callback);
     }
 
     public void send(String sender, String recipient, String message) {
@@ -22,10 +22,10 @@ public class ChatService {
                 System.out.println("Some important job in the service can't be accomplished!");
             }
 
-            if (!users.containsKey(recipient)) {
-                System.err.printf("User %s not found%n", recipient);
+            if (users.containsKey(recipient)) {
+                users.get(recipient).callback(recipient, message);
             } else {
-                users.get(recipient).callback(sender, message);
+                System.err.printf("User %s not found%n", recipient);
             }
 
             return null;
