@@ -1,15 +1,20 @@
-package com.example.jse.m02.s08;
+package com.example.jse.m02.s09;
 
-public class SwitchArgsRefactored {
+public class SwitchArgs {
     public static void main(String[] args) {
-        if (args.length == 0) {
+        switch (args.length) {
+        case 0:
             System.out.println("No argument passed in");
-        } else if (args.length == 1) {
+            break;
+        case 1:
             System.out.println("The only argument passed is: " + args[0]);
-        } else if (args.length == 2) {
+            break;
+        case 2:
             System.out.println("The second and last argument passed is: " + args[1]);
-        } else {
+            break;
+        default:
             System.out.println("The last argument passed is: " + args[args.length - 1]);
+            break;
         }
 
         System.out.println("-- done --");

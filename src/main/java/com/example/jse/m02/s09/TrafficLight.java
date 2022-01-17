@@ -1,4 +1,4 @@
-package com.example.jse.m02.s08;
+package com.example.jse.m02.s09;
 
 public enum TrafficLight {
     GREEN, YELLOW, RED

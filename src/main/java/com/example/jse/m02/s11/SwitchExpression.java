@@ -4,50 +4,49 @@ public class SwitchExpression {
     public static void main(String[] args) {
         // initialize with expression switch
         var size = switch (args.length) {
-            case 0, 1 -> Size.S;
-            case 2 -> Size.M;
-            case 3, 4 -> Size.L;
-            default -> Size.XL;
+        case 0, 1 -> Size.S;
+        case 2 -> Size.M;
+        case 3, 4 -> Size.L;
+        default -> Size.XL;
         };
 
         // yield with classic case
         var itSize = switch (size) {
-            case S:
-                System.out.println("Small size");
-                yield 42;
-            case M:
-                System.out.println("Medium size");
-                yield 44;
-            case L:
-                System.out.println("Large size");
-                yield 46;
-            case XL:
-                System.out.println("Extra Large size");
-                yield 48;
+        case S:
+            System.out.print("Small");
+            yield 42;
+        case M:
+            System.out.print("Medium");
+            yield 44;
+        case L:
+            System.out.print("Large");
+            yield 46;
+        case XL:
+            System.out.print("Extra Large");
+            yield 48;
         };
 
-        System.out.printf("Size is %d", itSize);
+        System.out.printf(" is %d (IT)%n", itSize);
 
         // yield with arrow case
-        System.out.println("Size is " + switch (size) {
-            case S -> {
-                System.out.print("(small) ");
-                yield 42;
-            }
-            case M -> {
-                System.out.println("(medium) ");
-                yield 44;
-            }
-            case L -> {
-                System.out.println("(large) ");
-                yield 46;
-            }
-            case XL -> {
-                System.out.println("(extra large) ");
-                yield 48;
-            }
-        });
+        int deSize = switch (size) {
+        case S -> {
+            System.out.print("Small");
+            yield 34;
+        }
+        case M -> {
+            System.out.println("Medium");
+            yield 38;
+        }
+        case L -> {
+            System.out.println("Large");
+            yield 42;
+        }
+        case XL -> {
+            System.out.println("Extra Large");
+            yield 46;
+        }
+        };
+        System.out.printf(" is %d (DE)", deSize);
     }
-
-    private enum Size {S, M, L, XL}
 }

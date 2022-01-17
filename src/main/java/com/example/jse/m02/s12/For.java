@@ -1,4 +1,4 @@
-package com.example.jse.m02.s10;
+package com.example.jse.m02.s12;
 
 public class For {
     public static void main(String[] args) {

@@ -1,8 +1,9 @@
 package com.example.jse.m02.s09;
 
-public class SwitchDays {
+public class SwitchDay {
     public static void main(String[] args) {
         WeekDay today = WeekDay.values()[(int) (Math.random() * 7)];
+        System.out.println("Today is " + today);
 
         switch (today) {
         case MONDAY:
@@ -24,10 +25,6 @@ public class SwitchDays {
         case SUNDAY:
             System.out.println("Something else");
             break;
-        }
-
-        if (today == WeekDay.FRIDAY) {
-            System.out.println(":-)");
         }
     }
 }

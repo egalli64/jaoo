@@ -1,4 +1,4 @@
-package com.example.jse.m02.s10.ex;
+package com.example.jse.m02.s12.ex;
 
 import java.util.Arrays;
 
