@@ -5,12 +5,9 @@ import java.time.temporal.UnsupportedTemporalTypeException;
 
 public class DurationPeriodMain {
     public static void main(String[] args) {
-        System.out.println("Duration zero secs between times: " +
-                Duration.between(LocalTime.now(), LocalTime.now()));
-        System.out.println("Duration zero secs between instants: " +
-                Duration.between(Instant.now(), Instant.now()));
-        System.out.println("Duration zero days between instants: " +
-                Period.between(LocalDate.now(), LocalDate.now()));
+        System.out.println("Duration (almost) zero between times: " + Duration.between(LocalTime.now(), LocalTime.now()));
+        System.out.println("Duration zero secs between instants: " + Duration.between(Instant.now(), Instant.now()));
+        System.out.println("Duration zero days between instants: " + Period.between(LocalDate.now(), LocalDate.now()));
 
         try {
             Duration.between(LocalTime.now(), Instant.now());

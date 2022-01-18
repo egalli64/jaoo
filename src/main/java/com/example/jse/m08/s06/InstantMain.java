@@ -8,9 +8,9 @@ public class InstantMain {
 
         System.out.println("An instant passing millis: " + Instant.ofEpochMilli(900_000_000_000L));
         System.out.println("An instant passing seconds: " + Instant.ofEpochSecond(1_000_000_000L));
-        System.out.println("An instant passing seconds and nano adjustment: " +
-                Instant.ofEpochSecond(1_000_000_000L, 1_000_000_000));
+        System.out.println("An instant passing seconds and nano adjustment: "
+                + Instant.ofEpochSecond(1_000_000_000L, 1_000_000_000));
 
-        System.out.println(Instant.now().getEpochSecond());
+        System.out.println("Now, UNIX time in secs: " + Instant.now().getEpochSecond());
     }
 }

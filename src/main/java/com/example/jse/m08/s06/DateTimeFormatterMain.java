@@ -11,13 +11,11 @@ public class DateTimeFormatterMain {
     public static void main(String[] args) {
         // date formatter
         LocalDate today = LocalDate.now();
-        System.out.println("Full current date: " +
-                today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
+        System.out.println("Full current date: " + today.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.FULL)));
 
         // time formatter
         LocalTime now = LocalTime.now();
-        System.out.println("Medium current time: " +
-                now.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM)));
+        System.out.println("Medium current time: " + now.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM)));
 
         LocalDateTime current = LocalDateTime.of(today, now);
 
@@ -25,8 +23,7 @@ public class DateTimeFormatterMain {
         var medium = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
         System.out.println("Medium current date time: " + current.format(medium));
 
-        var full = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL)
-                .withZone(ZoneId.systemDefault());
+        var full = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL).withZone(ZoneId.systemDefault());
         System.out.println("Full current date time: " + current.format(full));
     }
 }
