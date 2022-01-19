@@ -9,6 +9,6 @@ public class Overflow {
 
         int total = bob + tom + kim + jon;
 
-        System.out.println(total);
+        System.out.printf("%d + %d + %d + %d = %d", bob, tom, kim, jon, total);
     }
 }
