@@ -7,6 +7,6 @@ public class Flat {
     private static final Logger log = Logger.getGlobal();
 
     public Flat() {
-        log.info("Car created");
+        log.info("Flat created");
     }
 }
