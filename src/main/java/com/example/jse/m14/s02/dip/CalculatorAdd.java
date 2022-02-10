@@ -1,8 +1,8 @@
 package com.example.jse.m14.s02.dip;
 
-public class CalculatorAdd extends Calculator {
+public class CalculatorAdd implements Calculator {
     @Override
-    double calculate(double left, double right) {
+    public double calculate(double left, double right) {
         return left + right;
     }
 }
