@@ -3,13 +3,14 @@ package com.example.jse.m14.s02.ioc;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ChatService {
-    private static Map<String, ChatCallback> users = new HashMap<>();
+public class ChatService implements Service {
+    private static Map<String, Callback> users = new HashMap<>();
 
-    public ChatService(String user, ChatCallback callback) {
+    public ChatService(String user, Callback callback) {
         users.put(user, callback);
     }
 
+    @Override
     public void send(String sender, String recipient, String message) {
         System.out.printf("Service send message from %s to %s%n", sender, recipient);
 

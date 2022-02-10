@@ -2,8 +2,8 @@ package com.example.jse.m14.s02.ioc;
 
 public class Main {
     public static void main(String[] args) {
-        ChatClient tom = new ChatClient("Tom");
-        ChatClient bob = new ChatClient("Bob");
+        Client tom = new ChatClient("Tom");
+        Client bob = new ChatClient("Bob");
 
         tom.send("Bob", "Hello");
         timeWaster(1);
