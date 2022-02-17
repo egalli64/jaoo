@@ -1,93 +1,34 @@
 package com.example.jse.m11.s05;
 
 public class Main {
-    public void unsynchroHello() {
-        UnsynchronizedHello unsync = new UnsynchronizedHello();
-
-        Thread[] threads = { new Thread(() -> unsync.sayHello("Tom")), //
-                new Thread(() -> unsync.sayHello("Kim")), //
-                new Thread(() -> unsync.sayHello("Sal")), //
-                new Thread(() -> unsync.sayHello("Bob")) };
-
-        for (Thread thread : threads) {
-            thread.start();
-        }
-
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted join on " + thread.getName());
-                Thread.currentThread().interrupt();
-            }
-        }
-    }
-
-    public void synchroHello() {
-        SynchronizedHello sync = new SynchronizedHello();
-
-        Thread[] threads = { new Thread(() -> sync.sayHello("Tom")), //
-                new Thread(() -> sync.sayHello("Kim")), //
-                new Thread(() -> sync.sayHello("Sal")), //
-                new Thread(() -> sync.sayHello("Bob")) };
-
-        for (Thread thread : threads) {
-            thread.start();
-        }
-
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted join on " + thread.getName());
-                Thread.currentThread().interrupt();
-            }
-        }
-    }
-
-    public void retrofit() {
-        UnsynchronizedHello unsync = new UnsynchronizedHello();
-
-        Thread[] threads = { new Thread(() -> {
-            synchronized (unsync) {
-                unsync.sayHello("Tom");
-            }
-        }), new Thread(() -> {
-            synchronized (unsync) {
-                unsync.sayHello("Kim");
-            }
-        }), new Thread(() -> {
-            synchronized (unsync) {
-                unsync.sayHello("Sal");
-            }
-        }), new Thread(() -> {
-            synchronized (unsync) {
-                unsync.sayHello("Bob");
-            }
-        }) };
-
-        for (Thread thread : threads) {
-            thread.start();
-        }
-
-        for (Thread thread : threads) {
-            try {
-                thread.join();
-            } catch (InterruptedException e) {
-                System.out.println("Interrupted join on " + thread.getName());
-                Thread.currentThread().interrupt();
-            }
-        }
-    }
-
     public static void main(String[] args) {
-        Main main = new Main();
+        Thread t0 = new Thread(() -> System.out.println("A message from " + Thread.currentThread().getName()));
 
-        System.out.println("Unsynchronized");
-        main.unsynchroHello();
-        System.out.println("Synchronized");
-        main.synchroHello();
-        System.out.println("Synchrony patch");
-        main.retrofit();
+        if (!t0.isAlive()) {
+            System.out.println("Before start(), a thread is not yet alive");
+        } else {
+            System.out.println("You should not get this message");
+        }
+        t0.start();
+        if (t0.isAlive()) {
+            System.out.println("After start(), a thread is alive");
+        } else {
+            System.out.println("You should not get this message");
+        }
+
+        try {
+            t0.join();
+            System.out.println(t0.getName() + " joined");
+        } catch (InterruptedException e) {
+            System.out.println(t0.getName() + " interrupted");
+            // we would usually handle the exception, or at least reset it
+            // like this: Thread.currentThread().interrupt();
+        }
+
+        if (!t0.isAlive()) {
+            System.out.println("After join(), a thread is not alive anymore");
+        } else {
+            System.out.println("You should not get this message");
+        }
     }
 }
