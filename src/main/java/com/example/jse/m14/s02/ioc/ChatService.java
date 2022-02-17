@@ -1,13 +1,18 @@
 package com.example.jse.m14.s02.ioc;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ChatService implements Service {
-    private static Map<String, Callback> users = new HashMap<>();
+    private static ChatService instance = new ChatService();
+    private Map<String, Callback> users = new ConcurrentHashMap<>();
 
-    public ChatService(String user, Callback callback) {
-        users.put(user, callback);
+    private ChatService() {
+    }
+
+    public static Service subscribe(String user, Callback callback) {
+        instance.users.put(user, callback);
+        return instance;
     }
 
     @Override

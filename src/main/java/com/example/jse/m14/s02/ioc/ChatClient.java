@@ -6,7 +6,7 @@ public class ChatClient implements Client {
 
     public ChatClient(String name) {
         this.name = name;
-        this.service = new ChatService(name, this::callback);
+        this.service = ChatService.subscribe(name, this::callback);
     }
 
     @Override
