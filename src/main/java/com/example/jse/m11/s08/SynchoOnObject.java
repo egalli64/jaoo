@@ -1,4 +1,4 @@
-package com.example.jse.m11.s07;
+package com.example.jse.m11.s08;
 
 public class SynchoOnObject {
     private Object lockF = new Object();

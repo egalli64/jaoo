@@ -1,4 +1,4 @@
-package com.example.jse.m11.s06;
+package com.example.jse.m11.s07;
 
 public class MainLongRunner {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.example.jse.m11.s07;
+package com.example.jse.m11.s08;
 
 public class HelloSynchro {
     public static void main(String[] args) {

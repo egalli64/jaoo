@@ -1,4 +1,4 @@
-package com.example.jse.m11.s06.caster;
+package com.example.jse.m11.s07.caster;
 
 public class Main {
     private static final int NR = 3;

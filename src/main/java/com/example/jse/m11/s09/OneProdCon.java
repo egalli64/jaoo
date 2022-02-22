@@ -1,4 +1,4 @@
-package com.example.jse.m11.s08;
+package com.example.jse.m11.s09;
 
 public class OneProdCon {
     private static final int BASE_VALUE = 42;

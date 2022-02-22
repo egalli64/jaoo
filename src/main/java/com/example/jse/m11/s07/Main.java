@@ -1,4 +1,4 @@
-package com.example.jse.m11.s06;
+package com.example.jse.m11.s07;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.example.jse.m11.s06.caster;
+package com.example.jse.m11.s07.caster;
 
 public class Worker extends Thread {
     private static final int MAX_VALUE = 6;

@@ -1,4 +1,4 @@
-package com.example.jse.m11.s06.adder;
+package com.example.jse.m11.s07.adder;
 
 public class Worker extends Thread {
     private long[] data;

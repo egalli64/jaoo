@@ -1,12 +1,11 @@
-package com.example.jse.m11.s06.adder;
+package com.example.jse.m11.s07.adder;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.LongStream;
 
-public class MainThreadedStream {
+public class MainThreaded {
     private static final int SIZE = 200_000_000;
     private static final int NR = 10;
 
@@ -18,7 +17,7 @@ public class MainThreadedStream {
 
         for (int j = 0; j < NR; j++) {
             long start = System.currentTimeMillis();
-            results.add(Arrays.stream(data).parallel().sum());
+            results.add(mtAdder(data));
             times.add(System.currentTimeMillis() - start);
         }
 
@@ -33,5 +32,30 @@ public class MainThreadedStream {
         } else {
             System.out.println("Time is in " + times);
         }
+    }
+
+    private static long mtAdder(long[] data) {
+        Worker[] workers = { new Worker(data, 0, data.length / 4), //
+                new Worker(data, data.length / 4, data.length / 2),
+                new Worker(data, data.length / 2, data.length / 4 * 3),
+                new Worker(data, data.length / 4 * 3, data.length) };
+
+        for (Worker worker : workers) {
+            worker.start();
+        }
+
+        for (Worker worker : workers) {
+            try {
+                worker.join();
+            } catch (InterruptedException e) {
+                throw new IllegalStateException(e);
+            }
+        }
+
+        long result = 0;
+        for (Worker worker : workers) {
+            result += worker.getResult();
+        }
+        return result;
     }
 }

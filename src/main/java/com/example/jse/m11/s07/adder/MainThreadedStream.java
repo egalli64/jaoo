@@ -1,11 +1,12 @@
-package com.example.jse.m11.s06.adder;
+package com.example.jse.m11.s07.adder;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
 import java.util.stream.LongStream;
 
-public class MainSingle {
+public class MainThreadedStream {
     private static final int SIZE = 200_000_000;
     private static final int NR = 10;
 
@@ -17,7 +18,7 @@ public class MainSingle {
 
         for (int j = 0; j < NR; j++) {
             long start = System.currentTimeMillis();
-            results.add(plainAdder(data));
+            results.add(Arrays.stream(data).parallel().sum());
             times.add(System.currentTimeMillis() - start);
         }
 
@@ -32,13 +33,5 @@ public class MainSingle {
         } else {
             System.out.println("Time is in " + times);
         }
-    }
-
-    private static long plainAdder(long[] data) {
-        long result = 0;
-        for (long value : data) {
-            result += value;
-        }
-        return result;
     }
 }
