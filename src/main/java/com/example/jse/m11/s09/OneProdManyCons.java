@@ -3,15 +3,9 @@ package com.example.jse.m11.s09;
 public class OneProdManyCons {
     private static final int BASE_VALUE = 42;
     private int result;
-    private boolean producing;
 
     public OneProdManyCons() {
         this.result = 0;
-        this.producing = true;
-    }
-
-    public void stopProducer() {
-        producing = false;
     }
 
     public synchronized void checkThreadStates() {
@@ -20,18 +14,17 @@ public class OneProdManyCons {
         // Thread::enumerate() should be used only for debugging and monitoring purposes
         int count = Thread.enumerate(ts);
         for (int i = 0; i < count; i++) {
-            System.out.printf("Thread %s state is %s%n", ts[i].getName(), ts[i].getState());
+            System.out.printf("%s is %s%n", ts[i].getName(), ts[i].getState());
         }
     }
 
     private synchronized void producer() {
         int delta = 0;
         try {
-            while (producing) {
+            while (!Thread.currentThread().isInterrupted()) {
                 System.out.println("Producer is working on a (simulated) long job");
-                Thread.sleep(500);
-                result = BASE_VALUE + delta;
-                delta += 1;
+                Thread.sleep(200);
+                result = BASE_VALUE + delta++;
                 System.out.println("Producer has produced as result " + result);
 
                 checkThreadStates();
@@ -43,20 +36,23 @@ public class OneProdManyCons {
                 }
             }
         } catch (InterruptedException e) {
-            throw new IllegalStateException(e);
+            System.out.println("Producer has been interrupted");
+            Thread.currentThread().interrupt();
+        } finally {
+            System.out.println("Producer has stopped producing values");
         }
-
     }
 
     private synchronized void consumer() {
+        String tName = Thread.currentThread().getName();
         try {
             while (result == 0) {
-                System.out.printf("Consumer %s waits for the result%n", Thread.currentThread().getName());
+                System.out.println(tName + " waits for the result");
                 wait();
-                System.out.printf("Consumer %s wait is ended%n", Thread.currentThread().getName());
+                System.out.println(tName + " wait is ended");
             }
 
-            System.out.printf("Consumer %s consumes %d%n", Thread.currentThread().getName(), result);
+            System.out.printf("Consumer %s consumes %d%n", tName, result);
             result = 0;
 
             checkThreadStates();
@@ -64,18 +60,18 @@ public class OneProdManyCons {
         } catch (InterruptedException e) {
             throw new IllegalStateException(e);
         }
-        System.out.printf("Consumer %s is done%n", Thread.currentThread().getName());
+        System.out.println(tName + " exits consumer()");
     }
 
     public static void main(String[] args) throws InterruptedException {
         OneProdManyCons wn = new OneProdManyCons();
 
-        Thread producer = new Thread(wn::producer, "Producer");
+        Thread producer = new Thread(wn::producer, "TP");
 
         Thread[] consumers = { //
-                new Thread(wn::consumer, "Consumer1"), //
-                new Thread(wn::consumer, "Consumer2"), //
-                new Thread(wn::consumer, "Consumer3") //
+                new Thread(wn::consumer, "TC1"), //
+                new Thread(wn::consumer, "TC2"), //
+                new Thread(wn::consumer, "TC3") //
         };
 
         producer.start();
@@ -89,7 +85,8 @@ public class OneProdManyCons {
             consumer.join();
         }
 
-        wn.stopProducer();
+        System.out.println("No more consumer, interrupting producer");
+        producer.interrupt();
         producer.join();
 
         System.out.println("Bye");
