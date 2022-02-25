@@ -1,4 +1,4 @@
-package com.example.jse.m11.s12;
+package com.example.jse.m11.s10;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
