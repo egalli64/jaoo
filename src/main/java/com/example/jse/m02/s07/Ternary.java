@@ -12,5 +12,11 @@ public class Ternary {
             version2 = args[0];
         }
         System.out.println(version2);
+        
+        String version3 = "No arg passed";
+        if (args.length != 0) {
+            version3 = args[0];
+        }
+        System.out.println(version3);
     }
 }
