@@ -2,7 +2,7 @@ package com.example.jse.m02.s08;
 
 public class IfDay {
     public static void main(String[] args) {
-        WeekDay today = WeekDay.values()[(int) (Math.random() * 7)];
+        WeekDay today = aDay();
         System.out.println("Today is " + today);
 
         if (today == WeekDay.MONDAY) {
@@ -18,5 +18,13 @@ public class IfDay {
         } else if (today == WeekDay.SATURDAY || today == WeekDay.SUNDAY) {
             System.out.println("Something else");
         }
+    }
+
+    /**
+     * @return a randomly chosen WeekDay
+     */
+    private static WeekDay aDay() {
+        WeekDay[] days = WeekDay.values();
+        return days[(int) (Math.random() * days.length)];
     }
 }
