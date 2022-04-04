@@ -2,7 +2,7 @@ package com.example.jse.m01.s07;
 
 public class Widening {
     public static void main(String[] args) {
-        byte aByte = 42;
+        byte aByte = 70;
         short aShort = aByte;
         int anInt = aShort;
         long aLong = anInt;
@@ -11,6 +11,7 @@ public class Widening {
 
         System.out.println(aDouble);
 
+        // the character 'F' is coded as 70
         char aChar = (char) aShort;
         int anotherInt = aChar;
 
@@ -19,6 +20,7 @@ public class Widening {
         System.out.print(" <-> ");
         System.out.println(anotherInt);
 
+        // the character '*' is coded as 42
         char asterisk = '*';
         int asterAsInt = asterisk;
         System.out.print(asterisk);
