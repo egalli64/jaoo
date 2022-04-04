@@ -7,8 +7,10 @@ public class Overflow {
         int kim = 1_000_000_003;
         int jon = 1_000_000_004;
 
-        int total = bob + tom + kim + jon;
+        int wrong = bob + tom + kim + jon;
+        System.out.printf("%d + %d + %d + %d = %d%n", bob, tom, kim, jon, wrong);
 
-        System.out.printf("%d + %d + %d + %d = %d", bob, tom, kim, jon, total);
+        long correct = (long) bob + tom + kim + jon;
+        System.out.printf("%d + %d + %d + %d = %d%n", bob, tom, kim, jon, correct);
     }
 }
