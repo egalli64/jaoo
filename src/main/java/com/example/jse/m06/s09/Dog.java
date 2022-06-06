@@ -31,4 +31,29 @@ public class Dog extends Mammal implements Barker, Drinker {
     public void drink() {
         System.out.println("Sip!");
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((tail == null) ? 0 : tail.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Dog other = (Dog) obj;
+        if (tail == null) {
+            if (other.tail != null)
+                return false;
+        } else if (!tail.equals(other.tail))
+            return false;
+        return true;
+    }
 }
