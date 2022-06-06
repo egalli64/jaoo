@@ -2,7 +2,8 @@ package com.example.jse.m06.s06;
 
 import java.util.Objects;
 
-public class Dog {
+// Derivation from Object does not require an explicit declaration
+public class Dog extends Object {
     private String name;
     private String owner;
 
