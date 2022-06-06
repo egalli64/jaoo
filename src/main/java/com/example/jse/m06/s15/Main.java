@@ -50,11 +50,8 @@ public class Main {
             if (pet instanceof Dog) {
                 Dog dog = (Dog) pet;
                 dog.bark();
-            }
-            if (pet instanceof Cat) {
-                Cat cat = (Cat) pet;
-                cat.meow();
-//                ((Cat) pet).meow();
+            } else if (pet instanceof Cat) {
+                ((Cat) pet).meow();
             }
         }
     }
