@@ -22,7 +22,7 @@ public class Arithmetic {
 
         // Type range
         System.out.print("Overflow! 1_000_000 * 3_000 = ");
-        System.out.println(1_000_000 * 3_000); // 30
+        System.out.println(1_000_000 * 3_000); // -1294967296
 
         System.out.println("---");
 //        System.out.println(a / 0); // ArithmeticException
