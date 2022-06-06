@@ -1,8 +1,8 @@
 package com.example.jse.m05.s07.example;
 
 public class Dog {
-    private static int count;
-    private static int barkCount;
+    private static int count = 0;
+    private static int barkCount = 0;
     private int barkCountCurrent;
     private String name;
 
