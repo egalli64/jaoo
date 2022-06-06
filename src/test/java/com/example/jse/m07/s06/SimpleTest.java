@@ -7,6 +7,18 @@ import org.junit.jupiter.api.Test;
 
 class SimpleTest {
     @Test
+    void negateMaxValue() {
+        Simple simple = new Simple();
+
+        int value = Integer.MAX_VALUE;
+        int expected = -2_147_483_647;
+
+        int result = simple.negate(value);
+        assertThat(result).isEqualTo(expected);
+    }
+
+    
+    @Test
     void negateZero() {
         Simple simple = new Simple();
 
@@ -23,6 +35,17 @@ class SimpleTest {
 
         int value = 42;
         int expected = -42;
+
+        int result = simple.negate(value);
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void negateNegative() {
+        Simple simple = new Simple();
+
+        int value = -25;
+        int expected = 25;
 
         int result = simple.negate(value);
         assertThat(result).isEqualTo(expected);
