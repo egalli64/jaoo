@@ -12,5 +12,7 @@ public class DoWhile {
             System.out.println("arg " + i + " is " + args[i]);
             i += 1;
         } while (i < args.length);
+
+        System.out.println("Done");
     }
 }
