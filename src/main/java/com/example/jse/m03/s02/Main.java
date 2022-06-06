@@ -3,7 +3,7 @@ package com.example.jse.m03.s02;
 public class Main {
     public static void main(String[] args) {
         // calling a static method
-        double root = Math.sqrt(121);
+        double root = Math.sqrt(121.0);
 
         // calling an instance method
         System.out.println(root);
