@@ -22,9 +22,11 @@ public class Main {
 //            System.out.println("... !!! I use instead 5");
 //            result = 5;
 
-            // maybe I could just tell the user why I can't go on with the program
+            // maybe I could just tell the user about the issue
             System.out.println("Bad input!");
-            throw new IllegalStateException(ex);
+
+            // if the problem is really bad, we could terminate the execution
+//            throw new IllegalStateException(ex);
         }
 
         // exceptions are expensive, also in Java they are not always used
@@ -64,11 +66,7 @@ public class Main {
     /**
      * ArithmeticException!
      */
-    static int f(int a, int b) throws Exception {
-        if (a > b) {
-            throw new Exception("Bad values");
-        }
-
-        return a + b;
+    static int f(int a, int b) {
+        return a / b;
     }
 }
