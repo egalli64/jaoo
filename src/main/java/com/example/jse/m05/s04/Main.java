@@ -3,7 +3,8 @@ package com.example.jse.m05.s04;
 public class Main {
     public static void main(String[] args) {
         boolean flag = true;
-        
+
+        // a bit perplexing way to convert a boolean to string
         String boolAsStringClassic = "" + flag;
         System.out.println("A boolean converted to string: " + boolAsStringClassic);
 
