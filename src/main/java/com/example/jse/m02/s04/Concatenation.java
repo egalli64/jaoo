@@ -27,7 +27,7 @@ public class Concatenation {
         String t = s;
 
         // reference to a different object created by concatenation
-        s += 3;
+        s += ", Tom";
 
         System.out.print("+= on a string generate a new object: ");
         System.out.println(s);
