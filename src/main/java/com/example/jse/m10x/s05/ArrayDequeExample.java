@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s04;
+package com.example.jse.m10x.s05;
 
 import java.util.ArrayDeque;
 import java.util.List;

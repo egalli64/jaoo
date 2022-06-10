@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s02.simple;
+package com.example.jse.m10x.s03.simple;
 
 import java.util.Arrays;
 import java.util.Objects;

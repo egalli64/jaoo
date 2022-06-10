@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s06;
+package com.example.jse.m10x.s07;
 
 import java.util.LinkedHashSet;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s03.simple;
+package com.example.jse.m10x.s04.simple;
 
 public class MyIntList {
     private Node head;

@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s09;
+package com.example.jse.m10x.s10;
 
 import java.util.Collection;
 import java.util.Map;

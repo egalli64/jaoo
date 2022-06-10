@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s01;
+package com.example.jse.m10x.s02;
 
 import java.util.Collection;
 import java.util.Collections;

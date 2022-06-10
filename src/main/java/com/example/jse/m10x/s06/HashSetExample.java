@@ -1,4 +1,4 @@
-package com.example.jse.m10x.s05;
+package com.example.jse.m10x.s06;
 
 import java.util.HashSet;
 import java.util.List;
