@@ -1,4 +1,4 @@
-var a = 7;
-var b = 3;
+int a = 7;
+int b = 3;
 a + b
 a * b

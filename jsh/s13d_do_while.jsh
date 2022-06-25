@@ -1,4 +1,4 @@
-var i = 0;
+int i = 0;
 do {
 	System.out.println(i);
 	i++;
