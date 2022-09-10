@@ -1,8 +1,8 @@
-package com.example.jse.m01.s09;
+package com.example.jse.m01.s10;
 
 import java.util.Arrays;
 
-public class More {
+public class ArraysExamples {
     public static void main(String[] args) {
         int[] one = { 1, 2, 3, 4, 5 };
         System.out.println(Arrays.toString(one));

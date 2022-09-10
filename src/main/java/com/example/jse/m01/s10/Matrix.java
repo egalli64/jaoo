@@ -1,8 +1,8 @@
-package com.example.jse.m01.s09;
+package com.example.jse.m01.s10;
 
 import java.util.Arrays;
 
-public class ArrayTwoD {
+public class Matrix {
     public static void main(String[] args) {
         int[][] matrix = new int[4][5];
 
