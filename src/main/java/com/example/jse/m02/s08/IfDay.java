@@ -15,7 +15,12 @@ public class IfDay {
             System.out.println("Fish and Chips");
         } else if (today == WeekDay.FRIDAY) {
             System.out.println("Pizza");
-        } else if (today == WeekDay.SATURDAY || today == WeekDay.SUNDAY) {
+        }
+        // We can explicit check the other days ...
+        // else if (today == WeekDay.SATURDAY || today == WeekDay.SUNDAY) {
+        //
+        // ... or we can implicitly consider all other days
+        else {
             System.out.println("Something else");
         }
     }

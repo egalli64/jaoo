@@ -7,7 +7,7 @@ public class SwitchArgsIfElse {
         } else if (args.length == 1) {
             System.out.println("The only argument passed is: " + args[0]);
         } else if (args.length == 2) {
-            System.out.println("The second and last argument passed is: " + args[1]);
+            System.out.println("The two args are: " + args[0] + ", " + args[1]);
         } else {
             System.out.println("The last argument passed is: " + args[args.length - 1]);
         }
