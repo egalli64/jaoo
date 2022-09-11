@@ -7,12 +7,15 @@ public class Initialize {
 
     public void f() {
         int i = 42;
+        // Whenever possible, prefer local variable definition over declaration
         int j;
+        // Element array are implicitly initialized
         int[] data = new int[10];
 
         System.out.println(data[3] + i);
 
-//        System.out.println(j); // error: variable j might not have been initialized
+        // Compile error: variable j might not have been initialized
+//        System.out.println(j);
         j = i / 2;
         System.out.println(j);
     }
