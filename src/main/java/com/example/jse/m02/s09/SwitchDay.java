@@ -1,8 +1,10 @@
 package com.example.jse.m02.s09;
 
+import com.example.jse.m02.s08.WeekDay;
+
 public class SwitchDay {
     public static void main(String[] args) {
-        WeekDay today = WeekDay.values()[(int) (Math.random() * 7)];
+        WeekDay today = SwitchDay.aDay();
         System.out.println("Today is " + today);
 
         switch (today) {
@@ -26,5 +28,13 @@ public class SwitchDay {
             System.out.println("Something else");
             break;
         }
+    }
+
+    /**
+     * @return a randomly chosen WeekDay
+     */
+    private static WeekDay aDay() {
+        WeekDay[] days = WeekDay.values();
+        return days[(int) (Math.random() * days.length)];
     }
 }

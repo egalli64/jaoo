@@ -9,28 +9,23 @@ public class Dog {
     public Dog(String name) {
         this.name = name;
         this.barkCountCurrent = 0;
-        count += 1;
+        Dog.count += 1;
     }
 
     public Dog(String name, int barkCountCurrent) {
         this.name = name;
         this.barkCountCurrent = barkCountCurrent;
-        count += 1;
+        Dog.count += 1;
     }
 
     void bark() {
-        barkCount += 1;
+        Dog.barkCount += 1;
         barkCountCurrent += 1;
         System.out.println(this.name + " bark! (" + Dog.barkCount + ")");
         if (barkCountCurrent > 1) {
-            double rate = (double) barkCountCurrent / barkCount;
+            double rate = (double) barkCountCurrent / Dog.barkCount;
             System.out.println("Bark rate: " + rate);
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Dog [name=" + name + "]";
     }
 
     public static int getCount() {
@@ -43,5 +38,10 @@ public class Dog {
 
     public int getBarkCountCurrent() {
         return barkCountCurrent;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog [barkCountCurrent=" + barkCountCurrent + ", name=" + name + "]";
     }
 }

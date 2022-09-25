@@ -4,19 +4,19 @@ public class Pet {
     protected String name;
 
     public Pet() {
-        // implicit call to super ctor
-//      super();
-        this.name = "Unknown";
+        // passing no name is like passing "Unknown"
+        this("Unknown");
     }
 
     public Pet(String name) {
-        // useless explicit call to super ctor
+        // implicit call to super ctor
         super();
         this.name = name;
     }
 
     public String getName() {
-        return name;
+        // someone likes using "this" also in getter, for symmetry
+        return this.name;
     }
 
     @Override
