@@ -10,7 +10,7 @@ public class Main {
             dog.bark();
         }
 
-//		Cat cat = (Cat) new Dog();
+//        Cat cat = (Cat) new Dog();
 
         Pet pet = new Dog("Bob");
 
