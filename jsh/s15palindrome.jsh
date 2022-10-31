@@ -1,5 +1,5 @@
 String s = "abba";
-//          0123
+// indices  0123
 
 boolean isPal = true;
 
