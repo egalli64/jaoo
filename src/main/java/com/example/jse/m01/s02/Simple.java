@@ -1,10 +1,11 @@
 /*
  * A simple Java source file
+ * 
+ * https://github.com/egalli64/jse
  */
 package com.example.jse.m01.s02;
 
 // import java.lang.Math; // java.lang implicitly imported
-import com.example.jse.m01.s05.*;
 
 /**
  * A "hello" class
@@ -20,7 +21,8 @@ public class Simple {
         if (args.length == 1) {
             System.out.println(args[0]);
         }
-        System.out.println(Variable.class);
+
+        System.out.println(Math.PI);
     }
 }
 
