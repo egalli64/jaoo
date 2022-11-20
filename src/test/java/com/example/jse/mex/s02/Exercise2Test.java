@@ -11,7 +11,7 @@ class Exercise2Test {
         double actual = Exercise2.distance(1, 10, 2, 9);
         double expected = Math.sqrt(2);
 
-        assertThat(actual).isEqualTo(expected, withPrecision(6d));
+        assertThat(actual).isEqualTo(expected, withPrecision(.000_001));
     }
 
     @Test
