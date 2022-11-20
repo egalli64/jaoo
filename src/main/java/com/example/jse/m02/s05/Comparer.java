@@ -1,6 +1,16 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s05;
 
 public class Comparer {
+    /**
+     * Comparison operators, and equals() on references
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         int alpha = 12;
         int beta = 21;
@@ -45,13 +55,21 @@ public class Comparer {
         String c = "ution";
         String d = b + c;
 
-        result = a == d; // false!
-        System.out.println(a + " == " + d + "? " + result);
+        if (a != d) {
+            System.out.println("The references a and d go to different objects");
+        }
+        if (a.equals(d)) {
+            System.out.println("Still, a is equal to d!");
+        }
 
-        // Java should be smart enough to see there is already a "solution" string
+        // Java is often smart enough to see there is already a "solution" string
         // Two references to the same object
         String e = "solution";
-        result = a == e; // true!
-        System.out.println(a + " == " + e + "? " + result);
+        if (a == e) {
+            System.out.println("The references a and e go to the same object");
+        }
+        if (a.equals(e)) {
+            System.out.println("So, a is equal to e");
+        }
     }
 }

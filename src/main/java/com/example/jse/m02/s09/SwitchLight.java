@@ -1,6 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s09;
 
+/**
+ * An example for a switch on an enumerator
+ */
 public class SwitchLight {
+    /**
+     * Generate randomly a TrafficLight, then use it to print a message
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         TrafficLight light = SwitchLight.aColor();
 
@@ -15,6 +28,7 @@ public class SwitchLight {
             System.out.println("Stop!");
             break;
         }
+        System.out.println("Done!");
     }
 
     /**
@@ -27,5 +41,4 @@ public class SwitchLight {
                 Math.random() > .5 ? TrafficLight.YELLOW : TrafficLight.RED;
 
     }
-
 }

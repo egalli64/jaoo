@@ -1,6 +1,16 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s03;
 
 public class Arithmetic {
+    /**
+     * Basic numeric operations
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         int a = 10;
         int b = 3;
@@ -80,6 +90,9 @@ public class Arithmetic {
         alpha += 3_000_000_000L; // -1_294_967_294
         System.out.print("alpha += 3_000_000_000L leads to alpha = ");
         System.out.println(alpha);
+
+        // the plain "add to" idiom is safer, requiring an explicit cast
+        // alpha = alpha + 3_000_000_000L;
 
         // Compile time error
         // Type mismatch: cannot convert from long to int
