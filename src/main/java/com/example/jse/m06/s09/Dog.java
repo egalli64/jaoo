@@ -1,8 +1,17 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s09;
 
+/**
+ * Dog "is-a" Mammal, Barker, and Drinker. And "has-a" Tail
+ */
 public class Dog extends Mammal implements Barker, Drinker {
+    private static final int DEFAULT_TAIL_LEN = 12;
     private Tail tail;
-    
+
     public Dog(int gestationDays, int tailLen) {
         super(gestationDays);
         this.tail = new Tail(tailLen);
@@ -10,7 +19,7 @@ public class Dog extends Mammal implements Barker, Drinker {
 
     public Dog(int gestationDays) {
         super(gestationDays);
-        this.tail = new Tail(12);
+        this.tail = new Tail(DEFAULT_TAIL_LEN);
     }
 
     @Override
