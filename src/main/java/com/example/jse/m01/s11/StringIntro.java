@@ -1,3 +1,8 @@
+/*
+ * Introduction to String, StringBuilder, text block
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m01.s11;
 
 public class StringIntro {
@@ -22,13 +27,21 @@ public class StringIntro {
         // Create a String from a StringBuilder
         String u = sb.toString();
         System.out.println(u);
+        System.out.println("---");
 
         // Text block
-        String text = """
+        String modern = """
                 Non impedir lo suo fatale andare:
                 vuolsi così colà dove si puote
-                ciò che si vuole, e più non dimandare
-                """;
-        System.out.println(text);
+                ciò che si vuole, e più non dimandare""";
+
+        // Classic string with newlines in it
+        String classic = "Non impedir lo suo fatale andare:\n" + //
+                "vuolsi così colà dove si puote\n" + //
+                "ciò che si vuole, e più non dimandare";
+
+        System.out.println(modern);
+        System.out.println("---");
+        System.out.println(classic);
     }
 }
