@@ -1,10 +1,18 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s05;
 
 import java.util.Arrays;
 
+/**
+ * Wrapper classes to primitives
+ */
 public class Wrapper {
     public static void main(String[] args) {
-        Object[] wrappers = {Boolean.class, Character.class, Short.class, Integer.class, Float.class, Double.class};
+        Object[] wrappers = { Boolean.class, Character.class, Short.class, Integer.class, Float.class, Double.class };
         System.out.println("Wrapper classes: " + Arrays.toString(wrappers));
 
         // deprecated for removal since Java 9

@@ -1,5 +1,5 @@
 /*
- * A simple Java source file
+ * Introduction to Java Standard Edition
  * 
  * https://github.com/egalli64/jse
  */
@@ -8,7 +8,7 @@ package com.example.jse.m01.s02;
 // import java.lang.Math; // java.lang implicitly imported
 
 /**
- * A "hello" class
+ * A Java "Hello world"
  * 
  * @author Emanuele Galli
  */
