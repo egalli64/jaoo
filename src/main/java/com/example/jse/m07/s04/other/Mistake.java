@@ -1,67 +1,47 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s04.other;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Fix-a-bug exercise
+ */
 public class Mistake {
     private static final Logger log = Logger.getGlobal();
 
+    /**
+     * A Math.incrementExact() bugged alternative
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        int value = Integer.MAX_VALUE - 1;
-        log.info("value is " + value);
-
-        try {
-            System.out.println(increment(value));
-        } catch (Exception e) {
-            log.log(Level.SEVERE, "Cannot increase " + value, e);
-        }
-
-        // ...
-
-        try {
-            value = increment(value);
-        } catch (Exception e) {
-            log.log(Level.SEVERE, "Cannot increase " + value, e);
-        }
-
-        // ...
-
+        int value = Integer.MAX_VALUE;
         System.out.println("value is " + value);
 
-//        long result = incrementNoExc(value);
-//        if (result == Long.MIN_VALUE) {
-//            System.out.println("Error!");
-//        } else {
-//            value = (int) result;
-//        }
+        try {
+            value = Math.incrementExact(value);
+        } catch (ArithmeticException ae) {
+            log.log(Level.SEVERE, "Cannot increase " + value, ae);
+        }
 
-        value = (int) incrementNoExc(value);
-        
-        System.out.println("value is " + value);
+        System.out.println("value is still " + value);
+
+        long result = incrementToLong(value);
+        System.out.println("incremented value is " + result);
     }
 
     /**
+     * Fix this bugged method
      * 
-     * @param x
-     * @return
+     * @param x an integer
+     * @return the increased value as long
      */
-    static int increment(int x) throws Exception {
-        if (x == Integer.MAX_VALUE) {
-            throw new Exception();
-        }
+    static long incrementToLong(int x) {
         return x + 1;
-    }
-
-    /**
-     * 
-     * @param x
-     * @return blah blah blah or 0 in case of error
-     */
-    static long incrementNoExc(int x) {
-        if (x == Integer.MAX_VALUE) {
-            return Long.MIN_VALUE;
-        }
-
-        return x + 1L;
     }
 }

@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s04;
 
 import java.util.logging.Level;
@@ -5,6 +10,9 @@ import java.util.logging.Logger;
 
 import com.example.jse.m07.s03.Exceptional;
 
+/**
+ * Try-catching exceptions
+ */
 public class Risky {
     private static final Logger log = Logger.getGlobal();
 
@@ -16,15 +24,15 @@ public class Risky {
             exceptional.aCheckedThrower();
 
             // called only if no exception before
-            // close();
+            // exceptional.close();
         } catch (Exception ex) {
             log.log(Level.SEVERE, "Exception caught in f()", ex);
 
             // called only when an exception occurs
-            // close();
+            // exceptional.close();
         } finally {
             // always called
-            close();
+            exceptional.close();
         }
     }
 
@@ -34,10 +42,8 @@ public class Risky {
         // ...
         exceptional.aCheckedThrower();
         log.info("This statement won't be reached");
-    }
-
-    private void close() {
-        log.info("performing cleanup");
+        // ERROR! resource leak!
+        exceptional.close();
     }
 
     public static void main(String[] args) throws Exception {
@@ -59,6 +65,7 @@ public class Risky {
             exceptional.aCheckedThrower();
         } finally {
             System.out.println("done call to Exceptional.aCheckedThrower()");
+            exceptional.close();
         }
 
         log.info("This statement won't be reached");
