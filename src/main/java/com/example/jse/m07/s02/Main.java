@@ -1,72 +1,60 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s02;
 
+/**
+ * Introduction to exception
+ */
 public class Main {
     public static void main(String[] args) {
-        // the caller should check the return value to ensure it is "good"
-        double result = noExceptionSquareRoot(-7);
-        if (result == -1) {
-            System.out.println("...!!!");
+        // Exceptions are expensive, not always used!
+
+        // The error code idiom
+        // 1. call the method that could fail
+        double input = -15.3;
+        double result = Math.sqrt(input);
+        // 2. check the result
+        if (Double.isNaN(result)) {
+            // 2a. Error code detected, signal the problem
+            System.out.println("Bad input: " + input);
+        } else {
+            // 2b. No error code, result is good, use it
+            System.out.println("Square root is " + result);
         }
 
-        /*
-         * ... but what if there is no check?
-         */
+        // ... but what if there is no check?
+        System.out.println("Result is " + result);
 
-        System.out.println("result is " + result);
+        // in case of exception, if the caller do not take any further step, the program
+        // terminates!
 
-        // in case of exception, if the caller do not take any further step, the program terminates!
+        // The try-catch idiom
+        int a = 42;
+        int b = 0;
         try {
-            result = squareRoot(-7);
+            // in the try block the code that could throw an exception
+            System.out.println(a / b);
         } catch (Exception ex) {
-            // maybe there is a possible alternative approach
-//            System.out.println("... !!! I use instead 5");
-//            result = 5;
+            // java.lang.ArithmeticException: / by zero
 
-            // maybe I could just tell the user about the issue
+            // maybe there is a possible alternative approach
+
+            // maybe we could just tell the user about the issue
             System.out.println("Bad input!");
 
-            // if the problem is really bad, we could terminate the execution
-//            throw new IllegalStateException(ex);
+            // maybe we could re-throw the exception
+            // throw ex;
+
+            // maybe we could wrap the original exception and throw again
+            // throw new IllegalStateException(ex);
+
+            // maybe we could just terminate the method execution
+            // return;
         }
 
-        // exceptions are expensive, also in Java they are not always used
-//        if (Double.isNaN(result)) {
-//            System.out.println("...!!!");
-//        }
-
-        try {
-            int x = f(3, 0);
-            System.out.println(x);
-        } catch (Exception e) {
-            System.out.println("... " + e.getMessage());
-        }
-
-    }
-
-    private static double squareRoot(int value) throws Exception {
-        if (value < 0) {
-            throw new Exception("Bad input, negative values are not accepted");
-        }
-        return Math.sqrt(value);
-    }
-
-    /**
-     * 
-     * @param value
-     * @return -1 if something went wrong
-     */
-    private static double noExceptionSquareRoot(int value) {
-        if (value < 0) {
-            return -1;
-        }
-
-        return Math.sqrt(value);
-    }
-
-    /**
-     * ArithmeticException!
-     */
-    static int f(int a, int b) {
-        return a / b;
+        System.out.println("Done");
     }
 }
