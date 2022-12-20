@@ -25,7 +25,3 @@ public class Simple {
         System.out.println(Math.PI);
     }
 }
-
-class PackageClass {
-    // TODO: Not implemented (yet)
-}
