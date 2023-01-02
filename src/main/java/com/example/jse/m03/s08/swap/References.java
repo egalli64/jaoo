@@ -38,6 +38,7 @@ public class References {
      * 
      * @param left  to be swapped with right
      * @param right to be swapped with left
+     * @throws NullPointerException if left or right is null
      */
     private static void swap(StringBuilder left, StringBuilder right) {
         // save the content of left
