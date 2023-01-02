@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m03.s08.swap;
+package com.example.jse.m03.s08;
 
 /**
  * Swapping primitive values
