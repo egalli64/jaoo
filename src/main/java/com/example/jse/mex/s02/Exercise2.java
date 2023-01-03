@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s02;
 
+/**
+ * Operators - Exercise 2
+ * 
+ * Pythagorean theorem: requires square and square root
+ */
 public class Exercise2 {
     /**
      * Distance between (x0, y0) and (x1, y1)
