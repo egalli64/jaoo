@@ -1,12 +1,12 @@
 /*
- * A simple Java source file
+ * Introduction to Java Standard Edition
  * 
  * https://github.com/egalli64/jse
  */
 package com.example.jse.m01.s04;
 
 /**
- * A "hello" program that uses the passed args
+ * A "hello" program that uses the passed args, call it from CLI
  * 
  * @author Emanuele Galli
  */
