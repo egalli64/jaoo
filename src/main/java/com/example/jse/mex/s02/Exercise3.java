@@ -23,6 +23,7 @@ public class Exercise3 {
      * @return ("cilindrata") volume in cm^3
      */
     public static double displacement(double bore, double stroke, int nr) {
+        // TODO
         throw new UnsupportedOperationException("Not yet implemented");
     }
 }
