@@ -1,12 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m01.s09;
 
+/**
+ * Defining and using an array with the standard initialization
+ */
 public class ArrayIntro {
     public static void main(String[] args) {
+        // Array with length 12, each element is initialized to zero
         int[] values = new int[12];
 
-        values[0] = 7;
-        values[1] = 5;
+        // Explicit initialization of array elements
+        values[0] = 734;
+        values[1] = 512;
         // ...
+        values[10] = 187;
         values[11] = 345;
 
         System.out.print("First element is ");
