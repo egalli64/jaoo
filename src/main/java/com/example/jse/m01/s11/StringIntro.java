@@ -1,10 +1,13 @@
 /*
- * Introduction to String, StringBuilder, text block
+ * Introduction to Java Standard Edition
  * 
  * https://github.com/egalli64/jse
  */
 package com.example.jse.m01.s11;
 
+/**
+ * Introduction to String, StringBuilder, text block
+ */
 public class StringIntro {
     public static void main(String[] args) {
         // a single character
