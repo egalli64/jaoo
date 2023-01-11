@@ -10,19 +10,18 @@ package com.example.jse.m03.s08;
  */
 public class Primitives {
     public static void main(String[] args) {
-        // Any primitive type would lead to the same result
-        int a = 1;
-        int b = 2;
-        printCurrentStatus("Original status", a, b);
+        int x = 1;
+        int y = 2;
+        printCurrentStatus("Original status", x, y);
 
-        buggySwap(a, b);
-        printCurrentStatus("After call to (buggy) swap method", a, b);
+        buggySwap(x, y);
+        printCurrentStatus("After call to (buggy) swap method", x, y);
 
         // Workaround: swap primitives where it is needed
-        int temp = a;
-        a = b;
-        b = temp;
-        printCurrentStatus("After local swap", a, b);
+        int temp = x;
+        x = y;
+        y = temp;
+        printCurrentStatus("After local swap", x, y);
     }
 
     /**
