@@ -1,6 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s02;
 
+/**
+ * Unary operators
+ */
 public class Unary {
+    /**
+     * Using unary operators on a variable
+     * <li>++ to increase by one
+     * <li>-- to decrease by one
+     * <li>+ pretty useless
+     * <li>- change sign
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
         int value = 1;
 
