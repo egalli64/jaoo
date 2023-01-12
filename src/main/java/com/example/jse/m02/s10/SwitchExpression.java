@@ -1,9 +1,22 @@
-package com.example.jse.m02.s11;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s10;
 
+/**
+ * Control flow - Decision: switch expression
+ */
 public class SwitchExpression {
+    /**
+     * Show use of expression switch and yield
+     * 
+     * @param args its length is used to set a size by expression switch
+     */
     public static void main(String[] args) {
         // initialize with expression switch
-        var size = switch (args.length) {
+        Size size = switch (args.length) {
         case 0, 1 -> Size.S;
         case 2 -> Size.M;
         case 3, 4 -> Size.L;
@@ -11,7 +24,7 @@ public class SwitchExpression {
         };
 
         // yield with classic case
-        var itSize = switch (size) {
+        int itSize = switch (size) {
         case S:
             System.out.print("Small");
             yield 42;
