@@ -10,7 +10,7 @@ package com.example.jse.m02.s07;
  */
 public class IfDay {
     /**
-     * Peak a week day randomly, then print the associated food of the day
+     * Pick a week day randomly, then print the associated food of the day
      * 
      * @param args not used
      * @see WeekDay enumerator for the week days
