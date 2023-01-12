@@ -6,9 +6,9 @@
 package com.example.jse.m02.s02;
 
 /**
- * Unary operators
+ * Arithmetic unary operators
  */
-public class Unary {
+public class ArithmeticUnary {
     /**
      * Using unary operators on a variable
      * <li>++ to increase by one
@@ -16,7 +16,7 @@ public class Unary {
      * <li>+ pretty useless
      * <li>- change sign
      * 
-     * @param args
+     * @param args not used
      */
     public static void main(String[] args) {
         int value = 1;
