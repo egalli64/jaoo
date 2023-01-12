@@ -1,6 +1,26 @@
-package com.example.jse.m02.s06;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s05;
 
+/**
+ * Bitwise operators
+ */
 public class Bitwise {
+    /**
+     * Bitwise operators
+     * <li>& AND
+     * <li>| OR
+     * <li>^ XOR
+     * <li>~ NOT
+     * <li>>> right shift
+     * <li>>>> "unsigned" right shift
+     * <li><< left shift
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         int gamma = 0b101; // 5
         int delta = 0b110; // 6

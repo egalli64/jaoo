@@ -1,11 +1,19 @@
-package com.example.jse.m02.s07;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s06;
 
 /**
- * Example for ternary operator ?:
- * <p>
- * Compared against if-else / default value + if
+ * Control flow - Decision the conditional expression ?:
  */
 public class Ternary {
+    /**
+     * Example for ternary operator ?:
+     * <p>
+     * Compared against if-else / default value + if
+     */
     public static void main(String[] args) {
         String version1 = args.length == 0 ? "No arg passed" : args[0];
         System.out.println(version1);

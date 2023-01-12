@@ -3,11 +3,14 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m02.s05;
+package com.example.jse.m02.s04;
 
+/**
+ * Comparison operators
+ */
 public class Comparer {
     /**
-     * Comparison operators, and equals() on references
+     * Comparison operators on primitives, and equals() on references
      * 
      * @param args not used
      */
@@ -62,7 +65,7 @@ public class Comparer {
             System.out.println("Still, a is equal to d!");
         }
 
-        // Java is often smart enough to see there is already a "solution" string
+        // Java is often smart enough to see there is already the required string
         // Two references to the same object
         String e = "solution";
         if (a == e) {

@@ -1,6 +1,19 @@
-package com.example.jse.m02.s04;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s03;
 
+/**
+ * String concatenation by operators
+ */
 public class Concatenation {
+    /**
+     * Overloaded + and += operator
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         System.out.print("5 + 7: ");
         // adding integers 5 and 7 leads to 12
@@ -35,10 +48,10 @@ public class Concatenation {
         System.out.print("We could still have access to the original string: ");
         System.out.println(t);
 
-        // a string of 20 *, in a compact way
+        System.out.println("A string of 20 asterisks, generated in a compact way");
         System.out.println("*".repeat(20));
 
-        // a string of 20 *, in a verbose way
+        System.out.println("A string of 20 asterisks, generated in a more verbose way");
         String star = "*";
         String star20 = star.repeat(20);
         System.out.println(star20);

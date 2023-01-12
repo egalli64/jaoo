@@ -1,6 +1,28 @@
-package com.example.jse.m02.s06;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s05;
 
+/**
+ * Logical operators
+ */
 public class Logical {
+    /**
+     * Short circuit logical operators
+     * <li>&& AND
+     * <li>|| OR
+     * <p>
+     * The unary NOT logical operator: !
+     * <p>
+     * Other logical operators
+     * <li>& AND
+     * <li>| OR
+     * <li>^ XOR
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         boolean alpha = true;
         boolean beta = false;
