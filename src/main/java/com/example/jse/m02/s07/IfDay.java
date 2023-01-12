@@ -1,6 +1,20 @@
-package com.example.jse.m02.s08;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s07;
 
+/**
+ * Control flow - Decision: if else if ... else using an enum
+ */
 public class IfDay {
+    /**
+     * Peak a week day randomly, then print the associated food of the day
+     * 
+     * @param args not used
+     * @see WeekDay enumerator for the week days
+     */
     public static void main(String[] args) {
         WeekDay today = aDay();
         System.out.println("Today is " + today);
@@ -26,7 +40,10 @@ public class IfDay {
     }
 
     /**
-     * @return a randomly chosen WeekDay
+     * A randomly chosen week day
+     * 
+     * @return a WeekDay
+     * @see WeekDay enumerator for week days
      */
     private static WeekDay aDay() {
         WeekDay[] days = WeekDay.values();

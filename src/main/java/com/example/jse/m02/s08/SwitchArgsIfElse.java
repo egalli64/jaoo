@@ -1,6 +1,22 @@
-package com.example.jse.m02.s09;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s08;
 
+/**
+ * Control flow - Decision: if else if ... else
+ * 
+ * @see SwitchArgs same behavior, there with switch, here with if-else
+ */
 public class SwitchArgsIfElse {
+    /**
+     * Accordingly to the number of arguments, a different case in the switch is
+     * executed.
+     * 
+     * @param args determine the switch execution
+     */
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("No argument passed in");

@@ -3,16 +3,17 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m02.s09;
+package com.example.jse.m02.s08;
 
 /**
- * An example for a switch on an enumerator
+ * Control flow - Decision: switch and enumerator
  */
 public class SwitchLight {
     /**
      * Generate randomly a TrafficLight, then use it to print a message
      * 
      * @param args not used
+     * @see TrafficLight enumerator for available traffic lights
      */
     public static void main(String[] args) {
         TrafficLight light = SwitchLight.aColor();

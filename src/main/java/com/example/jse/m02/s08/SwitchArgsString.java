@@ -1,6 +1,19 @@
-package com.example.jse.m02.s09;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s08;
 
+/**
+ * Control flow - Decision: switch on String
+ */
 public class SwitchArgsString {
+    /**
+     * Accordingly to the argument, a different feedback is generated
+     * 
+     * @param args a single argument is expected
+     */
     public static void main(String[] args) {
         if (args.length == 0) {
             System.out.println("Please, pass me a string!");

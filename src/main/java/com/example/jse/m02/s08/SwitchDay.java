@@ -1,8 +1,24 @@
-package com.example.jse.m02.s09;
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
+package com.example.jse.m02.s08;
 
-import com.example.jse.m02.s08.WeekDay;
+import com.example.jse.m02.s07.IfDay;
+import com.example.jse.m02.s07.WeekDay;
 
+/**
+ * Control flow - Decision: switch and enumerator
+ */
 public class SwitchDay {
+    /**
+     * Peak a week day randomly, then print the associated food of the day
+     * 
+     * @param args not used
+     * @see WeekDay enumerator for the week days
+     * @see IfDay same result, but using if-else instead
+     */
     public static void main(String[] args) {
         WeekDay today = SwitchDay.aDay();
         System.out.println("Today is " + today);
@@ -31,7 +47,10 @@ public class SwitchDay {
     }
 
     /**
-     * @return a randomly chosen WeekDay
+     * A randomly chosen week day
+     * 
+     * @return a WeekDay
+     * @see WeekDay enumerator for week days
      */
     private static WeekDay aDay() {
         WeekDay[] days = WeekDay.values();
