@@ -1,5 +1,13 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m03.s07;
 
+/**
+ * A first look to constants and methods in Math
+ */
 public class AboutMath {
     public static void main(String[] args) {
         System.out.println("E is " + Math.E);
