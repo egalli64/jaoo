@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m03.s05.ex;
+package com.example.jse.m03.s06.ex;
 
 public class Exercise {
 //    private static final int GAP = 'a' - 'A';     // charset independent 

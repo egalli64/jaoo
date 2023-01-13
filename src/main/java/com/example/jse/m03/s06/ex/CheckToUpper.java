@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m03.s05.ex;
+package com.example.jse.m03.s06.ex;
 
 /**
  * Sort of simple tester, see JUnit for the real stuff
