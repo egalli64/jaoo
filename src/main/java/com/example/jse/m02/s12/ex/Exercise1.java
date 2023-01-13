@@ -1,10 +1,20 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s12.ex;
 
+/**
+ * Control flow - Loop: for
+ */
 public class Exercise1 {
+    /**
+     * Print all values in [0 .. 9]
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        // TODO: print all values in [0 .. 9]
-        // (1) for loop
-        // (2) while loop
-        // (3) do-while loop
+        // TODO
     }
 }

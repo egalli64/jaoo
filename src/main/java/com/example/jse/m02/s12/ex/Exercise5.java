@@ -1,6 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s12.ex;
 
+/**
+ * Control flow - Loop: for
+ */
 public class Exercise5 {
+    /**
+     * Emulate multiplicative operators with the help of a for loop.
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         int a = 10;
         int b = 3;

@@ -1,18 +1,27 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m02.s12;
 
+/**
+ * Control flow - Infinite Loop (for)
+ * 
+ * @see Neverending same, but using while instead
+ */
 public class Forever {
-    public static void main(String[] args) {
-        boolean hasArguments = args.length != 0;
-
-        // same as: while (true)
+    /**
+     * Print a dot, sleep for a second, repeat forever (or until someone kill the
+     * process).
+     * 
+     * @param args not used
+     * @throws InterruptedException when the OS kills the process
+     */
+    public static void main(String[] args) throws InterruptedException {
         for (;;) {
-            System.out.println("Pass an argument to loop forever");
-
-            if (!hasArguments) {
-                break;
-            }
+            System.out.print('.');
+            Thread.sleep(1_000);
         }
-
-        System.out.println("bye");
     }
 }
