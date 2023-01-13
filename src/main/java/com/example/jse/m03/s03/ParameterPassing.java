@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m03.s03;
 
+/**
+ * Using parameters
+ * 
+ * @see Main a class that invokes methods of this class
+ */
 public class ParameterPassing {
     /**
      * No side effect
@@ -14,7 +24,7 @@ public class ParameterPassing {
     /**
      * No side effect
      * 
-     * @param parameter an immutable
+     * @param parameter an immutable, can't be changed
      */
     public void immutableReference(String parameter) {
         if (parameter == null) {
@@ -50,9 +60,9 @@ public class ParameterPassing {
     }
 
     /**
-     * Array is a reference
+     * Side effect
      * 
-     * @param data an array, its values could be changed
+     * @param data an array, it is a mutable reference, its values could be changed
      */
     public void reference(int[] data) {
         if (data == null || data.length == 0) {
@@ -72,5 +82,24 @@ public class ParameterPassing {
      */
     public int increase(int value) {
         return value + 1;
+    }
+
+    /**
+     * Get an immutable reference, modify the local copy and return a modified copy
+     * 
+     * @param parameter an immutable, can't be changed
+     * @return a new string based on the passed parameter
+     */
+    public String append(String parameter) {
+        if (parameter == null) {
+            System.out.println("Nothing to do here");
+            return parameter;
+        }
+
+        // alternatively: we could throw a NullPointerException if parameter is null
+//        Objects.requireNonNull(parameter, "Parameter should not be null");
+
+        parameter += " there";
+        return parameter;
     }
 }
