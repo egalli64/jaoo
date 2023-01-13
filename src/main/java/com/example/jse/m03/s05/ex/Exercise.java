@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m03.s05.ex;
 
 public class Exercise {
@@ -11,7 +16,7 @@ public class Exercise {
      * 
      * Do not use any method in String!
      * 
-     * @param s
+     * @param s a string, possibly empty or even null
      * @return uppercase version of input
      */
     public String toUpper(String s) {

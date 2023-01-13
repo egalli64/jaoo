@@ -1,9 +1,20 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m03.s05.ex;
 
 /**
  * Sort of simple tester, see JUnit for the real stuff
  */
 public class CheckCaesar {
+    /**
+     * Simple checker for strings, print the result
+     * 
+     * @param actual   the actual string
+     * @param expected the expected string
+     */
     private static void check(String actual, String expected) {
         if (actual == expected || actual != null && actual.equals(expected)) {
             System.out.println("OK!");
@@ -12,6 +23,9 @@ public class CheckCaesar {
         }
     }
 
+    /**
+     * Run a few tests
+     */
     public static void main(String[] args) {
         testCiao1();
         testDjbpMinus1();
@@ -21,6 +35,9 @@ public class CheckCaesar {
         testZoo27();
     }
 
+    /**
+     * CIAO + 1 is DJBP
+     */
     public static void testCiao1() {
         Exercise ex = new Exercise();
 
@@ -31,6 +48,9 @@ public class CheckCaesar {
         check(actual, expected);
     }
 
+    /**
+     * DJBP - 1 is CIAO
+     */
     public static void testDjbpMinus1() {
         Exercise ex = new Exercise();
 
@@ -41,6 +61,9 @@ public class CheckCaesar {
         check(actual, expected);
     }
 
+    /**
+     * ZOO + 1 is APP
+     */
     public static void testZoo1() {
         Exercise ex = new Exercise();
 
@@ -51,6 +74,9 @@ public class CheckCaesar {
         check(actual, expected);
     }
 
+    /**
+     * APP - 1 is ZOO
+     */
     public static void testAppMinus1() {
         Exercise ex = new Exercise();
 
@@ -61,6 +87,9 @@ public class CheckCaesar {
         check(actual, expected);
     }
 
+    /**
+     * ZOO + 27 is APP
+     */
     public static void testZoo27() {
         Exercise ex = new Exercise();
 
@@ -71,6 +100,9 @@ public class CheckCaesar {
         check(actual, expected);
     }
 
+    /**
+     * APP - 27 is ZOO
+     */
     public static void testAppMinus27() {
         Exercise ex = new Exercise();
 

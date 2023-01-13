@@ -1,9 +1,20 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m03.s05.ex;
 
 /**
  * Sort of simple tester, see JUnit for the real stuff
  */
 public class CheckToUpper {
+    /**
+     * Simple checker for strings, print the result
+     * 
+     * @param actual   the actual string
+     * @param expected the expected string
+     */
     private static void check(String actual, String expected) {
         if (actual == expected || actual != null && actual.equals(expected)) {
             System.out.println("OK!");
@@ -12,6 +23,9 @@ public class CheckToUpper {
         }
     }
 
+    /**
+     * Run a few tests
+     */
     public static void main(String[] args) {
         testBob();
         testBobUpper();
@@ -20,6 +34,9 @@ public class CheckToUpper {
         testPlain();
     }
 
+    /**
+     * Bob becomes BOB
+     */
     public static void testBob() {
         Exercise ex = new Exercise();
 
@@ -30,6 +47,10 @@ public class CheckToUpper {
         check(actual, expected);
     }
 
+    
+    /**
+     * BOB becomes BOB
+     */
     public static void testBobUpper() {
         Exercise ex = new Exercise();
 
@@ -40,6 +61,9 @@ public class CheckToUpper {
         check(actual, expected);
     }
 
+    /**
+     * Only lowercase characters should change (to the expected uppercase character)
+     */
     public static void testPlain() {
         Exercise ex = new Exercise();
         String input = "A 'random' string with UPPERCASE and _strange_ characters like ⌂!";
@@ -50,6 +74,9 @@ public class CheckToUpper {
         check(actual, expected);
     }
 
+    /**
+     * Empty string should be managed correctly
+     */
     public static void testEmpty() {
         Exercise ex = new Exercise();
 
@@ -60,6 +87,9 @@ public class CheckToUpper {
         check(actual, expected);
     }
 
+    /**
+     * null should be managed correctly
+     */
     public static void testNull() {
         Exercise ex = new Exercise();
 
