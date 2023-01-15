@@ -1,11 +1,24 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s06;
 
+/**
+ * A few static method in primitive wrappers
+ */
 public class Wrapper {
+    /**
+     * Examples from Boolean, Character, Integer, and Double
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         // from boolean to Boolean
         Boolean f1 = Boolean.valueOf(true);
         // not a boolean -> false
-        Boolean f2 = Boolean.valueOf("Mistake");
+        Boolean f2 = Boolean.valueOf("If it is not true it is false!");
         // case insensitive
         boolean f3 = Boolean.parseBoolean("True");
         System.out.printf("A few booleans: %b, %b, %b%n", f1, f2, f3);

@@ -1,8 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s07.example;
 
 import java.util.Arrays;
 
+/**
+ * Smoke test for variable scope example
+ * 
+ * @see Dog the checked class
+ */
 public class Main {
+    /**
+     * Works with dogs
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Dog[] myDogs = new Dog[10];
 

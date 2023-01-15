@@ -1,7 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s08.exercise;
 
+/**
+ * Exercise
+ */
 public class Main {
-    // TODO: let this code work correctly
+    /**
+     * TODO: let this code work correctly
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Square square = new Square(3.0);
 
