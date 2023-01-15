@@ -1,8 +1,21 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s03.ex;
 
 import java.util.Arrays;
 
+/**
+ * Exercise: create a few cats and let them meow accordingly to requests
+ */
 public class Main {
+    /**
+     * Follow the instructions in the "to do" comments.
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         String[] names = { "Tom", "Bob", "Kit", "Zip", "Kit" };
         String[] colors = { "blue", "green", "yellow", "black", "blue" };
@@ -12,12 +25,12 @@ public class Main {
 
         // TODO: (1) create an array of cats, same size of the arrays above
         Cat[] cats = new Cat[0];
-        System.out.println(String.format("There are %d cats in the array", cats.length));
+        System.out.printf("The array of cats has %d length%n", cats.length);
 
         // TODO: (2) initialize the cats array
         // each cat should have name and color from the arrays above
 
-        System.out.println(String.format("Currently there are %d cats in the program", Cat.getCount()));
+        System.out.printf("Currently there are %d cats in the program%n", Cat.getCount());
 
         // TODO: (3) each cat should meow
 

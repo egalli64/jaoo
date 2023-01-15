@@ -1,5 +1,16 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s03.ex;
 
+/**
+ * A sample class. Each object has two fields, a constructor, two methods
+ * (overload), and toString() method.
+ * <p>
+ * At class level it is defined a field, the cat counter.
+ */
 public class Cat {
     private static int count = 0;
 
