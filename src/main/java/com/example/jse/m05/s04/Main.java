@@ -1,6 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m05.s04;
 
+/**
+ * Static factory method
+ */
 public class Main {
+    /**
+     * Create object without calling explicitly "new"
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         boolean flag = true;
 
