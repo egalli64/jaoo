@@ -37,6 +37,6 @@ public class WideningExtra {
         System.out.print(" [long -> double] ");
         System.out.println(aDoubleConversion);
 
-        System.out.println(String.format("Float: %.0f, double: %.0f", aFloatApproximation, aDoubleConversion));
+        System.out.printf("Float: %.0f, double: %.0f%n", aFloatApproximation, aDoubleConversion);
     }
 }

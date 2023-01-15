@@ -72,6 +72,6 @@ public class References {
      * @param second  another character sequence (String or StringBuilder)
      */
     private static void printCurrentStatus(String message, CharSequence first, CharSequence second) {
-        System.out.println(String.format("%s: first is %s, second is %s", message, first, second));
+        System.out.printf("%s: first is %s, second is %s%n", message, first, second);
     }
 }

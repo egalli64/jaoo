@@ -46,6 +46,6 @@ public class Primitives {
      * @param second  another value
      */
     private static void printCurrentStatus(String message, int first, int second) {
-        System.out.println(String.format("%s: first is %d, second is %d", message, first, second));
+        System.out.printf("%s: first is %d, second is %d%n", message, first, second);
     }
 }

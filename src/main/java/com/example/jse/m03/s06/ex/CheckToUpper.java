@@ -19,7 +19,7 @@ public class CheckToUpper {
         if (actual == expected || actual != null && actual.equals(expected)) {
             System.out.println("OK!");
         } else {
-            System.out.println(String.format("Failure: %s not equals to %s", actual, expected));
+            System.out.printf("Failure: %s not equals to %s%n", actual, expected);
         }
     }
 
@@ -47,7 +47,6 @@ public class CheckToUpper {
         check(actual, expected);
     }
 
-    
     /**
      * BOB becomes BOB
      */

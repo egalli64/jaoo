@@ -87,8 +87,9 @@ public class AboutString {
         int a = 42;
         String b = "hello";
         double c = 10 / 3.0;
-        System.out.println(String.format("An integer %d, a string %s, and a floating point %.3f", a, b, c));
         System.out.println("An integer " + a + ", a string " + b + ", and a floating point " + c);
+        System.out.println(String.format("An integer %d, a string %s, and a floating point %.3f", a, b, c));
+        System.out.printf("An integer %d, a string %s, and a floating point %.3f%n", a, b, c);
 
         String x = null;
         System.out.println("Sort of safe toString(): " + String.valueOf(x));

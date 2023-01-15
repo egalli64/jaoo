@@ -37,6 +37,6 @@ public class Dog {
     }
 
     public void bark() {
-        System.out.println(String.format("%s %s: woof", breed, name));
+        System.out.printf("%s %s: woof%n", breed, name);
     }
 }

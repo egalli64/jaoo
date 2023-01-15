@@ -22,8 +22,8 @@ public class ListExample {
         int value = -997;
         int pos = 2;
         list.add(pos, value);
-        System.out.println(String.format("After adding at position %d element %d: %s", pos, value, list));
-        System.out.println(String.format("Index of %d: %d", value, list.indexOf(-997)));
+        System.out.printf("After adding at position %d element %d: %s%n", pos, value, list);
+        System.out.printf("Index of %d: %d%n", value, list.indexOf(-997));
 
         try {
             int badPos = 100;
@@ -38,11 +38,11 @@ public class ListExample {
 
         pos = 3;
         value = list.remove(pos);
-        System.out.println(String.format("Removing at position %d element %d: %s", pos, value, list));
+        System.out.printf("Removing at position %d element %d: %s%n", pos, value, list);
 
         value = 42;
         int old = list.set(pos, value); // if it was an array: list[pos] = value;
-        System.out.println(String.format("Set at position %d element %d, was %d: %s", pos, value, old, list));
+        System.out.printf("Set at position %d element %d, was %d: %s%n", pos, value, old, list);
 
         list.replaceAll(x -> x + 1);
         System.out.println("Increasing all elements by 1: " + list);

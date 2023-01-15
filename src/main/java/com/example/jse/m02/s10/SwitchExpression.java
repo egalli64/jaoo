@@ -60,6 +60,6 @@ public class SwitchExpression {
             yield 46;
         }
         };
-        System.out.printf(" is %d (DE)", deSize);
+        System.out.printf(" is %d (DE)%n", deSize);
     }
 }

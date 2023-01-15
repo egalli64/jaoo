@@ -42,6 +42,6 @@ public class SwapInArray {
      * @param values  an array
      */
     private static void printCurrentStatus(String message, int[] values) {
-        System.out.println(String.format("%s: %s", message, Arrays.toString(values)));
+        System.out.printf("%s: %s%n", message, Arrays.toString(values));
     }
 }
