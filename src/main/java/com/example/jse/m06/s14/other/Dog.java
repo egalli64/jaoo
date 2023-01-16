@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s14.other;
 
+/**
+ * this and super
+ * <p>
+ * Base class
+ */
 public class Dog {
     private static final String DEFAULT_NAME = "???";
     private static final int DEFAULT_WEIGHT = 7;
@@ -7,23 +17,47 @@ public class Dog {
     private String name;
     private int weight;
 
+    /**
+     * No-arg constructor
+     */
     public Dog() {
         this(DEFAULT_NAME, DEFAULT_WEIGHT);
     }
 
+    /**
+     * A constructor
+     * 
+     * @param name dog name
+     */
     public Dog(String name) {
         this(name, DEFAULT_WEIGHT);
     }
 
+    /**
+     * A constructor
+     * 
+     * @param weight dog weight
+     */
     public Dog(int weight) {
         this(DEFAULT_NAME, weight);
     }
 
+    /**
+     * Canonical constructor
+     * 
+     * @param name   dog name
+     * @param weight dog weight
+     */
     public Dog(String name, int weight) {
         this.name = name;
         this.weight = weight;
     }
 
+    /**
+     * Getter
+     * 
+     * @return dog name
+     */
     public String getName() {
         return name;
     }

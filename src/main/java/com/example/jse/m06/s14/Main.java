@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s14;
 
+/**
+ * this and super
+ * <p>
+ * Smoke test
+ */
 public class Main {
     public static void main(String[] args) {
         Dog tom = new Dog("Tom");
