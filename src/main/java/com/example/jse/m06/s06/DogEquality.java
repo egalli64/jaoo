@@ -1,9 +1,24 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s06;
 
+/**
+ * Ensure equality works fine on Dog objects
+ * 
+ * @see Dog class Dog definition
+ */
 public class DogEquality {
     private static final String BOB_FULL_NAME = "Robert Barkright";
     private static final String WILL_FULL_NAME = "William Barkright";
 
+    /**
+     * Check Dog equals()
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Dog bob = new Dog("Bob", BOB_FULL_NAME);
 
@@ -14,11 +29,14 @@ public class DogEquality {
         nullBehavior(bob);
     }
 
+    /**
+     * Reflexivity: x equals x
+     */
     private static void reflexivity(Dog bob) {
         Dog bob2 = new Dog("Bob", BOB_FULL_NAME);
 
-        System.out.println("bob is " + bob + ", hash: " + bob.hashCode());
-        System.out.println("bob2 is " + bob2 + ", hash: " + bob.hashCode());
+        System.out.printf("bob is %s, id: %x%n", bob, System.identityHashCode(bob));
+        System.out.printf("bob2 is %s, id: %x%n", bob2, System.identityHashCode(bob2));
 
         if (bob.equals(bob2)) {
             System.out.println("Reflexivity: x equals x");
@@ -27,6 +45,9 @@ public class DogEquality {
         }
     }
 
+    /**
+     * Symmetry: x equals y -> y equals x
+     */
     private static void symmetry(Dog bob) {
         Dog[] others = { new Dog("Bob", BOB_FULL_NAME), new Dog("Bob", WILL_FULL_NAME) };
         for (Dog other : others) {
@@ -46,6 +67,9 @@ public class DogEquality {
         }
     }
 
+    /**
+     * Transitivity: x equals y and x equals z -> x equals z
+     */
     private static void transitivity(Dog bob) {
         Dog[] dogs2 = { new Dog("Bob", BOB_FULL_NAME), new Dog("Bob", WILL_FULL_NAME) };
         Dog[] dogs3 = { new Dog("Zip", WILL_FULL_NAME), new Dog("Bob", BOB_FULL_NAME) };
@@ -64,6 +88,9 @@ public class DogEquality {
         }
     }
 
+    /**
+     * Consistency: if x equals y once, x always equals y
+     */
     private static void consistency(Dog bob) {
         Dog[] others = { new Dog("Bob", BOB_FULL_NAME), new Dog("Bob", WILL_FULL_NAME) };
         for (Object other : others) {
@@ -83,11 +110,14 @@ public class DogEquality {
         }
     }
 
+    /**
+     * x is never equal to null
+     */
     private static void nullBehavior(Dog bob) {
         if (bob.equals(null)) {
             unexpected();
         } else {
-            System.out.println("x equals null must always return false");
+            System.out.println("x is never equal to null");
         }
     }
 
