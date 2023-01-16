@@ -1,14 +1,33 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s11;
 
-public class Dog implements WaggingBarker, Jumper {
-    private final int WAG_COUNT;
+/**
+ * Interface vs class example
+ * <p>
+ * Dog is-a WaggingBarking Jumping
+ */
+public class Dog implements WaggingBarking, Jumping {
+    /** how many times this dog wags its tail */
+    private final int wagCount;
 
+    /**
+     * Canonical constructor
+     * 
+     * @param wagCount counter
+     */
     public Dog(int wagCount) {
-        WAG_COUNT = wagCount;
+        this.wagCount = wagCount;
     }
 
+    /**
+     * No-arg constructor
+     */
     public Dog() {
-        WAG_COUNT = DEFAULT_WAG_COUNT;
+        wagCount = DEFAULT_WAG_COUNT;
     }
 
     @Override
@@ -16,10 +35,19 @@ public class Dog implements WaggingBarker, Jumper {
         return "Woof";
     }
 
+    /**
+     * A dog specific method
+     */
     public void eat() {
-
+        System.out.println("Eating ...");
     }
 
+    /**
+     * A dog specific overload
+     * 
+     * @param count counter
+     * @return a string representing the dog barking
+     */
     public String bark(int count) {
         StringBuilder sb = new StringBuilder();
 
@@ -34,7 +62,7 @@ public class Dog implements WaggingBarker, Jumper {
     public String wag() {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < WAG_COUNT; i++) {
+        for (int i = 0; i < wagCount; i++) {
             sb.append("Wag");
         }
 
@@ -42,12 +70,12 @@ public class Dog implements WaggingBarker, Jumper {
     }
 
     @Override
-    public String toString() {
-        return "Dog [WAG_COUNT=" + WAG_COUNT + "]";
+    public void jump() {
+        System.out.println("I'm jumping");
     }
 
     @Override
-    public void jump() {
-        System.out.println("I'm jumping");
+    public String toString() {
+        return "Dog [WAG_COUNT=" + wagCount + "]";
     }
 }

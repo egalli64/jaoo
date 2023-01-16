@@ -1,6 +1,17 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s11;
 
-public class Robot extends Toy implements Barker, Jumper {
+/**
+ * Robot is a Toy, Barking, Jumping
+ */
+public class Robot extends Toy implements Barking, Jumping {
+    /**
+     * No-arg constructor
+     */
     public Robot() {
         super(10);
     }
@@ -8,11 +19,6 @@ public class Robot extends Toy implements Barker, Jumper {
     @Override
     public String bark() {
         return "B-A-R-K";
-    }
-
-    @Override
-    public String toString() {
-        return "Hello " + super.toString();
     }
 
     @Override
@@ -25,5 +31,10 @@ public class Robot extends Toy implements Barker, Jumper {
         for (int i = 0; i < times; i++) {
             jump();
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Hello " + super.toString();
     }
 }
