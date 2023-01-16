@@ -1,8 +1,21 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s04;
 
+/**
+ * Demo for access modifier for data member
+ */
 public class Main {
+    /**
+     * Create a Pet and work with it
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        Pet pet = new Pet();
+        Pet pet = new Pet("Waffle", 2.18);
 
         // pet's private members are _not_ accessible
 //      System.out.println(pet.name);
@@ -13,6 +26,11 @@ public class Main {
         makeBill(pet);
     }
 
+    /**
+     * A static method
+     * 
+     * @param pet a pet
+     */
     public static void makeBill(Pet pet) {
         // pet's protected members are accessible!
         pet.weight = 1000;

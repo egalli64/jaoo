@@ -1,18 +1,32 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s04;
 
+/**
+ * Data member access modifier - a sample class
+ */
 public class Pet {
+    /** prefer private data member */
     private String name;
     protected double weight;
     static int count;
+    // avoid public data member, if you can
     // public long doNotDoThis;
 
+    // here, a static initializer is an overkill
     static {
         count = 12;
     }
 
-    public Pet() {
-        this.name = "Waffle";
-        this.weight = 2.18;
+    /**
+     * Canonical constructor
+     */
+    public Pet(String name, double weight) {
+        this.name = name;
+        this.weight = weight;
     }
 
     private void increaseWeight() {
