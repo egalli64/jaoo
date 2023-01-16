@@ -6,36 +6,51 @@
 package com.example.jse.m06.s09;
 
 /**
- * Dog "is-a" Mammal, Barker, and Drinker. And "has-a" Tail
+ * Dog "is-a" Mammal, Barking, and Drinking. And "has-a" Tail
  */
-public class Dog extends Mammal implements Barker, Drinker {
+public class Dog extends Mammal implements Barking, Drinking {
     private static final int DEFAULT_TAIL_LEN = 12;
     private Tail tail;
 
+    /**
+     * Constructor
+     * 
+     * @param gestationDays days to get a new dog
+     * @param tailLen       the tail length
+     */
     public Dog(int gestationDays, int tailLen) {
         super(gestationDays);
         this.tail = new Tail(tailLen);
     }
 
+    /**
+     * Constructor, for a dog having a tail with default length
+     * 
+     * @param gestationDays days to get a new dog
+     */
     public Dog(int gestationDays) {
         super(gestationDays);
         this.tail = new Tail(DEFAULT_TAIL_LEN);
     }
 
-    @Override
-    public String toString() {
-        return "Dog [tail=" + tail + ", gestation=" + gestation + "]";
-    }
-
+    /**
+     * Forward the wag request to the tail
+     */
     public void wag() {
         tail.wag();
     }
 
+    /**
+     * Barking objects should know how to bark
+     */
     @Override
     public void bark() {
         System.out.println("Wap!");
     }
 
+    /**
+     * Drinking objects should know how to drink
+     */
     @Override
     public void drink() {
         System.out.println("Sip!");
@@ -64,5 +79,10 @@ public class Dog extends Mammal implements Barker, Drinker {
         } else if (!tail.equals(other.tail))
             return false;
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "Dog [tail=" + tail + ", gestation=" + gestation + "]";
     }
 }
