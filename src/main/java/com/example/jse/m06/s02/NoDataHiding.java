@@ -1,13 +1,27 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s02;
 
+/**
+ * The disadvantages of breaking data hiding
+ */
 public class NoDataHiding {
+    /**
+     * Create and use a dog object, violating data hiding
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        // violating data hiding principle
         Dog dog = new Dog();
+
+        // The user can change the dog name in a silly way!
         dog.name = "*!_";
         System.out.println("Dog name set to " + dog.getName());
 
-        // using data hiding principle
+        // The user should use a Dog method to change its state
         Dog dog2 = new Dog();
 
         dog2.setName("|||");

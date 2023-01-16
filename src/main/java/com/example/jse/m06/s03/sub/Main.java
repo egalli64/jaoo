@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s03.sub;
 
 import com.example.jse.m06.s03.BasicClass;
@@ -11,10 +16,14 @@ import com.example.jse.m06.s03.BasicClass;
  */
 public class Main {
     public static void main(String[] args) {
+        // Required to be imported
         BasicClass bc = new BasicClass();
         System.out.println(bc);
 
         Extended poodle = new Extended();
         System.out.println(poodle);
+
+        // Won't compile: PackageClass cannot be resolved to a type
+        // PackageClass pc = new PackageClass();
     }
 }
