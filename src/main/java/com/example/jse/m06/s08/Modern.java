@@ -1,16 +1,37 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s08;
 
-public abstract interface Modern {
+/**
+ * A modern interface
+ */
+interface Modern {
+    /**
+     * A static methods
+     */
     public static void f() {
-        System.out.println("A Java 8 feature");
+        System.out.println("Static method in interface is a Java 8 feature");
     }
 
+    /**
+     * A concrete method
+     * 
+     * @param message a message
+     */
     public default void c(String message) {
-        System.out.println("Another Java 8 feature: " + message);
-        d();
+        System.out.println("Default body for interface method is a Java 8 feature");
+        d(message);
     }
 
-    private void d() {
-        System.out.println("A Java 9 feature");
+    /**
+     * A private method
+     * 
+     * @param message a message
+     */
+    private void d(String message) {
+        System.out.println("Private interface method is a Java 9 feature: " + message);
     }
 }
