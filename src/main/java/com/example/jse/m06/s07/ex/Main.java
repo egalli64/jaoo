@@ -1,7 +1,12 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s07.ex;
 
 /**
- * Overriding exercise
+ * Override exercise
  * 
  * Complete the classes Cat, Dog, Mouse with a toString() override
  * 
