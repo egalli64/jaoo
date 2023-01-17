@@ -1,11 +1,26 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s04;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
 
+/**
+ * LinkedList
+ */
 public class LinkedListExample {
+    /**
+     * A few methods from LinkedList
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
+        // an empty linked list
         LinkedList<Integer> ll = new LinkedList<>();
+
         ll.addLast(3);
         ll.addFirst(2);
         System.out.println("First element is " + ll.getFirst());

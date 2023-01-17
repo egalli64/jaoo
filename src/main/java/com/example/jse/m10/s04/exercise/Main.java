@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s04.exercise;
 
 /**
@@ -10,6 +15,11 @@ package com.example.jse.m10.s04.exercise;
  * let it throw MyIntListException (checked) in case of errors
  */
 public class Main {
+    /**
+     * Smoke test for MyIntList, JUnit test case would be advisable!
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         MyIntList mil = new MyIntList();
         System.out.println("[] -> " + mil.toString());
