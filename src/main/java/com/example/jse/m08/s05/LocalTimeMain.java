@@ -1,9 +1,22 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s05;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoField;
 
+/**
+ * java time LocalTime
+ */
 public class LocalTimeMain {
+    /**
+     * Basic LocalTime functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         // time factories
         System.out.printf("A time (by 'of'): %s%n", LocalTime.of(11, 15, 24));

@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s06;
 
 import java.time.DateTimeException;
@@ -8,12 +13,22 @@ import java.time.LocalTime;
 import java.time.Period;
 import java.time.temporal.UnsupportedTemporalTypeException;
 
+/**
+ * java time Duration and Period
+ */
 public class DurationPeriodMain {
+    /**
+     * Basic Duration and Period functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        System.out
-                .println("Duration (almost) zero between times: " + Duration.between(LocalTime.now(), LocalTime.now()));
-        System.out.println("Duration zero secs between instants: " + Duration.between(Instant.now(), Instant.now()));
-        System.out.println("Duration zero days between instants: " + Period.between(LocalDate.now(), LocalDate.now()));
+        System.out.println("Duration (almost) zero between times: " //
+                + Duration.between(LocalTime.now(), LocalTime.now()));
+        System.out.println("Duration zero secs between instants: " //
+                + Duration.between(Instant.now(), Instant.now()));
+        System.out.println("Duration zero days between instants: " //
+                + Period.between(LocalDate.now(), LocalDate.now()));
 
         try {
             Duration.between(LocalTime.now(), Instant.now());

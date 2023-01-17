@@ -1,8 +1,21 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s02;
 
 import java.util.Date;
 
+/**
+ * java util Date
+ */
 public class DateMain {
+    /**
+     * Basics on date
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Date date = new Date();
         System.out.println("Current date: " + date);

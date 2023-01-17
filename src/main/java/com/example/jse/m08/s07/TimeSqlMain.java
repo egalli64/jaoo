@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s07;
 
 import java.sql.Date;
@@ -7,7 +12,15 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+/**
+ * Date in java.sql and java.time
+ */
 public class TimeSqlMain {
+    /**
+     * Java SQL integration for date/time
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Date date = Date.valueOf(LocalDate.now());
         System.out.println("SQL Date: " + date);

@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s05;
 
 import java.time.LocalDate;
@@ -5,12 +10,20 @@ import java.time.Month;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
+/**
+ * java time LocalDate
+ */
 public class LocalDateMain {
+    /**
+     * Basic LocalDate functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         // data factories
-        System.out.printf("A date (by 'of' /1): %s%n", LocalDate.of(2022, Month.JANUARY, 30));
-        System.out.printf("A date (by 'of' /2): %s%n", LocalDate.of(2022, 1, 30));
-        System.out.printf("A date (by 'parse'): %s%n", LocalDate.parse("2022-01-30"));
+        System.out.printf("A date (by 'of' /1): %s%n", LocalDate.of(2023, Month.JANUARY, 30));
+        System.out.printf("A date (by 'of' /2): %s%n", LocalDate.of(2023, 1, 30));
+        System.out.printf("A date (by 'parse'): %s%n", LocalDate.parse("2023-01-30"));
 
         LocalDate today = LocalDate.now();
         System.out.printf("Current date (now): %s%n", today);

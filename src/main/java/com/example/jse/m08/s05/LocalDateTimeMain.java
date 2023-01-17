@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m08.s05;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+/**
+ * java time LocalDateTime
+ */
 public class LocalDateTimeMain {
+    /**
+     * Basic LocalDateTime functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         // date-time factories
         System.out.println("Date time (now): " + LocalDateTime.now());
