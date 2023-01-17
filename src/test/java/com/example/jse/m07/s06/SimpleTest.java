@@ -1,27 +1,48 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s06;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Test case for Simple::negate()
+ */
 class SimpleTest {
+    private Simple simple;
+
+    /**
+     * Initialize the simple object before each test
+     */
+    @BeforeEach
+    void init() {
+        this.simple = new Simple();
+    }
+
+    /**
+     * Negate max integer value
+     */
     @Test
     void negateMaxValue() {
-        Simple simple = new Simple();
 
         int value = Integer.MAX_VALUE;
-        int expected = -2_147_483_647;
+        int expected = -Integer.MAX_VALUE;
 
         int result = simple.negate(value);
         assertThat(result).isEqualTo(expected);
     }
 
-    
+    /**
+     * Negate zero (is again zero)
+     */
     @Test
     void negateZero() {
-        Simple simple = new Simple();
-
         int value = 0;
         int expected = 0;
 
@@ -29,10 +50,11 @@ class SimpleTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Negate a positive number
+     */
     @Test
     void negatePositive() {
-        Simple simple = new Simple();
-
         int value = 42;
         int expected = -42;
 
@@ -40,10 +62,11 @@ class SimpleTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Negate a negative number
+     */
     @Test
     void negateNegative() {
-        Simple simple = new Simple();
-
         int value = -25;
         int expected = 25;
 
@@ -51,10 +74,11 @@ class SimpleTest {
         assertThat(result).isEqualTo(expected);
     }
 
+    /**
+     * Can't negate minimum integer value - classic test
+     */
     @Test
     void negateException() {
-        Simple simple = new Simple();
-
         try {
             int actual = simple.negate(Integer.MIN_VALUE);
             fail("An IllegalArgumentException was expected, instead I've got " + actual);
@@ -64,10 +88,11 @@ class SimpleTest {
         }
     }
 
+    /**
+     * Can't negate minimum integer value - alternative classic test
+     */
     @Test
     void negateExceptionAlternative() {
-        Simple simple = new Simple();
-
         try {
             simple.negate(Integer.MIN_VALUE);
         } catch (IllegalArgumentException iae) {

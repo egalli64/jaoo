@@ -16,6 +16,9 @@ import com.example.jse.m07.s03.Exceptional;
 public class Risky {
     private static final Logger log = Logger.getGlobal();
 
+    /**
+     * A method that catches an exception
+     */
     public void aCatcher() {
         Exceptional exceptional = new Exceptional();
 
@@ -36,16 +39,29 @@ public class Risky {
         }
     }
 
+    /**
+     * A method that do not catch an exception
+     * 
+     * @throws Exception thrown by Exceptional::aCheckedThrower()
+     */
     public void notACatcher() throws Exception {
         Exceptional exceptional = new Exceptional();
 
         // ...
         exceptional.aCheckedThrower();
+
+        // when the method above throws an exception, the following code is ignored
         log.info("This statement won't be reached");
         // ERROR! resource leak!
         exceptional.close();
     }
 
+    /**
+     * Smoke test for try-catch example
+     * 
+     * @param args not used
+     * @throws Exception let the program terminate printing the stack trace
+     */
     public static void main(String[] args) throws Exception {
         Risky risky = new Risky();
         Exceptional exceptional = new Exceptional();
@@ -61,6 +77,7 @@ public class Risky {
         }
 
         log.info("Final call to Exceptional.aCheckedThrower(), exception passed on to JVM");
+        // try-finally, the exception is not caught!
         try {
             exceptional.aCheckedThrower();
         } finally {

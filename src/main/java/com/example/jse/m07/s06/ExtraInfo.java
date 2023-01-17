@@ -1,7 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s06;
 
-public class Main {
-
+/**
+ * How to use catch clause to give more information to the user
+ */
+public class ExtraInfo {
+    /**
+     * Try to negate the input, detailed information when an exception is thrown
+     * 
+     * @param args use the first argument, when provided, as input
+     */
     public static void main(String[] args) {
         Simple simple = new Simple();
 

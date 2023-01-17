@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s07;
 
 //import org.junit.Rule;
@@ -5,7 +10,11 @@ package com.example.jse.m07.s07;
 //import org.junit.rules.ExpectedException;
 //import m07.s06.Simple;
 
-// Run as test for Test runner JUnit 4!
+/**
+ * Test case for Simple::negate() on minimum integer value
+ * <p>
+ * It should run as test for Test runner JUnit 4!
+ */
 public class SimpleTest {
 //    @Rule
 //    public ExpectedException thrown = ExpectedException.none();

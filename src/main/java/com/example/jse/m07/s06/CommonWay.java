@@ -1,7 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m07.s06;
 
-public class Other {
-
+/**
+ * Common way of managing exceptions
+ */
+public class CommonWay {
+    /**
+     * Try to negate the input, signal problem when an exception is thrown
+     * 
+     * @param args use the first argument, when provided, as input
+     */
     public static void main(String[] args) {
         Simple simple = new Simple();
 
@@ -13,11 +25,6 @@ public class Other {
         } catch (Exception ex) {
             System.out.println("Bad input value");
         }
-//        catch (NumberFormatException e) {
-//            System.out.println("Pass me an integer!");
-//        } catch(IllegalArgumentException iae) {
-//            System.out.println("Bad input value");
-//        }
 
         System.out.println("Bye");
     }

@@ -12,9 +12,14 @@ import org.junit.jupiter.api.Test;
 import com.example.jse.m07.s06.Simple;
 
 /**
- * Testing an exception-throwing method in the modern way - Jupiter + AssertJ
+ * Testing an exception-throwing method in the modern way - Jupiter
+ * <p>
+ * By AssertJ assertThatThrownBy() + isInstanceOf() + hasMessage()
  */
 class SimpleTest {
+    /**
+     * Can't negate minimum integer value
+     */
     @Test
     void negateMinInt() {
         Simple simple = new Simple();

@@ -14,21 +14,26 @@ import java.util.logging.Logger;
 public class Example {
     private static final Logger log = Logger.getGlobal();
 
+    /**
+     * Comparing the use of error code and exception
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         withoutException();
 
-        // The try-catch idiom
+        // The try-catch construct
         try {
             // in the try block the code that could throw an exception
             double result = by2ExUnchecked(-15.3);
             System.out.println(result);
         } catch (Exception ex) {
             // when an exception is thrown in the try block
-            // the stack unwinding let the execution control restarting here
+            // the stack unwinding let the execution control go here
 
             // maybe a message to the user
             System.out.println("Bad input, no neg please!");
-            // strongly suggested a log to help debugging
+            // a log message is strongly suggested to help debugging
             log.log(Level.SEVERE, "Can' double the passed value", ex);
         }
 

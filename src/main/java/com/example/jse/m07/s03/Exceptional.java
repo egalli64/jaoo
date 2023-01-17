@@ -6,9 +6,9 @@
 package com.example.jse.m07.s03;
 
 /**
- * A class with methods that throw exceptions
+ * A class representing a resource with methods that throw exceptions
  */
-public class Exceptional {
+public class Exceptional implements AutoCloseable {
     /**
      * Simulating a resource setup
      */
@@ -16,9 +16,7 @@ public class Exceptional {
         System.out.println("Object setup");
     }
 
-    /**
-     * Simulating a resource shutdown
-     */
+    @Override
     public void close() {
         System.out.println("Object cleanup");
     }

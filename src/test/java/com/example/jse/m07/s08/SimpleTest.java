@@ -13,9 +13,13 @@ import org.junit.jupiter.api.Test;
 import com.example.jse.m07.s06.Simple;
 
 /**
- * Testing an exception-throwing method in the modern way - plain Jupiter
+ * Test case for Simple::negate() on minimum integer value with Jupiter
+ * assertThrows()
  */
 class SimpleTest {
+    /**
+     * Can't negate minimum integer value
+     */
     @Test
     void negateMinInt() {
         Simple simple = new Simple();
