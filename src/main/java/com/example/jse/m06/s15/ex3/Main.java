@@ -1,31 +1,33 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m06.s15.ex3;
 
+/**
+ * Exercise: create a hierarchy of classes based on Pet. Each Pet subclass has
+ * an housing cost. Each pet instance has its own number of days booking,
+ * specified by constructor.
+ * <p>
+ * Dog (more expensive), Cat
+ */
 public class Main {
+    /**
+     * Create a bunch of pets, each with its own associated number of days.
+     * <p>
+     * For each pet print the total housing cost. Then print the total housing cost.
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
-        //  Pet - abstract int housing()
-        //  |  \
-        // Dog Cat
-        
-        // ctor(int)
-        
-        // dog x 1 day -> 10
-        // cat         -> 6
-        
-        // Pet[] = new Dog, Cat, ...
-        
-        // bob = new Dog(3);
-        // tom = new Cat(1);
-        // bob.housing() -> 30
-        
-        // for each -> total housing cost = 36
-        
-        Pet[] guests = { new Dog(3), new Cat(5), new Dog(1) };
-        
+        Pet[] guests = {};
+
         int total = 0;
-        for(Pet guest: guests) {
+        for (Pet guest : guests) {
             total += guest.housing();
         }
-        
+
         System.out.println("Total bill for guests: " + total);
     }
 }
