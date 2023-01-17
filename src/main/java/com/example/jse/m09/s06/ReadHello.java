@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m09.s06;
 
 import java.io.BufferedReader;
@@ -7,10 +12,18 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Reading from File
+ */
 public class ReadHello {
     private static final Logger log = Logger.getGlobal();
     private static final String FILE_NAME = "/tmp/hello.txt";
 
+    /**
+     * BufferedReader, FileReader
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         File f = new File(FILE_NAME);
 
@@ -39,7 +52,7 @@ public class ReadHello {
             log.log(Level.SEVERE, "Can't read from " + FILE_NAME, e);
         } finally {
             try {
-                if(br != null) {
+                if (br != null) {
                     br.close();
                 }
             } catch (IOException e) {

@@ -1,12 +1,25 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m09.s04;
 
 import java.io.File;
 import java.util.Arrays;
 
+/**
+ * java io File
+ */
 public class CheckFile {
     private static final String ABSOLUTE_FILE_NAME = "/tmp/hello.txt";
     private static final String DIR_NAME = "/tmp/";
 
+    /**
+     * Some File methods
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         File f1 = new File(ABSOLUTE_FILE_NAME);
 

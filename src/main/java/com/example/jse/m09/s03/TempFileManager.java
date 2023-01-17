@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m09.s03;
 
 import java.io.File;
@@ -7,6 +12,9 @@ import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * File
+ */
 public class TempFileManager {
     private static final Logger log = Logger.getGlobal();
 
@@ -16,6 +24,11 @@ public class TempFileManager {
     private static final String ABSOLUTE_URI = "file://" + ABSOLUTE_FILE_NAME;
     private static final String ABSOLUTE_URI_WIN = "file:///C:" + ABSOLUTE_FILE_NAME;
 
+    /**
+     * A tour of java io File functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         String badFileName = "";
         try {
@@ -32,7 +45,7 @@ public class TempFileManager {
 
         try {
             ensureFileExistsByAbsoluteName(badFileName);
-        } catch(IllegalArgumentException ex) {
+        } catch (IllegalArgumentException ex) {
             String message = "Can't check file named \"" + badFileName + "\"";
             System.out.println(message);
             log.log(Level.SEVERE, message, ex);
@@ -69,10 +82,22 @@ public class TempFileManager {
         }
     }
 
+    /**
+     * Hack to provide a functionality like default parameter
+     * 
+     * @return reference to File for the default directory
+     */
     private static File ensureDirectory() {
         return ensureDirectory(DEFAULT_DIR_NAME);
     }
 
+    /**
+     * Try to create directory File with the passed filename
+     * 
+     * @param dirName the required directory
+     * @return a File representing the required directory
+     * @throws IllegalArgumentException bad directory name
+     */
     private static File ensureDirectory(String dirName) {
         File result = new File(dirName);
         if (result.mkdir()) {
@@ -88,8 +113,15 @@ public class TempFileManager {
         return result;
     }
 
+    /**
+     * Ensure a file with the passed filename exists (maybe creating it)
+     * 
+     * @param fileName a filename
+     * @throws IllegalArgumentException in case of failure
+     */
     private static void ensureFileExistsByAbsoluteName(String fileName) {
         File file = new File(fileName);
+
         try {
             if (file.createNewFile()) {
                 log.info(String.format("File %s created successfully", fileName));
@@ -101,6 +133,12 @@ public class TempFileManager {
         }
     }
 
+    /**
+     * Check if the passed URI is relative to an actual file
+     * 
+     * @param uri file URI
+     * @return true if exists
+     */
     private static boolean isFileExistingByUri(String uri) {
         try {
             File file = new File(new URI(uri));

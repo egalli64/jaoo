@@ -1,11 +1,24 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m09.s09;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
 
+/**
+ * File input by Scanner
+ */
 public class Adder {
     private static final Logger log = Logger.getGlobal();
 
+    /**
+     * Scanner and try-with-resources
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         System.out.println("Please, enter a few numbers");
         double result = 0.0;

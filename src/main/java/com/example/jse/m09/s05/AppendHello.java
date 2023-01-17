@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m09.s05;
 
 import java.io.FileOutputStream;
@@ -6,10 +11,18 @@ import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Writing to File
+ */
 public class AppendHello {
     private static final Logger log = Logger.getGlobal();
     private static final String FILE_NAME = "/tmp/hello.txt";
 
+    /**
+     * PrintWriter, FileOutputStream
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         PrintWriter pw = null;
         try {
