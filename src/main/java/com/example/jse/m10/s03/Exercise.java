@@ -1,7 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s03;
 
 import java.util.List;
 
+/**
+ * Three exercises. Compare int[] and List&lt;Integer&gt; behavior
+ */
 public class Exercise {
     /**
      * Extract from input the even values and return them in an array
@@ -21,7 +29,7 @@ public class Exercise {
     }
 
     /**
-     * Extract from input the even values and return them in a List
+     * Extract from input the even values and return them
      * <p>
      * Example: in {2, 3, 4, 5} -> out {2, 4}
      * 
@@ -29,19 +37,19 @@ public class Exercise {
      * @return even values from input
      * 
      */
-    public List<Integer> evens(int[] data) {
+    public List<Integer> evens(List<Integer> data) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 
     /**
-     * Extract non-duplicated values in input and return them in a list
+     * Extract non-duplicated values in input and return them in a list.
      * <p>
-     * Example: in {2, 3, 4, 4, 5, 5, 6, 7} -> out {2, 3, 6, 7}
+     * Example: in {5, 4, 2, 3, 7, 4, 5, 6} -> out {2, 3, 6, 7}
      * 
      * @param data a bunch of integers
      * @return only the non-duplicated values from input
      */
-    public List<Integer> singles(int[] data) {
+    public List<Integer> singles(List<Integer> data) {
         throw new UnsupportedOperationException("Not yet implemented");
     }
 }
