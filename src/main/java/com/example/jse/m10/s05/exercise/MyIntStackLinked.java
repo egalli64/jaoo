@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s05.exercise;
 
 /**
@@ -20,6 +25,9 @@ public class MyIntStackLinked implements MyIntStack {
 
     private IntNode top;
 
+    /**
+     * No-arg constructor
+     */
     public MyIntStackLinked() {
         this.top = null;
     }

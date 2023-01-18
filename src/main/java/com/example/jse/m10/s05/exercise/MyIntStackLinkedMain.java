@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s05.exercise;
 
 /**
@@ -15,6 +20,11 @@ package com.example.jse.m10.s05.exercise;
  * <li>toString()
  */
 public class MyIntStackLinkedMain {
+    /**
+     * Smoke test for MyIntStackLinked - a JUnit test case would be more helpful!
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         MyIntStackLinked mis = new MyIntStackLinked();
 

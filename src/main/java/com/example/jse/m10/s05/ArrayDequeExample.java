@@ -1,9 +1,22 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s05;
 
 import java.util.ArrayDeque;
 import java.util.List;
 
+/**
+ * ArrayDeque
+ */
 public class ArrayDequeExample {
+    /**
+     * Using push() and pop() on ArrayDeque
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         ArrayDeque<Integer> ad = new ArrayDeque<>(List.of(42, -27, 99, 12));
         System.out.println(ad);
