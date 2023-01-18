@@ -1,15 +1,31 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s16;
 
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+/**
+ * Optional
+ */
 public class OptionalExample {
+    /**
+     * Some Optional functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         create();
         checkExtract(Optional.of(42.5), Optional.empty());
         conditionalExecution(Optional.of(42.5), Optional.empty());
     }
 
+    /**
+     * Optional creation
+     */
     private static void create() {
         Optional<String> optHello = Optional.of("Hello");
         System.out.println("An optional of a string: " + optHello);
@@ -28,7 +44,7 @@ public class OptionalExample {
 
         try {
             o1.get();
-        } catch(NoSuchElementException e) {
+        } catch (NoSuchElementException e) {
             System.out.println("Getting the value for an empty optional leads to " + e);
         }
 
@@ -39,6 +55,12 @@ public class OptionalExample {
         System.out.println("An empty optional string: " + oEmpty);
     }
 
+    /**
+     * Optional extraction
+     * 
+     * @param good a present optional
+     * @param bad  an empty otpional
+     */
     private static void checkExtract(Optional<Double> good, Optional<String> bad) {
         if (good.isPresent()) {
             System.out.println("Optional is present in " + good);
@@ -56,6 +78,12 @@ public class OptionalExample {
         }
     }
 
+    /**
+     * Optional higher order conditional methods
+     * 
+     * @param good a present optional
+     * @param bad  an empty optional
+     */
     private static void conditionalExecution(Optional<Double> good, Optional<String> bad) {
         good.ifPresent(value -> System.out.println("The good value is " + value));
 
