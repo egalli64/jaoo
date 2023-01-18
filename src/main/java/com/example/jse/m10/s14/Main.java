@@ -1,14 +1,27 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s14;
 
 import java.util.logging.Logger;
 
+/**
+ * Inner class smoke test
+ */
 public class Main {
     private static final Logger log = Logger.getGlobal();
 
+    /**
+     * Show some inner class features
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Encloser encloser = new Encloser();
 
-        // Error: The type Encloser.InnerPrivate is not visible
+        // Won't compile: The type Encloser.InnerPrivate is not visible
 //        Encloser.InnerPrivate eipx;
 
         // however, in some way, we can use an inner private class

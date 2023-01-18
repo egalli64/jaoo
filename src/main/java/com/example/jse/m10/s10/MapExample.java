@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s10;
 
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Map
+ */
 public class MapExample {
+    /**
+     * Creating and accessing a map
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Map<String, Integer> phones = Map.of("Tom", 42212);
         System.out.println("A map: " + phones);

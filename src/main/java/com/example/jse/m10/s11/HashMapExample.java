@@ -1,16 +1,29 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s11;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * HashMap
+ */
 public class HashMapExample {
+    /**
+     * Some HashMap functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         var temp = Map.ofEntries( //
                 Map.entry("Bob", 18944), //
                 Map.entry("Kim", 75491), //
                 Map.entry("Tim", 52318));
 
-        // copy ctor for map
+        // copy constructor for map
         Map<String, Integer> map = new HashMap<>(temp);
         System.out.println("HashMap: " + map);
 

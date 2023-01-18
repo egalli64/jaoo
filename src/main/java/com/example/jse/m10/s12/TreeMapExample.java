@@ -1,16 +1,29 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s12;
 
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * TreeMap
+ */
 public class TreeMapExample {
+    /**
+     * Some TreeMap functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         var temp = Map.ofEntries( //
                 Map.entry("Tim", 18944), //
                 Map.entry("Kim", 75491), //
                 Map.entry("Bob", 52318));
 
-        // copy ctor for map
+        // copy constructor for map
         Map<String, Integer> map = new TreeMap<>(temp);
         System.out.println("TreeMap: " + map);
 

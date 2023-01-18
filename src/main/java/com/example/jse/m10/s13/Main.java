@@ -10,8 +10,15 @@ import java.util.List;
 
 /**
  * Example on generic classes
+ * 
+ * @see Animal an interface
+ * @see Dog a class implementing Animal
  */
 public class Main {
+    /**
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         List<Integer> li = new ArrayList<Integer>();
         li.add(4);
@@ -29,6 +36,7 @@ public class Main {
      * @param obj
      */
     private static void noGenericTypeCheck(Object obj) {
+        // Won't compile: Type Object cannot be safely cast to List<Integer>
 //        if (obj instanceof List<Integer>) {
 //            System.out.println("As expected");
 //        }
@@ -47,6 +55,7 @@ public class Main {
         List<Animal> la = new ArrayList<>();
         la.add(new Dog());
 
+        // Won't compile: Cannot cast from List<Animal> to ArrayList<Dog>
 //        ArrayList<Dog> ald = (ArrayList<Dog>) la;
 
         ArrayList<?> alo = (ArrayList<?>) la;
@@ -59,7 +68,9 @@ public class Main {
     private static void noGenericUpcast() {
         List<Dog> ld = new ArrayList<>();
         ld.add(new Dog());
-        // ArrayList<Animal> ala = (ArrayList<Animal>) ld;
+
+        // Won't compile: Cannot cast from List<Dog> to ArrayList<Animal>
+//        ArrayList<Animal> ala = (ArrayList<Animal>) ld;
 
         ArrayList<?> alo = (ArrayList<?>) ld;
         System.out.println("MyArray contains " + alo.size() + " object(s)");
@@ -69,6 +80,7 @@ public class Main {
      * Cannot create an array of generics
      */
     private static void noGenericArray() {
+        // Won't compile: Cannot create a generic array of ArrayList<Dog>
 //        List<Dog>[] ld = new ArrayList<Dog>[10];
 
         // If you really need it

@@ -1,7 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s14;
 
 import java.util.logging.Logger;
 
+/**
+ * Inner class example
+ */
 public class Encloser {
     private static final Logger log = Logger.getGlobal();
     private final int value = 12;
@@ -23,6 +31,11 @@ public class Encloser {
         return inner.getDoubledValue();
     }
 
+    /**
+     * A method defining a class in its scope
+     * 
+     * @return a useless value
+     */
     public int k() {
         class LocalClass {
             final int a = 7;
@@ -34,21 +47,43 @@ public class Encloser {
         return answer.a * answer.b * answer.c;
     }
 
+    /**
+     * An inner public class
+     */
     public class InnerPublic {
+        /**
+         * No-arg constructor
+         */
         public InnerPublic() {
             log.info("An object of an inner public class created, full access to class property: " + value);
         }
 
+        /**
+         * A method
+         * 
+         * @return a useless value
+         */
         public int getDoubledValue() {
             return value * 2;
         }
     }
 
+    /**
+     * A private inner class
+     */
     private class InnerPrivate implements Getter {
+        /**
+         * No-arg constructor
+         */
         public InnerPrivate() {
             log.info("An object of an inner private class created, full access to class property: " + value);
         }
 
+        /**
+         * A method
+         * 
+         * @return a useless value
+         */
         public int getDoubledValue() {
             return value * 2;
         }

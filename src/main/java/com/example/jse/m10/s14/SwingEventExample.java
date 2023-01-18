@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s14;
 
 import java.awt.event.ActionEvent;
@@ -8,11 +13,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+/**
+ * Using inner class for working on events
+ */
 public class SwingEventExample extends JFrame {
     private static final long serialVersionUID = 1L;
     private JButton button;
     private int counter;
 
+    /**
+     * No-arg constructor
+     */
     public SwingEventExample() {
         setSize(300, 100);
         setLocationRelativeTo(null);
@@ -29,13 +40,24 @@ public class SwingEventExample extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * The action listener used to act on button click
+     */
     private class ClickListener implements ActionListener {
+        /**
+         * When the user click on the button
+         */
         public void actionPerformed(ActionEvent e) {
             counter += 1;
             button.setText("Click counter is " + counter);
         }
     }
 
+    /**
+     * Start the swing application
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         new SwingEventExample();
     }
