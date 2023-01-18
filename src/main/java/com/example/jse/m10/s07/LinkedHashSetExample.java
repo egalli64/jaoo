@@ -1,9 +1,17 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s07;
 
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * LinkedHashSet
+ */
 public class LinkedHashSetExample {
     public static void main(String[] args) {
         Set<Integer> set = new LinkedHashSet<>(List.of(5, 8, 99));
@@ -24,6 +32,6 @@ public class LinkedHashSetExample {
         for (Integer cur : set) {
             System.out.print(cur + " ");
         }
-        System.out.println();        
+        System.out.println();
     }
 }

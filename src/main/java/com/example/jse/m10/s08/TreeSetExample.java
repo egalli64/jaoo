@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s08;
 
 import java.util.Comparator;
@@ -5,7 +10,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**
+ * TreeSet
+ */
 public class TreeSetExample {
+    /**
+     * Using TreeSet functionality
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         List<Integer> data = List.of(5, 8, 99);
 

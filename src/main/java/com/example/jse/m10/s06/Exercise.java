@@ -1,8 +1,19 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s06;
 
+import java.util.Collection;
+
+/**
+ * HashSet exercise
+ */
 public class Exercise {
     /**
-     * Generate an array that contains only once each value (possibly duplicated) in the input array
+     * Given an integer collection, return another collection without any duplicate
+     * value
      * 
      * <pre>
      * Example: { 12, 53, 12, 35 } -> { 12, 35, 53 }
@@ -10,10 +21,10 @@ public class Exercise {
      * Note: Result is not expected in any specific order
      * </pre>
      * 
-     * @param data an array with duplicates
-     * @return the original array (but wrapped values) stripped of duplicates
+     * @param data a collection, possibly with duplicates
+     * @return the original data stripped of duplicates
      */
-    public Integer[] singles(int[] data) {
+    public Collection<Integer> singles(Collection<Integer> data) {
         // TODO
         throw new UnsupportedOperationException("Not yet implemented");
     }

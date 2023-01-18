@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s06;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * HashSet
+ */
 public class HashSetExample {
+    /**
+     * A few methods from HashSet
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Set<Integer> set = new HashSet<>(List.of(5, 8, 99));
         System.out.println("The set: " + set);
