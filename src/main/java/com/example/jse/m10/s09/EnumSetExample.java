@@ -1,8 +1,21 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.m10.s09;
 
 import java.util.EnumSet;
 
+/**
+ * EnumSet example on the Size enumerator
+ */
 public class EnumSetExample {
+    /**
+     * Working with EnumSet
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         EnumSet<Size> allSizes = EnumSet.allOf(Size.class);
         System.out.println("All available sizes:");
