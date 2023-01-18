@@ -1,10 +1,20 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s03;
 
+/**
+ * Decisions - Exercise 4
+ * <p>
+ * Common status of two variables
+ */
 public class Exercise4 {
     /**
      * Check if the passed day requires an early wake up
      * 
-     * @param day
+     * @param day      the day of week
      * @param vacation false when in a working period
      * @return false during weekend or holiday
      */

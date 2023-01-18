@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s03;
 
+/**
+ * Decisions - Exercise 3
+ * <p>
+ * Eleven possible outcomes - ten punctual check, one for all the other values
+ */
 public class Exercise3 {
     /**
      * Convert the parameter to its English name, if it is in [0..9]

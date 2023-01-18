@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s03;
 
+/**
+ * Decisions - Exercise 5
+ * <p>
+ * Values in ranges
+ */
 public class Exercise5 {
     /**
      * Convert a value in the interval [0, 100] to a letter in [A, F]

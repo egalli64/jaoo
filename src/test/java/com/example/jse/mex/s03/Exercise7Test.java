@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s03;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Decisions - Exercise 7
+ * <p>
+ * FizzBuzz
+ */
 class Exercise7Test {
+    /**
+     * Plain
+     */
     @Test
     void fizzBuzzPlain() {
         String actual = Exercise7.fizzBuzz(52);
@@ -13,6 +26,9 @@ class Exercise7Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * Fizz
+     */
     @Test
     void fizzBuzzMultiple3() {
         String actual = Exercise7.fizzBuzz(42);
@@ -21,6 +37,9 @@ class Exercise7Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * Buzz
+     */
     @Test
     void fizzBuzzMultiple5() {
         String actual = Exercise7.fizzBuzz(25);
@@ -29,6 +48,9 @@ class Exercise7Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * FizzBuzz
+     */
     @Test
     void fizzBuzzMultiple15() {
         String actual = Exercise7.fizzBuzz(90);
