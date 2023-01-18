@@ -1,3 +1,8 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -6,16 +11,26 @@ import static org.assertj.core.api.Assertions.withPrecision;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Loop - Exercise 4
+ * <p>
+ * Square root by Newton's method
+ */
 class Exercise4Test {
+    /**
+     * Square root of 2
+     */
     @Test
     void sqrt2() {
         double actual = Exercise4.sqrt(2);
         double expected = Math.sqrt(2);
 
-        assertThat(actual).isEqualTo(expected, withPrecision(9d));
-
+        assertThat(actual).isEqualTo(expected, withPrecision(.000_001));
     }
 
+    /**
+     * Square root of 2, with given epsilon
+     */
     @Test
     void sqrtEpsilon() {
         double epsilon = 0.001;

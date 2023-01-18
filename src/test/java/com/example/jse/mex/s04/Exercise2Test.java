@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Loop - Exercise 2
+ * <p>
+ * From begin to end (included), but not all the elements
+ */
 class Exercise2Test {
+    /**
+     * 1, 2, 3 -> 2
+     */
     @Test
     void evenSumPositive() {
         long actual = Exercise2.evenSum(1, 3);
@@ -13,6 +26,9 @@ class Exercise2Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * -3, -2, ..., 2, 3 -> 0
+     */
     @Test
     void evenSumNegPos() {
         long actual = Exercise2.evenSum(-3, 3);
@@ -21,6 +37,9 @@ class Exercise2Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * single even element
+     */
     @Test
     void evenSumSingle() {
         long actual = Exercise2.evenSum(1002, 1002);
@@ -29,6 +48,20 @@ class Exercise2Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * single odd element -> 0
+     */
+    @Test
+    void oddSumSingle() {
+        long actual = Exercise2.evenSum(1003, 1003);
+        long expected = 0;
+
+        assertThat(actual).isEqualTo(expected);
+    }
+
+    /**
+     * left bigger than right -> 0
+     */
     @Test
     void evenSumEmpty() {
         long actual = Exercise2.evenSum(1003, 1002);

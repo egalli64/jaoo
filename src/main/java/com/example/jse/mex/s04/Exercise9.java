@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
+/**
+ * Loop - Exercise 9
+ * <p>
+ * Multiplication table
+ */
 public class Exercise9 {
     /**
      * Multiplication table

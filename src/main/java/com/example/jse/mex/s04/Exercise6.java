@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
+/**
+ * Loop - Exercise 6
+ * <p>
+ * Looping on digits
+ */
 public class Exercise6 {
     /**
      * Each digit in input should be squared

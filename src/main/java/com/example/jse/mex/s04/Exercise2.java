@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
+/**
+ * Loop - Exercise 2
+ * <p>
+ * From begin to end (included), but not all the elements
+ */
 public class Exercise2 {
     /**
      * Add up only the even numbers in the passed closed interval

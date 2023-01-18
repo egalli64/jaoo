@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s04;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Loop - Exercise 9
+ * <p>
+ * Multiplication table
+ */
 class Exercise9Test {
+    /**
+     * 0 -> empty table
+     */
     @Test
     void multiplicationTableZero() {
         int[][] expected = {};
@@ -13,6 +26,9 @@ class Exercise9Test {
         assertThat(actual).isEqualTo(expected);
     }
 
+    /**
+     * 3 -> ...
+     */
     @Test
     void multiplicationTableThree() {
         int[][] expected = { { 1, 2, 3 }, { 2, 4, 6 }, { 3, 6, 9 } };
