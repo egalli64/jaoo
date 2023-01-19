@@ -1,8 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex;
 
+/**
+ * Unchecked exception for exercises - not meant for serialization
+ */
+@SuppressWarnings("serial")
 public class ExerciseUncheckedException extends RuntimeException {
-    private static final long serialVersionUID = 1L;
-
     public ExerciseUncheckedException(String message) {
         super(message);
     }

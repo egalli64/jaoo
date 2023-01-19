@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s06;
 
+/**
+ * Array - Exercise 1b
+ * <p>
+ * In-place reverse
+ */
 public class Exercise1b {
     /**
      * Reverse (in-place) an array of integers

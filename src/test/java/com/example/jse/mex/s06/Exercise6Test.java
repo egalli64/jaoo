@@ -1,10 +1,23 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s06;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Array - Exercise 6
+ * <p>
+ * Merge
+ */
 class Exercise6Test {
+    /**
+     * A plain test
+     */
     @Test
     void mergePlain() {
         int[] left = { 1, 3, 5, 7 };
@@ -14,4 +27,8 @@ class Exercise6Test {
 
         assertThat(actual).isEqualTo(expected);
     }
+
+    /*
+     * Add more tests ...!
+     */
 }

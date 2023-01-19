@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s06;
 
+/**
+ * Array - Exercise 3b
+ * <p>
+ * Minimum value
+ */
 public class Exercise3b {
     /**
      * Find the smallest value
