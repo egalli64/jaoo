@@ -1,5 +1,15 @@
+/*
+ * Introduction to Java Standard Edition
+ * 
+ * https://github.com/egalli64/jse
+ */
 package com.example.jse.mex.s05;
 
+/**
+ * String - Exercise 6a
+ * <p>
+ * Character to integer
+ */
 public class Exercise6a {
     /**
      * Convert from binary to decimal.
