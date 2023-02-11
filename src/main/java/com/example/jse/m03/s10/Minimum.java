@@ -33,10 +33,14 @@ public class Minimum {
      * 
      * @param data an array
      * @return the position of the first smallest element
-     * @throws NullPointerException           if data is null
-     * @throws ArrayIndexOutOfBoundsException if data is empty
+     * @throws NullPointerException     if data is null
+     * @throws IllegalArgumentException if data is empty
      */
     public static int getMinPos(int[] data) {
+        if (data.length == 0) {
+            throw new IllegalArgumentException("Input array can't be empty");
+        }
+
         int position = 0;
 
         for (int i = 1; i < data.length; i++) {
