@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m07.s06;
+package com.example.jse.m07.s05;
 
 /**
  * Common way of managing exceptions

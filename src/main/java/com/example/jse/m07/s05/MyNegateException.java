@@ -3,13 +3,13 @@
  * 
  * https://github.com/egalli64/jse
  */
-package com.example.jse.m07.s06;
+package com.example.jse.m07.s05;
 
 /**
  * A checked exception with extra capabilities
  */
+@SuppressWarnings("serial")
 public class MyNegateException extends Exception {
-    private static final long serialVersionUID = 1L;
     private final int alternativeValue;
 
     /**
