@@ -1,8 +1,0 @@
-// Run this script in the local JVM: jshell --execution local script.jsh
-
-System.out.print("Are there six fresh eggs? [Y/n]: ");
-Scanner scanner = new Scanner(System.in);
-String next = scanner.next();
-
-char c = 
-boolean available = next.length > 0 && 
