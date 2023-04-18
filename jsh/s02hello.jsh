@@ -1,3 +1,3 @@
 System.out.println("Hello");
-String message = "Hello"
+String message = "Ciao"
 System.out.println(message);
