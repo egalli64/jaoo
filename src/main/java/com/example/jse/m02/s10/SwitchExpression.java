@@ -48,15 +48,15 @@ public class SwitchExpression {
             yield 34;
         }
         case M -> {
-            System.out.println("Medium");
+            System.out.print("Medium");
             yield 38;
         }
         case L -> {
-            System.out.println("Large");
+            System.out.print("Large");
             yield 42;
         }
         case XL -> {
-            System.out.println("Extra Large");
+            System.out.print("Extra Large");
             yield 46;
         }
         };
