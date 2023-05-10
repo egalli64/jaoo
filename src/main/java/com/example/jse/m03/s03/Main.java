@@ -51,7 +51,7 @@ public class Main {
         other = pp.increase(other);
         System.out.println(" now it is " + other);
 
-        // to change a primitive we have to do it in the scope of the variable
+        // to change a immutable reference we have to do it in the scope of the variable
         String anotherString = "Hello";
         System.out.print("Another string was " + anotherString);
         anotherString = pp.append(anotherString);
