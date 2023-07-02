@@ -1,7 +1,7 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
 package com.example.jaoo.mex;
 
