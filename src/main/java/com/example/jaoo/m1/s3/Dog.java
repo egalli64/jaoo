@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m05.s03;
+package com.example.jaoo.m1.s3;
 
 import java.util.logging.Logger;
 

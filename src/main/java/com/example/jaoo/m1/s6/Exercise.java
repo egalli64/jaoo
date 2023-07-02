@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m05.s06;
+package com.example.jaoo.m1.s6;
 
 /**
  * This exercise should be solved using a method in a primitive wrapper

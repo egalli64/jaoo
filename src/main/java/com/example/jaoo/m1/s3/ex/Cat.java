@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m05.s03.ex;
+package com.example.jaoo.m1.s3.ex;
 
 /**
  * A sample class. Each object has two fields, a constructor, two methods
