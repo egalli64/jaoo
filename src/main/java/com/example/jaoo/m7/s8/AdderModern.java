@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m09.s09;
+package com.example.jaoo.m7.s8;
 
 import java.util.Scanner;
 import java.util.logging.Logger;
@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 /**
  * File input by Scanner
  */
-public class Adder {
+public class AdderModern {
     private static final Logger log = Logger.getGlobal();
 
     /**

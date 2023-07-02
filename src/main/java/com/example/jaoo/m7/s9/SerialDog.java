@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m09.s10;
+package com.example.jaoo.m7.s9;
 
 import java.io.Serial;
 import java.io.Serializable;
