@@ -1,5 +1,5 @@
-# jse
-Java Standard Edition
+# jaoo
+Java and Object-Oriented programming
 
 A Java project that requires
 - Maven
