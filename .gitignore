@@ -4,7 +4,7 @@
 /.settings/
 /bin/
 /.idea/
-/jse.iml
+/*.iml
 /.vscode/
 /.dbeaver/
 /.checkstyle
