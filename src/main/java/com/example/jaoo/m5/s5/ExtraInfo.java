@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m07.s05;
+package com.example.jaoo.m5.s5;
 
 /**
  * How to use catch clause to give more information to the user

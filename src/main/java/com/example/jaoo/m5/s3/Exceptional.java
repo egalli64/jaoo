@@ -1,9 +1,9 @@
 /*
- * Introduction to Java Standard Edition
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jse
+ * https://github.com/egalli64/jaoo
  */
-package com.example.jse.m07.s03;
+package com.example.jaoo.m5.s3;
 
 /**
  * A class representing a resource with methods that throw exceptions
