@@ -35,6 +35,7 @@ public class Final {
      * A method that can't be overridden
      */
     public final void f() {
+        String s;
     }
 
     /**
