@@ -6,9 +6,12 @@
 package com.example.jaoo.m4.s2;
 
 /**
- * Marking as final primitive, immutable/mutable references
+ * Using final on variables
  */
-public class Final {
+public class FinalVariables {
+    /** A class constant */
+    public static final int THE_SOLUTION = 42;
+
     /**
      * Some final examples
      * 
@@ -21,7 +24,9 @@ public class Final {
 
         System.out.println(size + 1);
         System.out.println(max + 1);
+        System.out.println("The solution is " + THE_SOLUTION);
 
+        // final on a reference to mutable, the object can change
         sb.append('!');
         System.out.println(sb);
 
@@ -29,18 +34,5 @@ public class Final {
 //        size += 1;
 //        max += 1;
 //        sb = new StringBuilder("Goodbye");
-    }
-
-    /**
-     * A method that can't be overridden
-     */
-    public final void f() {
-        String s;
-    }
-
-    /**
-     * A method that can't be hidden
-     */
-    public static final void g() {
     }
 }
