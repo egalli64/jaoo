@@ -30,6 +30,13 @@ public final class ImmutableDog {
         return name;
     }
 
+    /**
+     * A plain method
+     */
+    public void bark() {
+        System.out.println(name + ": bark!");
+    }
+
     @Override
     public String toString() {
         return "ImmutableDog [name=" + name + "]";
