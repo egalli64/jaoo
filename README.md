@@ -3,7 +3,7 @@ Java and Object-Oriented programming
 
 A Java project that requires
 - Maven
-- Java JDK 17
+- Java JDK 21
 
 Prerequisites
 - Introduction to programming. See [dev-intro](https://github.com/egalli64/dev-intro)
