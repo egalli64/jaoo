@@ -20,24 +20,22 @@ public class Main {
         String[] names = { "Tom", "Bob", "Kit", "Zip", "Kit" };
         String[] colors = { "blue", "green", "yellow", "black", "blue" };
 
-        System.out.println(Arrays.toString(names));
-        System.out.println(Arrays.toString(colors));
+        System.out.println("The cats names: " + Arrays.toString(names));
+        System.out.println("The cats colors: " + Arrays.toString(colors));
 
-        // TODO: (1) create an array of cats, same size of the arrays above
+        // TODO 1: create an array of cats, same size of the arrays above
         Cat[] cats = new Cat[0];
-        System.out.printf("The array of cats has %d length%n", cats.length);
+        System.out.println("The array of cats length is " + cats.length);
 
-        // TODO: (2) initialize the cats array
+        // TODO 2: initialize the cats array
         // each cat should have name and color from the arrays above
 
-        System.out.printf("Currently there are %d cats in the program%n", Cat.getCount());
+        // TODO 3: each cat should meow
 
-        // TODO: (3) each cat should meow
+        // TODO 4: each cat named Kit should meow
 
-        // TODO: (4) each cat named Kit should meow
+        // TODO 5: only the first cat named Kit should meow
 
-        // TODO: (5) only the first cat named Kit should meow
-
-        // TODO: (6) only the cats in even position should meow
+        // TODO 6: only the cats in even position should meow
     }
 }
