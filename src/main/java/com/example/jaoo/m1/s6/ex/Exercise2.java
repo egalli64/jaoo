@@ -3,12 +3,12 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m1.s6;
+package com.example.jaoo.m1.s6.ex;
 
 /**
  * This exercise should be solved using a method in a primitive wrapper
  */
-public class Exercise {
+public class Exercise2 {
     /**
      * See requests in the "to do" comments
      * 
