@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m4.s5;
+package com.example.jaoo.m5.s5;
 
 /**
  * A sealed class extending another sealed class

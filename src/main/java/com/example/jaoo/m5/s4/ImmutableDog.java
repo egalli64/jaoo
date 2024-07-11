@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m4.s4;
+package com.example.jaoo.m5.s4;
 
 /**
  * An immutable class
