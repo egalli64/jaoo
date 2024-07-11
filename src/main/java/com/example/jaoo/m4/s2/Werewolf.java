@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s4;
+package com.example.jaoo.m4.s2;
 
 /**
  * A man-wolf. Can't extends more than one class, so extends Man and implements
