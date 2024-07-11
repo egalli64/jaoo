@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s9.ex1;
+package com.example.jaoo.m4.s5.ex1;
 
 /**
  * Exercise: create a hierarchy of classes based on Actor

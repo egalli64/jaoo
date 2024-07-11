@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s9.ex3;
+package com.example.jaoo.m4.s5.ex3;
 
 /**
  * Exercise: create a hierarchy of classes based on Pet. Each Pet subclass has
