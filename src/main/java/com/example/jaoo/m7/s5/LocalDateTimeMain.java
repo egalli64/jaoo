@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m6.s5;
+package com.example.jaoo.m7.s5;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

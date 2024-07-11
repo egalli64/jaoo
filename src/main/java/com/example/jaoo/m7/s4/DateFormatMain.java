@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m6.s4;
+package com.example.jaoo.m7.s4;
 
 import java.text.DateFormat;
 import java.util.Date;

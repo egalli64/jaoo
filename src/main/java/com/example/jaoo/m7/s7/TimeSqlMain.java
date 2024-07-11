@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m6.s7;
+package com.example.jaoo.m7.s7;
 
 import java.sql.Date;
 import java.sql.Time;

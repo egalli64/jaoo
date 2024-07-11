@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m6.s3;
+package com.example.jaoo.m7.s3;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
