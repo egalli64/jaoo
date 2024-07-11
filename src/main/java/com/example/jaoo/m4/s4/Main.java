@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s8;
+package com.example.jaoo.m4.s4;
 
 /**
  * this and super
