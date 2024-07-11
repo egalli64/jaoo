@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m5.s3;
+package com.example.jaoo.m6.s3;
 
 /**
  * A class representing a resource with methods that throw exceptions

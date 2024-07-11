@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m5.s4.other;
+package com.example.jaoo.m6.s4.other;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

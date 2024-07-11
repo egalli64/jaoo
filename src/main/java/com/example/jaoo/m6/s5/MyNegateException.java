@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m5.s5;
+package com.example.jaoo.m6.s5;
 
 /**
  * A checked exception with extra capabilities

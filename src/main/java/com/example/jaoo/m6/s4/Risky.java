@@ -3,12 +3,12 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m5.s4;
+package com.example.jaoo.m6.s4;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.example.jaoo.m5.s3.Exceptional;
+import com.example.jaoo.m6.s3.Exceptional;
 
 /**
  * Try-catching exceptions
