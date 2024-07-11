@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m7.s8;
+package com.example.jaoo.m8.s8;
 
 import java.util.Scanner;
 import java.util.logging.Logger;

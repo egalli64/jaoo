@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m7.s3;
+package com.example.jaoo.m8.s3;
 
 import java.io.File;
 import java.io.IOException;

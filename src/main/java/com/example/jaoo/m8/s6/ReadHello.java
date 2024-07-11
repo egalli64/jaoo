@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m7.s6;
+package com.example.jaoo.m8.s6;
 
 import java.io.BufferedReader;
 import java.io.File;
