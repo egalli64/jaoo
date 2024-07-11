@@ -6,9 +6,9 @@
 package com.example.jaoo.m3.s2;
 
 /**
- * An interface, details are left implicit
+ * An interface, abstract could be left implicit
  */
-interface Implicit {
+public interface Implicit {
     /** a constant, implicitly public static final */
     int XYZ = 42;
 
