@@ -3,22 +3,20 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s5.ex;
+package com.example.jaoo.m3.s7.ex;
 
 import java.util.logging.Logger;
 
 /**
- * Base of a class hierarchy
- * <P>
- * TODO: it should steer left/right, it should brake
+ * TODO: Flat is-a Conditioning
  */
-public class Vehicle {
+public class Flat {
     private static final Logger log = Logger.getGlobal();
 
     /**
      * No-arg constructor
      */
-    public Vehicle() {
-        log.info("Vehicle created");
+    public Flat() {
+        log.info("Flat created");
     }
 }
