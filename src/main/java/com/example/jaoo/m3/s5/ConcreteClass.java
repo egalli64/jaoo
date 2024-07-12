@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s6;
+package com.example.jaoo.m3.s5;
 
 // The type Concrete must implement the inherited abstract method
 //public class ConcreteClass extends AbstractClass {
