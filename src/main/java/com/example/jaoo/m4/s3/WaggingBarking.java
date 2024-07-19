@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s7;
+package com.example.jaoo.m4.s3;
 
 /**
  * WaggingBarking is a Barking
