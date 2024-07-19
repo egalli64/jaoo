@@ -3,12 +3,12 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s6;
+package com.example.jaoo.m4.s2;
 
 /**
  * The barking classes should implement this interface
  */
-interface Barking {
+public interface Barking {
     /** bark sound level, when not specified otherwise */
     int DEFAULT_SOUND_LEVEL = 42;
 

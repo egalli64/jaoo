@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m3.s6;
+package com.example.jaoo.m4.s2;
 
 /**
  * A cat "is-a" mammal and "has-a" tail
