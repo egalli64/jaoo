@@ -5,10 +5,14 @@
  */
 package com.example.jaoo.m5.s3;
 
-public class MainWeekDay {
+/**
+ * Smoke test for an enumeration, it shows the use of the static method values()
+ * and the instance method toString()
+ */
+public class DayMain {
     public static void main(String[] args) {
         System.out.println("The available weekdays:");
-        for (WeekDay cur : WeekDay.values()) {
+        for (Day cur : Day.values()) {
             System.out.println(cur);
         }
     }

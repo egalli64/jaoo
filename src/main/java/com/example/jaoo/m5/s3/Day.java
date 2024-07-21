@@ -8,6 +8,6 @@ package com.example.jaoo.m5.s3;
 /**
  * Enumerator for week days, ranging from MONDAY to SUNDAY
  */
-public enum WeekDay {
+public enum Day {
     MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
 }
