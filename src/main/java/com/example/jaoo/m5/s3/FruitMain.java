@@ -1,13 +1,13 @@
 /*
- * Introduction to Java base concepts
+ * Introduction to OOP with Java
  * 
- * https://github.com/egalli64/jaba
+ * https://github.com/egalli64/jaoo
  */
 package com.example.jaoo.m5.s3;
 
 /**
- * Smoke test for an enumeration, it shows the use of the static method values()
- * and the instance method toString()
+ * Smoke test for an enriched enumeration, it also shows the use of custom
+ * method description()
  */
 public class FruitMain {
     public static void main(String[] args) {
