@@ -8,11 +8,11 @@ package com.example.jaoo.m7.s2;
 import java.util.Date;
 
 /**
- * java util Date
+ * java.util.Date should be used only in legacy code
  */
-public class DateMain {
+public class BasicDateUse {
     /**
-     * Basics on date
+     * Basics on Date
      * 
      * @param args not used
      */
@@ -26,6 +26,6 @@ public class DateMain {
         System.out.println("Nine hundred billion ms in the UNIX epoch: " + new Date(900_000_000_000L));
 
         Date base = new Date(0L);
-        System.out.println("Base time: " + base);
+        System.out.println("The beginning of UNIX epoch: " + base);
     }
 }
