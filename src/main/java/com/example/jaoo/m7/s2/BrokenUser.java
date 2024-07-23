@@ -6,6 +6,7 @@
 package com.example.jaoo.m7.s2;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * Apparently, there is no way of changing the user start date after creation.
@@ -22,9 +23,10 @@ public class BrokenUser {
      * 
      * @param start user start date
      * @param id    user id
+     * @throws NullPointerException if start is null
      */
     public BrokenUser(Date start, int id) {
-        this.start = start;
+        this.start = Objects.requireNonNull(start, "start");
         this.id = id;
     }
 
@@ -57,6 +59,12 @@ public class BrokenUser {
      * @param args not used
      */
     public static void main(String[] args) {
+        try {
+            new BrokenUser(null, 0);
+        } catch (NullPointerException npe) {
+            System.out.println("Null date not allowed, " + npe);
+        }
+
         Date startDate = new Date();
         BrokenUser bu = new BrokenUser(startDate, 42);
         System.out.println("Original user info: " + bu);
