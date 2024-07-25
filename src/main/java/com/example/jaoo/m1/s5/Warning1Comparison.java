@@ -7,6 +7,7 @@ package com.example.jaoo.m1.s5;
 
 /**
  * Some cases requiring attention when using boxed primitives
+ * <p>
  * 1. Do not compare boxed primitives by == or !=
  */
 public class Warning1Comparison {
