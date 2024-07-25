@@ -6,7 +6,7 @@
 package com.example.jaoo.m1.s5;
 
 /**
- * Boxing primitives in immutable reference types
+ * Listing the immutable primitive wrappers, and boxing boolean
  */
 public class BoxingBoolean {
     /**
@@ -15,7 +15,9 @@ public class BoxingBoolean {
      * @param args not used
      */
     public static void main(String[] args) {
-        Class<?>[] wrappers = { Boolean.class, Character.class, Short.class, Integer.class, Float.class, Double.class };
+        Class<?>[] wrappers = { Boolean.class, Character.class, //
+                Byte.class, Short.class, Integer.class, Long.class, //
+                Float.class, Double.class };
         System.out.println("Primitive wrappers:");
         for (var wrapper : wrappers) {
             System.out.println(wrapper.getSimpleName());
