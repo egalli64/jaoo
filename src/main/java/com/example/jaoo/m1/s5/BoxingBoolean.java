@@ -10,7 +10,7 @@ package com.example.jaoo.m1.s5;
  */
 public class BoxingBoolean {
     /**
-     * List the primitive wrapper types, and create objects from primitives
+     * List the primitive wrapper types, and create boolean objects
      * 
      * @param args not used
      */
@@ -22,7 +22,9 @@ public class BoxingBoolean {
         }
         System.out.println();
 
+        // a primitive boolean
         boolean flag = false;
+
         // the static factory method valueOf() is the preferred way for boxing
         Boolean wFlag = Boolean.valueOf(flag);
         Boolean wFlag2 = Boolean.valueOf("true");
