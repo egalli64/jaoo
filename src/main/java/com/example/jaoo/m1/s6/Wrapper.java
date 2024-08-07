@@ -21,7 +21,7 @@ public class Wrapper {
         Boolean f2 = Boolean.valueOf("If it is not true it is false!");
         // case insensitive
         boolean f3 = Boolean.parseBoolean("True");
-        System.out.printf("A few booleans: %b, %b, %b%n", f1, f2, f3);
+        System.out.printf("A few booleans: %b, %b, %b\n", f1, f2, f3);
 
         System.out.println("Is '9' a digit? " + Character.isDigit('9'));
         System.out.println("Is 'k' a letter? " + Character.isLetter('k'));
@@ -42,6 +42,6 @@ public class Wrapper {
         // Double.POSITIVE_INFINITY, Double.NEGATIVE_INFINITY
         double infinityPos = 1 / 0.0;
         double infinityNeg = -1 / 0.0;
-        System.out.printf("Divide by zero for floating points: %f, %f%n", infinityPos, infinityNeg);
+        System.out.printf("Divide by zero for floating points: %f, %f\n", infinityPos, infinityNeg);
     }
 }
