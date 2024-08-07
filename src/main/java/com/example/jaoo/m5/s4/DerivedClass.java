@@ -14,7 +14,7 @@ public class DerivedClass extends BaseClass {
 //    }
 
     // Won't compile: Cannot override the final method from BaseClass
-    // Actually, the message is not correct, static method can't be overridden
-//    public static final void g() {
+    // Actually, the message is not correct, static method can't be overridden, it can't _hide_ it
+//    public final static void g() {
 //    }
 }
