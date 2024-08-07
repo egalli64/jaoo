@@ -33,17 +33,8 @@ public class Dog {
      * 
      * @return a new dog with default name and breed
      */
-    public static Dog createWithNoName() {
-        /*
-         * 1. fetch images for components a: nose b: tail c: ...
-         * 
-         * 2. goto database for info on dog breed ...
-         * 
-         * 3. ...
-         */
-
-        log.info("Creating a dog with no name");
-        return new Dog(null, null);
+    public static Dog createAnonymous() {
+        return createWithNameAndBreed(null, null);
     }
 
     /**
@@ -53,8 +44,7 @@ public class Dog {
      * @return a new dog with default breed
      */
     public static Dog createWithName(String name) {
-        log.info(String.format("Creating a dog with name [%s]", name));
-        return new Dog(name, null);
+        return createWithNameAndBreed(name, null);
     }
 
     /**
@@ -63,15 +53,33 @@ public class Dog {
      * @param breed dog's breed
      * @return a new dog with default name
      */
-    public static Dog createWithBreedButNoName(String breed) {
-        log.info(String.format("Creating a dog with no name and breed [%s]", breed));
-        return new Dog(null, breed);
+    public static Dog createWithBreed(String breed) {
+        return createWithNameAndBreed(null, breed);
+    }
+
+    /**
+     * static factory method
+     * 
+     * @param name dog's name
+     * @return a new dog with default breed
+     */
+    public static Dog createWithNameAndBreed(String name, String breed) {
+        /*
+         * 1. fetch images for components a: nose b: tail c: ...
+         * 
+         * 2. goto database for info on dog breed ...
+         * 
+         * 3. ...
+         */
+
+        log.info(String.format("Creating a dog with name [%s] and breed [%s]", name, breed));
+        return new Dog(name, breed);
     }
 
     /**
      * let the dog bark
      */
     public void bark() {
-        System.out.printf("%s %s: woof%n", breed, name);
+        System.out.printf("%s %s: woof\n", breed, name);
     }
 }

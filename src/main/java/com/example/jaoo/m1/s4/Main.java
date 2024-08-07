@@ -17,7 +17,8 @@ public class Main {
     public static void main(String[] args) {
         boolean flag = true;
 
-        // Don't do it - old style way to convert a boolean to string
+        // !!! Don't do it - but you can see it in legacy code !!!
+        // Old style way to convert anything to string
         String boolAsStringClassic = "" + flag;
         System.out.println("A boolean converted to string: " + boolAsStringClassic);
 
@@ -25,11 +26,12 @@ public class Main {
         String boolAsStringModern = String.valueOf(flag);
         System.out.println("Another boolean converted to string: " + boolAsStringModern);
 
-        Dog[] dogs = new Dog[3];
+        Dog[] dogs = new Dog[4];
 
-        dogs[0] = Dog.createWithName("Bob");
-        dogs[1] = Dog.createWithNoName();
-        dogs[2] = Dog.createWithBreedButNoName("Bobtail");
+        dogs[0] = Dog.createAnonymous();
+        dogs[1] = Dog.createWithName("Bob");
+        dogs[2] = Dog.createWithBreed("Bobtail");
+        dogs[3] = Dog.createWithNameAndBreed("Tim", "Poodle");
 
         for (Dog dog : dogs) {
             dog.bark();
