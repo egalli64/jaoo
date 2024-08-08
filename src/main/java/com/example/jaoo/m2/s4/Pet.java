@@ -13,12 +13,18 @@ public class Pet {
     private String name;
     protected double weight;
     static int count;
-    // avoid public data member, if you can
+    // usually public field should be avoided
     // public long doNotDoThis;
 
-    // here, a static initializer is an overkill
+    // a static initializer (not very common)
     static {
+        System.out.println("First time class Pet is seen by the JVM");
         count = 12;
+    }
+
+    // an instance initializer (rarely used)
+    {
+        System.out.println("First block of statements called on this pet");
     }
 
     /**
