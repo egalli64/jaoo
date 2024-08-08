@@ -27,6 +27,14 @@ public class Dog extends Object {
     }
 
     /**
+     * No-arg constructor
+     * <p>
+     * Dangerously leave the fields to null!
+     */
+    public Dog() {
+    }
+
+    /**
      * Getter
      * 
      * @return the dog name

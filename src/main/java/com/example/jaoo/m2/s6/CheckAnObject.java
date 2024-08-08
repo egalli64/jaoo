@@ -19,7 +19,7 @@ public class CheckAnObject {
         Object o2 = new Object();
 
         System.out.println("Two different objects are equal? " + o.equals(o2));
-        System.out.printf("Hash code of two different object: %d %d%n", o.hashCode(), o2.hashCode());
+        System.out.printf("Hash code of two different object: %d %d\n", o.hashCode(), o2.hashCode());
         System.out.println("An object as string: " + o.toString());
     }
 }

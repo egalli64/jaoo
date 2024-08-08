@@ -35,8 +35,8 @@ public class DogEquality {
     private static void reflexivity(Dog bob) {
         Dog bob2 = new Dog("Bob", BOB_FULL_NAME);
 
-        System.out.printf("bob is %s, id: %x%n", bob, System.identityHashCode(bob));
-        System.out.printf("bob2 is %s, id: %x%n", bob2, System.identityHashCode(bob2));
+        System.out.printf("bob is %s, id: %x\n", bob, System.identityHashCode(bob));
+        System.out.printf("bob2 is %s, id: %x\n", bob2, System.identityHashCode(bob2));
 
         if (bob.equals(bob2)) {
             System.out.println("Reflexivity: x equals x");
