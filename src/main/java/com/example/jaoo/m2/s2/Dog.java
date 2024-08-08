@@ -18,7 +18,7 @@ public class Dog {
     String name;
 
     /**
-     * No-arg constructor. Default initialization of
+     * No-arg constructor. Default initialization of name
      */
     public Dog() {
         log.info("Creating a new dog");
@@ -36,7 +36,7 @@ public class Dog {
     }
 
     /**
-     * Safe setter. The name is checked before accepting it.
+     * Safe setter. The name is checked before accepting it
      * 
      * @param name the new dog name
      */
@@ -57,7 +57,7 @@ public class Dog {
     }
 
     /**
-     * Getter.
+     * Getter (safe, being a reference to an immutable object)
      * 
      * @return the dog name
      */
