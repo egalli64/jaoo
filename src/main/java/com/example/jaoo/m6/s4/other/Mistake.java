@@ -21,18 +21,20 @@ public class Mistake {
      */
     public static void main(String[] args) {
         int value = Integer.MAX_VALUE;
-        System.out.println("value is " + value);
+        System.out.println("Value is " + value);
 
         try {
             value = Math.incrementExact(value);
         } catch (ArithmeticException ae) {
+            System.out.println("Can't increment " + value);
             log.log(Level.SEVERE, "Cannot increase " + value, ae);
         }
 
-        System.out.println("value is still " + value);
+        System.out.println("Value is " + value);
 
+        // TODO: the user is not happy for the following code
         long result = incrementToLong(value);
-        System.out.println("incremented value is " + result);
+        System.out.println("Incremented value is " + result);
     }
 
     /**
