@@ -70,9 +70,11 @@ public class User {
         User bu = new User(startDate, 42);
         System.out.println("Original user info: " + bu);
 
+        // changing the local Date object has no effect on the User
         startDate.setTime(startDate.getTime() - 10_000_000_000L);
         System.out.println("Safe user info /1: " + bu);
 
+        // the getter return a _copy_ of the User Date object 
         Date attack = bu.getStart();
         attack.setTime(0L);
         System.out.println("Safe user info /2: " + bu);
