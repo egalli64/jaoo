@@ -20,15 +20,14 @@ public class LocalDateTimeMain {
      */
     public static void main(String[] args) {
         // date-time factories
-        System.out.println("Date time (now): " + LocalDateTime.now());
+        System.out.println("LocalDateTime.now(): " + LocalDateTime.now());
         LocalDateTime now = LocalDateTime.of(LocalDate.now(), LocalTime.now());
-        System.out.printf("Date time (by aggregation): %s%n", now);
-        System.out.printf("Current date time (getter): %02d %02d %d - %02d %02d %d%n", now.getDayOfMonth(),
-                now.getMonthValue(), now.getYear(), now.getHour(), now.getMinute(), now.getSecond());
+        System.out.printf("LocalDateTime by aggregation: %s\n", now);
+        System.out.printf("Using getters: %02d %02d %d - %02d %02d %d\n", now.getDayOfMonth(), now.getMonthValue(),
+                now.getYear(), now.getHour(), now.getMinute(), now.getSecond());
 
         // date-time getters
-        System.out.printf("Date extracted from date-time: %s%n", now.toLocalDate());
-
-        System.out.printf("Time extracted from date-time: %s%n", now.toLocalTime());
+        System.out.printf("Get date from date-time: %s%n", now.toLocalDate());
+        System.out.printf("Get time from date-time: %s%n", now.toLocalTime());
     }
 }
