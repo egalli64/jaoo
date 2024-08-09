@@ -69,9 +69,11 @@ public class BrokenUser {
         BrokenUser bu = new BrokenUser(startDate, 42);
         System.out.println("Original user info: " + bu);
 
+        // the local Date object is referenced also by the BrokenUser! 
         startDate.setTime(startDate.getTime() - 10_000_000_000L);
         System.out.println("Changed user info /1: " + bu);
 
+        // the BrokenUser getter return the mutable reference to its Date!
         Date attack = bu.getStart();
         attack.setTime(0L);
         System.out.println("Changed user info /2: " + bu);
