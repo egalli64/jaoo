@@ -24,7 +24,7 @@ public class InstantMain {
         System.out.println("An instant passing seconds: " //
                 + Instant.ofEpochSecond(1_000_000_000L));
         System.out.println("An instant passing seconds and nano adjustment: " //
-                + Instant.ofEpochSecond(1_000_000_000L, 1_000_000_000));
+                + Instant.ofEpochSecond(1_000_000_000L, 1_000_000_000L));
 
         System.out.println("Now, UNIX time in secs: " + Instant.now().getEpochSecond());
     }
