@@ -9,8 +9,9 @@ package com.example.jaoo.m1.s3.ex;
  * A sample class. Each object has:
  * <ul>
  * <li>two fields
- * <li>two constructors (overload)
- * <li>a method
+ * <li>a constructor
+ * <li>a getter
+ * <li>a meow method
  * </ul>
  */
 public class Cat {
@@ -27,12 +28,13 @@ public class Cat {
     }
 
     /**
-     * Constructor for a cat with a given color but with no name
+     * A getter
      * 
-     * @param color the cat color
+     * @return the cat name
      */
-    public Cat(String color) {
-        // TODO: initialize the object
+    public String getName() {
+        // TODO: return the cat name
+        return "???";
     }
 
     /**

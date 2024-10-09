@@ -25,7 +25,12 @@ public class Main {
 
         // TODO 1: create an array of cats, same size of the arrays above
         Cat[] cats = new Cat[0];
-        System.out.println("The array of cats length is " + cats.length);
+        
+        // check the first task
+        if (names.length != colors.length || names.length != cats.length) {
+            System.out.println("The three arrays should have the same length!");
+            return;
+        }
 
         // TODO 2: initialize the cats array
         // each cat should have name and color from the arrays above
