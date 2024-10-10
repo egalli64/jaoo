@@ -17,13 +17,13 @@ import com.example.jaoo.m2.s3.BasicClass;
 public class Main {
     public static void main(String[] args) {
         // Required to be imported
-        BasicClass bc = new BasicClass();
-        System.out.println(bc);
+        BasicClass basic = new BasicClass();
+        System.out.println(basic);
 
-        Extended poodle = new Extended();
-        System.out.println(poodle);
+        Extended extended = new Extended();
+        System.out.println(extended);
 
         // Won't compile: PackageClass cannot be resolved to a type
-        // PackageClass pc = new PackageClass();
+//        PackageClass pc = new PackageClass();
     }
 }
