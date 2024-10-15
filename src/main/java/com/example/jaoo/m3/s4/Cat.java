@@ -15,8 +15,8 @@ public class Cat {
         this.id = -1;
     }
 
-    public Cat(int x) {
-        this.id = x;
+    public Cat(int id) {
+        this.id = id;
     }
 
     @Override
