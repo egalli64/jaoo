@@ -20,9 +20,9 @@ public class TreeExample {
             System.out.println(ex);
         }
 
-        TreeSet<ComparableDog> dogs = new TreeSet<>();
-        dogs.add(new ComparableDog("Tom", "Carl"));
-        dogs.add(new ComparableDog("Tom", "Bob"));
+        TreeSet<Dog> dogs = new TreeSet<>();
+        dogs.add(new Dog("Tom", "Carl", 4));
+        dogs.add(new Dog("Tom", "Bob", 3));
         System.out.println("A sorted collection of dogs: " + dogs);
     }
 }

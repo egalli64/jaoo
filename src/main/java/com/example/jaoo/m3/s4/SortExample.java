@@ -22,7 +22,7 @@ public class SortExample {
         }
 
         // ComparableDogs can be sorted
-        ComparableDog[] dogs = { new ComparableDog("Tom", "Carl"), new ComparableDog("Tom", "Bob") };
+        Dog[] dogs = { new Dog("Tom", "Carl", 4), new Dog("Tom", "Bob", 3) };
         System.out.println("Original order dogs: " + Arrays.toString(dogs));
         Arrays.sort(dogs);
         System.out.println("Sorted dogs: " + Arrays.toString(dogs));

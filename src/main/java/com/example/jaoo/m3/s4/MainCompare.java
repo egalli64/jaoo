@@ -17,8 +17,8 @@ public class MainCompare {
      */
     @SuppressWarnings("unlikely-arg-type")
     public static void main(String[] args) {
-        ComparableDog tomBob = new ComparableDog("Tom", "Bob");
-        ComparableDog tomCarl = new ComparableDog("Tom", "Carl");
+        Dog tomBob = new Dog("Tom", "Bob", 4);
+        Dog tomCarl = new Dog("Tom", "Carl", 3);
         if (tomBob.compareTo(tomCarl) < 0) {
             System.out.println("Tom-Bob is before Tom-Carl");
         } else {
