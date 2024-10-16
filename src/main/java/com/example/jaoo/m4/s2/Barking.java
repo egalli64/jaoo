@@ -10,8 +10,8 @@ package com.example.jaoo.m4.s2;
  */
 public interface Barking {
     /** bark sound level, when not specified otherwise */
-    int DEFAULT_SOUND_LEVEL = 42;
+    public final static int DEFAULT_SOUND_LEVEL = 42;
 
     /** every barking class should state how its objects bark */
-    void bark();
+    public void bark();
 }
