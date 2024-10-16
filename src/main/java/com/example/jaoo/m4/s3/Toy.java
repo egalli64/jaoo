@@ -10,6 +10,7 @@ package com.example.jaoo.m4.s3;
  */
 public class Toy {
     private int price;
+    private int discount;
 
     /**
      * Canonical constructor
@@ -18,10 +19,16 @@ public class Toy {
      */
     public Toy(int price) {
         this.price = price;
+        this.discount = 0;
+    }
+
+    public Toy(int price, int discount) {
+        this.price = price;
+        this.discount = discount;
     }
 
     @Override
     public String toString() {
-        return "Toy [price=" + price + "]";
+        return "Toy [price=" + price + ", discount=" + discount + "]";
     }
 }
