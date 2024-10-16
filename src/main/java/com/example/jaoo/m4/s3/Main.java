@@ -18,7 +18,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // Can't instantiate an interface
-//        Barker barker = new Barker();
+//        Barking barker = new Barking();
 
         // Can instantiate an array of reference to an interface
         Barking[] barkings = { new Fox(), new Dog(), new Robot(), new Poodle() };
