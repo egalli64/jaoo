@@ -8,9 +8,10 @@ package com.example.jaoo.m4.s3.ex;
 import java.util.logging.Logger;
 
 /**
- * Base of a class hierarchy
+ * Base of a class hierarchy (abstract?)
  * <P>
- * TODO: it should steer left/right, it should brake
+ * TODO (1): it should be an abstract class<BR>
+ * TODO (2): each vehicle should steer left/right, and brake
  */
 public class Vehicle {
     private static final Logger log = Logger.getGlobal();
