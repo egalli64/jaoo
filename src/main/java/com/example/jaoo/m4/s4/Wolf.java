@@ -15,12 +15,22 @@ public class Wolf implements Wolfable {
     }
 
     @Override
-    public String toString() {
-        return "A Wolf";
+    public void attack(Man man) {
+        System.out.println("A wolf is attacking " + man);
+    }
+
+    /**
+     * Overload, a wolfable knows how to attack a man, a wolf know also how to
+     * attack another wolf
+     * 
+     * @param other the attacked wolf
+     */
+    public void attack(Wolf other) {
+        System.out.println("A wolf is attacking " + other);
     }
 
     @Override
-    public void attack(Man man) {
-        System.out.printf("A wolf is attacking %s%n", man);
+    public String toString() {
+        return "A Wolf";
     }
 }
