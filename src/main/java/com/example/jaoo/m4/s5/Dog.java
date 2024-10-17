@@ -9,6 +9,7 @@ package com.example.jaoo.m4.s5;
  * A sample class
  */
 public class Dog {
+    private static final String DEFAULT_NAME = "Fido";
     private String name;
 
     /**
@@ -18,6 +19,14 @@ public class Dog {
      */
     public Dog(String name) {
         this.name = name;
+    }
+
+    public Dog() {
+        this.name = DEFAULT_NAME;
+    }
+
+    public void bark() {
+        System.out.println(name + ": Bark!");
     }
 
     @Override
