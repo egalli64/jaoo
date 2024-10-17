@@ -6,38 +6,25 @@
 package com.example.jaoo.m4.s7.ex1;
 
 /**
- * Exercise: create a hierarchy of classes based on Actor
+ * Exercise: create a hierarchy of classes based on Person
  * <p>
- * Warrior: could fight, can't do any magic
+ * Consultant: daily fee
  * <p>
- * Wizard: can't fight, could do magic
+ * Employee: monthly salary
  */
 public class Main {
     /**
-     * Create a bunch of actors
+     * Create a bunch of persons
      * <p>
-     * Let them fight against each others
-     * <p>
-     * Peer-to-peer fight, the most skilled one wins
-     * <p>
-     * Wizards always beat warriors
-     * <p>
-     * In the end, let the user knows who survived
+     * Print name and daily / salary accordingly to their actual type
      * 
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+        Person[] persons = { /* ... */ };
 
-        for (Actor actor : actors) {
-            System.out.println(actor);
-        }
-
-        System.out.println("Let's fight ...");
-        for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
+        for (Person person : persons) {
+            System.out.println(person);
         }
     }
 }

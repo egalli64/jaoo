@@ -10,14 +10,14 @@ package com.example.jaoo.m4.s7.ex2;
  * <p>
  * Abstract base class
  */
-public abstract class Person {
+public abstract class Pet {
     /**
-     * Canonical constructor
+     * The number of day the pet has booked its stay
      * 
-     * @param firstName person first name
-     * @param lastName  person last name
+     * @return a positive number
      */
-    protected Person(String firstName, String lastName) {
+    public int housing() {
         // TODO
+        return 0;
     }
 }

@@ -6,28 +6,38 @@
 package com.example.jaoo.m4.s7.ex3;
 
 /**
- * Exercise: create a hierarchy of classes based on Pet. Each Pet subclass has
- * an housing cost. Each pet instance has its own number of days booking,
- * specified by constructor.
+ * Exercise: create a hierarchy of classes based on Actor
  * <p>
- * Dog (more expensive), Cat
+ * Warrior: could fight, can't do any magic
+ * <p>
+ * Wizard: can't fight, could do magic
  */
 public class Main {
     /**
-     * Create a bunch of pets, each with its own associated number of days.
+     * Create a bunch of actors
      * <p>
-     * For each pet print the total housing cost. Then print the total housing cost.
+     * Let them fight against each others
+     * <p>
+     * Peer-to-peer fight, the most skilled one wins
+     * <p>
+     * Wizards always beat warriors
+     * <p>
+     * In the end, let the user knows who survived
      * 
      * @param args not used
      */
     public static void main(String[] args) {
-        Pet[] guests = {};
+        // TODO: create actors, both warriors and wizards
+        Actor[] actors = { /* ... */ };
 
-        int total = 0;
-        for (Pet guest : guests) {
-            total += guest.housing();
+        for (Actor actor : actors) {
+            System.out.println(actor);
         }
 
-        System.out.println("Total bill for guests: " + total);
+        System.out.println("Let's fight ...");
+        for (Actor actor : actors) {
+            System.out.println("Actor: " + actor);
+            // ...
+        }
     }
 }

@@ -6,25 +6,28 @@
 package com.example.jaoo.m4.s7.ex2;
 
 /**
- * Exercise: create a hierarchy of classes based on Person
+ * Exercise: create a hierarchy of classes based on Pet. Each Pet subclass has
+ * an housing cost. Each pet instance has its own number of days booking,
+ * specified by constructor.
  * <p>
- * Consultant: daily fee
- * <p>
- * Employee: monthly salary
+ * Dog (more expensive), Cat
  */
 public class Main {
     /**
-     * Create a bunch of persons
+     * Create a bunch of pets, each with its own associated number of days.
      * <p>
-     * Print name and daily / salary accordingly to their actual type
+     * For each pet print the total housing cost. Then print the total housing cost.
      * 
      * @param args not used
      */
     public static void main(String[] args) {
-        Person[] persons = { /* ... */ };
+        Pet[] guests = {};
 
-        for (Person person : persons) {
-            System.out.println(person);
+        int total = 0;
+        for (Pet guest : guests) {
+            total += guest.housing();
         }
+
+        System.out.println("Total bill for guests: " + total);
     }
 }
