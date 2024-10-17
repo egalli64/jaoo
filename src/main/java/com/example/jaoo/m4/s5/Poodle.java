@@ -10,6 +10,7 @@ package com.example.jaoo.m4.s5;
  * in toString()
  */
 public class Poodle extends Dog {
+    private static final String DEFAULT_DOG_NAME = "Fuffy";
     private String owner;
 
     /**
@@ -22,6 +23,27 @@ public class Poodle extends Dog {
         super(name);
 
         this.owner = owner;
+    }
+
+    /**
+     * Constructor using default dog name for this poodle
+     * 
+     * @param owner dog owner
+     */
+    public Poodle(String owner) {
+        this(DEFAULT_DOG_NAME, owner);
+
+        // alternative: constructor code duplication
+//        super(DEFAULT_DOG_NAME);
+//
+//        this.owner = owner;
+    }
+
+    @Override
+    public void bark() {
+        System.out.println("Grr ... ");
+        super.bark();
+        System.out.println("... Grr");
     }
 
     @Override
