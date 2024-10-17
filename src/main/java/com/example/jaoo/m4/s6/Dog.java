@@ -11,7 +11,7 @@ package com.example.jaoo.m4.s6;
  * A derived class
  */
 public class Dog extends Pet {
-    public static final double STANDARD_SPEED = 0.0;
+    public static final double STANDARD_SPEED = 1.0;
 
     /** dog speed */
     private double speed;
@@ -34,6 +34,10 @@ public class Dog extends Pet {
      */
     public Dog(String name) {
         this(name, STANDARD_SPEED);
+
+        // alternative implementation, not DRY
+//        super(name);
+//        this.speed = STANDARD_SPEED;
     }
 
     /**
