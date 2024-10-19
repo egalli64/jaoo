@@ -39,8 +39,8 @@ public class Example3Checked {
         }
 
         // For checked exception try-catch (or throws) is mandatory
-        // result = by2ExChecked(input);
-        // System.out.println(result);
+//        double result = by2ExChecked(input);
+//        System.out.println(result);
     }
 
     /**
