@@ -54,7 +54,7 @@ public class Example2Unchecked {
      * @return the doubled input value
      * @throws IllegalArgumentException when negative input passed
      */
-    public static double by2ExUnchecked(double value) {
+    public static double by2ExUnchecked(double value) throws IllegalArgumentException {
         if (value < 0) {
             throw new IllegalArgumentException("Value should not be negative: " + value);
         }
