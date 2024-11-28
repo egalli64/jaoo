@@ -12,14 +12,13 @@ public class Pet {
     /** prefer private data member */
     private String name;
     protected double weight;
-    static int count;
+    int fleaCount;
     // usually public field should be avoided
     // public long doNotDoThis;
 
     // a static initializer (not very common)
     static {
         System.out.println("First time class Pet is seen by the JVM");
-        count = 12;
     }
 
     // an instance initializer (rarely used)
@@ -33,6 +32,7 @@ public class Pet {
     public Pet(String name, double weight) {
         this.name = name;
         this.weight = weight;
+        this.fleaCount = 0;
     }
 
     private void increaseWeight() {
@@ -43,8 +43,8 @@ public class Pet {
         increaseWeight();
     }
 
-    public static int getCount() {
-        return count;
+    public int getFleaCount() {
+        return fleaCount;
     }
 
     public String getName() {

@@ -17,12 +17,16 @@ public class Main {
     public static void main(String[] args) {
         Pet pet = new Pet("Waffle", 2.18);
 
-        // pet's private members are _not_ accessible
+        // Pet private members are _not_ accessible
 //      System.out.println(pet.name);
 
-        // pet's package members are accessible
-        System.out.println("count: " + Pet.count);
+        // Pet package-private members are accessible
+        pet.fleaCount = 3;
 
+        // Pet public members are accessible to everyone
+        System.out.println("Count fleas on pet: " + pet.getFleaCount());
+
+        // calling a static method passing a Pet as argument
         makeBill(pet);
     }
 
@@ -32,7 +36,7 @@ public class Main {
      * @param pet a pet
      */
     public static void makeBill(Pet pet) {
-        // pet's protected members are accessible!
+        // Pet protected members are accessible!
         pet.weight = 1000;
         System.out.println("weight: " + pet.weight);
     }
