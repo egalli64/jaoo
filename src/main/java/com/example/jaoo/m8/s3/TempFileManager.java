@@ -34,7 +34,7 @@ public class TempFileManager {
         try {
             ensureDirectory(badFileName);
         } catch (Exception e) {
-            System.out.println("\"" + badFileName + "\" is not a 'good' name for the temp directory");
+            System.out.println("As expected, \"" + badFileName + "\" is not a 'good' name for the temp directory");
             log.log(Level.SEVERE, "Can't create TempFileManager", e);
         }
 
