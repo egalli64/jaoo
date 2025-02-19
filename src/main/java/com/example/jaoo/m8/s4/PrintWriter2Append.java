@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s5;
+package com.example.jaoo.m8.s4;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -12,14 +12,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Writing to File
+ * Writing to File by PrintWriter
  */
-public class AppendHello {
+public class PrintWriter2Append {
     private static final Logger log = Logger.getGlobal();
     private static final String FILE_NAME = "/tmp/hello.txt";
 
     /**
-     * PrintWriter, FileOutputStream
+     * Create a FileOutputStream, wrap it in a PrintWriter, so to use its handy
+     * methods: print(), println(), append()
      * 
      * @param args not used
      */
