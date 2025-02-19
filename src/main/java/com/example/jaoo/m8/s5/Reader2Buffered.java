@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s6;
+package com.example.jaoo.m8.s5;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 /**
  * Reading from File
  */
-public class ReadHello {
+public class Reader2Buffered {
     private static final Logger log = Logger.getGlobal();
     private static final String FILE_NAME = "/tmp/hello.txt";
 
