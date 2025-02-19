@@ -3,15 +3,15 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s3;
+package com.example.jaoo.m8.s4;
 
 import java.io.File;
 import java.util.Arrays;
 
 /**
- * java io File
+ * Java IO File
  */
-public class TempFileUser {
+public class FileFunctionalities {
     private static final String ABSOLUTE_FILE_NAME = "/tmp/hello.txt";
     private static final String DIR_NAME = "/tmp/";
 

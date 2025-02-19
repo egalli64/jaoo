@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s3;
+package com.example.jaoo.m8.s4;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,9 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * File
+ * File, creation and basic commands
  */
-public class TempFileManager {
+public class FileBasics {
     private static final Logger log = Logger.getGlobal();
 
     private static final String DEFAULT_DIR_NAME = "/tmp/";
@@ -25,7 +25,7 @@ public class TempFileManager {
     private static final String ABSOLUTE_URI_WIN = "file:///C:" + ABSOLUTE_FILE_NAME;
 
     /**
-     * A tour of java io File functionality
+     * A tour of Java IO File basic functionality
      * 
      * @param args not used
      */
