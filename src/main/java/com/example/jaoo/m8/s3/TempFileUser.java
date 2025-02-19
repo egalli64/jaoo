@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s4;
+package com.example.jaoo.m8.s3;
 
 import java.io.File;
 import java.util.Arrays;
@@ -11,7 +11,7 @@ import java.util.Arrays;
 /**
  * java io File
  */
-public class CheckFile {
+public class TempFileUser {
     private static final String ABSOLUTE_FILE_NAME = "/tmp/hello.txt";
     private static final String DIR_NAME = "/tmp/";
 
@@ -23,13 +23,13 @@ public class CheckFile {
     public static void main(String[] args) {
         File f1 = new File(ABSOLUTE_FILE_NAME);
 
-        System.out.println("Is the file hidden? " + f1.isHidden());
+        System.out.printf("Is the file %s hidden? %b\n", ABSOLUTE_FILE_NAME, f1.isHidden());
         System.out.println("For the current (UNIX) user ...");
         System.out.println(" Is the file readable? " + f1.canRead());
         System.out.println(" Is the file writable? " + f1.canWrite());
         System.out.println("Length: " + f1.length());
 
-        System.out.println("Is the file name absolute? " + f1.isAbsolute() + " (Win requires the drive!)");
+        System.out.printf("Is the file name absolute? %s (Win requires the drive!)\n", f1.isAbsolute());
 
         System.out.println("Name: " + f1.getName());
         System.out.println("Path: " + f1.getPath());
