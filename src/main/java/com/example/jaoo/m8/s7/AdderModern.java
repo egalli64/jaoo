@@ -3,14 +3,13 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s8.except;
+package com.example.jaoo.m8.s7;
 
 import java.util.Scanner;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Modern Scanner with exception
+ * File input by Scanner
  */
 public class AdderModern {
     private static final Logger log = Logger.getGlobal();
@@ -29,24 +28,13 @@ public class AdderModern {
             while (scanner.hasNext()) {
                 if (scanner.hasNextDouble()) {
                     result += scanner.nextDouble();
-                    dangerous();
                     log.info("Current result is " + result);
                 } else {
                     System.out.println("Bad input, discarded: " + scanner.next());
                 }
             }
-        } catch (Exception ex) {
-            log.log(Level.SEVERE, "Can't scan", ex);
-            System.out.println("Problem while reading");
         }
 
         System.out.println("Total is " + result);
-    }
-
-    /**
-     * This call will result in an exception
-     */
-    private static void dangerous() {
-        throw new IllegalArgumentException("Boom!");
     }
 }

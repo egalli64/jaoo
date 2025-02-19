@@ -3,19 +3,20 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s8;
+package com.example.jaoo.m8.s7.except;
 
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * File input by Scanner
+ * Classic Scanner with exception
  */
-public class AdderModern {
+public class AdderClassic {
     private static final Logger log = Logger.getGlobal();
 
     /**
-     * Scanner and try-with-resources
+     * Scanner
      * 
      * @param args not used
      */
@@ -23,18 +24,31 @@ public class AdderModern {
         System.out.println("Please, enter a few numbers");
         double result = 0.0;
 
-        // try-with-resources
-        try (Scanner scanner = new Scanner(System.in)) {
+        Scanner scanner = new Scanner(System.in);
+        try {
             while (scanner.hasNext()) {
                 if (scanner.hasNextDouble()) {
                     result += scanner.nextDouble();
+                    dangerous();
                     log.info("Current result is " + result);
                 } else {
                     System.out.println("Bad input, discarded: " + scanner.next());
                 }
             }
+        } catch (Exception ex) {
+            log.log(Level.SEVERE, "Can't scan", ex);
+            System.out.println("Problem while reading");
+        } finally {
+            scanner.close();
         }
 
         System.out.println("Total is " + result);
+    }
+
+    /**
+     * This call will result in an exception
+     */
+    private static void dangerous() {
+        throw new IllegalArgumentException("Boom!");
     }
 }
