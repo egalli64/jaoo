@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s5;
+package com.example.jaoo.m8.s6;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -27,9 +27,7 @@ public class Reader2Buffered {
     public static void main(String[] args) {
         File f = new File(FILE_NAME);
 
-        BufferedReader br = null;
-        try {
-            br = new BufferedReader(new FileReader(f));
+        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
             String line = br.readLine();
             System.out.println(">" + line + "<");
 
@@ -50,14 +48,6 @@ public class Reader2Buffered {
             log.info("Done reading from " + FILE_NAME);
         } catch (IOException e) {
             log.log(Level.SEVERE, "Can't read from " + FILE_NAME, e);
-        } finally {
-            try {
-                if (br != null) {
-                    br.close();
-                }
-            } catch (IOException e) {
-                log.log(Level.SEVERE, "Can't close on " + FILE_NAME, e);
-            }
         }
     }
 }
