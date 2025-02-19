@@ -17,7 +17,7 @@ public class TreeExample {
         try {
             cats.add(new Cat(11));
         } catch (ClassCastException ex) {
-            System.out.println(ex);
+            System.out.println("Cats can't be added to a sorted collection!");
         }
 
         TreeSet<Dog> dogs = new TreeSet<>();
