@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jaoo
  */
-package com.example.jaoo.m8.s4;
+package com.example.jaoo.m8.s5;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -25,19 +25,13 @@ public class PrintWriter2Append {
      * @param args not used
      */
     public static void main(String[] args) {
-        PrintWriter pw = null;
-        try {
-            pw = new PrintWriter(new FileOutputStream(FILE_NAME, true));
+        try (PrintWriter pw = new PrintWriter(new FileOutputStream(FILE_NAME, true))) {
             pw.print("More ");
             pw.println("hello!");
             pw.append("Hello again!");
             log.info("Append to " + FILE_NAME + " done");
         } catch (IOException e) {
             log.log(Level.SEVERE, "Can't append to " + FILE_NAME, e);
-        } finally {
-            if (pw != null) {
-                pw.close();
-            }
         }
     }
 }
