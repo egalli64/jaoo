@@ -18,7 +18,7 @@ public class SortExample {
         try {
             Arrays.sort(cats);
         } catch (ClassCastException ex) {
-            System.out.println(ex);
+            System.out.println("Can't sort cats!");
         }
 
         // ComparableDogs can be sorted
