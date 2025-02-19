@@ -28,20 +28,23 @@ public class Dog implements Comparable<Dog> {
         this.age = age;
     }
 
+    /**
+     * Compare first by name. If they are equal, compare by owner. If also owner is
+     * the same, compare by age.
+     */
     @Override
     public int compareTo(Dog that) {
-        // compare by age only
+        int nameComparison = this.name.compareTo(that.name);
+        if (nameComparison != 0) {
+            return nameComparison;
+        }
+
+        int ownerComparison = this.owner.compareTo(that.owner);
+        if (ownerComparison != 0) {
+            return ownerComparison;
+        }
+
         return Integer.compare(this.age, that.age);
-
-        // compare by name only
-//        return this.name.compareTo(that.name);
-
-        // compare by name + owner
-//        int x = this.name.compareTo(that.name);
-//        if (x == 0) {
-//            return this.owner.compareTo(that.owner);
-//        }
-//        return x;
     }
 
     @Override
