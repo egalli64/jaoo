@@ -6,7 +6,6 @@
 package com.example.jaoo.m8.s6;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -25,9 +24,7 @@ public class Reader2Buffered {
      * @param args not used
      */
     public static void main(String[] args) {
-        File f = new File(FILE_NAME);
-
-        try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
             String line = br.readLine();
             System.out.println(">" + line + "<");
 
